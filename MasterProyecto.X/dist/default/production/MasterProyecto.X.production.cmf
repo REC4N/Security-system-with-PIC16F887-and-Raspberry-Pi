@@ -12,32 +12,37 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\MasterProyecto.X.production.o
-cinit CODE 0 7F9 7F9 7 2
-text1 CODE 0 52A 52A 2A 2
-text2 CODE 0 505 505 25 2
-text3 CODE 0 675 675 55 2
-text4 CODE 0 6CA 6CA 5B 2
-text5 CODE 0 580 580 36 2
-text6 CODE 0 725 725 5E 2
-text7 CODE 0 783 783 76 2
-text8 CODE 0 497 497 8 2
-text9 CODE 0 490 490 7 2
-text10 CODE 0 489 489 7 2
-text11 CODE 0 482 482 7 2
-text12 CODE 0 554 554 2C 2
-text13 CODE 0 49F 49F 9 2
-text14 CODE 0 4E7 4E7 1E 2
-text15 CODE 0 5B6 5B6 39 2
-text16 CODE 0 62B 62B 4A 2
-text17 CODE 0 4A8 4A8 B 2
-text18 CODE 0 4CD 4CD 1A 2
-text19 CODE 0 4B3 4B3 1A 2
-maintext CODE 0 5EF 5EF 3C 2
+cinit CODE 0 7F8 7F8 8 2
+text1 CODE 0 34D 34D 25 2
+text2 CODE 0 504 504 55 2
+text3 CODE 0 559 559 5B 2
+text4 CODE 0 3D0 3D0 36 2
+text5 CODE 0 5B4 5B4 5E 2
+text6 CODE 0 612 612 76 2
+text7 CODE 0 688 688 98 2
+text8 CODE 0 329 329 24 2
+text9 CODE 0 720 720 D8 2
+text10 CODE 0 39E 39E 32 2
+text11 CODE 0 43F 43F 3C 2
+text12 CODE 0 2C6 2C6 11 2
+text13 CODE 0 2AA 2AA 8 2
+text14 CODE 0 2A3 2A3 7 2
+text15 CODE 0 29C 29C 7 2
+text16 CODE 0 295 295 7 2
+text17 CODE 0 372 372 2C 2
+text18 CODE 0 2B2 2B2 9 2
+text19 CODE 0 30B 30B 1E 2
+text20 CODE 0 406 406 39 2
+text21 CODE 0 4BA 4BA 4A 2
+text22 CODE 0 2BB 2BB B 2
+text23 CODE 0 2F1 2F1 1A 2
+text24 CODE 0 2D7 2D7 1A 2
+maintext CODE 0 47B 47B 3F 2
 cstackCOMMON COMMON 1 70 70 E 1
-cstackBANK0 BANK0 1 20 20 9 1
-bssBANK0 BANK0 1 29 29 1 1
-strings STRING 0 3 3 C 2
-$C:\Users\kit_s\AppData\Local\Temp\s51k.o
+cstackBANK0 BANK0 1 20 20 1C 1
+bssBANK0 BANK0 1 3C 3C 2 1
+strings STRING 0 3 3 19 2
+$C:\Users\kit_s\AppData\Local\Temp\so9g.o
 end_init CODE 0 0 0 3 2
 config CONFIG 0 2007 2007 2 2
 # %UNUSED Section
@@ -46,30 +51,30 @@ config CONFIG 0 2007 2007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 2A-6F 1
+RAM 3E-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 2A-6F 1
+BANK0 3E-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST F-481 2
+CONST 1C-294 2
 CONST 800-1FFF 2
-ENTRY F-481 2
+ENTRY 1C-294 2
 ENTRY 800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE F-481 2
+CODE 1C-294 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
 EEDATA 2100-21FF 2
-STRCODE F-481 2
+STRCODE 1C-294 2
 STRCODE 800-1FFF 2
-STRING F-481 2
+STRING 1C-294 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -85,208 +90,289 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\MasterProyecto.X.production.o
-7F9 cinit CODE >530:C:\Users\kit_s\AppData\Local\Temp\s51k.
-7F9 cinit CODE >533:C:\Users\kit_s\AppData\Local\Temp\s51k.
-7F9 cinit CODE >544:C:\Users\kit_s\AppData\Local\Temp\s51k.
-7FA cinit CODE >545:C:\Users\kit_s\AppData\Local\Temp\s51k.
-7FB cinit CODE >546:C:\Users\kit_s\AppData\Local\Temp\s51k.
-7FC cinit CODE >552:C:\Users\kit_s\AppData\Local\Temp\s51k.
-7FC cinit CODE >554:C:\Users\kit_s\AppData\Local\Temp\s51k.
-7FD cinit CODE >555:C:\Users\kit_s\AppData\Local\Temp\s51k.
-4B3 text19 CODE >7:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4B4 text19 CODE >9:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4B6 text19 CODE >10:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4BA text19 CODE >11:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4BA text19 CODE >12:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4BD text19 CODE >14:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4BF text19 CODE >15:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4C1 text19 CODE >16:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4C1 text19 CODE >17:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4C2 text19 CODE >19:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4C4 text19 CODE >20:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4C6 text19 CODE >21:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4C6 text19 CODE >22:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4C7 text19 CODE >24:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4C9 text19 CODE >25:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4CB text19 CODE >26:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4CB text19 CODE >27:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4CC text19 CODE >28:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4CD text18 CODE >29:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4CE text18 CODE >31:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4D1 text18 CODE >32:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4D7 text18 CODE >33:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4DA text18 CODE >34:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4E3 text18 CODE >35:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4E6 text18 CODE >36:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4A8 text17 CODE >38:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4A8 text17 CODE >40:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4AE text17 CODE >41:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4B2 text17 CODE >42:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-62B text16 CODE >44:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-62C text16 CODE >47:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-62F text16 CODE >49:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-634 text16 CODE >50:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-640 text16 CODE >51:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-645 text16 CODE >52:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-64B text16 CODE >53:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-64F text16 CODE >54:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-650 text16 CODE >55:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-654 text16 CODE >57:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-659 text16 CODE >58:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-665 text16 CODE >59:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-66A text16 CODE >60:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-670 text16 CODE >61:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-674 text16 CODE >63:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-5B6 text15 CODE >84:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-5B7 text15 CODE >87:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-5BC text15 CODE >88:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-5C1 text15 CODE >89:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-5C4 text15 CODE >90:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-5D2 text15 CODE >91:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-5D5 text15 CODE >92:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-5DA text15 CODE >93:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-5DD text15 CODE >94:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-5E3 text15 CODE >95:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-5E6 text15 CODE >96:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-5EB text15 CODE >97:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-5EE text15 CODE >98:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4E7 text14 CODE >100:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4E8 text14 CODE >103:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-4EA text14 CODE >104:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-49F text13 CODE >32:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-49F text13 CODE >34:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-554 text12 CODE >74:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-554 text12 CODE >77:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-559 text12 CODE >78:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-55C text12 CODE >79:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-561 text12 CODE >80:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-56A text12 CODE >81:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-56F text12 CODE >83:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-573 text12 CODE >84:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-576 text12 CODE >85:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-577 text12 CODE >86:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-57A text12 CODE >87:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-57A text12 CODE >88:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-57B text12 CODE >89:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-57F text12 CODE >90:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-482 text11 CODE >47:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-482 text11 CODE >49:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-485 text11 CODE >50:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-488 text11 CODE >51:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-489 text10 CODE >39:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-489 text10 CODE >41:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-48C text10 CODE >42:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-48F text10 CODE >43:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-490 text9 CODE >55:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-490 text9 CODE >57:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-493 text9 CODE >58:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-496 text9 CODE >59:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-497 text8 CODE >65:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-497 text8 CODE >67:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-49A text8 CODE >68:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-49E text8 CODE >69:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-783 text7 CODE >83:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-783 text7 CODE >87:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-788 text7 CODE >88:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-791 text7 CODE >89:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-79A text7 CODE >90:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-79F text7 CODE >91:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-7A8 text7 CODE >92:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-7B7 text7 CODE >93:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-7C5 text7 CODE >94:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-7CA text7 CODE >96:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-7D9 text7 CODE >97:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-7DF text7 CODE >98:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-7E3 text7 CODE >99:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-7F0 text7 CODE >100:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-7F6 text7 CODE >101:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-7F7 text7 CODE >103:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-7F8 text7 CODE >104:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-725 text6 CODE >5:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-725 text6 CODE >13:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-72D text6 CODE >14:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-733 text6 CODE >15:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-735 text6 CODE >16:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-737 text6 CODE >17:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-740 text6 CODE >18:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-744 text6 CODE >16:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-745 text6 CODE >21:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-74E text6 CODE >22:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-75E text6 CODE >23:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-76C text6 CODE >24:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-76D text6 CODE >26:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-776 text6 CODE >27:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-77A text6 CODE >29:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-782 text6 CODE >30:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
-580 text5 CODE >16:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-580 text5 CODE >18:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-584 text5 CODE >19:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-587 text5 CODE >20:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-5B2 text5 CODE >21:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-5B3 text5 CODE >22:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-5B4 text5 CODE >23:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-5B5 text5 CODE >24:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/I2C.h
-6CA text4 CODE >65:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-6CA text4 CODE >67:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-6D0 text4 CODE >68:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-6D9 text4 CODE >69:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-6DF text4 CODE >70:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-6E8 text4 CODE >71:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-6EE text4 CODE >72:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-6F6 text4 CODE >73:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-6FC text4 CODE >75:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-702 text4 CODE >76:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-708 text4 CODE >77:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-70E text4 CODE >78:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-714 text4 CODE >79:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-71A text4 CODE >80:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-720 text4 CODE >81:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-724 text4 CODE >82:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/LCD4bits.h
-675 text3 CODE >11:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-676 text3 CODE >13:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-677 text3 CODE >16:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-67B text3 CODE >17:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-67C text3 CODE >20:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-682 text3 CODE >24:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-688 text3 CODE >28:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-68E text3 CODE >32:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-694 text3 CODE >36:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-69A text3 CODE >40:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-6A0 text3 CODE >41:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-6A1 text3 CODE >44:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-6A1 text3 CODE >48:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-6A5 text3 CODE >49:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-6A6 text3 CODE >50:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-6C8 text3 CODE >51:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-6C9 text3 CODE >53:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X/Oscilador.h
-505 text2 CODE >61:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-505 text2 CODE >62:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-50B text2 CODE >63:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-50E text2 CODE >64:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-50F text2 CODE >65:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-512 text2 CODE >66:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-513 text2 CODE >67:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-516 text2 CODE >68:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-517 text2 CODE >69:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-51C text2 CODE >70:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-529 text2 CODE >71:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-52A text1 CODE >33:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
-52B text1 CODE >37:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
-531 text1 CODE >38:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
-535 text1 CODE >39:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
-539 text1 CODE >37:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
-54E text1 CODE >41:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
-553 text1 CODE >42:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
-5EF maintext CODE >46:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-5EF maintext CODE >47:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-5F4 maintext CODE >48:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-5F9 maintext CODE >53:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-5FA maintext CODE >54:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-5FD maintext CODE >50:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-607 maintext CODE >51:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-60F maintext CODE >52:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-617 maintext CODE >53:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
-627 maintext CODE >56:D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\MasterProyecto.X\mainMaster.c
+7F8 cinit CODE >568:C:\Users\kit_s\AppData\Local\Temp\so9g.
+7F8 cinit CODE >571:C:\Users\kit_s\AppData\Local\Temp\so9g.
+7F8 cinit CODE >585:C:\Users\kit_s\AppData\Local\Temp\so9g.
+7F9 cinit CODE >586:C:\Users\kit_s\AppData\Local\Temp\so9g.
+7FA cinit CODE >587:C:\Users\kit_s\AppData\Local\Temp\so9g.
+7FB cinit CODE >588:C:\Users\kit_s\AppData\Local\Temp\so9g.
+7FC cinit CODE >594:C:\Users\kit_s\AppData\Local\Temp\so9g.
+7FC cinit CODE >596:C:\Users\kit_s\AppData\Local\Temp\so9g.
+7FD cinit CODE >597:C:\Users\kit_s\AppData\Local\Temp\so9g.
+2D7 text24 CODE >7:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2D8 text24 CODE >9:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2DA text24 CODE >10:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2DE text24 CODE >11:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2DE text24 CODE >12:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2E1 text24 CODE >14:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2E3 text24 CODE >15:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2E5 text24 CODE >16:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2E5 text24 CODE >17:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2E6 text24 CODE >19:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2E8 text24 CODE >20:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2EA text24 CODE >21:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2EA text24 CODE >22:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2EB text24 CODE >24:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2ED text24 CODE >25:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2EF text24 CODE >26:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2EF text24 CODE >27:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2F0 text24 CODE >28:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2F1 text23 CODE >29:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2F2 text23 CODE >31:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2F5 text23 CODE >32:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2FB text23 CODE >33:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2FE text23 CODE >34:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+307 text23 CODE >35:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+30A text23 CODE >36:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2BB text22 CODE >38:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2BB text22 CODE >40:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2C1 text22 CODE >41:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2C5 text22 CODE >42:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+4BA text21 CODE >44:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+4BB text21 CODE >47:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+4BE text21 CODE >49:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+4C3 text21 CODE >50:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+4CF text21 CODE >51:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+4D4 text21 CODE >52:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+4DA text21 CODE >53:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+4DE text21 CODE >54:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+4DF text21 CODE >55:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+4E3 text21 CODE >57:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+4E8 text21 CODE >58:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+4F4 text21 CODE >59:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+4F9 text21 CODE >60:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+4FF text21 CODE >61:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+503 text21 CODE >63:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+406 text20 CODE >84:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+407 text20 CODE >87:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+40C text20 CODE >88:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+411 text20 CODE >89:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+414 text20 CODE >90:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+422 text20 CODE >91:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+425 text20 CODE >92:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+42A text20 CODE >93:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+42D text20 CODE >94:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+433 text20 CODE >95:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+436 text20 CODE >96:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+43B text20 CODE >97:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+43E text20 CODE >98:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+30B text19 CODE >100:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+30C text19 CODE >103:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+30E text19 CODE >104:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+2B2 text18 CODE >32:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+2B2 text18 CODE >34:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+372 text17 CODE >74:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+372 text17 CODE >77:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+377 text17 CODE >78:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+37A text17 CODE >79:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+37F text17 CODE >80:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+388 text17 CODE >81:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+38D text17 CODE >83:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+391 text17 CODE >84:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+394 text17 CODE >85:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+395 text17 CODE >86:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+398 text17 CODE >87:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+398 text17 CODE >88:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+399 text17 CODE >89:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+39D text17 CODE >90:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+295 text16 CODE >47:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+295 text16 CODE >49:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+298 text16 CODE >50:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+29B text16 CODE >51:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+29C text15 CODE >39:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+29C text15 CODE >41:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+29F text15 CODE >42:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+2A2 text15 CODE >43:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+2A3 text14 CODE >55:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+2A3 text14 CODE >57:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+2A6 text14 CODE >58:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+2A9 text14 CODE >59:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+2AA text13 CODE >65:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+2AA text13 CODE >67:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+2AD text13 CODE >68:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+2B1 text13 CODE >69:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+2C6 text12 CODE >4:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+2C7 text12 CODE >6:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+2C8 text12 CODE >43:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+2CA text12 CODE >44:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+2CE text12 CODE >45:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+2D0 text12 CODE >46:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+2D2 text12 CODE >47:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+2D5 text12 CODE >50:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+2D6 text12 CODE >51:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+43F text11 CODE >5:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+43F text11 CODE >13:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+441 text11 CODE >14:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+445 text11 CODE >15:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+447 text11 CODE >16:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+449 text11 CODE >17:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+450 text11 CODE >18:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+454 text11 CODE >16:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+455 text11 CODE >21:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+45C text11 CODE >22:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+464 text11 CODE >23:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+46A text11 CODE >24:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+46B text11 CODE >26:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+472 text11 CODE >27:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+476 text11 CODE >29:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+47A text11 CODE >30:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+39E text10 CODE >5:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+39E text10 CODE >12:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+3A2 text10 CODE >13:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+3A4 text10 CODE >14:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+3A6 text10 CODE >15:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+3AD text10 CODE >16:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+3B1 text10 CODE >14:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+3B2 text10 CODE >19:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+3BA text10 CODE >20:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+3C0 text10 CODE >21:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+3C7 text10 CODE >22:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+3CB text10 CODE >24:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+3CF text10 CODE >25:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+720 text9 CODE >500:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+723 text9 CODE >545:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+727 text9 CODE >548:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+737 text9 CODE >550:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+73B text9 CODE >553:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+746 text9 CODE >554:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+747 text9 CODE >560:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+748 text9 CODE >841:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+765 text9 CODE >1278:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+771 text9 CODE >1280:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+773 text9 CODE >1281:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+777 text9 CODE >1282:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+77C text9 CODE >1324:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+77E text9 CODE >1325:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+797 text9 CODE >1326:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+79F text9 CODE >1457:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+7A3 text9 CODE >1458:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+7AE text9 CODE >1491:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+7B2 text9 CODE >1493:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+7B9 text9 CODE >1508:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+7E7 text9 CODE >1543:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+7F2 text9 CODE >1493:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+7F3 text9 CODE >1557:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+7F7 text9 CODE >1560:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+329 text8 CODE >8:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
+32A text8 CODE >18:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
+32E text8 CODE >19:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
+334 text8 CODE >20:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
+338 text8 CODE >19:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
+339 text8 CODE >22:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
+33D text8 CODE >23:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
+341 text8 CODE >21:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
+688 text7 CODE >121:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+688 text7 CODE >125:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+68D text7 CODE >126:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+696 text7 CODE >127:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+69F text7 CODE >128:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+6A4 text7 CODE >129:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+6AD text7 CODE >130:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+6BC text7 CODE >131:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+6CA text7 CODE >132:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+6CF text7 CODE >135:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+6E8 text7 CODE >136:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+6F9 text7 CODE >137:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+6FE text7 CODE >138:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+700 text7 CODE >140:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+711 text7 CODE >142:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+71B text7 CODE >143:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+71E text7 CODE >145:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+71F text7 CODE >146:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+612 text6 CODE >84:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+612 text6 CODE >88:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+617 text6 CODE >89:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+620 text6 CODE >90:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+629 text6 CODE >91:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+62E text6 CODE >92:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+637 text6 CODE >93:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+646 text6 CODE >94:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+654 text6 CODE >95:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+659 text6 CODE >97:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+668 text6 CODE >98:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+66E text6 CODE >99:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+672 text6 CODE >100:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+67F text6 CODE >101:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+685 text6 CODE >102:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+686 text6 CODE >104:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+687 text6 CODE >105:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+5B4 text5 CODE >5:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+5B4 text5 CODE >13:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+5BC text5 CODE >14:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+5C2 text5 CODE >15:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+5C4 text5 CODE >16:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+5C6 text5 CODE >17:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+5CF text5 CODE >18:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+5D3 text5 CODE >16:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+5D4 text5 CODE >21:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+5DD text5 CODE >22:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+5ED text5 CODE >23:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+5FB text5 CODE >24:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+5FC text5 CODE >26:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+605 text5 CODE >27:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+609 text5 CODE >29:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+611 text5 CODE >30:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+3D0 text4 CODE >16:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+3D0 text4 CODE >18:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+3D4 text4 CODE >19:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+3D7 text4 CODE >20:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+402 text4 CODE >21:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+403 text4 CODE >22:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+404 text4 CODE >23:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+405 text4 CODE >24:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
+559 text3 CODE >65:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+559 text3 CODE >67:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+55F text3 CODE >68:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+568 text3 CODE >69:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+56E text3 CODE >70:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+577 text3 CODE >71:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+57D text3 CODE >72:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+585 text3 CODE >73:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+58B text3 CODE >75:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+591 text3 CODE >76:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+597 text3 CODE >77:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+59D text3 CODE >78:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+5A3 text3 CODE >79:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+5A9 text3 CODE >80:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+5AF text3 CODE >81:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+5B3 text3 CODE >82:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
+504 text2 CODE >11:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+505 text2 CODE >13:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+506 text2 CODE >16:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+50A text2 CODE >17:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+50B text2 CODE >20:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+511 text2 CODE >24:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+517 text2 CODE >28:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+51D text2 CODE >32:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+523 text2 CODE >36:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+529 text2 CODE >40:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+52F text2 CODE >41:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+530 text2 CODE >44:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+530 text2 CODE >48:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+534 text2 CODE >49:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+535 text2 CODE >50:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+557 text2 CODE >51:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+558 text2 CODE >53:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
+34D text1 CODE >61:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+34D text1 CODE >62:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+353 text1 CODE >63:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+356 text1 CODE >64:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+357 text1 CODE >65:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+35A text1 CODE >66:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+35B text1 CODE >67:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+35E text1 CODE >68:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+35F text1 CODE >69:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+364 text1 CODE >70:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+371 text1 CODE >71:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+47B maintext CODE >47:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+47B maintext CODE >48:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+480 maintext CODE >49:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+485 maintext CODE >52:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+48F maintext CODE >53:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+497 maintext CODE >54:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+49F maintext CODE >55:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+4A9 maintext CODE >56:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+4B1 maintext CODE >57:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -301,62 +387,76 @@ $dist/default/production\MasterProyecto.X.production.o
 %SYMTAB
 get_time@hour 26 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
 ___latbits 2 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
+___lwmod@counter 7D 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 __Hspace_0 2009 0 ABS 0 - -
 __Hspace_1 7E 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-_Lcd_Init D94 0 CODE 0 text4 dist/default/production\MasterProyecto.X.production.o
-_Lcd_Port 966 0 CODE 0 text19 dist/default/production\MasterProyecto.X.production.o
+_Lcd_Init AB2 0 CODE 0 text3 dist/default/production\MasterProyecto.X.production.o
+_Lcd_Port 5AE 0 CODE 0 text24 dist/default/production\MasterProyecto.X.production.o
 I2C_Master_Init@c 20 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_Lcd_Init E4A 0 CODE 0 text4 dist/default/production\MasterProyecto.X.production.o
-__end_of_Lcd_Port 99A 0 CODE 0 text19 dist/default/production\MasterProyecto.X.production.o
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
+__end_of_Lcd_Init B68 0 CODE 0 text3 dist/default/production\MasterProyecto.X.production.o
+__end_of_Lcd_Port 5E2 0 CODE 0 text24 dist/default/production\MasterProyecto.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _RCEN 48B 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\s51k.o
-_main BDE 0 CODE 0 maintext dist/default/production\MasterProyecto.X.production.o
-_time 29 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\so9g.o
+_main 8F6 0 CODE 0 maintext dist/default/production\MasterProyecto.X.production.o
+_temp 3C 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.o
+_time 3D 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-_Lcd_Write_Char B6C 0 CODE 0 text15 dist/default/production\MasterProyecto.X.production.o
-start 0 0 CODE 0 init C:\Users\kit_s\AppData\Local\Temp\s51k.o
+_Lcd_Write_Char 80C 0 CODE 0 text20 dist/default/production\MasterProyecto.X.production.o
+start 0 0 CODE 0 init C:\Users\kit_s\AppData\Local\Temp\so9g.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of___lldiv 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
+__size_of___lwmod 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 Lcd_Port@a 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 Lcd_Write_Char@temp 72 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 I2C_Master_Read@a 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\s51k.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\s51k.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\s51k.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\s51k.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\s51k.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\s51k.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\so9g.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\so9g.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\so9g.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\so9g.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\so9g.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\so9g.o
+strcat@from 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
+___bmul@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 I2C_Master_Read@temp 74 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 __size_of_Lcd_Set_Cursor 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-__end_of_Lcd_Write_Char BDE 0 CODE 0 text15 dist/default/production\MasterProyecto.X.production.o
+__end_of_Lcd_Write_Char 87E 0 CODE 0 text20 dist/default/production\MasterProyecto.X.production.o
 __size_of_initOscilador 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
+__end_of___bmul 5AE 0 CODE 0 text12 dist/default/production\MasterProyecto.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-__end_of___lldiv F06 0 CODE 0 text6 dist/default/production\MasterProyecto.X.production.o
-__end_of_initOscilador D94 0 CODE 0 text3 dist/default/production\MasterProyecto.X.production.o
-?_strcmp 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\s51k.o
-___stacklo 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\s51k.o
+__size_of_sprintf 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
+___bmul@multiplier 73 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
+___lwmod@divisor 78 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
+__end_of___lldiv C24 0 CODE 0 text5 dist/default/production\MasterProyecto.X.production.o
+__end_of___lwdiv 8F6 0 CODE 0 text11 dist/default/production\MasterProyecto.X.production.o
+__end_of___lwmod 7A0 0 CODE 0 text10 dist/default/production\MasterProyecto.X.production.o
+__end_of_initOscilador AB2 0 CODE 0 text2 dist/default/production\MasterProyecto.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\so9g.o
+___stacklo 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\so9g.o
+_dpowers 12 0 STRING 0 strings dist/default/production\MasterProyecto.X.production.o
+___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 Lcd_Set_Cursor@temp 7A 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
+___lwmod@dividend 7A 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 ___lldiv@counter 7D 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-__CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-start_initialization FF2 0 CODE 0 cinit dist/default/production\MasterProyecto.X.production.o
+start_initialization FF0 0 CODE 0 cinit dist/default/production\MasterProyecto.X.production.o
 ___lldiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
-_Lcd_Write_String 9CE 0 CODE 0 text14 dist/default/production\MasterProyecto.X.production.o
+_Lcd_Write_String 616 0 CODE 0 text19 dist/default/production\MasterProyecto.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
 _SSPADD 93 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
@@ -365,29 +465,30 @@ get_time@min 27 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.p
 _TRISC3 43B 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\s51k.o
+___int_sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\so9g.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 1000 0 CODE 0 cinit -
-__end_of_strcmp AA8 0 CODE 0 text1 dist/default/production\MasterProyecto.X.production.o
+__end_of_strcat 69A 0 CODE 0 text8 dist/default/production\MasterProyecto.X.production.o
 __Hidloc 0 0 IDLOC 0 idloc -
 __Hstack 0 0 STACK 2 stack -
 __stringbase 10 0 STRING 0 strings dist/default/production\MasterProyecto.X.production.o
+___lwdiv@counter 77 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 I2C_Master_Write@d 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
-_I2C_Master_RepeatedStart 904 0 CODE 0 text11 dist/default/production\MasterProyecto.X.production.o
+_I2C_Master_RepeatedStart 52A 0 CODE 0 text16 dist/default/production\MasterProyecto.X.production.o
+__end_of_sprintf FF0 0 CODE 0 text9 dist/default/production\MasterProyecto.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 0 config -
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
-__Lcinit FF2 0 CODE 0 cinit -
+__Lcinit FF0 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Lstack 0 0 STACK 2 stack -
-_PORTAbits 5 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _PORTBbits 6 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
@@ -405,6 +506,7 @@ __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
+___bmul 58C 0 CODE 0 text12 dist/default/production\MasterProyecto.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
@@ -413,97 +515,120 @@ __S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __CFG_BOR4V$BOR40V 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
+get_temp@temperature 30 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-_I2C_Master_Start 912 0 CODE 0 text10 dist/default/production\MasterProyecto.X.production.o
-_I2C_Master_Write 92E 0 CODE 0 text8 dist/default/production\MasterProyecto.X.production.o
-__end_of_Lcd_Write_String A0A 0 CODE 0 text14 dist/default/production\MasterProyecto.X.production.o
-strcmp@s1 76 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
-strcmp@s2 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
-__end_of_Lcd_Clear 966 0 CODE 0 text17 dist/default/production\MasterProyecto.X.production.o
+_I2C_Master_Start 538 0 CODE 0 text15 dist/default/production\MasterProyecto.X.production.o
+_I2C_Master_Write 554 0 CODE 0 text13 dist/default/production\MasterProyecto.X.production.o
+sprintf@val 29 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
+__end_of_Lcd_Write_String 652 0 CODE 0 text19 dist/default/production\MasterProyecto.X.production.o
+strcat@cp 73 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
+strcat@to 72 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
+__end_of_Lcd_Clear 58C 0 CODE 0 text22 dist/default/production\MasterProyecto.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
 ___lldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 __size_of_Lcd_Write_String 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __stringtab 6 0 STRING 0 strings dist/default/production\MasterProyecto.X.production.o
 Lcd_Write_String@a 78 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 Lcd_Write_String@i 76 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
+__size_of_get_temp 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of_get_time 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-strcmp@r 75 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\kit_s\AppData\Local\Temp\s51k.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\kit_s\AppData\Local\Temp\so9g.o
 __size_of_Lcd_Clear 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-__end_of_Lcd_Cmd 9CE 0 CODE 0 text18 dist/default/production\MasterProyecto.X.production.o
+__end_of_Lcd_Cmd 616 0 CODE 0 text23 dist/default/production\MasterProyecto.X.production.o
+__size_of___bmul 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext10 912 0 CODE 0 text10 dist/default/production\MasterProyecto.X.production.o
-__ptext11 904 0 CODE 0 text11 dist/default/production\MasterProyecto.X.production.o
-__ptext12 AA8 0 CODE 0 text12 dist/default/production\MasterProyecto.X.production.o
-__ptext13 93E 0 CODE 0 text13 dist/default/production\MasterProyecto.X.production.o
-__ptext14 9CE 0 CODE 0 text14 dist/default/production\MasterProyecto.X.production.o
-__ptext15 B6C 0 CODE 0 text15 dist/default/production\MasterProyecto.X.production.o
-__ptext16 C56 0 CODE 0 text16 dist/default/production\MasterProyecto.X.production.o
-__ptext17 950 0 CODE 0 text17 dist/default/production\MasterProyecto.X.production.o
-__ptext18 99A 0 CODE 0 text18 dist/default/production\MasterProyecto.X.production.o
-__ptext19 966 0 CODE 0 text19 dist/default/production\MasterProyecto.X.production.o
-_Lcd_Clear 950 0 CODE 0 text17 dist/default/production\MasterProyecto.X.production.o
+sprintf@flag 27 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
+sprintf@prec 28 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
+__ptext10 73C 0 CODE 0 text10 dist/default/production\MasterProyecto.X.production.o
+__ptext11 87E 0 CODE 0 text11 dist/default/production\MasterProyecto.X.production.o
+__ptext12 58C 0 CODE 0 text12 dist/default/production\MasterProyecto.X.production.o
+__ptext13 554 0 CODE 0 text13 dist/default/production\MasterProyecto.X.production.o
+__ptext14 546 0 CODE 0 text14 dist/default/production\MasterProyecto.X.production.o
+__ptext15 538 0 CODE 0 text15 dist/default/production\MasterProyecto.X.production.o
+__ptext16 52A 0 CODE 0 text16 dist/default/production\MasterProyecto.X.production.o
+__ptext17 6E4 0 CODE 0 text17 dist/default/production\MasterProyecto.X.production.o
+__ptext18 564 0 CODE 0 text18 dist/default/production\MasterProyecto.X.production.o
+__ptext19 616 0 CODE 0 text19 dist/default/production\MasterProyecto.X.production.o
+__ptext20 80C 0 CODE 0 text20 dist/default/production\MasterProyecto.X.production.o
+__ptext21 974 0 CODE 0 text21 dist/default/production\MasterProyecto.X.production.o
+__ptext22 576 0 CODE 0 text22 dist/default/production\MasterProyecto.X.production.o
+__ptext23 5E2 0 CODE 0 text23 dist/default/production\MasterProyecto.X.production.o
+__ptext24 5AE 0 CODE 0 text24 dist/default/production\MasterProyecto.X.production.o
+_Lcd_Clear 576 0 CODE 0 text22 dist/default/production\MasterProyecto.X.production.o
 __size_of_Lcd_Write_Char 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-_Lcd_Set_Cursor C56 0 CODE 0 text16 dist/default/production\MasterProyecto.X.production.o
-___lldiv E4A 0 CODE 0 text6 dist/default/production\MasterProyecto.X.production.o
-__pmaintext BDE 0 CODE 0 maintext dist/default/production\MasterProyecto.X.production.o
+_Lcd_Set_Cursor 974 0 CODE 0 text21 dist/default/production\MasterProyecto.X.production.o
+___lldiv B68 0 CODE 0 text5 dist/default/production\MasterProyecto.X.production.o
+___lwdiv 87E 0 CODE 0 text11 dist/default/production\MasterProyecto.X.production.o
+___lwmod 73C 0 CODE 0 text10 dist/default/production\MasterProyecto.X.production.o
+__pmaintext 8F6 0 CODE 0 maintext dist/default/production\MasterProyecto.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
+___lwdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 __size_of_I2C_Master_RepeatedStart 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-_strcmp A54 0 CODE 0 text1 dist/default/production\MasterProyecto.X.production.o
+_strcat 652 0 CODE 0 text8 dist/default/production\MasterProyecto.X.production.o
 ?_I2C_Master_Read 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
-_get_time F06 0 CODE 0 text7 dist/default/production\MasterProyecto.X.production.o
-__end_of_I2C_Master_Init B6C 0 CODE 0 text5 dist/default/production\MasterProyecto.X.production.o
-__end_of_I2C_Master_Read B00 0 CODE 0 text12 dist/default/production\MasterProyecto.X.production.o
-__end_of_I2C_Master_Stop 92E 0 CODE 0 text9 dist/default/production\MasterProyecto.X.production.o
-__end_of_I2C_Master_Wait 950 0 CODE 0 text13 dist/default/production\MasterProyecto.X.production.o
+_get_temp D10 0 CODE 0 text7 dist/default/production\MasterProyecto.X.production.o
+_get_time C24 0 CODE 0 text6 dist/default/production\MasterProyecto.X.production.o
+__end_of_I2C_Master_Init 80C 0 CODE 0 text4 dist/default/production\MasterProyecto.X.production.o
+__end_of_I2C_Master_Read 73C 0 CODE 0 text17 dist/default/production\MasterProyecto.X.production.o
+__end_of_I2C_Master_Stop 554 0 CODE 0 text14 dist/default/production\MasterProyecto.X.production.o
+__end_of_I2C_Master_Wait 576 0 CODE 0 text18 dist/default/production\MasterProyecto.X.production.o
 __end_of__stringtab 12 0 STRING 0 strings dist/default/production\MasterProyecto.X.production.o
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-__end_of_I2C_Master_Start 920 0 CODE 0 text10 dist/default/production\MasterProyecto.X.production.o
+__end_of_I2C_Master_Start 546 0 CODE 0 text15 dist/default/production\MasterProyecto.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-__end_of_I2C_Master_Write 93E 0 CODE 0 text8 dist/default/production\MasterProyecto.X.production.o
+__end_of_I2C_Master_Write 564 0 CODE 0 text13 dist/default/production\MasterProyecto.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
-__end_of_get_time FF2 0 CODE 0 text7 dist/default/production\MasterProyecto.X.production.o
+__end_of_get_temp E40 0 CODE 0 text7 dist/default/production\MasterProyecto.X.production.o
+__end_of_get_time D10 0 CODE 0 text6 dist/default/production\MasterProyecto.X.production.o
 __Lend_init 0 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __size_of_I2C_Master_Start 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of_I2C_Master_Write 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 end_of_initialization FF8 0 CODE 0 cinit dist/default/production\MasterProyecto.X.production.o
-__end_of_Lcd_Set_Cursor CEA 0 CODE 0 text16 dist/default/production\MasterProyecto.X.production.o
+__end_of_Lcd_Set_Cursor A08 0 CODE 0 text21 dist/default/production\MasterProyecto.X.production.o
 __Hintentry 0 0 CODE 0 intentry -
 Lcd_Set_Cursor@a 77 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 Lcd_Set_Cursor@b 74 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 Lcd_Set_Cursor@y 79 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 Lcd_Set_Cursor@z 78 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 __Lstrings 0 0 ABS 0 strings -
+___lwdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 ?___lldiv 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
+?___lwdiv 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
+?___lwmod 78 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
+get_temp@tempLSB 3A 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
+get_temp@tempMSB 36 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
 __Hreset_vec 0 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__size_of_strcmp 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
+__size_of_strcat 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _SSPCON2bits 91 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-__ptext1 A54 0 CODE 0 text1 dist/default/production\MasterProyecto.X.production.o
-__ptext2 A0A 0 CODE 0 text2 dist/default/production\MasterProyecto.X.production.o
-__ptext3 CEA 0 CODE 0 text3 dist/default/production\MasterProyecto.X.production.o
-__ptext4 D94 0 CODE 0 text4 dist/default/production\MasterProyecto.X.production.o
-__ptext5 B00 0 CODE 0 text5 dist/default/production\MasterProyecto.X.production.o
-__ptext6 E4A 0 CODE 0 text6 dist/default/production\MasterProyecto.X.production.o
-__ptext7 F06 0 CODE 0 text7 dist/default/production\MasterProyecto.X.production.o
-__ptext8 92E 0 CODE 0 text8 dist/default/production\MasterProyecto.X.production.o
-__ptext9 920 0 CODE 0 text9 dist/default/production\MasterProyecto.X.production.o
+__ptext1 69A 0 CODE 0 text1 dist/default/production\MasterProyecto.X.production.o
+__ptext2 A08 0 CODE 0 text2 dist/default/production\MasterProyecto.X.production.o
+__ptext3 AB2 0 CODE 0 text3 dist/default/production\MasterProyecto.X.production.o
+__ptext4 7A0 0 CODE 0 text4 dist/default/production\MasterProyecto.X.production.o
+__ptext5 B68 0 CODE 0 text5 dist/default/production\MasterProyecto.X.production.o
+__ptext6 C24 0 CODE 0 text6 dist/default/production\MasterProyecto.X.production.o
+__ptext7 D10 0 CODE 0 text7 dist/default/production\MasterProyecto.X.production.o
+__ptext8 652 0 CODE 0 text8 dist/default/production\MasterProyecto.X.production.o
+__ptext9 E40 0 CODE 0 text9 dist/default/production\MasterProyecto.X.production.o
 get_time@string_time 20 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
+_sprintf E40 0 CODE 0 text9 dist/default/production\MasterProyecto.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-_I2C_Master_Init B00 0 CODE 0 text5 dist/default/production\MasterProyecto.X.production.o
-_I2C_Master_Read AA8 0 CODE 0 text12 dist/default/production\MasterProyecto.X.production.o
-_I2C_Master_Stop 920 0 CODE 0 text9 dist/default/production\MasterProyecto.X.production.o
-_I2C_Master_Wait 93E 0 CODE 0 text13 dist/default/production\MasterProyecto.X.production.o
+_I2C_Master_Init 7A0 0 CODE 0 text4 dist/default/production\MasterProyecto.X.production.o
+_I2C_Master_Read 6E4 0 CODE 0 text17 dist/default/production\MasterProyecto.X.production.o
+_I2C_Master_Stop 546 0 CODE 0 text14 dist/default/production\MasterProyecto.X.production.o
+_I2C_Master_Wait 564 0 CODE 0 text18 dist/default/production\MasterProyecto.X.production.o
+sprintf@ap 26 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
+sprintf@sp 2B 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of_I2C_Master_RepeatedStart 912 0 CODE 0 text11 dist/default/production\MasterProyecto.X.production.o
+__end_of_I2C_Master_RepeatedStart 538 0 CODE 0 text16 dist/default/production\MasterProyecto.X.production.o
 __end_of__initialization FF8 0 CODE 0 cinit dist/default/production\MasterProyecto.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 Lcd_Cmd@a 73 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
@@ -515,29 +640,35 @@ _SSPSTAT 94 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of_Lcd_Init 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of_Lcd_Port 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __Hend_init 6 0 CODE 0 end_init -
-__end_of_main C56 0 CODE 0 maintext dist/default/production\MasterProyecto.X.production.o
+sprintf@c 2C 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
+sprintf@f 20 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
+__end_of_main 974 0 CODE 0 maintext dist/default/production\MasterProyecto.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
+__end_of_dpowers 26 0 STRING 0 strings dist/default/production\MasterProyecto.X.production.o
 initOscilador@option 72 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
+?_sprintf 20 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _SSPIE 463 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _SSPIF 63 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _TRISA 85 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-__end_of_setup A54 0 CODE 0 text2 dist/default/production\MasterProyecto.X.production.o
+__end_of_setup 6E4 0 CODE 0 text1 dist/default/production\MasterProyecto.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-_setup A0A 0 CODE 0 text2 dist/default/production\MasterProyecto.X.production.o
-_Lcd_Cmd 99A 0 CODE 0 text18 dist/default/production\MasterProyecto.X.production.o
-__initialization FF2 0 CODE 0 cinit dist/default/production\MasterProyecto.X.production.o
+_setup 69A 0 CODE 0 text1 dist/default/production\MasterProyecto.X.production.o
+get_temp@decimal 37 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
+_Lcd_Cmd 5E2 0 CODE 0 text23 dist/default/production\MasterProyecto.X.production.o
+__initialization FF0 0 CODE 0 cinit dist/default/production\MasterProyecto.X.production.o
+___bmul@product 72 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-__pbssBANK0 29 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.o
+__pbssBANK0 3C 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.o
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __pstrings 6 0 STRING 0 strings dist/default/production\MasterProyecto.X.production.o
 Lcd_Write_Char@a 74 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 Lcd_Write_Char@y 73 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
-_initOscilador CEA 0 CODE 0 text3 dist/default/production\MasterProyecto.X.production.o
+_initOscilador A08 0 CODE 0 text2 dist/default/production\MasterProyecto.X.production.o
 __size_of_I2C_Master_Init 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of_I2C_Master_Read 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of_I2C_Master_Stop 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
@@ -567,29 +698,34 @@ __size_of_I2C_Master_Wait 0 0 ABS 0 - dist/default/production\MasterProyecto.X.p
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7F9 FF2 7 2
-text1 0 52A A54 2A 2
-text2 0 505 A0A 25 2
-text3 0 675 CEA 55 2
-text4 0 6CA D94 5B 2
-text5 0 580 B00 36 2
-text6 0 725 E4A 5E 2
-text7 0 783 F06 76 2
-text8 0 497 92E 8 2
-text9 0 490 920 7 2
-text10 0 489 912 7 2
-text11 0 482 904 7 2
-text12 0 554 AA8 2C 2
-text13 0 49F 93E 9 2
-text14 0 4E7 9CE 1E 2
-text15 0 5B6 B6C 39 2
-text16 0 62B C56 4A 2
-text17 0 4A8 950 B 2
-text18 0 4CD 99A 1A 2
-text19 0 4B3 966 1A 2
-maintext 0 5EF BDE 3C 2
+cinit 0 7F8 FF0 8 2
+text1 0 34D 69A 25 2
+text2 0 504 A08 55 2
+text3 0 559 AB2 5B 2
+text4 0 3D0 7A0 36 2
+text5 0 5B4 B68 5E 2
+text6 0 612 C24 76 2
+text7 0 688 D10 98 2
+text8 0 329 652 24 2
+text9 0 720 E40 D8 2
+text10 0 39E 73C 32 2
+text11 0 43F 87E 3C 2
+text12 0 2C6 58C 11 2
+text13 0 2AA 554 8 2
+text14 0 2A3 546 7 2
+text15 0 29C 538 7 2
+text16 0 295 52A 7 2
+text17 0 372 6E4 2C 2
+text18 0 2B2 564 9 2
+text19 0 30B 616 1E 2
+text20 0 406 80C 39 2
+text21 0 4BA 974 4A 2
+text22 0 2BB 576 B 2
+text23 0 2F1 5E2 1A 2
+text24 0 2D7 5AE 1A 2
+maintext 0 47B 8F6 3F 2
 cstackCOMMON 1 70 70 E 1
-cstackBANK0 1 20 20 A 1
+cstackBANK0 1 20 20 1E 1
 reset_vec 0 0 0 3 2
-strings 0 3 6 C 2
+strings 0 3 6 19 2
 config 0 2007 400E 2 2

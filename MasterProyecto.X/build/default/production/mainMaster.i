@@ -18,6 +18,7 @@
 #pragma config FOSC = INTRC_NOCLKOUT
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
+#pragma config MCLRE = ON
 #pragma config CP = OFF
 #pragma config CPD = OFF
 #pragma config BOREN = OFF
@@ -2919,24 +2920,24 @@ void initOscilador(char option){
 # 38 "mainMaster.c" 2
 
 
-char* time;
+char *time, *temp;
 
 void setup (void);
-void write_time(void);
+void write_RTC(char sec, char hour, char minutes, char day);
 char* get_time(void);
+char* get_temp(void);
 
 void main(void) {
     setup();
     Lcd_Clear();
+
     while (1) {
         time = get_time();
         Lcd_Set_Cursor(1,1);
         Lcd_Write_String(time);
-        if (strcmp(time, "15:50") == 0){
-            PORTAbits.RA0 = 1;
-        } else {
-            PORTAbits.RA0 = 0;
-        }
+        temp = get_temp();
+        Lcd_Set_Cursor(2,1);
+        Lcd_Write_String(temp);
     }
 }
 
@@ -2952,17 +2953,18 @@ void setup (void){
     I2C_Master_Init(100000);
 }
 
-void write_RTC (char hour, char minutes, char day) {
+void write_RTC (char sec, char hour, char minutes, char day) {
     I2C_Master_Start();
     I2C_Master_Write(0xD0);
-    I2C_Master_Write(0x01);
+    I2C_Master_Write(0x00);
+    I2C_Master_Write(sec);
     I2C_Master_Write(minutes);
     I2C_Master_Write(hour);
     I2C_Master_Write(day);
     I2C_Master_Stop();
 }
 
-char *get_time (void){
+char* get_time (void){
     char hour, min;
     char string_time[6];
 
@@ -2993,8 +2995,35 @@ char get_day(void){
     I2C_Master_Write(0x03);
     I2C_Master_RepeatedStart();
     I2C_Master_Write(0xD1);
-    day = I2C_Master_Read(1);
+    day = I2C_Master_Read(0);
     I2C_Master_Stop();
 
     return (day);
+}
+
+char* get_temp(void){
+    char tempLSB, tempMSB;
+    char temperature[6], decimal[3];
+
+    I2C_Master_Start();
+    I2C_Master_Write(0xD0);
+    I2C_Master_Write(0x11);
+    I2C_Master_RepeatedStart();
+    I2C_Master_Write(0xD1);
+    tempMSB = I2C_Master_Read(1);
+    tempLSB = I2C_Master_Read(0);
+    I2C_Master_Stop();
+
+    tempMSB = tempMSB;
+    tempLSB = (tempLSB >> 6) * 25;
+    sprintf(temperature, "%d", tempMSB);
+    if (tempLSB == 0){
+        sprintf(decimal, ".%d0", tempLSB);
+    } else {
+        sprintf(decimal, ".%d", tempLSB);
+    }
+    strcat(temperature, decimal);
+    temperature[5] = '\0';
+
+    return (temperature);
 }
