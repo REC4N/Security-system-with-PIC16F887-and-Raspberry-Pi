@@ -2920,12 +2920,13 @@ void initOscilador(char option){
 # 38 "mainMaster.c" 2
 
 
-char *time, *temp;
+char *time, *temp, key;
 
 void setup (void);
 void write_RTC(char sec, char hour, char minutes, char day);
 char* get_time(void);
 char* get_temp(void);
+char get_hall(void);
 
 void main(void) {
     setup();
@@ -2938,6 +2939,13 @@ void main(void) {
         temp = get_temp();
         Lcd_Set_Cursor(2,1);
         Lcd_Write_String(temp);
+        key = get_hall();
+        Lcd_Set_Cursor(1,7);
+        if (key == 1){
+            Lcd_Write_String("Key ON  ");
+        } else {
+            Lcd_Write_String("Key OFF ");
+        }
     }
 }
 
@@ -3026,4 +3034,15 @@ char* get_temp(void){
     temperature[5] = '\0';
 
     return (temperature);
+}
+
+char get_hall (void){
+    char key;
+
+    I2C_Master_Start();
+    I2C_Master_Write(0x11);
+    key = I2C_Master_Read(0);
+    I2C_Master_Stop();
+
+    return (key);
 }

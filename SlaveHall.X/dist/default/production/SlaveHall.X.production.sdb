@@ -3,6 +3,18 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 6 ]
+"1 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/ADC.h
+[v _ADC_channel ADC_channel `(v  1 e 1 0 ]
+"68
+[v _initADC initADC `(v  1 e 1 0 ]
+"32 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/I2C.h
+[v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
+"94
+[v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
+"11 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/Oscilador.h
+[v _initOscilador initOscilador `(v  1 e 1 0 ]
+"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
 "10 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
@@ -11,35 +23,279 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"28 D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\SlaveHall.X\MainHall.c
+"35 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X\MainHall.c
+[v _isr isr `II(v  1 e 1 0 ]
+"70
 [v _main main `(v  1 e 1 0 ]
-"39
+"88
 [v _setup setup `(v  1 e 1 0 ]
 "166 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 "228
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-"290
-[v _PORTC PORTC `VEuc  1 e 1 @7 ]
-"352
-[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+[s S235 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"553
+[u S243 . 1 `S235 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES243  1 e 1 @12 ]
+"843
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"850
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+[s S254 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"870
+[s S260 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S265 . 1 `S254 1 . 1 0 `S260 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES265  1 e 1 @20 ]
+"1238
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+[s S22 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1276
+[s S27 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S36 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S39 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S42 . 1 `S22 1 . 1 0 `S27 1 . 1 0 `S36 1 . 1 0 `S39 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES42  1 e 1 @31 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
+[s S89 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"1433
+[u S98 . 1 `S89 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES98  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
+[s S140 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1495
+[u S149 . 1 `S140 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES149  1 e 1 @134 ]
+[s S110 . 1 `uc 1 TRISE0 1 0 :1:0 
+`uc 1 TRISE1 1 0 :1:1 
+`uc 1 TRISE2 1 0 :1:2 
+`uc 1 TRISE3 1 0 :1:3 
+]
+"1677
+[u S115 . 1 `S110 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES115  1 e 1 @137 ]
+[s S209 . 1 `uc 1 SCS 1 0 :1:0 
+`uc 1 LTS 1 0 :1:1 
+`uc 1 HTS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+]
+"1882
+[s S215 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S220 . 1 `S209 1 . 1 0 `S215 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES220  1 e 1 @143 ]
+"1979
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
+[s S182 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"1996
+[u S191 . 1 `S182 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES191  1 e 1 @145 ]
+"2048
+[v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
+"2177
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S280 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"2231
+[s S289 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S294 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S300 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S305 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S310 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S315 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S320 . 1 `S280 1 . 1 0 `S289 1 . 1 0 `S294 1 . 1 0 `S300 1 . 1 0 `S305 1 . 1 0 `S310 1 . 1 0 `S315 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES320  1 e 1 @148 ]
+[s S161 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"2991
+[u S167 . 1 `S161 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES167  1 e 1 @159 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+[s S68 . 1 `uc 1 ANS0 1 0 :1:0 
+`uc 1 ANS1 1 0 :1:1 
+`uc 1 ANS2 1 0 :1:2 
+`uc 1 ANS3 1 0 :1:3 
+`uc 1 ANS4 1 0 :1:4 
+`uc 1 ANS5 1 0 :1:5 
+`uc 1 ANS6 1 0 :1:6 
+`uc 1 ANS7 1 0 :1:7 
+]
+"3404
+[u S77 . 1 `S68 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES77  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-"4079
-[v _RA0 RA0 `VEb  1 e 0 @40 ]
-"28 D:\Documents\UVG\Semestre 5\Electrónica Digital 2\MPLab\SlaveHall.X\MainHall.c
+[s S123 . 1 `uc 1 ANS8 1 0 :1:0 
+`uc 1 ANS9 1 0 :1:1 
+`uc 1 ANS10 1 0 :1:2 
+`uc 1 ANS11 1 0 :1:3 
+`uc 1 ANS12 1 0 :1:4 
+`uc 1 ANS13 1 0 :1:5 
+]
+"3464
+[u S130 . 1 `S123 1 . 1 0 ]
+[v _ANSELHbits ANSELHbits `VES130  1 e 1 @393 ]
+"3641
+[v _BF BF `VEb  1 e 0 @1184 ]
+"3896
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"4040
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"4166
+[v _RCEN RCEN `VEb  1 e 0 @1163 ]
+"4274
+[v _SSPIE SSPIE `VEb  1 e 0 @1123 ]
+"4277
+[v _SSPIF SSPIF `VEb  1 e 0 @99 ]
+"4457
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
+"4460
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
+"31 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X\MainHall.c
+[v _z z `uc  1 e 1 0 ]
+[v _key key `uc  1 e 1 0 ]
+[v _ADC ADC `uc  1 e 1 0 ]
+"70
 [v _main main `(v  1 e 1 0 ]
 {
-"37
+"86
 } 0
-"39
+"88
 [v _setup setup `(v  1 e 1 0 ]
 {
-"48
+"99
+} 0
+"11 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/Oscilador.h
+[v _initOscilador initOscilador `(v  1 e 1 0 ]
+{
+[v initOscilador@option option `uc  1 a 1 wreg ]
+[v initOscilador@option option `uc  1 a 1 wreg ]
+[v initOscilador@option option `uc  1 a 1 5 ]
+"53
+} 0
+"68 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/ADC.h
+[v _initADC initADC `(v  1 e 1 0 ]
+{
+[v initADC@a a `uc  1 a 1 wreg ]
+[v initADC@a a `uc  1 a 1 wreg ]
+[v initADC@a a `uc  1 a 1 4 ]
+"74
+} 0
+"94 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/I2C.h
+[v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
+{
+[v I2C_Slave_Init@address address `s  1 p 2 3 ]
+"106
+} 0
+"1 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/ADC.h
+[v _ADC_channel ADC_channel `(v  1 e 1 0 ]
+{
+[v ADC_channel@a a `uc  1 a 1 wreg ]
+[v ADC_channel@a a `uc  1 a 1 wreg ]
+"3
+[v ADC_channel@a a `uc  1 a 1 5 ]
+"66
+} 0
+"35 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X\MainHall.c
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"68
 } 0

@@ -21,28 +21,79 @@
 #pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
 #pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits (Write protection off)
 
+#define _XTAL_FREQ 8000000
+
 #include <xc.h>
+#include "ADC.h"
+#include "I2C.h"
+#include "Oscilador.h"
+
+char z, key, ADC;
 
 void setup (void);
+
+void __interrupt() isr(void){
+   if(PIR1bits.SSPIF == 1){ 
+
+        SSPCONbits.CKP = 0;
+       
+        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+            z = SSPBUF;                 // Read the previous value to clear the buffer
+            SSPCONbits.SSPOV = 0;       // Clear the overflow flag
+            SSPCONbits.WCOL = 0;        // Clear the collision bit
+            SSPCONbits.CKP = 1;         // Enables SCL (Clock)
+        }
+
+        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
+            //__delay_us(7);
+            z = SSPBUF;                 // Read to refresh the buffer and reset the BF bit.
+            //__delay_us(2);
+            PIR1bits.SSPIF = 0;         // Interruption flag is cleared.
+            SSPCONbits.CKP = 1;         // SCL pulses are activated.
+            while(!SSPSTATbits.BF);     // Meanwhile the process is complete, no nothing.
+            z = SSPBUF;             // SSPBUF is of no use, so it is stored in the dummy variable.
+            __delay_us(250);
+            
+        }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+            z = SSPBUF;                 // Read to refresh the buffer and reset the BF bit.
+            BF = 0;
+            SSPBUF = key;               // ADC value is put on the SSPBUF to transmit.
+            SSPCONbits.CKP = 1;         // SCL pulses are activated.
+            __delay_us(250);
+            while(SSPSTATbits.BF);      // It waits until transmit is complete.
+        }
+       
+        PIR1bits.SSPIF = 0;             // Interrupt flag is cleared.
+    }
+}
 
 void main(void) {
     setup();
     while (1){
-        if (RA0 == 0){
-            PORTB = 0;
-        } else if (RA0 == 1){
-            PORTB = 255;
+        ADCON0bits.GO = 1;                  // ADC conversion is set to go.
+        while(ADCON0bits.GO == 1){
+            asm("nop");                     // While ADC conversion is not finished, the PIC does not do anything.
+        }
+        ADC = ADRESH;
+        PORTB = key;
+        __delay_ms(200);
+        if (ADC > 134 | ADC < 120){
+            key = 1;
+        } else {
+            key = 0;
         }
     }
 }
 
 void setup (void){
+    initOscilador(7);
     ANSEL = 0;
     ANSELH = 0;
     TRISA = 0;
     TRISB = 0;
     PORTA = 0;
     PORTB = 0;
-    PORTC = 0;
-    PORTD = 0;
+    ADC_channel(0);
+    initADC(2);
+    I2C_Slave_Init(0x10);
 }

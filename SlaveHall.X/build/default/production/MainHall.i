@@ -31,6 +31,8 @@
 #pragma config WRT = OFF
 
 
+
+
 # 1 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 1 3
 # 18 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2515,29 +2517,303 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
-# 24 "MainHall.c" 2
+# 26 "MainHall.c" 2
 
+# 1 "./ADC.h" 1
+void ADC_channel(char a){
+
+    ADCON0bits.ADCS = a;
+    switch (a){
+        case 0:
+            ANSELbits.ANS0 = 1;
+            TRISAbits.TRISA0 = 1;
+            break;
+        case 1:
+            ANSELbits.ANS1 = 1;
+            TRISAbits.TRISA1 = 1;
+            break;
+        case 2:
+            ANSELbits.ANS2 = 1;
+            TRISAbits.TRISA2 = 1;
+            break;
+        case 3:
+            ANSELbits.ANS3 = 1;
+            TRISAbits.TRISA3 = 1;
+            break;
+        case 4:
+            ANSELbits.ANS4 = 1;
+            TRISAbits.TRISA5 = 1;
+            break;
+        case 5:
+            ANSELbits.ANS5 = 1;
+            TRISEbits.TRISE0 = 1;
+            break;
+        case 6:
+            ANSELbits.ANS6 = 1;
+            TRISEbits.TRISE1 = 1;
+            break;
+        case 7:
+            ANSELbits.ANS7 = 1;
+            TRISEbits.TRISE2 = 1;
+            break;
+        case 8:
+            ANSELHbits.ANS8 = 1;
+            TRISBbits.TRISB2 = 1;
+            break;
+        case 9:
+            ANSELHbits.ANS9 = 1;
+            TRISBbits.TRISB3 = 1;
+            break;
+        case 10:
+            ANSELHbits.ANS10 = 1;
+            TRISBbits.TRISB1 = 1;
+            break;
+        case 11:
+            ANSELHbits.ANS11 = 1;
+            TRISBbits.TRISB4 = 1;
+            break;
+        case 12:
+            ANSELHbits.ANS12 = 1;
+            TRISBbits.TRISB0 = 1;
+            break;
+        case 13:
+            ANSELHbits.ANS13 = 1;
+            TRISBbits.TRISB5 = 1;
+            break;
+        default:
+            ANSELbits.ANS0 = 1;
+            TRISAbits.TRISA0 = 1;
+            break;
+    }
+}
+
+void initADC(char a){
+    ADCON1bits.ADFM = 0;
+    ADCON1bits.VCFG0 = 0;
+    ADCON1bits.VCFG1 = 0;
+    ADCON0bits.ADCS = a;
+    ADCON0bits.ADON = 1;
+}
+# 27 "MainHall.c" 2
+
+# 1 "./I2C.h" 1
+# 16 "./I2C.h"
+void I2C_Master_Init(const unsigned long c)
+{
+    SSPCON = 0b00101000;
+    SSPCON2 = 0;
+    SSPADD = (8000000/(4*c))-1;
+    SSPSTAT = 0;
+    TRISC3 = 1;
+    TRISC4 = 1;
+}
+
+
+
+
+
+
+
+void I2C_Master_Wait()
+{
+    while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
+}
+
+
+
+void I2C_Master_Start()
+{
+    I2C_Master_Wait();
+    SSPCON2bits.SEN = 1;
+}
+
+
+
+void I2C_Master_RepeatedStart()
+{
+    I2C_Master_Wait();
+    SSPCON2bits.RSEN = 1;
+}
+
+
+
+void I2C_Master_Stop()
+{
+    I2C_Master_Wait();
+    SSPCON2bits.PEN = 1;
+}
+
+
+
+
+
+void I2C_Master_Write(unsigned d)
+{
+    I2C_Master_Wait();
+    SSPBUF = d;
+}
+
+
+
+
+unsigned short I2C_Master_Read(unsigned short a)
+{
+    unsigned short temp;
+    I2C_Master_Wait();
+    RCEN = 1;
+    I2C_Master_Wait();
+    temp = SSPBUF;
+    I2C_Master_Wait();
+
+    if(a == 1){
+        SSPCON2bits.ACKDT = 0;
+    }else{
+        SSPCON2bits.ACKDT = 1;
+    }
+    SSPCON2bits.ACKEN = 1;
+    return temp;
+}
+
+
+
+void I2C_Slave_Init(short address)
+{
+    SSPADD = address;
+    SSPCON = 0x36;
+    SSPSTAT = 0x80;
+    SSPCON2 = 0x01;
+    TRISC3 = 1;
+    TRISC4 = 1;
+    GIE = 1;
+    PEIE = 1;
+    SSPIF = 0;
+    SSPIE = 1;
+}
+# 28 "MainHall.c" 2
+
+# 1 "./Oscilador.h" 1
+
+
+
+
+
+
+
+#pragma config FOSC = INTRC_NOCLKOUT
+
+
+void initOscilador(char option){
+
+    switch(option){
+        case 0:
+
+            OSCCONbits.IRCF = 0;
+            break;
+        case 1:
+
+            OSCCONbits.IRCF = 1;
+            break;
+        case 2:
+
+            OSCCONbits.IRCF = 2;
+            break;
+        case 3:
+
+            OSCCONbits.IRCF = 3;
+            break;
+        case 4:
+
+            OSCCONbits.IRCF = 4;
+            break;
+        case 5:
+
+            OSCCONbits.IRCF = 5;
+            break;
+        case 6:
+
+            OSCCONbits.IRCF = 6;
+            break;
+        case 7:
+
+            OSCCONbits.IRCF = 7;
+            break;
+        default:
+
+            OSCCONbits.IRCF = 7;
+            break;
+    }
+    OSCCONbits.SCS = 1;
+
+}
+# 29 "MainHall.c" 2
+
+
+char z, key, ADC;
 
 void setup (void);
+
+void __attribute__((picinterrupt(("")))) isr(void){
+   if(PIR1bits.SSPIF == 1){
+
+        SSPCONbits.CKP = 0;
+
+        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+            z = SSPBUF;
+            SSPCONbits.SSPOV = 0;
+            SSPCONbits.WCOL = 0;
+            SSPCONbits.CKP = 1;
+        }
+
+        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
+
+            z = SSPBUF;
+
+            PIR1bits.SSPIF = 0;
+            SSPCONbits.CKP = 1;
+            while(!SSPSTATbits.BF);
+            z = SSPBUF;
+            _delay((unsigned long)((250)*(8000000/4000000.0)));
+
+        }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+            z = SSPBUF;
+            BF = 0;
+            SSPBUF = key;
+            SSPCONbits.CKP = 1;
+            _delay((unsigned long)((250)*(8000000/4000000.0)));
+            while(SSPSTATbits.BF);
+        }
+
+        PIR1bits.SSPIF = 0;
+    }
+}
 
 void main(void) {
     setup();
     while (1){
-        if (RA0 == 0){
-            PORTB = 0;
-        } else if (RA0 == 1){
-            PORTB = 255;
+        ADCON0bits.GO = 1;
+        while(ADCON0bits.GO == 1){
+            __asm("nop");
+        }
+        ADC = ADRESH;
+        PORTB = key;
+        _delay((unsigned long)((200)*(8000000/4000.0)));
+        if (ADC > 134 | ADC < 120){
+            key = 1;
+        } else {
+            key = 0;
         }
     }
 }
 
 void setup (void){
+    initOscilador(7);
     ANSEL = 0;
     ANSELH = 0;
     TRISA = 0;
     TRISB = 0;
     PORTA = 0;
     PORTB = 0;
-    PORTC = 0;
-    PORTD = 0;
+    ADC_channel(0);
+    initADC(2);
+    I2C_Slave_Init(0x10);
 }

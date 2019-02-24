@@ -1,2 +1,5 @@
 build/default/production/MainHall.p1:  \
-MainHall.c 
+MainHall.c  \
+ADC.h  \
+I2C.h  \
+Oscilador.h 
