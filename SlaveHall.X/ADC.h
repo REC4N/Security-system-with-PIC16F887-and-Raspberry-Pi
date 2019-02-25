@@ -1,3 +1,10 @@
+/* 
+ * File:   ADC.h
+ * Author: Julio Shin
+ * Libreria para utilizar el ADC del PIC16F887
+ * Created on January 24, 2019, 2:07 PM
+ */
+
 void ADC_channel(char a){
     //Seleccion del canal para ADC
     ADCON0bits.ADCS = a;

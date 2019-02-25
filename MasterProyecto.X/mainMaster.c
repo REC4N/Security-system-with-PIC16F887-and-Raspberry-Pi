@@ -63,6 +63,13 @@ void main(void) {
         } else {
             Lcd_Write_String("Key OFF ");
         }
+        
+        if (strcmp(temp,"23.50") > 0){
+            PORTAbits.RA0 = 1;
+        } else {
+            PORTAbits.RA0 = 0;
+        }
+        
     }  
 }
 
@@ -139,7 +146,7 @@ char* get_temp(void){
     tempLSB = I2C_Master_Read(0);
     I2C_Master_Stop();
     
-    tempMSB = tempMSB;// - 4;
+    tempMSB = tempMSB - 4;
     tempLSB = (tempLSB >> 6) * 25;
     sprintf(temperature, "%d", tempMSB);
     if (tempLSB == 0){

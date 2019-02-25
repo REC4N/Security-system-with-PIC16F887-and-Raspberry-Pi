@@ -45,6 +45,8 @@
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "8 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
 [v _strcat strcat `(*.4uc  1 e 1 0 ]
+"33 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
+[v _strcmp strcmp `(i  1 e 2 0 ]
 "4 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
 [v ___bmul __bmul `(uc  1 e 1 0 ]
 "4 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
@@ -55,16 +57,28 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "48 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _main main `(v  1 e 1 0 ]
-"69
+"76
 [v _setup setup `(v  1 e 1 0 ]
-"92
+"99
 [v _get_time get_time `(*.4uc  1 e 1 0 ]
-"129
+"136
 [v _get_temp get_temp `(*.4uc  1 e 1 0 ]
-"156
+"163
 [v _get_hall get_hall `(uc  1 e 1 0 ]
 "166 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
+[s S130 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"183
+[u S139 . 1 `S130 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES139  1 e 1 @5 ]
 "228
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
 [s S55 . 1 `uc 1 RB0 1 0 :1:0 
@@ -146,12 +160,24 @@
 "48
 [v _main main `(v  1 e 1 0 ]
 {
-"67
+"74
 } 0
-"69
+"33 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
+[v _strcmp strcmp `(i  1 e 2 0 ]
+{
+[v strcmp@s1 s1 `*.4DCuc  1 a 1 wreg ]
+"35
+[v strcmp@r r `c  1 a 1 5 ]
+"33
+[v strcmp@s1 s1 `*.4DCuc  1 a 1 wreg ]
+[v strcmp@s2 s2 `*.24DCuc  1 p 1 0 ]
+[v strcmp@s1 s1 `*.4DCuc  1 a 1 6 ]
+"42
+} 0
+"76 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"79
+"86
 } 0
 "11 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
 [v _initOscilador initOscilador `(v  1 e 1 0 ]
@@ -184,26 +210,26 @@
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"92 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+"99 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _get_time get_time `(*.4uc  1 e 1 0 ]
 {
-"94
+"101
 [v get_time@string_time string_time `[6]uc  1 a 6 0 ]
-"93
+"100
 [v get_time@min min `uc  1 a 1 7 ]
 [v get_time@hour hour `uc  1 a 1 6 ]
-"113
+"120
 } 0
-"129
+"136
 [v _get_temp get_temp `(*.4uc  1 e 1 0 ]
 {
-"131
+"138
 [v get_temp@temperature temperature `[6]uc  1 a 6 16 ]
-[v get_temp@decimal decimal `[3]uc  1 a 3 23 ]
-"130
+[v get_temp@decimal decimal `[3]uc  1 a 3 22 ]
+"137
 [v get_temp@tempLSB tempLSB `uc  1 a 1 26 ]
-[v get_temp@tempMSB tempMSB `uc  1 a 1 22 ]
-"154
+[v get_temp@tempMSB tempMSB `uc  1 a 1 25 ]
+"161
 } 0
 "8 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
 [v _strcat strcat `(*.4uc  1 e 1 0 ]
@@ -279,12 +305,12 @@
 {
 "51
 } 0
-"156 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+"163 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _get_hall get_hall `(uc  1 e 1 0 ]
 {
-"157
+"164
 [v get_hall@key key `uc  1 a 1 7 ]
-"165
+"172
 } 0
 "65 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
