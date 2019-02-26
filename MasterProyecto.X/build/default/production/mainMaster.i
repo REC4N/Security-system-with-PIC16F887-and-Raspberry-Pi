@@ -2939,6 +2939,8 @@ void main(void) {
         temp = get_temp();
         Lcd_Set_Cursor(2,1);
         Lcd_Write_String(temp);
+        Lcd_Write_Char(223);
+        Lcd_Write_Char('C');
         key = get_hall();
         Lcd_Set_Cursor(1,7);
         if (key == 1){
