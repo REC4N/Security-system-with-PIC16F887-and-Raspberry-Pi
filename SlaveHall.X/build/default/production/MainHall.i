@@ -2520,6 +2520,13 @@ extern __bank0 __bit __timeout;
 # 26 "MainHall.c" 2
 
 # 1 "./ADC.h" 1
+
+
+
+
+
+
+
 void ADC_channel(char a){
 
     ADCON0bits.ADCS = a;
@@ -2748,12 +2755,12 @@ void initOscilador(char option){
 # 29 "MainHall.c" 2
 
 
-char z, key, ADC;
+char z, key, ADC, cont, val;
 
 void setup (void);
 
 void __attribute__((picinterrupt(("")))) isr(void){
-   if(PIR1bits.SSPIF == 1){
+    if(PIR1bits.SSPIF == 1){
 
         SSPCONbits.CKP = 0;
 
@@ -2771,7 +2778,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
             PIR1bits.SSPIF = 0;
             SSPCONbits.CKP = 1;
             while(!SSPSTATbits.BF);
-            z = SSPBUF;
+            val = SSPBUF;
             _delay((unsigned long)((250)*(8000000/4000000.0)));
 
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
@@ -2785,6 +2792,20 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
         PIR1bits.SSPIF = 0;
     }
+
+    if (INTCONbits.T0IF == 1){
+            cont++;
+            if(cont < 200){
+                if(cont < val){
+                    PORTAbits.RA1 = 1;
+                }else{
+                    PORTAbits.RA1 = 0;
+                }
+            } else {
+                cont = 0;
+            }
+            INTCONbits.T0IF = 0;
+        }
 }
 
 void main(void) {
@@ -2813,7 +2834,18 @@ void setup (void){
     TRISB = 0;
     PORTA = 0;
     PORTB = 0;
+    val = 8;
     ADC_channel(0);
     initADC(2);
+    OPTION_REGbits.T0CS = 0;
+    OPTION_REGbits.T0SE = 0;
+    OPTION_REGbits.PSA = 1;
+    OPTION_REGbits.PS2 = 0;
+    OPTION_REGbits.PS1 = 0;
+    OPTION_REGbits.PS0 = 0;
+    TMR0 = 56;
+    INTCONbits.T0IF = 0;
+    INTCONbits.T0IE = 1;
+    INTCONbits.GIE = 1;
     I2C_Slave_Init(0x10);
 }

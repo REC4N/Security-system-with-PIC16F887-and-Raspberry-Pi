@@ -3,9 +3,9 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 6 ]
-"1 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/ADC.h
+"8 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/ADC.h
 [v _ADC_channel ADC_channel `(v  1 e 1 0 ]
-"68
+"75
 [v _initADC initADC `(v  1 e 1 0 ]
 "32 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/I2C.h
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
@@ -25,14 +25,45 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "35 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X\MainHall.c
 [v _isr isr `II(v  1 e 1 0 ]
-"70
+"84
 [v _main main `(v  1 e 1 0 ]
-"88
+"102
 [v _setup setup `(v  1 e 1 0 ]
-"166 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
+"59 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"166
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
+[s S408 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"183
+[u S417 . 1 `S408 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES417  1 e 1 @5 ]
 "228
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S376 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"482
+[s S385 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S390 . 1 `S376 1 . 1 0 `S385 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES390  1 e 1 @11 ]
 [s S235 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -87,6 +118,20 @@
 ]
 [u S42 . 1 `S22 1 . 1 0 `S27 1 . 1 0 `S36 1 . 1 0 `S39 1 . 1 0 ]
 [v _ADCON0bits ADCON0bits `VES42  1 e 1 @31 ]
+[s S440 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+"1366
+[s S447 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S451 . 1 `S440 1 . 1 0 `S447 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES451  1 e 1 @129 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 [s S89 . 1 `uc 1 TRISA0 1 0 :1:0 
@@ -253,15 +298,17 @@
 [v _z z `uc  1 e 1 0 ]
 [v _key key `uc  1 e 1 0 ]
 [v _ADC ADC `uc  1 e 1 0 ]
-"70
+[v _cont cont `uc  1 e 1 0 ]
+[v _val val `uc  1 e 1 0 ]
+"84
 [v _main main `(v  1 e 1 0 ]
 {
-"86
+"100
 } 0
-"88
+"102
 [v _setup setup `(v  1 e 1 0 ]
 {
-"99
+"124
 } 0
 "11 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/Oscilador.h
 [v _initOscilador initOscilador `(v  1 e 1 0 ]
@@ -271,13 +318,13 @@
 [v initOscilador@option option `uc  1 a 1 5 ]
 "53
 } 0
-"68 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/ADC.h
+"75 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/ADC.h
 [v _initADC initADC `(v  1 e 1 0 ]
 {
 [v initADC@a a `uc  1 a 1 wreg ]
 [v initADC@a a `uc  1 a 1 wreg ]
 [v initADC@a a `uc  1 a 1 4 ]
-"74
+"81
 } 0
 "94 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/I2C.h
 [v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
@@ -285,17 +332,17 @@
 [v I2C_Slave_Init@address address `s  1 p 2 3 ]
 "106
 } 0
-"1 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/ADC.h
+"8 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X/ADC.h
 [v _ADC_channel ADC_channel `(v  1 e 1 0 ]
 {
 [v ADC_channel@a a `uc  1 a 1 wreg ]
 [v ADC_channel@a a `uc  1 a 1 wreg ]
-"3
+"10
 [v ADC_channel@a a `uc  1 a 1 5 ]
-"66
+"73
 } 0
 "35 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X\MainHall.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"68
+"82
 } 0

@@ -28,12 +28,12 @@
 #include "I2C.h"
 #include "Oscilador.h"
 
-char z, key, ADC;
+char z, key, ADC, cont, val;
 
 void setup (void);
 
 void __interrupt() isr(void){
-   if(PIR1bits.SSPIF == 1){ 
+    if(PIR1bits.SSPIF == 1){ 
 
         SSPCONbits.CKP = 0;
        
@@ -51,13 +51,13 @@ void __interrupt() isr(void){
             PIR1bits.SSPIF = 0;         // Interruption flag is cleared.
             SSPCONbits.CKP = 1;         // SCL pulses are activated.
             while(!SSPSTATbits.BF);     // Meanwhile the process is complete, no nothing.
-            z = SSPBUF;             // SSPBUF is of no use, so it is stored in the dummy variable.
+            val = SSPBUF;             // SSPBUF is of no use, so it is stored in the dummy variable.
             __delay_us(250);
             
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
             z = SSPBUF;                 // Read to refresh the buffer and reset the BF bit.
             BF = 0;
-            SSPBUF = key;               // ADC value is put on the SSPBUF to transmit.
+            SSPBUF = key;               // key value is put on the SSPBUF to transmit.
             SSPCONbits.CKP = 1;         // SCL pulses are activated.
             __delay_us(250);
             while(SSPSTATbits.BF);      // It waits until transmit is complete.
@@ -65,6 +65,20 @@ void __interrupt() isr(void){
        
         PIR1bits.SSPIF = 0;             // Interrupt flag is cleared.
     }
+    
+    if (INTCONbits.T0IF == 1){
+            cont++;
+            if(cont < 200){
+                if(cont < val){
+                    PORTAbits.RA1 = 1;
+                }else{
+                    PORTAbits.RA1 = 0;
+                }    
+            } else {
+                cont = 0;
+            }
+            INTCONbits.T0IF = 0;
+        }
 }
 
 void main(void) {
@@ -93,12 +107,10 @@ void setup (void){
     TRISB = 0;
     PORTA = 0;
     PORTB = 0;
+    val = 8;
     ADC_channel(0);
     initADC(2);
-    I2C_Slave_Init(0x10);
-}
-
-OPTION_REGbits.T0CS = 0;
+    OPTION_REGbits.T0CS = 0;
     OPTION_REGbits.T0SE = 0;  
     OPTION_REGbits.PSA = 1;   
     OPTION_REGbits.PS2 = 0;   
@@ -108,17 +120,7 @@ OPTION_REGbits.T0CS = 0;
     INTCONbits.T0IF = 0;
     INTCONbits.T0IE = 1;
     INTCONbits.GIE = 1;
+    I2C_Slave_Init(0x10);
+}
     
-    if (INTCONbits.T0IF == 1){
-            cont++;
-            if(cont < 200){
-                if(cont < 15){
-                    PORTAbits.RA1 = 1;
-                }else{
-                    PORTAbits.RA1 = 0;
-                }    
-            } else {
-                cont = 0;
-            }
-            INTCONbits.T0IF = 0;
-        }
+    
