@@ -44,6 +44,7 @@ void write_RTC(char sec, char hour, char minutes, char day);
 char* get_time(void);
 char* get_temp(void);
 char get_hall(void);
+char get_tripwire (void);
 
 void main(void) {
     setup();
@@ -70,6 +71,13 @@ void main(void) {
             PORTAbits.RA0 = 1;
         } else {
             PORTAbits.RA0 = 0;
+        }
+        trip = get_tripwire();
+        Lcd_Set_Cursor(2,9);
+        if (trip == 1){
+            Lcd_Write_String("Trip ON");
+        } else {
+            Lcd_Write_String("Trip OFF")
         }
         
     }  
@@ -171,4 +179,13 @@ char get_hall (void){
     I2C_Master_Stop();
     
     return (key);
+}
+
+char get_tripwire (void){
+    char trip;
+
+    I2C_Master_Start();
+    I2C_Master_Write(0x21);     
+    trip = I2C_Master_Read(0);
+    I2C_Master_Stop();
 }
