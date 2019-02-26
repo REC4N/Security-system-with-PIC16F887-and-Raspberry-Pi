@@ -2513,25 +2513,143 @@ extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
 # 31 "mainIR.c" 2
 
-# 1 "./PORTB_interrupt.h" 1
-# 17 "./PORTB_interrupt.h"
-void PORTB_interrupt_init(){
-    PORTB = 0;
-    TRISB = 0x02;
-    ANSELH = 0;
+# 1 "./I2C.h" 1
+# 16 "./I2C.h"
+void I2C_Master_Init(const unsigned long c)
+{
+    SSPCON = 0b00101000;
+    SSPCON2 = 0;
+    SSPADD = (8000000/(4*c))-1;
+    SSPSTAT = 0;
+    TRISC3 = 1;
+    TRISC4 = 1;
+}
 
-    IOCBbits.IOCB1 = 1;
-    INTCONbits.RBIF = 0;
-    INTCONbits.RBIE = 1;
+
+
+
+
+
+
+void I2C_Master_Wait()
+{
+    while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
+}
+
+
+
+void I2C_Master_Start()
+{
+    I2C_Master_Wait();
+    SSPCON2bits.SEN = 1;
+}
+
+
+
+void I2C_Master_RepeatedStart()
+{
+    I2C_Master_Wait();
+    SSPCON2bits.RSEN = 1;
+}
+
+
+
+void I2C_Master_Stop()
+{
+    I2C_Master_Wait();
+    SSPCON2bits.PEN = 1;
+}
+
+
+
+
+
+void I2C_Master_Write(unsigned d)
+{
+    I2C_Master_Wait();
+    SSPBUF = d;
+}
+
+
+
+
+unsigned short I2C_Master_Read(unsigned short a)
+{
+    unsigned short temp;
+    I2C_Master_Wait();
+    RCEN = 1;
+    I2C_Master_Wait();
+    temp = SSPBUF;
+    I2C_Master_Wait();
+
+    if(a == 1){
+        SSPCON2bits.ACKDT = 0;
+    }else{
+        SSPCON2bits.ACKDT = 1;
+    }
+    SSPCON2bits.ACKEN = 1;
+    return temp;
+}
+
+
+
+void I2C_Slave_Init(short address)
+{
+    SSPADD = address;
+    SSPCON = 0x36;
+    SSPSTAT = 0x80;
+    SSPCON2 = 0x01;
+    TRISC3 = 1;
+    TRISC4 = 1;
+    GIE = 1;
+    PEIE = 1;
+    SSPIF = 0;
+    SSPIE = 1;
 }
 # 32 "mainIR.c" 2
+
+char z, key, ADC, cont, val;
+
+void setup (void);
 
 
 
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
+    if(PIR1bits.SSPIF == 1){
 
+        SSPCONbits.CKP = 0;
+
+        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+            z = SSPBUF;
+            SSPCONbits.SSPOV = 0;
+            SSPCONbits.WCOL = 0;
+            SSPCONbits.CKP = 1;
+        }
+
+        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
+
+            z = SSPBUF;
+
+            PIR1bits.SSPIF = 0;
+            SSPCONbits.CKP = 1;
+            while(!SSPSTATbits.BF);
+            val = SSPBUF;
+            _delay((unsigned long)((250)*(8000000/4000000.0)));
+
+        }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+            z = SSPBUF;
+            BF = 0;
+            SSPBUF = key;
+            PORTAbits.RA6 = 1;
+            SSPCONbits.CKP = 1;
+            _delay((unsigned long)((250)*(8000000/4000000.0)));
+            while(SSPSTATbits.BF);
+        }
+
+        PIR1bits.SSPIF = 0;
+    }
 }
 
 void main(void) {
@@ -2550,15 +2668,20 @@ void main(void) {
     TRISB = 0x02;
     ANSEL = 0;
     ANSELH = 0;
-
+    INTCONbits.GIE = 1;
+    I2C_Slave_Init(0x20);
 
     while(1){
         if (PORTBbits.RB1 == 0){
             PORTAbits.RA0 = 1;
+            key = 1;
             _delay((unsigned long)((250)*(8000000/4000.0)));
             PORTAbits.RA0 = 0;
-        }
-        PORTAbits.RA6 = 1;
 
+        }
+
+        else{
+             key = 0;
+        }
     }
 }
