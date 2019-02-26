@@ -5,6 +5,12 @@
  * Created on February 19, 2019, 11:35 AM
  */
 
+/*
+I2C Directions:
+-> Hall sensor = 0x10
+-> Tripwire = 0x20
+*/
+
 // CONFIG1
 #pragma config FOSC = INTRC_NOCLKOUT// Oscillator Selection bits (INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
@@ -44,6 +50,7 @@ void write_RTC(char sec, char hour, char minutes, char day);
 char* get_time(void);
 char* get_temp(void);
 char get_hall(void);
+char get_tripwire(void);
 
 void __interrupt() isr(void){
     
@@ -73,6 +80,10 @@ void main(void) {
         } else {
             PORTAbits.RA0 = 0;
         }
+
+        /*if (tripwire == 1){
+            Lcd_Write_String()
+        }*/
 
         time = get_time();
         Lcd_Set_Cursor(1,1);
@@ -176,4 +187,17 @@ char get_hall (void){
     I2C_Master_Stop();
     
     return (key);
+}
+
+char get_tripwire (void){
+    char tripwire;
+
+    I2C_Master_Start();
+    I2C_Master_Write(0x21);     
+    tripwire = I2C_Master_Read(0);
+    I2C_Master_Stop();
+    
+    return (tripwire);
+
+
 }
