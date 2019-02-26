@@ -37,7 +37,7 @@
 #include "LCD4bits.h"
 #include "Oscilador.h"
 
-char *time, *temp, key;
+char *time, *temp, key, trip;
 
 void setup (void);
 void write_RTC(char sec, char hour, char minutes, char day);
@@ -62,9 +62,9 @@ void main(void) {
         key = get_hall();
         Lcd_Set_Cursor(1,7);
         if (key == 1){
-            Lcd_Write_String("Key ON  ");
+            Lcd_Write_String("Key ON ");
         } else {
-            Lcd_Write_String("Key OFF ");
+            Lcd_Write_String("Key OFF");
         }
         
         if (strcmp(temp,"23.50") > 0){
@@ -75,9 +75,9 @@ void main(void) {
         trip = get_tripwire();
         Lcd_Set_Cursor(2,9);
         if (trip == 1){
-            Lcd_Write_String("Trip ON");
+            Lcd_Write_String("Trip ON ");
         } else {
-            Lcd_Write_String("Trip OFF")
+            Lcd_Write_String("Trip OFF");
         }
         
     }  
@@ -188,4 +188,6 @@ char get_tripwire (void){
     I2C_Master_Write(0x21);     
     trip = I2C_Master_Read(0);
     I2C_Master_Stop();
+    
+    return (trip);
 }
