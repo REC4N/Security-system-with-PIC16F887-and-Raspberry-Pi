@@ -5,12 +5,6 @@
  * Created on February 19, 2019, 11:35 AM
  */
 
-/*
-I2C Directions:
--> Hall sensor = 0x10
--> Tripwire = 0x20
-*/
-
 // CONFIG1
 #pragma config FOSC = INTRC_NOCLKOUT// Oscillator Selection bits (INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
@@ -43,32 +37,29 @@ I2C Directions:
 #include "LCD4bits.h"
 #include "Oscilador.h"
 
-char *time, *temp, key, cont;
+char *time, *temp, key;
 
 void setup (void);
 void write_RTC(char sec, char hour, char minutes, char day);
 char* get_time(void);
 char* get_temp(void);
 char get_hall(void);
-char get_tripwire(void);
-
-void __interrupt() isr(void){
-    
-}
 
 void main(void) {
     setup();
     Lcd_Clear();
     //write_RTC(0x00, 0x15, 0x22, 0x06);
     while (1) {
-        
+        time = get_time();
+        Lcd_Set_Cursor(1,1);
         Lcd_Write_String(time);
         temp = get_temp();
         Lcd_Set_Cursor(2,1);
         Lcd_Write_String(temp);
+        Lcd_Write_Char(223);
+        Lcd_Write_Char('C');
         key = get_hall();
         Lcd_Set_Cursor(1,7);
-        
         if (key == 1){
             Lcd_Write_String("Key ON  ");
         } else {
@@ -80,13 +71,7 @@ void main(void) {
         } else {
             PORTAbits.RA0 = 0;
         }
-
-        /*if (tripwire == 1){
-            Lcd_Write_String()
-        }*/
-
-        time = get_time();
-        Lcd_Set_Cursor(1,1);
+        
     }  
 }
 
@@ -98,7 +83,6 @@ void setup (void){
     TRISA = 0;
     PORTB = 0;                  //Inicializar puertos
     PORTA = 0;
-    
     Lcd_Init();                 //Inicializar LCD
     I2C_Master_Init(100000);        // Inicializar Comuncación I2C
 }
@@ -187,17 +171,4 @@ char get_hall (void){
     I2C_Master_Stop();
     
     return (key);
-}
-
-char get_tripwire (void){
-    char tripwire;
-
-    I2C_Master_Start();
-    I2C_Master_Write(0x21);     
-    tripwire = I2C_Master_Read(0);
-    I2C_Master_Stop();
-    
-    return (tripwire);
-
-
 }

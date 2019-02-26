@@ -2920,7 +2920,7 @@ void initOscilador(char option){
 # 38 "mainMaster.c" 2
 
 
-char *time, *temp, key, cont;
+char *time, *temp, key;
 
 void setup (void);
 void write_RTC(char sec, char hour, char minutes, char day);
@@ -2928,23 +2928,21 @@ char* get_time(void);
 char* get_temp(void);
 char get_hall(void);
 
-void __attribute__((picinterrupt(("")))) isr(void){
-
-}
-
 void main(void) {
     setup();
     Lcd_Clear();
 
     while (1) {
-
+        time = get_time();
+        Lcd_Set_Cursor(1,1);
         Lcd_Write_String(time);
         temp = get_temp();
         Lcd_Set_Cursor(2,1);
         Lcd_Write_String(temp);
+        Lcd_Write_Char(223);
+        Lcd_Write_Char('C');
         key = get_hall();
         Lcd_Set_Cursor(1,7);
-
         if (key == 1){
             Lcd_Write_String("Key ON  ");
         } else {
@@ -2957,8 +2955,6 @@ void main(void) {
             PORTAbits.RA0 = 0;
         }
 
-        time = get_time();
-        Lcd_Set_Cursor(1,1);
     }
 }
 
@@ -2970,7 +2966,6 @@ void setup (void){
     TRISA = 0;
     PORTB = 0;
     PORTA = 0;
-
     Lcd_Init();
     I2C_Master_Init(100000);
 }
