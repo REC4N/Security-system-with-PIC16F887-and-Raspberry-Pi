@@ -97,3 +97,28 @@ void setup (void){
     initADC(2);
     I2C_Slave_Init(0x10);
 }
+
+OPTION_REGbits.T0CS = 0;
+    OPTION_REGbits.T0SE = 0;  
+    OPTION_REGbits.PSA = 1;   
+    OPTION_REGbits.PS2 = 0;   
+    OPTION_REGbits.PS1 = 0;
+    OPTION_REGbits.PS0 = 0;
+    TMR0 = 56;
+    INTCONbits.T0IF = 0;
+    INTCONbits.T0IE = 1;
+    INTCONbits.GIE = 1;
+    
+    if (INTCONbits.T0IF == 1){
+            cont++;
+            if(cont < 200){
+                if(cont < 15){
+                    PORTAbits.RA1 = 1;
+                }else{
+                    PORTAbits.RA1 = 0;
+                }    
+            } else {
+                cont = 0;
+            }
+            INTCONbits.T0IF = 0;
+        }
