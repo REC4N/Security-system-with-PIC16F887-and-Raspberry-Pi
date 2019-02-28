@@ -2519,6 +2519,7 @@ extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
 # 26 "MainHall.c" 2
 
+
 # 1 "./ADC.h" 1
 
 
@@ -2601,7 +2602,7 @@ void initADC(char a){
     ADCON0bits.ADCS = a;
     ADCON0bits.ADON = 1;
 }
-# 27 "MainHall.c" 2
+# 28 "MainHall.c" 2
 
 # 1 "./I2C.h" 1
 # 16 "./I2C.h"
@@ -2696,7 +2697,7 @@ void I2C_Slave_Init(short address)
     SSPIF = 0;
     SSPIE = 1;
 }
-# 28 "MainHall.c" 2
+# 29 "MainHall.c" 2
 
 # 1 "./Oscilador.h" 1
 
@@ -2752,10 +2753,10 @@ void initOscilador(char option){
     OSCCONbits.SCS = 1;
 
 }
-# 29 "MainHall.c" 2
+# 30 "MainHall.c" 2
 
 
-char z, key, ADC, cont, val;
+char z, key, ADC, cont, val, door;
 
 void setup (void);
 
@@ -2778,13 +2779,13 @@ void __attribute__((picinterrupt(("")))) isr(void){
             PIR1bits.SSPIF = 0;
             SSPCONbits.CKP = 1;
             while(!SSPSTATbits.BF);
-            val = SSPBUF;
+            z = SSPBUF;
             _delay((unsigned long)((250)*(8000000/4000000.0)));
 
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
             z = SSPBUF;
             BF = 0;
-            SSPBUF = key;
+            SSPBUF = door;
             SSPCONbits.CKP = 1;
             _delay((unsigned long)((250)*(8000000/4000000.0)));
             while(SSPSTATbits.BF);
@@ -2804,6 +2805,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
             } else {
                 cont = 0;
             }
+            TMR0 = 56;
             INTCONbits.T0IF = 0;
         }
 }
@@ -2823,6 +2825,20 @@ void main(void) {
         } else {
             key = 0;
         }
+        if (door == 0){
+            if (key == 1 & PORTAbits.RA2 == 1){
+                val = 15;
+                door = 1;
+                while(PORTAbits.RA2 == 1);
+            }
+        } else if (door == 1){
+            if (PORTAbits.RA2 == 1){
+                val = 8;
+                door = 0;
+                while(PORTAbits.RA2 == 1);
+            }
+        }
+
     }
 }
 
@@ -2831,10 +2847,12 @@ void setup (void){
     ANSEL = 0;
     ANSELH = 0;
     TRISA = 0;
+    TRISAbits.TRISA2 = 1;
     TRISB = 0;
     PORTA = 0;
     PORTB = 0;
     val = 8;
+    door = 0;
     ADC_channel(0);
     initADC(2);
     OPTION_REGbits.T0CS = 0;

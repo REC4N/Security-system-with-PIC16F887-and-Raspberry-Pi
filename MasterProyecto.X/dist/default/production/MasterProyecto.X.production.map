@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=D:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\MasterProyecto.X.production.sym \
   --cmf=dist/default/production\MasterProyecto.X.production.cmf -z -Q16F887 \
-  -oC:\Users\kit_s\AppData\Local\Temp\sb5o.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\kit_s\AppData\Local\Temp\s3vs.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/MasterProyecto.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\kit_s\AppData\Local\Temp\sb5o.o \
+  -DENTRY=2 -k C:\Users\kit_s\AppData\Local\Temp\s3vs.o \
   dist/default/production\MasterProyecto.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\kit_s\AppData\Local\Temp\sb5o.o
+C:\Users\kit_s\AppData\Local\Temp\s3vs.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        2     400E       0
 dist/default/production\MasterProyecto.X.production.o
@@ -64,7 +64,7 @@ dist/default/production\MasterProyecto.X.production.o
                 cstackBANK0                          20       20       1C       20       1
                 cstackCOMMON                         70       70        E       70       1
                 bssBANK0                             3C       3C        4       20       1
-                strings                               3        3       4B        6       0
+                strings                               3        3       53        6       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -104,7 +104,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   STRCODE        
 
         CLASS   STRING         
-                strings                               3        3       4B         0
+                strings                               3        3       53         0
 
         CLASS   CONST          
 
@@ -148,7 +148,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
-                strings                        000003  00004B  00004E         6       0  STRING      2
+                strings                        000003  000053  000056         6       0  STRING      2
                 cstackBANK0                    000020  000020  000040        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
                 text19                         000187  000007  00018E       30E       0  CODE        2
@@ -190,12 +190,12 @@ UNUSED ADDRESS RANGES
         BANK1            00A0-00EF             50           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
-        CODE             004E-0186            139           2
+        CODE             0056-0186            131           2
                          0800-1FFF            800
-        CONST            004E-0186             B2           2
+        CONST            0056-0186             AA           2
                          0800-1FFF            100
         EEDATA           2100-21FF            100           2
-        ENTRY            004E-0186             B2           2
+        ENTRY            0056-0186             AA           2
                          0800-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0040-006F             30           1
@@ -207,9 +207,9 @@ UNUSED ADDRESS RANGES
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
-        STRCODE          004E-0186            139           2
+        STRCODE          0056-0186            131           2
                          0800-1FFF           1800
-        STRING           004E-0186             B2           2
+        STRING           0056-0186             AA           2
                          0800-1FFF            100
 
                                   Symbol Table
@@ -473,13 +473,13 @@ __size_of_strcat                   (abs)        0000
 __size_of_strcmp                   (abs)        0000
 __stringbase                       strings      0012
 __stringtab                        strings      0003
+_door                              bssBANK0     003D
 _dpowers                           strings      0013
 _get_hall                          text16       01FD
 _get_temp                          text9        05C2
 _get_time                          text8        054C
 _get_tripwire                      text7        021C
 _initOscilador                     text3        043E
-_key                               bssBANK0     003D
 _main                              maintext     065F
 _setup                             text2        025F
 _sprintf                           text11       071E
@@ -1275,7 +1275,7 @@ Total ram usage:        0 bytes
  Parameters:    Size  Location     Type
   a               2    5[COMMON] PTR unsigned char 
 		 -> NULL(0), get_temp@temperature(6), get_time@string_time(6), STR_5(9), 
-		 -> STR_4(9), STR_2(8), STR_1(8), 
+		 -> STR_4(9), STR_2(12), STR_1(12), 
  Auto vars:     Size  Location     Type
   i               2   10[COMMON] int 
  Return value:  Size  Location     Type

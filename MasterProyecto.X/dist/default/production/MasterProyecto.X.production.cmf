@@ -44,8 +44,8 @@ maintext CODE 0 65F 65F BF 2
 cstackCOMMON COMMON 1 70 70 E 1
 cstackBANK0 BANK0 1 20 20 1C 1
 bssBANK0 BANK0 1 3C 3C 4 1
-strings STRING 0 3 3 4B 2
-$C:\Users\kit_s\AppData\Local\Temp\sb5o.o
+strings STRING 0 3 3 53 2
+$C:\Users\kit_s\AppData\Local\Temp\s3vs.o
 end_init CODE 0 0 0 3 2
 config CONFIG 0 2007 2007 2 2
 # %UNUSED Section
@@ -62,22 +62,22 @@ BANK0 40-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 4E-186 2
+CONST 56-186 2
 CONST 800-1FFF 2
-ENTRY 4E-186 2
+ENTRY 56-186 2
 ENTRY 800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE 4E-186 2
+CODE 56-186 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
 EEDATA 2100-21FF 2
-STRCODE 4E-186 2
+STRCODE 56-186 2
 STRCODE 800-1FFF 2
-STRING 4E-186 2
+STRING 56-186 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -93,17 +93,17 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\MasterProyecto.X.production.o
-7F6 cinit CODE >649:C:\Users\kit_s\AppData\Local\Temp\sb5o.
-7F6 cinit CODE >652:C:\Users\kit_s\AppData\Local\Temp\sb5o.
-7F6 cinit CODE >672:C:\Users\kit_s\AppData\Local\Temp\sb5o.
-7F7 cinit CODE >673:C:\Users\kit_s\AppData\Local\Temp\sb5o.
-7F8 cinit CODE >674:C:\Users\kit_s\AppData\Local\Temp\sb5o.
-7F9 cinit CODE >675:C:\Users\kit_s\AppData\Local\Temp\sb5o.
-7FA cinit CODE >676:C:\Users\kit_s\AppData\Local\Temp\sb5o.
-7FB cinit CODE >677:C:\Users\kit_s\AppData\Local\Temp\sb5o.
-7FC cinit CODE >683:C:\Users\kit_s\AppData\Local\Temp\sb5o.
-7FC cinit CODE >685:C:\Users\kit_s\AppData\Local\Temp\sb5o.
-7FD cinit CODE >686:C:\Users\kit_s\AppData\Local\Temp\sb5o.
+7F6 cinit CODE >657:C:\Users\kit_s\AppData\Local\Temp\s3vs.
+7F6 cinit CODE >660:C:\Users\kit_s\AppData\Local\Temp\s3vs.
+7F6 cinit CODE >680:C:\Users\kit_s\AppData\Local\Temp\s3vs.
+7F7 cinit CODE >681:C:\Users\kit_s\AppData\Local\Temp\s3vs.
+7F8 cinit CODE >682:C:\Users\kit_s\AppData\Local\Temp\s3vs.
+7F9 cinit CODE >683:C:\Users\kit_s\AppData\Local\Temp\s3vs.
+7FA cinit CODE >684:C:\Users\kit_s\AppData\Local\Temp\s3vs.
+7FB cinit CODE >685:C:\Users\kit_s\AppData\Local\Temp\s3vs.
+7FC cinit CODE >691:C:\Users\kit_s\AppData\Local\Temp\s3vs.
+7FC cinit CODE >693:C:\Users\kit_s\AppData\Local\Temp\s3vs.
+7FD cinit CODE >694:C:\Users\kit_s\AppData\Local\Temp\s3vs.
 1C9 text27 CODE >7:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
 1CA text27 CODE >9:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
 1CC text27 CODE >10:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
@@ -447,14 +447,15 @@ __end_of_Lcd_Port 3C6 0 CODE 0 text27 dist/default/production\MasterProyecto.X.p
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _RCEN 48B 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\sb5o.o
+___sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\s3vs.o
+_door 3D 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.o
 _main CBE 0 CODE 0 maintext dist/default/production\MasterProyecto.X.production.o
 _temp 3E 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.o
 _time 3F 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.o
 _trip 3C 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _Lcd_Write_Char 684 0 CODE 0 text23 dist/default/production\MasterProyecto.X.production.o
-start 0 0 CODE 0 init C:\Users\kit_s\AppData\Local\Temp\sb5o.o
+start 0 0 CODE 0 init C:\Users\kit_s\AppData\Local\Temp\s3vs.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of___lldiv 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
@@ -464,12 +465,12 @@ Lcd_Port@a 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.p
 Lcd_Write_Char@temp 72 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 I2C_Master_Read@a 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sb5o.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sb5o.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sb5o.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sb5o.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sb5o.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sb5o.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\s3vs.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\s3vs.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\s3vs.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\s3vs.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\s3vs.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\s3vs.o
 strcat@from 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 ___bmul@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
@@ -491,8 +492,8 @@ __end_of___lwdiv 76E 0 CODE 0 text13 dist/default/production\MasterProyecto.X.pr
 __end_of___lwmod 618 0 CODE 0 text12 dist/default/production\MasterProyecto.X.production.o
 __end_of_initOscilador 926 0 CODE 0 text3 dist/default/production\MasterProyecto.X.production.o
 ?_strcmp 70 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\sb5o.o
-___stacklo 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\sb5o.o
+___stackhi 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\s3vs.o
+___stacklo 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\s3vs.o
 _dpowers 26 0 STRING 0 strings dist/default/production\MasterProyecto.X.production.o
 ___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
@@ -511,7 +512,7 @@ get_time@min 27 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.p
 _TRISC3 43B 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\sb5o.o
+___int_sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\s3vs.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -562,7 +563,6 @@ __S0 2009 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_key 3D 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.o
 __CFG_BOR4V$BOR40V 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 get_temp@temperature 30 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
@@ -585,7 +585,7 @@ __size_of_get_hall 0 0 ABS 0 - dist/default/production\MasterProyecto.X.producti
 __size_of_get_temp 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of_get_time 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 strcmp@r 75 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\kit_s\AppData\Local\Temp\sb5o.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\kit_s\AppData\Local\Temp\s3vs.o
 __size_of_Lcd_Clear 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _get_tripwire 438 0 CODE 0 text7 dist/default/production\MasterProyecto.X.production.o
 __end_of_Lcd_Cmd 3FA 0 CODE 0 text26 dist/default/production\MasterProyecto.X.production.o
@@ -795,5 +795,5 @@ maintext 0 65F CBE BF 2
 cstackCOMMON 1 70 70 E 1
 cstackBANK0 1 20 20 20 1
 reset_vec 0 0 0 3 2
-strings 0 3 6 4B 2
+strings 0 3 6 53 2
 config 0 2007 400E 2 2

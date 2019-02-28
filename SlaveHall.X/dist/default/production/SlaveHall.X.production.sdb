@@ -23,11 +23,11 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"35 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\SlaveHall.X\MainHall.c
+"36 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\SlaveHall.X\MainHall.c
 [v _isr isr `II(v  1 e 1 0 ]
-"84
+"86
 [v _main main `(v  1 e 1 0 ]
-"102
+"118
 [v _setup setup `(v  1 e 1 0 ]
 "59 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -118,7 +118,7 @@
 ]
 [u S42 . 1 `S22 1 . 1 0 `S27 1 . 1 0 `S36 1 . 1 0 `S39 1 . 1 0 ]
 [v _ADCON0bits ADCON0bits `VES42  1 e 1 @31 ]
-[s S440 . 1 `uc 1 PS 1 0 :3:0 
+[s S441 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -126,12 +126,12 @@
 `uc 1 nRBPU 1 0 :1:7 
 ]
 "1366
-[s S447 . 1 `uc 1 PS0 1 0 :1:0 
+[s S448 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 ]
-[u S451 . 1 `S440 1 . 1 0 `S447 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES451  1 e 1 @129 ]
+[u S452 . 1 `S441 1 . 1 0 `S448 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES452  1 e 1 @129 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 [s S89 . 1 `uc 1 TRISA0 1 0 :1:0 
@@ -294,21 +294,22 @@
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4460
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
-"31 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\SlaveHall.X\MainHall.c
+"32 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\SlaveHall.X\MainHall.c
 [v _z z `uc  1 e 1 0 ]
 [v _key key `uc  1 e 1 0 ]
 [v _ADC ADC `uc  1 e 1 0 ]
 [v _cont cont `uc  1 e 1 0 ]
 [v _val val `uc  1 e 1 0 ]
-"84
+[v _door door `uc  1 e 1 0 ]
+"86
 [v _main main `(v  1 e 1 0 ]
 {
-"100
+"116
 } 0
-"102
+"118
 [v _setup setup `(v  1 e 1 0 ]
 {
-"124
+"142
 } 0
 "11 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\SlaveHall.X/Oscilador.h
 [v _initOscilador initOscilador `(v  1 e 1 0 ]
@@ -341,8 +342,8 @@
 [v ADC_channel@a a `uc  1 a 1 5 ]
 "73
 } 0
-"35 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\SlaveHall.X\MainHall.c
+"36 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\SlaveHall.X\MainHall.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"82
+"84
 } 0

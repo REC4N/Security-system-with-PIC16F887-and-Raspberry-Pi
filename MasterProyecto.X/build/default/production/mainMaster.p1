@@ -1113,10 +1113,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 176 ]
 }
 "40 mainMaster.c
-[; ;mainMaster.c: 40: char *time, *temp, key, trip;
+[; ;mainMaster.c: 40: char *time, *temp, door, trip;
 [v _time `*uc ~T0 @X0 1 e ]
 [v _temp `*uc ~T0 @X0 1 e ]
-[v _key `uc ~T0 @X0 1 e ]
+[v _door `uc ~T0 @X0 1 e ]
 [v _trip `uc ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "49
@@ -1160,17 +1160,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mainMaster.c: 61:         Lcd_Write_Char('C');
 [e ( _Lcd_Write_Char (1 -> -> 67 `ui `uc ]
 "62
-[; ;mainMaster.c: 62:         key = get_hall();
-[e = _key ( _get_hall ..  ]
+[; ;mainMaster.c: 62:         door = get_hall();
+[e = _door ( _get_hall ..  ]
 "63
 [; ;mainMaster.c: 63:         Lcd_Set_Cursor(1,7);
 [e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 7 `i `uc ]
 "64
-[; ;mainMaster.c: 64:         if (key == 1){
-[e $ ! == -> _key `i -> 1 `i 192  ]
+[; ;mainMaster.c: 64:         if (door == 1){
+[e $ ! == -> _door `i -> 1 `i 192  ]
 {
 "65
-[; ;mainMaster.c: 65:             Lcd_Write_String("Key ON ");
+[; ;mainMaster.c: 65:             Lcd_Write_String("Door OPEN  ");
 [e ( _Lcd_Write_String (1 :s 1C ]
 "66
 [; ;mainMaster.c: 66:         } else {
@@ -1179,7 +1179,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 192 ]
 {
 "67
-[; ;mainMaster.c: 67:             Lcd_Write_String("Key OFF");
+[; ;mainMaster.c: 67:             Lcd_Write_String("Door CLOSED");
 [e ( _Lcd_Write_String (1 :s 2C ]
 "68
 [; ;mainMaster.c: 68:         }
@@ -1559,9 +1559,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p f _sprintf 8388736 ]
 [a 8C 46 37 100 0 ]
 [a 6C 37 100 0 ]
-[a 2C 75 101 121 32 79 70 70 0 ]
 [a 5C 84 114 105 112 32 79 70 70 0 ]
+[a 2C 68 111 111 114 32 67 76 79 83 69 68 0 ]
 [a 7C 46 37 100 48 0 ]
 [a 3C 50 51 46 53 48 0 ]
-[a 1C 75 101 121 32 79 78 32 0 ]
 [a 4C 84 114 105 112 32 79 78 32 0 ]
+[a 1C 68 111 111 114 32 79 80 69 78 32 32 0 ]

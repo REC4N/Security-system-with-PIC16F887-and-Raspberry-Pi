@@ -37,7 +37,7 @@
 #include "LCD4bits.h"
 #include "Oscilador.h"
 
-char *time, *temp, key, trip;
+char *time, *temp, door, trip;
 
 void setup (void);
 void write_RTC(char sec, char hour, char minutes, char day);
@@ -59,12 +59,12 @@ void main(void) {
         Lcd_Write_String(temp);
         Lcd_Write_Char(223);
         Lcd_Write_Char('C');
-        key = get_hall();
+        door = get_hall();
         Lcd_Set_Cursor(1,7);
-        if (key == 1){
-            Lcd_Write_String("Key ON ");
+        if (door == 1){
+            Lcd_Write_String("Door OPEN  ");
         } else {
-            Lcd_Write_String("Key OFF");
+            Lcd_Write_String("Door CLOSED");
         }
         
         if (strcmp(temp,"23.50") > 0){
