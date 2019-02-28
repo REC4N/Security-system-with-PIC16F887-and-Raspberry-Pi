@@ -38,7 +38,7 @@ void setup (void);
 
                     // Variable de estado para indicar si el contador asciende o desciende
 
-/*void __interrupt() isr(void){
+void __interrupt() isr(void){
     if(PIR1bits.SSPIF == 1){ 
 
         SSPCONbits.CKP = 0;
@@ -72,7 +72,7 @@ void setup (void);
        
         PIR1bits.SSPIF = 0;             // Interrupt flag is cleared.
     }
-}*/
+}
 
 void main(void) {
     
@@ -90,8 +90,8 @@ void main(void) {
     TRISB = 0x02;
     ANSEL = 0;                  // Se pone PORTA como salida digital
     ANSELH = 0;
-    /*INTCONbits.GIE = 1;
-    I2C_Slave_Init(0x40);*/
+    INTCONbits.GIE = 1;
+    I2C_Slave_Init(0x40);
     
     while(1){
         if (PORTBbits.RB1 == 0){

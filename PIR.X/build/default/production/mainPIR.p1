@@ -46,6 +46,87 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4274
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 4274: extern volatile __bit SSPIE __attribute__((address(0x463)));
 [v _SSPIE `Vb ~T0 @X0 0 e@1123 ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"543
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 543:     struct {
+[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S19 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
+"542
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 542: typedef union {
+[u S18 `S19 1 ]
+[n S18 . . ]
+"553
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 553: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
+[v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
+"856
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 856:     struct {
+[s S30 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S30 . SSPM CKP SSPEN SSPOV WCOL ]
+"863
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 863:     struct {
+[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"855
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 855: typedef union {
+[u S29 `S30 1 `S31 1 ]
+[n S29 . . . ]
+"870
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 870: extern volatile SSPCONbits_t SSPCONbits __attribute__((address(0x014)));
+[v _SSPCONbits `VS29 ~T0 @X0 0 e@20 ]
+"2183
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 2183:     struct {
+[s S82 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S82 . BF UA R_nW S P D_nA CKE SMP ]
+"2193
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 2193:     struct {
+[s S83 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S83 . . R . D ]
+"2199
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 2199:     struct {
+[s S84 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S84 . . I2C_READ I2C_START I2C_STOP I2C_DATA ]
+"2206
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 2206:     struct {
+[s S85 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S85 . . nW . nA ]
+"2212
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 2212:     struct {
+[s S86 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S86 . . nWRITE . nADDRESS ]
+"2218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 2218:     struct {
+[s S87 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S87 . . R_W . D_A ]
+"2224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 2224:     struct {
+[s S88 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S88 . . READ_WRITE . DATA_ADDRESS ]
+"2182
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 2182: typedef union {
+[u S81 `S82 1 `S83 1 `S84 1 `S85 1 `S86 1 `S87 1 `S88 1 ]
+[n S81 . . . . . . . . ]
+"2231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 2231: extern volatile SSPSTATbits_t SSPSTATbits __attribute__((address(0x094)));
+[v _SSPSTATbits `VS81 ~T0 @X0 0 e@148 ]
+[v F1256 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
+[v __delay `JF1256 ~T0 @X0 0 e ]
+[p i __delay ]
+"3641 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 3641: extern volatile __bit BF __attribute__((address(0x4A0)));
+[v _BF `Vb ~T0 @X0 0 e@1184 ]
+"172
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 172:     struct {
+[s S6 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S6 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"171
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 171: typedef union {
+[u S5 `S6 1 ]
+[n S5 . . ]
+"183
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 183: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x005)));
+[v _PORTAbits `VS5 ~T0 @X0 0 e@5 ]
 [p mainexit ]
 "1868
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 1868:     struct {
@@ -80,6 +161,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3449
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 3449: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
 [v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"465
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 465:     struct {
+[s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S16 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
+"475
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 475:     struct {
+[s S17 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S17 . . TMR0IF . TMR0IE ]
+"464
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 464: typedef union {
+[u S15 `S16 1 `S17 1 ]
+[n S15 . . . ]
+"482
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 482: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
 "234
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 234:     struct {
 [s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -91,21 +187,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "245
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 245: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
 [v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
-"172
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 172:     struct {
-[s S6 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S6 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
-"171
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 171: typedef union {
-[u S5 `S6 1 ]
-[n S5 . . ]
-"183
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 183: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x005)));
-[v _PORTAbits `VS5 ~T0 @X0 0 e@5 ]
-[v F1256 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
-[v __delay `JF1256 ~T0 @X0 0 e ]
-[p i __delay ]
 "13 mainPIR.c
 [p x FOSC = INTRC_NOCLKOUT ]
 "14
@@ -611,6 +692,114 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ADC `uc ~T0 @X0 1 e ]
 [v _cont `uc ~T0 @X0 1 e ]
 [v _val `uc ~T0 @X0 1 e ]
+[v $root$_isr `(v ~T0 @X0 0 e ]
+"41
+[; ;mainPIR.c: 41: void __attribute__((picinterrupt(("")))) isr(void){
+[v _isr `(v ~T1 @X0 1 ef ]
+{
+[e :U _isr ]
+[f ]
+"42
+[; ;mainPIR.c: 42:     if(PIR1bits.SSPIF == 1){
+[e $ ! == -> . . _PIR1bits 0 3 `i -> 1 `i 152  ]
+{
+"44
+[; ;mainPIR.c: 44:         SSPCONbits.CKP = 0;
+[e = . . _SSPCONbits 0 1 -> -> 0 `i `uc ]
+"46
+[; ;mainPIR.c: 46:         if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+[e $ ! || != -> . . _SSPCONbits 0 3 `i -> 0 `i != -> . . _SSPCONbits 0 4 `i -> 0 `i 153  ]
+{
+"47
+[; ;mainPIR.c: 47:             z = SSPBUF;
+[e = _z -> _SSPBUF `uc ]
+"48
+[; ;mainPIR.c: 48:             SSPCONbits.SSPOV = 0;
+[e = . . _SSPCONbits 0 3 -> -> 0 `i `uc ]
+"49
+[; ;mainPIR.c: 49:             SSPCONbits.WCOL = 0;
+[e = . . _SSPCONbits 0 4 -> -> 0 `i `uc ]
+"50
+[; ;mainPIR.c: 50:             SSPCONbits.CKP = 1;
+[e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
+"51
+[; ;mainPIR.c: 51:         }
+}
+[e :U 153 ]
+"53
+[; ;mainPIR.c: 53:         if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
+[e $ ! && ! != -> . . _SSPSTATbits 0 5 `i -> 0 `i ! != -> . . _SSPSTATbits 0 2 `i -> 0 `i 154  ]
+{
+"55
+[; ;mainPIR.c: 55:             z = SSPBUF;
+[e = _z -> _SSPBUF `uc ]
+"57
+[; ;mainPIR.c: 57:             PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"58
+[; ;mainPIR.c: 58:             SSPCONbits.CKP = 1;
+[e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
+"59
+[; ;mainPIR.c: 59:             while(!SSPSTATbits.BF);
+[e $U 155  ]
+[e :U 156 ]
+[e :U 155 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 156  ]
+[e :U 157 ]
+"60
+[; ;mainPIR.c: 60:             val = SSPBUF;
+[e = _val -> _SSPBUF `uc ]
+"61
+[; ;mainPIR.c: 61:             _delay((unsigned long)((250)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"63
+[; ;mainPIR.c: 63:         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+}
+[e $U 158  ]
+[e :U 154 ]
+[e $ ! && ! != -> . . _SSPSTATbits 0 5 `i -> 0 `i != -> . . _SSPSTATbits 0 2 `i -> 0 `i 159  ]
+{
+"64
+[; ;mainPIR.c: 64:             z = SSPBUF;
+[e = _z -> _SSPBUF `uc ]
+"65
+[; ;mainPIR.c: 65:             BF = 0;
+[e = _BF -> -> 0 `i `b ]
+"66
+[; ;mainPIR.c: 66:             SSPBUF = key;
+[e = _SSPBUF -> _key `uc ]
+"67
+[; ;mainPIR.c: 67:             PORTAbits.RA6 = 1;
+[e = . . _PORTAbits 0 6 -> -> 1 `i `uc ]
+"68
+[; ;mainPIR.c: 68:             SSPCONbits.CKP = 1;
+[e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
+"69
+[; ;mainPIR.c: 69:             _delay((unsigned long)((250)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"70
+[; ;mainPIR.c: 70:             while(SSPSTATbits.BF);
+[e $U 160  ]
+[e :U 161 ]
+[e :U 160 ]
+[e $ != -> . . _SSPSTATbits 0 0 `i -> 0 `i 161  ]
+[e :U 162 ]
+"71
+[; ;mainPIR.c: 71:         }
+}
+[e :U 159 ]
+[e :U 158 ]
+"73
+[; ;mainPIR.c: 73:         PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"74
+[; ;mainPIR.c: 74:     }
+}
+[e :U 152 ]
+"75
+[; ;mainPIR.c: 75: }
+[e :UE 151 ]
+}
 [v $root$_main `(v ~T0 @X0 0 e ]
 "77
 [; ;mainPIR.c: 77: void main(void) {
@@ -648,13 +837,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92
 [; ;mainPIR.c: 92:     ANSELH = 0;
 [e = _ANSELH -> -> 0 `i `uc ]
+"93
+[; ;mainPIR.c: 93:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"94
+[; ;mainPIR.c: 94:     I2C_Slave_Init(0x40);
+[e ( _I2C_Slave_Init (1 -> -> 64 `i `s ]
 "96
 [; ;mainPIR.c: 96:     while(1){
-[e :U 153 ]
+[e :U 165 ]
 {
 "97
 [; ;mainPIR.c: 97:         if (PORTBbits.RB1 == 0){
-[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 155  ]
+[e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 167  ]
 {
 "98
 [; ;mainPIR.c: 98:             PORTAbits.RA0 = 1;
@@ -671,10 +866,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "103
 [; ;mainPIR.c: 103:         }
 }
-[e $U 156  ]
+[e $U 168  ]
 "105
 [; ;mainPIR.c: 105:         else{
-[e :U 155 ]
+[e :U 167 ]
 {
 "106
 [; ;mainPIR.c: 106:              key = 0;
@@ -682,14 +877,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "107
 [; ;mainPIR.c: 107:         }
 }
-[e :U 156 ]
+[e :U 168 ]
 "108
 [; ;mainPIR.c: 108:     }
 }
-[e :U 152 ]
-[e $U 153  ]
-[e :U 154 ]
+[e :U 164 ]
+[e $U 165  ]
+[e :U 166 ]
 "109
 [; ;mainPIR.c: 109: }
-[e :UE 151 ]
+[e :UE 163 ]
 }

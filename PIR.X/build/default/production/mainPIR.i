@@ -2611,7 +2611,47 @@ void I2C_Slave_Init(short address)
 char z, key, ADC, cont, val;
 
 void setup (void);
-# 77 "mainPIR.c"
+
+
+
+
+
+void __attribute__((picinterrupt(("")))) isr(void){
+    if(PIR1bits.SSPIF == 1){
+
+        SSPCONbits.CKP = 0;
+
+        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+            z = SSPBUF;
+            SSPCONbits.SSPOV = 0;
+            SSPCONbits.WCOL = 0;
+            SSPCONbits.CKP = 1;
+        }
+
+        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
+
+            z = SSPBUF;
+
+            PIR1bits.SSPIF = 0;
+            SSPCONbits.CKP = 1;
+            while(!SSPSTATbits.BF);
+            val = SSPBUF;
+            _delay((unsigned long)((250)*(8000000/4000000.0)));
+
+        }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+            z = SSPBUF;
+            BF = 0;
+            SSPBUF = key;
+            PORTAbits.RA6 = 1;
+            SSPCONbits.CKP = 1;
+            _delay((unsigned long)((250)*(8000000/4000000.0)));
+            while(SSPSTATbits.BF);
+        }
+
+        PIR1bits.SSPIF = 0;
+    }
+}
+
 void main(void) {
 
     OSCCONbits.IRCF0 = 1;
@@ -2628,8 +2668,8 @@ void main(void) {
     TRISB = 0x02;
     ANSEL = 0;
     ANSELH = 0;
-
-
+    INTCONbits.GIE = 1;
+    I2C_Slave_Init(0x40);
 
     while(1){
         if (PORTBbits.RB1 == 0){

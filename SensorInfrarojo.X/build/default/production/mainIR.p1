@@ -841,8 +841,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mainIR.c: 93:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "94
-[; ;mainIR.c: 94:     I2C_Slave_Init(0x20);
-[e ( _I2C_Slave_Init (1 -> -> 32 `i `s ]
+[; ;mainIR.c: 94:     I2C_Slave_Init(0x30);
+[e ( _I2C_Slave_Init (1 -> -> 48 `i `s ]
 "96
 [; ;mainIR.c: 96:     while(1){
 [e :U 165 ]

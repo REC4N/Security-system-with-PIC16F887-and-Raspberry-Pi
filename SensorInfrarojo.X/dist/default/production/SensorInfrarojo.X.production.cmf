@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.o
+$C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 0 2007 2007 2 2
@@ -70,16 +70,16 @@ STRING BB-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\SensorInfrarojo.X.production.o
-F cinit CODE >491:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.
-F cinit CODE >494:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.
-F cinit CODE >517:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.
-10 cinit CODE >518:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.
-11 cinit CODE >519:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.
-12 cinit CODE >520:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.
-13 cinit CODE >521:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.
-14 cinit CODE >527:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.
-14 cinit CODE >529:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.
-15 cinit CODE >530:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.
+F cinit CODE >491:C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.
+F cinit CODE >494:C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.
+F cinit CODE >517:C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.
+10 cinit CODE >518:C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.
+11 cinit CODE >519:C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.
+12 cinit CODE >520:C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.
+13 cinit CODE >521:C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.
+14 cinit CODE >527:C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.
+14 cinit CODE >529:C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.
+15 cinit CODE >530:C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.
 4 intentry CODE >41:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\SensorInfrarojo.X\mainIR.c
 18 text2 CODE >41:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\SensorInfrarojo.X\mainIR.c
 18 text2 CODE >42:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\SensorInfrarojo.X\mainIR.c
@@ -164,20 +164,20 @@ _BF 4A0 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
 _RCEN 48B 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.o
+___sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.o
 _main D4 0 CODE 0 maintext dist/default/production\SensorInfrarojo.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
-start 18 0 CODE 0 init C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.o
+start 18 0 CODE 0 init C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
@@ -186,8 +186,8 @@ __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELH 189 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
 _SSPCONbits 14 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.o
-___stacklo 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.o
+___stackhi 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.o
+___stacklo 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.o
 _I2C_Slave_Init 144 0 CODE 0 text1 dist/default/production\SensorInfrarojo.X.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\SensorInfrarojo.X.production.o
@@ -197,7 +197,7 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.o
+___int_sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -250,7 +250,7 @@ saved_w 7E 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\SensorInfrarojo.X.production.o
 __end_of_isr D4 0 CODE 0 text2 dist/default/production\SensorInfrarojo.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Alejandro Recancoj\AppData\Local\Temp\s1h8.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Alejandro Recancoj\AppData\Local\Temp\smrk.o
 __pmaintext D4 0 CODE 0 maintext dist/default/production\SensorInfrarojo.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -

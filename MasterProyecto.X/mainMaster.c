@@ -37,7 +37,7 @@
 #include "LCD4bits.h"
 #include "Oscilador.h"
 
-char *time, *temp, door, trip;
+char *time, *temp, door, trip, PIR, IR, state;
 
 void setup (void);
 void write_RTC(char sec, char hour, char minutes, char day);
@@ -45,12 +45,18 @@ char* get_time(void);
 char* get_temp(void);
 char get_hall(void);
 char get_tripwire (void);
+char get_PIR(void);
+char get_IR(void);
 
 void main(void) {
     setup();
+    state = 0;
     Lcd_Clear();
     //write_RTC(0x00, 0x15, 0x22, 0x06);
     while (1) {
+        if (state == 0){
+            
+        
         time = get_time();
         Lcd_Set_Cursor(1,1);
         Lcd_Write_String(time);
@@ -80,6 +86,32 @@ void main(void) {
             Lcd_Write_String("Trip OFF");
         }
         
+        }
+        else{
+            PIR = get_PIR();
+            Lcd_Set_Cursor(1,1);
+        if (PIR == 1){
+            Lcd_Write_String("PIR ON ");
+        } else {
+            Lcd_Write_String("PIR OFF");
+        }
+            IR = get_IR();
+            Lcd_Set_Cursor(2,1);
+            if (IR == 1){
+            Lcd_Write_String("IR ON ");
+        } else {
+            Lcd_Write_String("IR OFF");
+        }
+        }
+        if(PORTCbits.RC0 == 0){
+            state = 0;
+            PORTAbits.RA6 = 1;
+            PORTAbits.RA7 = 0;
+        } else{
+            state = 1;
+            PORTAbits.RA7 = 1;
+            PORTAbits.RA6 = 0;
+        }
     }  
 }
 
@@ -91,6 +123,9 @@ void setup (void){
     TRISA = 0;
     PORTB = 0;                  //Inicializar puertos
     PORTA = 0;
+    
+    TRISC = 0x03;
+    
     Lcd_Init();                 //Inicializar LCD
     I2C_Master_Init(100000);        // Inicializar Comuncación I2C
 }
@@ -190,4 +225,26 @@ char get_tripwire (void){
     I2C_Master_Stop();
     
     return (trip);
+}
+
+char get_PIR (void){
+    char PIR;
+
+    I2C_Master_Start();
+    I2C_Master_Write(0x41);     
+    PIR = I2C_Master_Read(0);
+    I2C_Master_Stop();
+    
+    return (PIR);
+}
+
+char get_IR (void){
+    char IR;
+
+    I2C_Master_Start();
+    I2C_Master_Write(0x31);     
+    PIR = I2C_Master_Read(0);
+    I2C_Master_Stop();
+    
+    return (IR);
 }
