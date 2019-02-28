@@ -70,7 +70,7 @@ void main(void) {
         if (door == 1){
             Lcd_Write_String("Door OPEN  ");
         } else {
-            Lcd_Write_String("Door CLOSED");
+            Lcd_Write_String("Door CLOSE");
         }
         
         if (strcmp(temp,"23.50") > 0){
@@ -104,10 +104,16 @@ void main(void) {
         }
         }
         if(PORTCbits.RC0 == 0){
+            if (state == 1){    
+                Lcd_Clear();
+            }
             state = 0;
             PORTAbits.RA6 = 1;
             PORTAbits.RA7 = 0;
-        } else{
+        } else {
+            if (state == 0){    
+                Lcd_Clear();
+            }
             state = 1;
             PORTAbits.RA7 = 1;
             PORTAbits.RA6 = 0;
@@ -243,7 +249,7 @@ char get_IR (void){
 
     I2C_Master_Start();
     I2C_Master_Write(0x31);     
-    PIR = I2C_Master_Read(0);
+    IR = I2C_Master_Read(0);
     I2C_Master_Stop();
     
     return (IR);
