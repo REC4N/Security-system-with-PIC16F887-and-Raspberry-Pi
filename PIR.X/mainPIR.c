@@ -91,7 +91,7 @@ void main(void) {
     ANSEL = 0;                  // Se pone PORTA como salida digital
     ANSELH = 0;
     INTCONbits.GIE = 1;
-    I2C_Slave_Init(0x30);
+    I2C_Slave_Init(0x40);
     
     while(1){
         if (PORTBbits.RB1 == 0){
