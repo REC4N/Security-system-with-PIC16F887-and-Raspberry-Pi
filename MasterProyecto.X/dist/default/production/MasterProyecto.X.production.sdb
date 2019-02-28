@@ -158,7 +158,7 @@
 "40 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _time time `*.4uc  1 e 1 0 ]
 [v _temp temp `*.4uc  1 e 1 0 ]
-[v _key key `uc  1 e 1 0 ]
+[v _door door `uc  1 e 1 0 ]
 [v _trip trip `uc  1 e 1 0 ]
 "49
 [v _main main `(v  1 e 1 0 ]

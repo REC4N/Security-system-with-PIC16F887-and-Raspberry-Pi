@@ -24,11 +24,12 @@
 #define _XTAL_FREQ 8000000
 
 #include <xc.h>
+#include <pic16f887.h>
 #include "ADC.h"
 #include "I2C.h"
 #include "Oscilador.h"
 
-char z, key, ADC, cont, val;
+char z, key, ADC, cont, val, door;
 
 void setup (void);
 
@@ -51,13 +52,13 @@ void __interrupt() isr(void){
             PIR1bits.SSPIF = 0;         // Interruption flag is cleared.
             SSPCONbits.CKP = 1;         // SCL pulses are activated.
             while(!SSPSTATbits.BF);     // Meanwhile the process is complete, no nothing.
-            val = SSPBUF;             // SSPBUF is of no use, so it is stored in the dummy variable.
+            z = SSPBUF;             // SSPBUF is of no use, so it is stored in the dummy variable.
             __delay_us(250);
             
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
             z = SSPBUF;                 // Read to refresh the buffer and reset the BF bit.
             BF = 0;
-            SSPBUF = key;               // key value is put on the SSPBUF to transmit.
+            SSPBUF = door;               // door value is put on the SSPBUF to transmit.
             SSPCONbits.CKP = 1;         // SCL pulses are activated.
             __delay_us(250);
             while(SSPSTATbits.BF);      // It waits until transmit is complete.
@@ -77,6 +78,7 @@ void __interrupt() isr(void){
             } else {
                 cont = 0;
             }
+            TMR0 = 56;
             INTCONbits.T0IF = 0;
         }
 }
@@ -96,6 +98,20 @@ void main(void) {
         } else {
             key = 0;
         }
+        if (door == 0){
+            if (key == 1 & PORTAbits.RA2 == 1){
+                val = 15;
+                door = 1;
+                while(PORTAbits.RA2 == 1);
+            }
+        } else if (door == 1){
+            if (PORTAbits.RA2 == 1){
+                val = 8;
+                door = 0;
+                while(PORTAbits.RA2 == 1);
+            }
+        }
+        
     }
 }
 
@@ -104,10 +120,12 @@ void setup (void){
     ANSEL = 0;
     ANSELH = 0;
     TRISA = 0;
+    TRISAbits.TRISA2 = 1;
     TRISB = 0;
     PORTA = 0;
     PORTB = 0;
     val = 8;
+    door = 0;
     ADC_channel(0);
     initADC(2);
     OPTION_REGbits.T0CS = 0;
