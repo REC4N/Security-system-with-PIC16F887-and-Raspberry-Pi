@@ -54,69 +54,70 @@ void main(void) {
     Lcd_Clear();
     //write_RTC(0x00, 0x15, 0x22, 0x06);
     while (1) {
-        if (state == 0){
-            
         
-        time = get_time();
-        Lcd_Set_Cursor(1,1);
-        Lcd_Write_String(time);
         temp = get_temp();
-        Lcd_Set_Cursor(2,1);
-        Lcd_Write_String(temp);
-        Lcd_Write_Char(223);
-        Lcd_Write_Char('C');
         door = get_hall();
-        Lcd_Set_Cursor(1,7);
-        if (door == 1){
-            Lcd_Write_String("Door OPEN  ");
-        } else {
-            Lcd_Write_String("Door CLOSE");
-        }
+        trip = get_tripwire();
+        PIR = get_PIR();
+        IR = get_IR();
+        time = get_time();
         
         if (strcmp(temp,"23.50") > 0){
             PORTAbits.RA0 = 1;
         } else {
             PORTAbits.RA0 = 0;
         }
-        trip = get_tripwire();
-        Lcd_Set_Cursor(2,9);
-        if (trip == 1){
-            Lcd_Write_String("Trip ON ");
-        } else {
-            Lcd_Write_String("Trip OFF");
-        }
         
-        }
-        else{
-            PIR = get_PIR();
+        if (state == 0){
+            
             Lcd_Set_Cursor(1,1);
-        if (PIR == 1){
-            Lcd_Write_String("PIR ON ");
-        } else {
-            Lcd_Write_String("PIR OFF");
-        }
-            IR = get_IR();
+            Lcd_Write_String(time);
+            
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_String(temp);
+            Lcd_Write_Char(223);
+            Lcd_Write_Char('C');
+            
+        } else if (state == 1){
+            
+            Lcd_Set_Cursor(1,1);
+            if (door == 1){
+                Lcd_Write_String("Door OPEN  ");
+            } else {
+                Lcd_Write_String("Door CLOSED");
+            }
+
+            Lcd_Set_Cursor(2,1);
+            if (trip == 1){
+                Lcd_Write_String("Trip ON ");
+            } else {
+                Lcd_Write_String("Trip OFF");
+            }
+            
+        } else if (state == 2){
+            
+            Lcd_Set_Cursor(1,1);
+            if (PIR == 1){
+                Lcd_Write_String("PIR ON ");
+            } else {
+                Lcd_Write_String("PIR OFF");
+            }
+            
             Lcd_Set_Cursor(2,1);
             if (IR == 1){
-            Lcd_Write_String("IR ON ");
-        } else {
-            Lcd_Write_String("IR OFF");
-        }
-        }
-        if(PORTCbits.RC0 == 0){
-            if (state == 1){    
-                Lcd_Clear();
+                Lcd_Write_String("IR ON ");
+            } else {
+                Lcd_Write_String("IR OFF");
             }
-            state = 0;
-            PORTAbits.RA6 = 1;
-            PORTAbits.RA7 = 0;
-        } else {
-            if (state == 0){    
-                Lcd_Clear();
+        }
+        
+        if(PORTCbits.RC0 == 1){
+            state++;
+            if (state > 2){
+                state = 0;
             }
-            state = 1;
-            PORTAbits.RA7 = 1;
-            PORTAbits.RA6 = 0;
+            Lcd_Clear();
+            while(PORTCbits.RC0 == 1);
         }
     }  
 }
@@ -129,9 +130,8 @@ void setup (void){
     TRISA = 0;
     PORTB = 0;                  //Inicializar puertos
     PORTA = 0;
-    
     TRISC = 0x03;
-    
+    PORTC = 0;
     Lcd_Init();                 //Inicializar LCD
     I2C_Master_Init(100000);        // Inicializar Comuncación I2C
 }
