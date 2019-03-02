@@ -2919,6 +2919,74 @@ void initOscilador(char option){
 }
 # 38 "mainMaster.c" 2
 
+# 1 "./UART.h" 1
+
+
+
+
+
+
+
+char UART_Init(const long int baudrate)
+{
+ unsigned int x;
+ x = (8000000 - baudrate*64)/(baudrate*64);
+ if(x>255)
+ {
+  x = (8000000 - baudrate*16)/(baudrate*16);
+  BRGH = 1;
+ }
+ if(x<256)
+ {
+   SPBRG = x;
+   SYNC = 0;
+   SPEN = 1;
+          TRISC7 = 1;
+          TRISC6 = 1;
+          CREN = 1;
+          TXEN = 1;
+   return 1;
+ }
+ return 0;
+}
+
+char UART_TX_Empty()
+{
+  return TRMT;
+}
+
+char UART_Data_Ready()
+{
+   return RCIF;
+}
+char UART_Read()
+{
+
+  while(!RCIF);
+  return RCREG;
+}
+
+void UART_Read_Text(char *Output, unsigned int length)
+{
+ unsigned int i;
+ for(int i=0;i<length;i++)
+  Output[i] = UART_Read();
+}
+
+void UART_Write(char data)
+{
+  while(!TRMT);
+  TXREG = data;
+}
+
+void UART_Write_Text(char *text)
+{
+  int i;
+  for(i=0;text[i]!='\0';i++)
+   UART_Write(text[i]);
+}
+# 39 "mainMaster.c" 2
+
 
 char *time, *temp, door, trip, PIR, IR, state;
 
@@ -2945,11 +3013,30 @@ void main(void) {
         IR = get_IR();
         time = get_time();
 
+        UART_Write_Text(temp);
+        UART_Write_Text(time);
+        UART_Write(door);
+        UART_Write(trip);
+        UART_Write(PIR);
+        UART_Write(IR);
+
+
         if (strcmp(temp,"23.50") > 0){
             PORTAbits.RA0 = 1;
         } else {
             PORTAbits.RA0 = 0;
         }
+
+
+        if(PORTCbits.RC0 == 1){
+            state++;
+            if (state > 2){
+                state = 0;
+            }
+            Lcd_Clear();
+            while(PORTCbits.RC0 == 1);
+        }
+
 
         if (state == 0){
 
@@ -2994,14 +3081,7 @@ void main(void) {
             }
         }
 
-        if(PORTCbits.RC0 == 1){
-            state++;
-            if (state > 2){
-                state = 0;
-            }
-            Lcd_Clear();
-            while(PORTCbits.RC0 == 1);
-        }
+
     }
 }
 
@@ -3013,13 +3093,15 @@ void setup (void){
     TRISA = 0;
     PORTB = 0;
     PORTA = 0;
-    TRISC = 0x03;
+    TRISC = 0x01;
     PORTC = 0;
     Lcd_Init();
+    UART_Init(9600);
     I2C_Master_Init(100000);
 }
 
 void write_RTC (char sec, char hour, char minutes, char day) {
+
     I2C_Master_Start();
     I2C_Master_Write(0xD0);
     I2C_Master_Write(0x00);
@@ -3031,6 +3113,7 @@ void write_RTC (char sec, char hour, char minutes, char day) {
 }
 
 char* get_time (void){
+
     char hour, min;
     char string_time[6];
 
@@ -3054,6 +3137,7 @@ char* get_time (void){
 }
 
 char get_day(void){
+
     char day;
 
     I2C_Master_Start();
@@ -3068,6 +3152,7 @@ char get_day(void){
 }
 
 char* get_temp(void){
+
     char tempLSB, tempMSB;
     char temperature[6], decimal[3];
 
@@ -3095,6 +3180,7 @@ char* get_temp(void){
 }
 
 char get_hall (void){
+
     char key;
 
     I2C_Master_Start();
@@ -3106,6 +3192,7 @@ char get_hall (void){
 }
 
 char get_tripwire (void){
+
     char trip;
 
     I2C_Master_Start();
@@ -3117,6 +3204,7 @@ char get_tripwire (void){
 }
 
 char get_PIR (void){
+
     char PIR;
 
     I2C_Master_Start();
@@ -3128,6 +3216,7 @@ char get_PIR (void){
 }
 
 char get_IR (void){
+
     char IR;
 
     I2C_Master_Start();

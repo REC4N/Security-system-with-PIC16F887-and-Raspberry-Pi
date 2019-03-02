@@ -36,6 +36,7 @@
 #include "I2C.h"
 #include "LCD4bits.h"
 #include "Oscilador.h"
+#include "UART.h"
 
 char *time, *temp, door, trip, PIR, IR, state;
 
@@ -54,7 +55,7 @@ void main(void) {
     Lcd_Clear();
     //write_RTC(0x00, 0x15, 0x22, 0x06);
     while (1) {
-        
+        //Obtener la información de los esclavos de la red I2C
         temp = get_temp();
         door = get_hall();
         trip = get_tripwire();
@@ -62,24 +63,43 @@ void main(void) {
         IR = get_IR();
         time = get_time();
         
+        UART_Write_Text(temp);
+        UART_Write_Text(time);
+        UART_Write(door);
+        UART_Write(trip);
+        UART_Write(PIR);
+        UART_Write(IR);
+        
+        //Si la temperatura es mayor a 23.50°C activa el relay, enciendiendo el ventilador
         if (strcmp(temp,"23.50") > 0){
             PORTAbits.RA0 = 1;
         } else {
             PORTAbits.RA0 = 0;
         }
         
+        //Cambia el estado para mostrar los diferentes sensores en la LCD
+        if(PORTCbits.RC0 == 1){
+            state++;
+            if (state > 2){
+                state = 0;
+            }
+            Lcd_Clear();
+            while(PORTCbits.RC0 == 1);
+        }
+        
+        
         if (state == 0){
-            
+            //Muestra la hora y la temperatura del banco
             Lcd_Set_Cursor(1,1);
             Lcd_Write_String(time);
             
             Lcd_Set_Cursor(2,1);
             Lcd_Write_String(temp);
-            Lcd_Write_Char(223);
+            Lcd_Write_Char(223);    //Escribe el caracter de grados (°)
             Lcd_Write_Char('C');
             
         } else if (state == 1){
-            
+            //Muestra el estado de la bóveda y el tripwire
             Lcd_Set_Cursor(1,1);
             if (door == 1){
                 Lcd_Write_String("Door OPEN  ");
@@ -95,7 +115,7 @@ void main(void) {
             }
             
         } else if (state == 2){
-            
+            //Muestra el estado del sensor de movimiento y el infrarrojo
             Lcd_Set_Cursor(1,1);
             if (PIR == 1){
                 Lcd_Write_String("PIR ON ");
@@ -111,32 +131,27 @@ void main(void) {
             }
         }
         
-        if(PORTCbits.RC0 == 1){
-            state++;
-            if (state > 2){
-                state = 0;
-            }
-            Lcd_Clear();
-            while(PORTCbits.RC0 == 1);
-        }
+        
     }  
 }
 
 void setup (void){
     initOscilador(7);           // Oscilador interno de 8 MHz
     ANSELH = 0;                 //Puerto B digital
-    ANSEL = 0;
+    ANSEL = 0;                  //Puerto A digital
     TRISB = 0;                  //PORTB como output
-    TRISA = 0;
+    TRISA = 0;                  //PORTA como output
     PORTB = 0;                  //Inicializar puertos
     PORTA = 0;
-    TRISC = 0x03;
+    TRISC = 0x01;               //RC0 como input
     PORTC = 0;
     Lcd_Init();                 //Inicializar LCD
+    UART_Init(9600);            //Inicializa la comunicación UART
     I2C_Master_Init(100000);        // Inicializar Comuncación I2C
 }
 
 void write_RTC (char sec, char hour, char minutes, char day) {
+    //Cambia los segundos, minutos, hora y día del DS3231
     I2C_Master_Start();
     I2C_Master_Write(0xD0);
     I2C_Master_Write(0x00);
@@ -148,6 +163,7 @@ void write_RTC (char sec, char hour, char minutes, char day) {
 }
 
 char* get_time (void){
+    //Obtiene la hora del RTC y la convierte en un string
     char hour, min;
     char string_time[6];
     
@@ -171,6 +187,7 @@ char* get_time (void){
 }
 
 char get_day(void){
+    //Obtiene día del DS3231. 1 es lunes, 2 martes, etc.
     char day;
     
     I2C_Master_Start();
@@ -185,6 +202,7 @@ char get_day(void){
 }
 
 char* get_temp(void){
+    //Obtiene la temperatura del RTC y la devuelve como string
     char tempLSB, tempMSB;
     char temperature[6], decimal[3];
     
@@ -212,6 +230,7 @@ char* get_temp(void){
 }
 
 char get_hall (void){
+    //Obtiene el estado de la puerta
     char key;
     
     I2C_Master_Start();
@@ -223,6 +242,7 @@ char get_hall (void){
 }
 
 char get_tripwire (void){
+    //Obtiene el estado del láser
     char trip;
 
     I2C_Master_Start();
@@ -234,6 +254,7 @@ char get_tripwire (void){
 }
 
 char get_PIR (void){
+    //Obtiene el estado del sensor de movimiento
     char PIR;
 
     I2C_Master_Start();
@@ -245,6 +266,7 @@ char get_PIR (void){
 }
 
 char get_IR (void){
+    //Obtiene el estado del sensor IR
     char IR;
 
     I2C_Master_Start();

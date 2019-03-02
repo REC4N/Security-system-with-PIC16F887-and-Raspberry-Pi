@@ -1,7 +1,7 @@
 /*
  * File:   mainHall.c
  * Author: Julio Shin
- * Detecta el switch del efecto Hall.
+ * Detecta el switch del efecto Hall y controla el servo para abrir la bóveda.
  * Created on February 21, 2019, 2:13 PM
  */
 

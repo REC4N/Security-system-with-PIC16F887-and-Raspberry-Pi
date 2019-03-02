@@ -8,6 +8,7 @@
       <itemPath>Oscilador.h</itemPath>
       <itemPath>LCD4bits.h</itemPath>
       <itemPath>PWM.h</itemPath>
+      <itemPath>UART.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
