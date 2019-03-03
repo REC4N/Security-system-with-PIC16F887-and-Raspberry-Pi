@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 6 ]
-"13 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+"13 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
 [e E1264 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -24,7 +24,7 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
-"46 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+"64 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
 [e E1266 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -45,34 +45,89 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
-"11 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/Oscilador.h
+"11 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/Oscilador.h
 [v _initOscilador initOscilador `(v  1 e 1 0 ]
-"10 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"4 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"6 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"32 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-[v _main main `(v  1 e 1 0 ]
+"32 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+[v _isr isr `II(v  1 e 1 0 ]
 "41
+[v _main main `(v  1 e 1 0 ]
+"49
 [v _setup setup `(v  1 e 1 0 ]
-"13 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+"13 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
 "30
 [v _spiReceiveWait spiReceiveWait `(v  1 s 1 spiReceiveWait ]
 "35
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
-"166 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
-[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"48
+[v _spiRead spiRead `(uc  1 e 1 0 ]
+"228 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"352
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+[s S181 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+]
+"427
+[u S186 . 1 `S181 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES186  1 e 1 @9 ]
+[s S211 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"482
+[s S220 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S225 . 1 `S211 1 . 1 0 `S220 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES225  1 e 1 @11 ]
+[s S243 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"553
+[u S251 . 1 `S243 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES251  1 e 1 @12 ]
 "843
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-"1416
-[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1478
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1602
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+[s S262 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"1718
+[u S270 . 1 `S262 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES270  1 e 1 @140 ]
 [s S151 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
@@ -134,16 +189,54 @@ SPI_ACTIVE_2_IDLE 64
 [v _SSPSTATbits SSPSTATbits `VES82  1 e 1 @148 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3449
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"4277
+[v _SSPIF SSPIF `VEb  1 e 0 @99 ]
+"4415
+[v _TRISA5 TRISA5 `VEb  1 e 0 @1069 ]
 "4457
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4463
 [v _TRISC5 TRISC5 `VEb  1 e 0 @1085 ]
-"32 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+"4496
+[v _TRISE0 TRISE0 `VEb  1 e 0 @1096 ]
+"41 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
 [v _main main `(v  1 e 1 0 ]
+{
+"47
+} 0
+"49
+[v _setup setup `(v  1 e 1 0 ]
+{
+"65
+} 0
+"13 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+[v _spiInit spiInit `(v  1 e 1 0 ]
+{
+[v spiInit@sType sType `E1264  1 a 1 wreg ]
+[v spiInit@sType sType `E1264  1 a 1 wreg ]
+[v spiInit@sDataSample sDataSample `E1272  1 p 1 3 ]
+[v spiInit@sClockIdle sClockIdle `E1276  1 p 1 4 ]
+[v spiInit@sTransmitEdge sTransmitEdge `E1280  1 p 1 5 ]
+"15
+[v spiInit@sType sType `E1264  1 a 1 6 ]
+"28
+} 0
+"11 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/Oscilador.h
+[v _initOscilador initOscilador `(v  1 e 1 0 ]
+{
+[v initOscilador@option option `uc  1 a 1 wreg ]
+[v initOscilador@option option `uc  1 a 1 wreg ]
+[v initOscilador@option option `uc  1 a 1 5 ]
+"53
+} 0
+"32 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+[v _isr isr `II(v  1 e 1 0 ]
 {
 "39
 } 0
-"35 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+"35 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
 {
 [v spiWrite@dat dat `uc  1 a 1 wreg ]
@@ -152,28 +245,13 @@ SPI_ACTIVE_2_IDLE 64
 [v spiWrite@dat dat `uc  1 a 1 0 ]
 "38
 } 0
-"41 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-[v _setup setup `(v  1 e 1 0 ]
+"48
+[v _spiRead spiRead `(uc  1 e 1 0 ]
 {
-"47
+"52
 } 0
-"13 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-[v _spiInit spiInit `(v  1 e 1 0 ]
+"30
+[v _spiReceiveWait spiReceiveWait `(v  1 s 1 spiReceiveWait ]
 {
-[v spiInit@sType sType `E1264  1 a 1 wreg ]
-[v spiInit@sType sType `E1264  1 a 1 wreg ]
-[v spiInit@sDataSample sDataSample `E1272  1 p 1 0 ]
-[v spiInit@sClockIdle sClockIdle `E1276  1 p 1 1 ]
-[v spiInit@sTransmitEdge sTransmitEdge `E1280  1 p 1 2 ]
-"15
-[v spiInit@sType sType `E1264  1 a 1 3 ]
-"28
-} 0
-"11 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/Oscilador.h
-[v _initOscilador initOscilador `(v  1 e 1 0 ]
-{
-[v initOscilador@option option `uc  1 a 1 wreg ]
-[v initOscilador@option option `uc  1 a 1 wreg ]
-[v initOscilador@option option `uc  1 a 1 2 ]
-"53
+"33
 } 0

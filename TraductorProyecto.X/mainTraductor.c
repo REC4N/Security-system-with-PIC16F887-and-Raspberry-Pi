@@ -28,20 +28,40 @@
 
 
 void setup(void);
+char val;
+
+void __interrupt() isr(void){
+   if(SSPIF == 1){
+        val = spiRead();
+        PORTD = val;
+        spiWrite(val);
+        PORTEbits.RE0 = ~PORTEbits.RE0;
+        SSPIF = 0;
+    }
+}
 
 void main(void) {
     setup();
     while (1){
-        PORTA++;
-        spiWrite(PORTA);
+        PORTB++;
         __delay_ms(1000);
     }
 }
 
 void setup(void){
     initOscilador(7);
+    ANSELH = 0;
+    TRISB = 0;
+    PORTB = 0;
     ANSEL = 0;
-    TRISA = 0;
-    PORTA = 0;
-    spiInit(SPI_MASTER_OSC_DIV4, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+    TRISD = 0;
+    PORTD = 0;
+    TRISA5 = 1;       // Slave Select
+    TRISE0 = 0;
+    PORTEbits.RE0 = 0;
+    INTCONbits.GIE = 1;         // Habilitamos interrupciones
+    INTCONbits.PEIE = 1;        // Habilitamos interrupciones PEIE
+    PIR1bits.SSPIF = 0;         // Borramos bandera interrupción MSSP
+    PIE1bits.SSPIE = 1;         // Habilitamos interrupción MSSP
+    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }
