@@ -2988,12 +2988,12 @@ void UART_Write_Text(char *text)
 # 39 "mainMaster.c" 2
 
 
-char *time, *temp, door, trip, PIR, IR, state;
+char time[6], temp[6], door, trip, PIR, IR, state;
 
 void setup (void);
 void write_RTC(char sec, char hour, char minutes, char day);
-char* get_time(void);
-char* get_temp(void);
+void get_time(char *time_string);
+void get_temp(char *temp_string);
 char get_hall(void);
 char get_tripwire (void);
 char get_PIR(void);
@@ -3006,12 +3006,12 @@ void main(void) {
 
     while (1) {
 
-        temp = get_temp();
+        get_temp(temp);
         door = get_hall();
         trip = get_tripwire();
         PIR = get_PIR();
         IR = get_IR();
-        time = get_time();
+        get_time(time);
 
         UART_Write_Text(temp);
         UART_Write_Text(time);
@@ -3019,6 +3019,7 @@ void main(void) {
         UART_Write(trip);
         UART_Write(PIR);
         UART_Write(IR);
+        UART_Write('A');
 
 
         if (strcmp(temp,"23.50") > 0){
@@ -3112,10 +3113,9 @@ void write_RTC (char sec, char hour, char minutes, char day) {
     I2C_Master_Stop();
 }
 
-char* get_time (void){
+void get_time (char *time_string){
 
     char hour, min;
-    char string_time[6];
 
     I2C_Master_Start();
     I2C_Master_Write(0xD0);
@@ -3126,14 +3126,12 @@ char* get_time (void){
     hour = I2C_Master_Read(0);
     I2C_Master_Stop();
 
-    string_time[0] = (hour >> 4) + '0';
-    string_time[1] = (hour & 0x0F) + '0';
-    string_time[2] = ':';
-    string_time[3] = (min >> 4) + '0';
-    string_time[4] = (min & 0x0F) + '0';
-    string_time[5] = '\0';
-
-    return (string_time);
+    time_string[0] = (hour >> 4) + '0';
+    time_string[1] = (hour & 0x0F) + '0';
+    time_string[2] = ':';
+    time_string[3] = (min >> 4) + '0';
+    time_string[4] = (min & 0x0F) + '0';
+    time_string[5] = '\0';
 }
 
 char get_day(void){
@@ -3151,10 +3149,10 @@ char get_day(void){
     return (day);
 }
 
-char* get_temp(void){
+void get_temp(char *temp_string){
 
     char tempLSB, tempMSB;
-    char temperature[6], decimal[3];
+    char decimal[3];
 
     I2C_Master_Start();
     I2C_Master_Write(0xD0);
@@ -3167,16 +3165,15 @@ char* get_temp(void){
 
     tempMSB = tempMSB - 4;
     tempLSB = (tempLSB >> 6) * 25;
-    sprintf(temperature, "%d", tempMSB);
+    sprintf(temp_string, "%d", tempMSB);
     if (tempLSB == 0){
         sprintf(decimal, ".%d0", tempLSB);
     } else {
         sprintf(decimal, ".%d", tempLSB);
     }
-    strcat(temperature, decimal);
-    temperature[5] = '\0';
+    strcat(temp_string, decimal);
+    temp_string[5] = '\0';
 
-    return (temperature);
 }
 
 char get_hall (void){
