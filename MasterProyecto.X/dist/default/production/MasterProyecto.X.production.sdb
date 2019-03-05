@@ -35,12 +35,12 @@
 [v _initOscilador initOscilador `(v  1 e 1 0 ]
 "8 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/UART.h
 [v _UART_Init UART_Init `(uc  1 e 1 0 ]
+"31
+[v _UART_TX_Empty UART_TX_Empty `(uc  1 e 1 0 ]
 "40
 [v _UART_Read UART_Read `(uc  1 e 1 0 ]
 "54
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
-"60
-[v _UART_Write_Text UART_Write_Text `(v  1 e 1 0 ]
 "5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
 "5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
@@ -67,19 +67,19 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "52 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _main main `(v  1 e 1 0 ]
-"139
+"164
 [v _setup setup `(v  1 e 1 0 ]
-"166
+"191
 [v _get_time get_time `(v  1 e 1 0 ]
-"202
+"227
 [v _get_temp get_temp `(v  1 e 1 0 ]
-"229
+"254
 [v _get_hall get_hall `(uc  1 e 1 0 ]
-"241
+"266
 [v _get_tripwire get_tripwire `(uc  1 e 1 0 ]
-"253
+"278
 [v _get_PIR get_PIR `(uc  1 e 1 0 ]
-"265
+"290
 [v _get_IR get_IR `(uc  1 e 1 0 ]
 "166 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -220,7 +220,7 @@
 "52
 [v _main main `(v  1 e 1 0 ]
 {
-"137
+"162
 } 0
 "33 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
@@ -234,10 +234,10 @@
 [v strcmp@s1 s1 `*.4DCuc  1 a 1 6 ]
 "42
 } 0
-"139 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+"164 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"152
+"177
 } 0
 "11 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
 [v _initOscilador initOscilador `(v  1 e 1 0 ]
@@ -292,40 +292,40 @@
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"241 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+"266 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _get_tripwire get_tripwire `(uc  1 e 1 0 ]
 {
-"243
+"268
 [v get_tripwire@trip trip `uc  1 a 1 7 ]
-"251
+"276
 } 0
-"166
+"191
 [v _get_time get_time `(v  1 e 1 0 ]
 {
 [v get_time@time_string time_string `*.4uc  1 a 1 wreg ]
-"168
+"193
 [v get_time@min min `uc  1 a 1 9 ]
 [v get_time@hour hour `uc  1 a 1 8 ]
-"166
+"191
 [v get_time@time_string time_string `*.4uc  1 a 1 wreg ]
-"170
+"195
 [v get_time@time_string time_string `*.4uc  1 a 1 10 ]
-"185
+"210
 } 0
-"202
+"227
 [v _get_temp get_temp `(v  1 e 1 0 ]
 {
 [v get_temp@temp_string temp_string `*.4uc  1 a 1 wreg ]
-"205
+"230
 [v get_temp@decimal decimal `[3]uc  1 a 3 16 ]
-"204
+"229
 [v get_temp@tempLSB tempLSB `uc  1 a 1 21 ]
 [v get_temp@tempMSB tempMSB `uc  1 a 1 19 ]
-"202
-[v get_temp@temp_string temp_string `*.4uc  1 a 1 wreg ]
-"207
-[v get_temp@temp_string temp_string `*.4uc  1 a 1 20 ]
 "227
+[v get_temp@temp_string temp_string `*.4uc  1 a 1 wreg ]
+"232
+[v get_temp@temp_string temp_string `*.4uc  1 a 1 20 ]
+"252
 } 0
 "8 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
 [v _strcat strcat `(*.4uc  1 e 1 0 ]
@@ -401,26 +401,26 @@
 {
 "51
 } 0
-"229 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+"254 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _get_hall get_hall `(uc  1 e 1 0 ]
 {
-"231
+"256
 [v get_hall@key key `uc  1 a 1 7 ]
-"239
+"264
 } 0
-"253
+"278
 [v _get_PIR get_PIR `(uc  1 e 1 0 ]
 {
-"255
+"280
 [v get_PIR@PIR PIR `uc  1 a 1 7 ]
-"263
+"288
 } 0
-"265
+"290
 [v _get_IR get_IR `(uc  1 e 1 0 ]
 {
-"267
+"292
 [v get_IR@IR IR `uc  1 a 1 7 ]
-"275
+"300
 } 0
 "65 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
@@ -452,25 +452,18 @@
 {
 "35
 } 0
-"60 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/UART.h
-[v _UART_Write_Text UART_Write_Text `(v  1 e 1 0 ]
-{
-[v UART_Write_Text@text text `*.4uc  1 a 1 wreg ]
-"62
-[v UART_Write_Text@i i `i  1 a 2 2 ]
-"60
-[v UART_Write_Text@text text `*.4uc  1 a 1 wreg ]
-"63
-[v UART_Write_Text@text text `*.4uc  1 a 1 4 ]
-"65
-} 0
-"54
+"54 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/UART.h
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
 {
 [v UART_Write@data data `uc  1 a 1 wreg ]
 [v UART_Write@data data `uc  1 a 1 wreg ]
 [v UART_Write@data data `uc  1 a 1 0 ]
 "58
+} 0
+"31
+[v _UART_TX_Empty UART_TX_Empty `(uc  1 e 1 0 ]
+{
+"34
 } 0
 "100 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]

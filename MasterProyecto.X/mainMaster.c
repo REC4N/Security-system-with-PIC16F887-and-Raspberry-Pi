@@ -38,7 +38,7 @@
 #include "Oscilador.h"
 #include "UART.h"
 
-char time[6], temp[6], door, trip, PIR, IR, state;
+char time[6], temp[6], door, trip, PIR, IR, state, sent;
 
 void setup (void);
 void write_RTC(char sec, char hour, char minutes, char day);
@@ -63,13 +63,38 @@ void main(void) {
         IR = get_IR();
         get_time(time);
         
-        UART_Write_Text(temp);
-        UART_Write_Text(time);
-        UART_Write(door);
-        UART_Write(trip);
-        UART_Write(PIR);
-        UART_Write(IR);
-        UART_Write('A');
+        if (UART_TX_Empty()){
+            UART_Write(temp[0]);
+            __delay_ms(1);
+            UART_Write(temp[1]);
+            __delay_ms(1);
+            UART_Write(temp[2]);
+            __delay_ms(1);
+            UART_Write(temp[3]);
+            __delay_ms(1);
+            UART_Write(temp[4]);
+            __delay_ms(1);
+            UART_Write(time[0]);
+            __delay_ms(1);
+            UART_Write(time[1]);
+            __delay_ms(1);
+            UART_Write(time[2]);
+            __delay_ms(1);
+            UART_Write(time[3]);
+            __delay_ms(1);
+            UART_Write(time[4]);
+            __delay_ms(1);
+            UART_Write(door);
+            __delay_ms(1);
+            UART_Write(trip);
+            __delay_ms(1);
+            UART_Write(PIR);
+            __delay_ms(1);
+            UART_Write(IR);
+            __delay_ms(1);
+            UART_Write('A');
+        }
+        
         
         //Si la temperatura es mayor a 23.50°C activa el relay, enciendiendo el ventilador
         if (strcmp(temp,"23.50") > 0){

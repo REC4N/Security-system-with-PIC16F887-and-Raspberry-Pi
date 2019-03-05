@@ -2988,7 +2988,7 @@ void UART_Write_Text(char *text)
 # 39 "mainMaster.c" 2
 
 
-char time[6], temp[6], door, trip, PIR, IR, state;
+char time[6], temp[6], door, trip, PIR, IR, state, sent;
 
 void setup (void);
 void write_RTC(char sec, char hour, char minutes, char day);
@@ -3013,13 +3013,38 @@ void main(void) {
         IR = get_IR();
         get_time(time);
 
-        UART_Write_Text(temp);
-        UART_Write_Text(time);
-        UART_Write(door);
-        UART_Write(trip);
-        UART_Write(PIR);
-        UART_Write(IR);
-        UART_Write('A');
+        if (UART_TX_Empty()){
+            UART_Write(temp[0]);
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            UART_Write(temp[1]);
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            UART_Write(temp[2]);
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            UART_Write(temp[3]);
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            UART_Write(temp[4]);
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            UART_Write(time[0]);
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            UART_Write(time[1]);
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            UART_Write(time[2]);
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            UART_Write(time[3]);
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            UART_Write(time[4]);
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            UART_Write(door);
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            UART_Write(trip);
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            UART_Write(PIR);
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            UART_Write(IR);
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            UART_Write('A');
+        }
+
 
 
         if (strcmp(temp,"23.50") > 0){
