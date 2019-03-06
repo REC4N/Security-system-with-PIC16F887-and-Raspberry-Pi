@@ -2988,7 +2988,8 @@ void UART_Write_Text(char *text)
 # 39 "mainMaster.c" 2
 
 
-char time[6] = {0}, temp[6] = {0}, door, trip, PIR, IR, state, sent, day1, *day2, j, change;
+char time[6] = {0}, temp[6] = {0}, newtime[6], *day2, *newday2;
+char door, trip, PIR, IR, state, day1, i, j, change, newday;
 
 void setup (void);
 void write_RTC(char sec, char hour, char minutes, char day);
@@ -3092,7 +3093,11 @@ void main(void) {
             if (change == 0){
                 state++;
                 Lcd_Clear();
-                if (state > 2){
+                if (state == 3){
+                    newday = get_day();
+                    get_time(newtime);
+                }
+                if (state > 3){
                     state = 0;
                 }
                 while(j < 50){
@@ -3150,6 +3155,39 @@ void main(void) {
             } else {
                 Lcd_Write_String("IR OFF");
             }
+        } else if (state == 3){
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("HORA: ");
+            Lcd_Write_String(newtime);
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_String("DIA: ");
+            switch(newday){
+                case 1:
+                    newday2 = "LUNES    ";
+                    break;
+                case 2:
+                    newday2 = "MARTES   ";
+                    break;
+                case 3:
+                    newday2 = "MIERCOLES";
+                    break;
+                case 4:
+                    newday2 = "JUEVES   ";
+                    break;
+                case 5:
+                    newday2 = "VIERNES  ";
+                    break;
+                case 6:
+                    newday2 = "SABADO   ";
+                    break;
+                case 7:
+                    newday2 = "DOMINGO  ";
+                    break;
+                default:
+                    newday2 = "         ";
+                    break;
+            }
+            Lcd_Write_String(newday2);
         }
     }
 }
@@ -3160,11 +3198,12 @@ void setup (void){
     ANSEL = 0;
     TRISB = 0;
     TRISA = 0;
-    TRISD = 0;
+    TRISD = 15;
     PORTB = 0;
     PORTA = 0;
     TRISC = 0x01;
     PORTC = 0;
+    i = 0;
     door = 0;
     trip = 0;
     IR = 0;

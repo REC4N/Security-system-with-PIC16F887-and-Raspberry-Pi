@@ -28,14 +28,14 @@
 
 
 void setup(void);
-char val;
+char val, received;
 
 void __interrupt() isr(void){
    if(SSPIF == 1){
         val = spiRead();
-        PORTD = val;
-        spiWrite(val);
-        PORTEbits.RE0 = ~PORTEbits.RE0;
+        //__delay_us(200);
+        spiWrite(PORTB);
+        PORTDbits.RD0 = ~PORTDbits.RD0;
         SSPIF = 0;
     }
 }
@@ -49,19 +49,22 @@ void main(void) {
 }
 
 void setup(void){
-    initOscilador(7);
+    OSCCONbits.IRCF0 = 1;       // Oscillator is configured to 8 MHz.
+    OSCCONbits.IRCF1 = 1;
+    OSCCONbits.IRCF2 = 1;
+    OSCCONbits.SCS = 1;  
+    val = 0;
     ANSELH = 0;
     TRISB = 0;
     PORTB = 0;
     ANSEL = 0;
     TRISD = 0;
     PORTD = 0;
-    TRISA5 = 1;       // Slave Select
-    TRISE0 = 0;
-    PORTEbits.RE0 = 0;
+    TRISAbits.TRISA5 = 1;       // Slave Select
+    TRISCbits.TRISC3 = 1; 
     INTCONbits.GIE = 1;         // Habilitamos interrupciones
     INTCONbits.PEIE = 1;        // Habilitamos interrupciones PEIE
-    PIR1bits.SSPIF = 0;         // Borramos bandera interrupción MSSP
-    PIE1bits.SSPIE = 1;         // Habilitamos interrupción MSSP
+    PIR1bits.SSPIF = 0;         // Borramos bandera interrupci�n MSSP
+    PIE1bits.SSPIE = 1;         // MSSP interruption is enabled.
     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }

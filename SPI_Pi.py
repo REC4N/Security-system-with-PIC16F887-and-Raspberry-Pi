@@ -5,29 +5,24 @@ import sys
 import time
 import RPi.GPIO as GPIO
 
-spi = spidev.SpiDev(0, 0)
-spi.mode = 2
-spi.max_speed_hz = 7629
+spi = spidev.SpiDev()
+spi.open(0, 0)
+spi.mode = 0b01
+spi.max_speed_hz = 1953000
+spi.cshigh = False
+spi.bits_per_word = 8
 
+try:
 
-def readPIC():
-    r = spi.xfer2([0x00])
-    return r
+    while True:
 
+        val = spi.xfer2([0x00])
+        print("Numero recibido fue: " + str(val))
+        time.sleep(1)
 
-if __name__ == '__main__':
-    try:
+except KeyboardInterrupt:
+    spi.close()
+    sys.exit(0)
 
-        while True:
-
-            cont = spi.xfer2([0x03])
-            print("Numero recibido fue: " + str(cont))
-
-            time.sleep(0.5)
-
-    except KeyboardInterrupt:
-        spi.close()
-        sys.exit(0)
-
-    finally:
-        GPIO.cleanup()
+finally:
+    GPIO.cleanup()
