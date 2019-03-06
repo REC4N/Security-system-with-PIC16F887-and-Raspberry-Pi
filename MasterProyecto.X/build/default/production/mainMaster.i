@@ -2656,8 +2656,8 @@ void I2C_Master_Init(const unsigned long c)
     SSPCON2 = 0;
     SSPADD = (8000000/(4*c))-1;
     SSPSTAT = 0;
-    TRISC3 = 1;
-    TRISC4 = 1;
+    TRISCbits.TRISC3 = 1;
+    TRISCbits.TRISC4 = 1;
 }
 
 
@@ -2988,11 +2988,12 @@ void UART_Write_Text(char *text)
 # 39 "mainMaster.c" 2
 
 
-char time[6], temp[6], door, trip, PIR, IR, state, sent;
+char time[6] = {0}, temp[6] = {0}, door, trip, PIR, IR, state, sent, day1, *day2, j, change;
 
 void setup (void);
 void write_RTC(char sec, char hour, char minutes, char day);
 void get_time(char *time_string);
+char get_day(void);
 void get_temp(char *temp_string);
 char get_hall(void);
 char get_tripwire (void);
@@ -3006,12 +3007,19 @@ void main(void) {
 
     while (1) {
 
+        RCSTAbits.SPEN = 0;
+        SSPCONbits.SSPEN = 1;
+
         get_temp(temp);
         door = get_hall();
         trip = get_tripwire();
         PIR = get_PIR();
         IR = get_IR();
         get_time(time);
+        day1 = get_day();
+
+        SSPCONbits.SSPEN = 0;
+        RCSTAbits.SPEN = 1;
 
         if (UART_TX_Empty()){
             UART_Write(temp[0]);
@@ -3045,6 +3053,32 @@ void main(void) {
             UART_Write('A');
         }
 
+        switch(day1){
+            case 1:
+                day2 = "LUNES    ";
+                break;
+            case 2:
+                day2 = "MARTES   ";
+                break;
+            case 3:
+                day2 = "MIERCOLES";
+                break;
+            case 4:
+                day2 = "JUEVES   ";
+                break;
+            case 5:
+                day2 = "VIERNES  ";
+                break;
+            case 6:
+                day2 = "SABADO   ";
+                break;
+            case 7:
+                day2 = "DOMINGO  ";
+                break;
+            default:
+                day2 = "         ";
+                break;
+        }
 
 
         if (strcmp(temp,"23.50") > 0){
@@ -3055,12 +3089,20 @@ void main(void) {
 
 
         if(PORTCbits.RC0 == 1){
-            state++;
-            if (state > 2){
-                state = 0;
+            if (change == 0){
+                state++;
+                Lcd_Clear();
+                if (state > 2){
+                    state = 0;
+                }
+                while(j < 50){
+                    j++;
+                }
+                j = 0;
+                change = 1;
             }
-            Lcd_Clear();
-            while(PORTCbits.RC0 == 1);
+        } else {
+            change =0;
         }
 
 
@@ -3068,6 +3110,9 @@ void main(void) {
 
             Lcd_Set_Cursor(1,1);
             Lcd_Write_String(time);
+
+            Lcd_Set_Cursor(1,7);
+            Lcd_Write_String(day2);
 
             Lcd_Set_Cursor(2,1);
             Lcd_Write_String(temp);
@@ -3106,8 +3151,6 @@ void main(void) {
                 Lcd_Write_String("IR OFF");
             }
         }
-
-
     }
 }
 
@@ -3117,10 +3160,15 @@ void setup (void){
     ANSEL = 0;
     TRISB = 0;
     TRISA = 0;
+    TRISD = 0;
     PORTB = 0;
     PORTA = 0;
     TRISC = 0x01;
     PORTC = 0;
+    door = 0;
+    trip = 0;
+    IR = 0;
+    PIR = 0;
     Lcd_Init();
     UART_Init(9600);
     I2C_Master_Init(100000);
@@ -3161,17 +3209,17 @@ void get_time (char *time_string){
 
 char get_day(void){
 
-    char day;
+    char d;
 
     I2C_Master_Start();
     I2C_Master_Write(0xD0);
     I2C_Master_Write(0x03);
     I2C_Master_RepeatedStart();
     I2C_Master_Write(0xD1);
-    day = I2C_Master_Read(0);
+    d = I2C_Master_Read(0);
     I2C_Master_Stop();
 
-    return (day);
+    return d;
 }
 
 void get_temp(char *temp_string){

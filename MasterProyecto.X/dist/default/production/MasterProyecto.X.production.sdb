@@ -65,25 +65,27 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"52 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+"53 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _main main `(v  1 e 1 0 ]
-"164
+"207
 [v _setup setup `(v  1 e 1 0 ]
-"191
+"239
 [v _get_time get_time `(v  1 e 1 0 ]
-"227
+"260
+[v _get_day get_day `(uc  1 e 1 0 ]
+"275
 [v _get_temp get_temp `(v  1 e 1 0 ]
-"254
+"302
 [v _get_hall get_hall `(uc  1 e 1 0 ]
-"266
+"314
 [v _get_tripwire get_tripwire `(uc  1 e 1 0 ]
-"278
+"326
 [v _get_PIR get_PIR `(uc  1 e 1 0 ]
-"290
+"338
 [v _get_IR get_IR `(uc  1 e 1 0 ]
 "166 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
-[s S156 . 1 `uc 1 RA0 1 0 :1:0 
+[s S251 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -93,11 +95,11 @@
 `uc 1 RA7 1 0 :1:7 
 ]
 "183
-[u S165 . 1 `S156 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES165  1 e 1 @5 ]
+[u S260 . 1 `S251 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES260  1 e 1 @5 ]
 "228
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S55 . 1 `uc 1 RB0 1 0 :1:0 
+[s S76 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -107,11 +109,11 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "245
-[u S64 . 1 `S55 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES64  1 e 1 @6 ]
+[u S85 . 1 `S76 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES85  1 e 1 @6 ]
 "290
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
-[s S177 . 1 `uc 1 RC0 1 0 :1:0 
+[s S272 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -121,12 +123,48 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "307
-[u S186 . 1 `S177 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES186  1 e 1 @7 ]
+[u S281 . 1 `S272 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES281  1 e 1 @7 ]
 "843
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+[s S189 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"870
+[s S195 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S200 . 1 `S189 1 . 1 0 `S195 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES200  1 e 1 @20 ]
+[s S145 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"1068
+[s S154 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S158 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S161 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S164 . 1 `S145 1 . 1 0 `S154 1 . 1 0 `S158 1 . 1 0 `S161 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES164  1 e 1 @24 ]
 "1133
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1140
@@ -137,23 +175,37 @@
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1540
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
-[s S82 . 1 `uc 1 SCS 1 0 :1:0 
+[s S26 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1557
+[u S35 . 1 `S26 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES35  1 e 1 @135 ]
+"1602
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+[s S103 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1882
-[s S88 . 1 `uc 1 . 1 0 :4:0 
+[s S109 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S93 . 1 `S82 1 . 1 0 `S88 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES93  1 e 1 @143 ]
+[u S114 . 1 `S103 1 . 1 0 `S109 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES114  1 e 1 @143 ]
 "1979
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
-[s S28 . 1 `uc 1 SEN 1 0 :1:0 
+[s S47 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -163,8 +215,8 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "1996
-[u S37 . 1 `S28 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES37  1 e 1 @145 ]
+[u S56 . 1 `S47 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES56  1 e 1 @145 ]
 "2048
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "2177
@@ -217,10 +269,14 @@
 [v _PIR PIR `uc  1 e 1 0 ]
 [v _IR IR `uc  1 e 1 0 ]
 [v _state state `uc  1 e 1 0 ]
-"52
+[v _day1 day1 `uc  1 e 1 0 ]
+[v _day2 day2 `*.24uc  1 e 1 0 ]
+[v _j j `uc  1 e 1 0 ]
+[v _change change `uc  1 e 1 0 ]
+"53
 [v _main main `(v  1 e 1 0 ]
 {
-"162
+"205
 } 0
 "33 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
@@ -234,10 +290,10 @@
 [v strcmp@s1 s1 `*.4DCuc  1 a 1 6 ]
 "42
 } 0
-"164 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+"207 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"177
+"225
 } 0
 "11 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
 [v _initOscilador initOscilador `(v  1 e 1 0 ]
@@ -292,40 +348,40 @@
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"266 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+"314 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _get_tripwire get_tripwire `(uc  1 e 1 0 ]
 {
-"268
+"316
 [v get_tripwire@trip trip `uc  1 a 1 7 ]
-"276
+"324
 } 0
-"191
+"239
 [v _get_time get_time `(v  1 e 1 0 ]
 {
 [v get_time@time_string time_string `*.4uc  1 a 1 wreg ]
-"193
+"241
 [v get_time@min min `uc  1 a 1 9 ]
 [v get_time@hour hour `uc  1 a 1 8 ]
-"191
+"239
 [v get_time@time_string time_string `*.4uc  1 a 1 wreg ]
-"195
+"243
 [v get_time@time_string time_string `*.4uc  1 a 1 10 ]
-"210
+"258
 } 0
-"227
+"275
 [v _get_temp get_temp `(v  1 e 1 0 ]
 {
 [v get_temp@temp_string temp_string `*.4uc  1 a 1 wreg ]
-"230
+"278
 [v get_temp@decimal decimal `[3]uc  1 a 3 16 ]
-"229
+"277
 [v get_temp@tempLSB tempLSB `uc  1 a 1 21 ]
 [v get_temp@tempMSB tempMSB `uc  1 a 1 19 ]
-"227
+"275
 [v get_temp@temp_string temp_string `*.4uc  1 a 1 wreg ]
-"232
+"280
 [v get_temp@temp_string temp_string `*.4uc  1 a 1 20 ]
-"252
+"300
 } 0
 "8 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
 [v _strcat strcat `(*.4uc  1 e 1 0 ]
@@ -396,31 +452,38 @@
 [v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
 "51
 } 0
+"302 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+[v _get_hall get_hall `(uc  1 e 1 0 ]
+{
+"304
+[v get_hall@key key `uc  1 a 1 7 ]
+"312
+} 0
+"260
+[v _get_day get_day `(uc  1 e 1 0 ]
+{
+"262
+[v get_day@d d `uc  1 a 1 7 ]
+"273
+} 0
 "47 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 [v _I2C_Master_RepeatedStart I2C_Master_RepeatedStart `(v  1 e 1 0 ]
 {
 "51
 } 0
-"254 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-[v _get_hall get_hall `(uc  1 e 1 0 ]
-{
-"256
-[v get_hall@key key `uc  1 a 1 7 ]
-"264
-} 0
-"278
+"326 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _get_PIR get_PIR `(uc  1 e 1 0 ]
 {
-"280
+"328
 [v get_PIR@PIR PIR `uc  1 a 1 7 ]
-"288
+"336
 } 0
-"290
+"338
 [v _get_IR get_IR `(uc  1 e 1 0 ]
 {
-"292
+"340
 [v get_IR@IR IR `uc  1 a 1 7 ]
-"300
+"348
 } 0
 "65 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]

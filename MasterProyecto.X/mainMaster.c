@@ -38,11 +38,13 @@
 #include "Oscilador.h"
 #include "UART.h"
 
-char time[6], temp[6], door, trip, PIR, IR, state, sent;
+char time[6] = {0}, temp[6] = {0}, newtime[6], *day2, *newday2;
+char door, trip, PIR, IR, state, day1, i, j, change, newday;
 
 void setup (void);
 void write_RTC(char sec, char hour, char minutes, char day);
 void get_time(char *time_string);
+char get_day(void);
 void get_temp(char *temp_string);
 char get_hall(void);
 char get_tripwire (void);
@@ -56,12 +58,19 @@ void main(void) {
     //write_RTC(0x00, 0x21, 0x50, 0x07);
     while (1) {
         //Obtener la información de los esclavos de la red I2C
+        RCSTAbits.SPEN = 0;
+        SSPCONbits.SSPEN = 1;
+        
         get_temp(temp);
         door = get_hall();
         trip = get_tripwire();
         PIR = get_PIR();
         IR = get_IR();
         get_time(time);
+        day1 = get_day();
+        
+        SSPCONbits.SSPEN = 0;
+        RCSTAbits.SPEN = 1;
         
         if (UART_TX_Empty()){
             UART_Write(temp[0]);
@@ -95,8 +104,34 @@ void main(void) {
             UART_Write('A');
         }
         
+        switch(day1){
+            case 1:
+                day2 = "LUNES    ";
+                break;
+            case 2:
+                day2 = "MARTES   ";
+                break;
+            case 3:
+                day2 = "MIERCOLES";
+                break;
+            case 4:
+                day2 = "JUEVES   ";
+                break;
+            case 5:
+                day2 = "VIERNES  ";
+                break;
+            case 6:
+                day2 = "SABADO   ";
+                break;
+            case 7:
+                day2 = "DOMINGO  ";
+                break;
+            default:
+                day2 = "         ";
+                break;  
+        }
         
-        //Si la temperatura es mayor a 23.50°C activa el relay, enciendiendo el ventilador
+        //Si la temperatura es mayor a 23.50°C activa el relay, encendiendo el ventilador
         if (strcmp(temp,"23.50") > 0){
             PORTAbits.RA0 = 1;
         } else {
@@ -105,12 +140,24 @@ void main(void) {
         
         //Cambia el estado para mostrar los diferentes sensores en la LCD
         if(PORTCbits.RC0 == 1){
-            state++;
-            if (state > 2){
-                state = 0;
+            if (change == 0){
+                state++;
+                Lcd_Clear();
+                if (state == 3){
+                    newday = get_day();
+                    get_time(newtime);
+                }
+                if (state > 3){
+                    state = 0;
+                }
+                while(j < 50){
+                    j++;
+                }
+                j = 0;
+                change = 1;
             }
-            Lcd_Clear();
-            while(PORTCbits.RC0 == 1);
+        } else {
+            change =0;
         }
         
         
@@ -118,6 +165,9 @@ void main(void) {
             //Muestra la hora y la temperatura del banco
             Lcd_Set_Cursor(1,1);
             Lcd_Write_String(time);
+            
+            Lcd_Set_Cursor(1,7);
+            Lcd_Write_String(day2);
             
             Lcd_Set_Cursor(2,1);
             Lcd_Write_String(temp);
@@ -155,9 +205,40 @@ void main(void) {
             } else {
                 Lcd_Write_String("IR OFF");
             }
+        } else if (state == 3){
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("HORA: ");
+            Lcd_Write_String(newtime);
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_String("DIA: ");
+            switch(newday){
+                case 1:
+                    newday2 = "LUNES    ";
+                    break;
+                case 2:
+                    newday2 = "MARTES   ";
+                    break;
+                case 3:
+                    newday2 = "MIERCOLES";
+                    break;
+                case 4:
+                    newday2 = "JUEVES   ";
+                    break;
+                case 5:
+                    newday2 = "VIERNES  ";
+                    break;
+                case 6:
+                    newday2 = "SABADO   ";
+                    break;
+                case 7:
+                    newday2 = "DOMINGO  ";
+                    break;
+                default:
+                    newday2 = "         ";
+                    break;  
+            }
+            Lcd_Write_String(newday2);
         }
-        
-        
     }  
 }
 
@@ -167,10 +248,16 @@ void setup (void){
     ANSEL = 0;                  //Puerto A digital
     TRISB = 0;                  //PORTB como output
     TRISA = 0;                  //PORTA como output
+    TRISD = 15;
     PORTB = 0;                  //Inicializar puertos
     PORTA = 0;
     TRISC = 0x01;               //RC0 como input
     PORTC = 0;
+    i = 0;
+    door = 0;
+    trip = 0;
+    IR = 0;
+    PIR = 0;
     Lcd_Init();                 //Inicializar LCD
     UART_Init(9600);            //Inicializa la comunicación UART
     I2C_Master_Init(100000);        // Inicializar Comuncación I2C
@@ -211,17 +298,17 @@ void get_time (char *time_string){
 
 char get_day(void){
     //Obtiene día del DS3231. 1 es lunes, 2 martes, etc.
-    char day;
+    char d;
     
     I2C_Master_Start();
     I2C_Master_Write(0xD0);
     I2C_Master_Write(0x03);         
     I2C_Master_RepeatedStart();     
     I2C_Master_Write(0xD1);
-    day = I2C_Master_Read(0);            
+    d = I2C_Master_Read(0);            
     I2C_Master_Stop();
     
-    return (day);
+    return d;
 }
 
 void get_temp(char *temp_string){

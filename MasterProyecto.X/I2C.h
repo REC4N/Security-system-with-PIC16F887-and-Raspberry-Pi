@@ -19,8 +19,8 @@ void I2C_Master_Init(const unsigned long c)
     SSPCON2 = 0;
     SSPADD = (_XTAL_FREQ/(4*c))-1;
     SSPSTAT = 0;
-    TRISC3 = 1;
-    TRISC4 = 1;
+    TRISCbits.TRISC3 = 1;
+    TRISCbits.TRISC4 = 1;
 }
 //*****************************************************************************
 // Función de espera: mientras se esté iniciada una comunicación,
