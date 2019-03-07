@@ -30,9 +30,19 @@
 #define _XTAL_FREQ 8000000
 #include <xc.h>
 #include "I2C.h"
+#include <stdio.h>
+
+#define speed 1 // Speed Range 10 to 1  10 = lowest , 1 = highest
+#define steps 250 // how much step it will take
+#define clockwise 0 // clockwise direction macro
+#define anti_clockwise 1 // anti clockwise direction macro
+
 char z, key, ADC, cont, val;
 
 void setup (void);
+void system_init (void); // This function will initialise the ports.
+void full_drive (char direction); // This function will drive the motor in full drive mode
+void delay(unsigned int val);
 
 #define _XTAL_FREQ 8000000      // Frecuencia de oscilacion de 1 Mhz
 
@@ -91,19 +101,65 @@ void main(void) {
     ANSEL = 0;                  // Se pone PORTA como salida digital
     ANSELH = 0;
     INTCONbits.GIE = 1;
+    system_init();
     I2C_Slave_Init(0x20);
     
     while(1){
         if (PORTBbits.RB1 == 0){
             PORTAbits.RA0 = 1;
             key = 1;
-            __delay_ms(250);
-            PORTAbits.RA0 = 0;
+
             
         }
         
         else{
              key = 0;
         }
+        if (val == 1){
+            for(int i=0;i<steps;i++){
+                full_drive(clockwise);
+            }
+        }
     }
+}
+
+void system_init (void){
+    ANSELH = 0;
+    TRISB = 0x00;     // PORT B as output port
+    PORTB = 0x0F;
+}
+
+void full_drive (char direction){
+    if (direction == anti_clockwise){
+        PORTB = 0b00000011;
+        delay(speed);
+        PORTB = 0b00000110;
+        delay(speed);
+        PORTB = 0b00001100;
+        delay(speed);
+        PORTB = 0b00001001;
+        delay(speed);
+        PORTB = 0b00000011;
+        delay(speed);
+    }
+    if (direction == clockwise){
+        PORTB = 0b00001001;
+        delay(speed);
+        PORTB = 0b00001100;
+        delay(speed);
+        PORTB = 0b00000110;
+        delay(speed);
+        PORTB = 0b00000011;
+        delay(speed);
+        PORTB = 0b00001001;
+        delay(speed);
+    }
+        
+}
+
+void delay(unsigned int val)
+{
+     unsigned int i,j;
+        for(i=0;i<val;i++)
+            for(j=0;j<250;j++);
 }
