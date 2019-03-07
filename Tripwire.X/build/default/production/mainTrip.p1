@@ -152,22 +152,51 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1416
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 1416: extern volatile unsigned char TRISA __attribute__((address(0x085)));
 [v _TRISA `Vuc ~T0 @X0 0 e@133 ]
-"1478
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
-[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1602
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 1602: extern volatile unsigned char TRISD __attribute__((address(0x088)));
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
 "3387
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
 "3449
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 3449: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
 [v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"465
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 465:     struct {
+[s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S16 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
+"475
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 475:     struct {
+[s S17 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S17 . . TMR0IF . TMR0IE ]
+"464
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 464: typedef union {
+[u S15 `S16 1 `S17 1 ]
+[n S15 . . . ]
+"482
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 482: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
 "43 mainTrip.c
 [; ;mainTrip.c: 43: void system_init (void);
 [v _system_init `(v ~T0 @X0 0 ef ]
-"44
+"358 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 358:     struct {
+[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S12 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"357
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 357: typedef union {
+[u S11 `S12 1 ]
+[n S11 . . ]
+"369
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 369: extern volatile PORTDbits_t PORTDbits __attribute__((address(0x008)));
+[v _PORTDbits `VS11 ~T0 @X0 0 e@8 ]
+"44 mainTrip.c
 [; ;mainTrip.c: 44: void full_drive (char direction);
 [v _full_drive `(v ~T0 @X0 0 ef1`uc ]
-"45
+"1478 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"45 mainTrip.c
 [; ;mainTrip.c: 45: void delay(unsigned int val);
 [v _delay `(v ~T0 @X0 0 ef1`ui ]
 "13 mainTrip.c
@@ -812,36 +841,67 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mainTrip.c: 99:     TRISA = 0;
 [e = _TRISA -> -> 0 `i `uc ]
 "100
-[; ;mainTrip.c: 100:     TRISB = 0x02;
-[e = _TRISB -> -> 2 `i `uc ]
+[; ;mainTrip.c: 100:     TRISD = 0x02;
+[e = _TRISD -> -> 2 `i `uc ]
 "101
 [; ;mainTrip.c: 101:     ANSEL = 0;
 [e = _ANSEL -> -> 0 `i `uc ]
 "102
 [; ;mainTrip.c: 102:     ANSELH = 0;
 [e = _ANSELH -> -> 0 `i `uc ]
+"103
+[; ;mainTrip.c: 103:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "104
 [; ;mainTrip.c: 104:     system_init();
 [e ( _system_init ..  ]
 "105
-[; ;mainTrip.c: 105:     val = 1;
-[e = _val -> -> 1 `i `uc ]
+[; ;mainTrip.c: 105:     val = 0;
+[e = _val -> -> 0 `i `uc ]
+"106
+[; ;mainTrip.c: 106:     I2C_Slave_Init(0x20);
+[e ( _I2C_Slave_Init (1 -> -> 32 `i `s ]
 "108
 [; ;mainTrip.c: 108:     while(1){
 [e :U 166 ]
 {
+"109
+[; ;mainTrip.c: 109:         if (PORTDbits.RD1 == 0){
+[e $ ! == -> . . _PORTDbits 0 1 `i -> 0 `i 168  ]
+{
+"110
+[; ;mainTrip.c: 110:             PORTAbits.RA0 = 1;
+[e = . . _PORTAbits 0 0 -> -> 1 `i `uc ]
+"111
+[; ;mainTrip.c: 111:             key = 1;
+[e = _key -> -> 1 `i `uc ]
+"114
+[; ;mainTrip.c: 114:         }
+}
+[e $U 169  ]
+"116
+[; ;mainTrip.c: 116:         else{
+[e :U 168 ]
+{
+"117
+[; ;mainTrip.c: 117:              key = 0;
+[e = _key -> -> 0 `i `uc ]
+"118
+[; ;mainTrip.c: 118:         }
+}
+[e :U 169 ]
 "119
-[; ;mainTrip.c: 119:         if (val == 1){
-[e $ ! == -> _val `i -> 1 `i 168  ]
+[; ;mainTrip.c: 119:         if (val == 255){
+[e $ ! == -> _val `i -> 255 `i 170  ]
 {
 "120
 [; ;mainTrip.c: 120:             for(int i=0;i<1000;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 1000 `i 169  ]
-[e $U 170  ]
-[e :U 169 ]
+[e $ < _i -> 1000 `i 171  ]
+[e $U 172  ]
+[e :U 171 ]
 {
 "121
 [; ;mainTrip.c: 121:                 full_drive(0);
@@ -850,172 +910,202 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mainTrip.c: 122:             }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 1000 `i 169  ]
-[e :U 170 ]
+[e $ < _i -> 1000 `i 171  ]
+[e :U 172 ]
 }
 "123
-[; ;mainTrip.c: 123:             val = 2;
-[e = _val -> -> 2 `i `uc ]
+[; ;mainTrip.c: 123:             val = 0;
+[e = _val -> -> 0 `i `uc ]
 "124
 [; ;mainTrip.c: 124:         }
 }
-[e :U 168 ]
+[e :U 170 ]
 "125
-[; ;mainTrip.c: 125:     }
+[; ;mainTrip.c: 125:         if (val == 128){
+[e $ ! == -> _val `i -> 128 `i 174  ]
+{
+"126
+[; ;mainTrip.c: 126:             for(int i=0;i<1000;i++){
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 1000 `i 175  ]
+[e $U 176  ]
+[e :U 175 ]
+{
+"127
+[; ;mainTrip.c: 127:                 full_drive(1);
+[e ( _full_drive (1 -> -> 1 `i `uc ]
+"128
+[; ;mainTrip.c: 128:             }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 1000 `i 175  ]
+[e :U 176 ]
+}
+"129
+[; ;mainTrip.c: 129:             val = 0;
+[e = _val -> -> 0 `i `uc ]
+"130
+[; ;mainTrip.c: 130:         }
+}
+[e :U 174 ]
+"131
+[; ;mainTrip.c: 131:         }
 }
 [e :U 165 ]
 [e $U 166  ]
 [e :U 167 ]
-"126
-[; ;mainTrip.c: 126: }
+"132
+[; ;mainTrip.c: 132:     }
 [e :UE 164 ]
 }
-"128
-[; ;mainTrip.c: 128: void system_init (void){
+"135
+[; ;mainTrip.c: 135: void system_init (void){
 [v _system_init `(v ~T0 @X0 1 ef ]
 {
 [e :U _system_init ]
 [f ]
-"129
-[; ;mainTrip.c: 129:     ANSELH = 0;
+"136
+[; ;mainTrip.c: 136:     ANSELH = 0;
 [e = _ANSELH -> -> 0 `i `uc ]
-"130
-[; ;mainTrip.c: 130:     TRISB = 0x00;
+"137
+[; ;mainTrip.c: 137:     TRISB = 0x00;
 [e = _TRISB -> -> 0 `i `uc ]
-"131
-[; ;mainTrip.c: 131:     PORTB = 0x0F;
+"138
+[; ;mainTrip.c: 138:     PORTB = 0x0F;
 [e = _PORTB -> -> 15 `i `uc ]
-"132
-[; ;mainTrip.c: 132: }
-[e :UE 172 ]
+"139
+[; ;mainTrip.c: 139: }
+[e :UE 178 ]
 }
-"134
-[; ;mainTrip.c: 134: void full_drive (char direction){
+"141
+[; ;mainTrip.c: 141: void full_drive (char direction){
 [v _full_drive `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _full_drive ]
 [v _direction `uc ~T0 @X0 1 r1 ]
 [f ]
-"135
-[; ;mainTrip.c: 135:     if (direction == 1){
-[e $ ! == -> _direction `i -> 1 `i 174  ]
-{
-"136
-[; ;mainTrip.c: 136:         PORTB = 0b00000011;
-[e = _PORTB -> -> 3 `i `uc ]
-"137
-[; ;mainTrip.c: 137:         delay(1);
-[e ( _delay (1 -> -> 1 `i `ui ]
-"138
-[; ;mainTrip.c: 138:         PORTB = 0b00000110;
-[e = _PORTB -> -> 6 `i `uc ]
-"139
-[; ;mainTrip.c: 139:         delay(1);
-[e ( _delay (1 -> -> 1 `i `ui ]
-"140
-[; ;mainTrip.c: 140:         PORTB = 0b00001100;
-[e = _PORTB -> -> 12 `i `uc ]
-"141
-[; ;mainTrip.c: 141:         delay(1);
-[e ( _delay (1 -> -> 1 `i `ui ]
 "142
-[; ;mainTrip.c: 142:         PORTB = 0b00001001;
-[e = _PORTB -> -> 9 `i `uc ]
+[; ;mainTrip.c: 142:     if (direction == 1){
+[e $ ! == -> _direction `i -> 1 `i 180  ]
+{
 "143
-[; ;mainTrip.c: 143:         delay(1);
-[e ( _delay (1 -> -> 1 `i `ui ]
+[; ;mainTrip.c: 143:         PORTB = 0b00000011;
+[e = _PORTB -> -> 3 `i `uc ]
 "144
-[; ;mainTrip.c: 144:         PORTB = 0b00000011;
-[e = _PORTB -> -> 3 `i `uc ]
+[; ;mainTrip.c: 144:         delay(1);
+[e ( _delay (1 -> -> 1 `i `ui ]
 "145
-[; ;mainTrip.c: 145:         delay(1);
-[e ( _delay (1 -> -> 1 `i `ui ]
-"146
-[; ;mainTrip.c: 146:     }
-}
-[e :U 174 ]
-"147
-[; ;mainTrip.c: 147:     if (direction == 0){
-[e $ ! == -> _direction `i -> 0 `i 175  ]
-{
-"148
-[; ;mainTrip.c: 148:         PORTB = 0b00001001;
-[e = _PORTB -> -> 9 `i `uc ]
-"149
-[; ;mainTrip.c: 149:         delay(1);
-[e ( _delay (1 -> -> 1 `i `ui ]
-"150
-[; ;mainTrip.c: 150:         PORTB = 0b00001100;
-[e = _PORTB -> -> 12 `i `uc ]
-"151
-[; ;mainTrip.c: 151:         delay(1);
-[e ( _delay (1 -> -> 1 `i `ui ]
-"152
-[; ;mainTrip.c: 152:         PORTB = 0b00000110;
+[; ;mainTrip.c: 145:         PORTB = 0b00000110;
 [e = _PORTB -> -> 6 `i `uc ]
-"153
-[; ;mainTrip.c: 153:         delay(1);
+"146
+[; ;mainTrip.c: 146:         delay(1);
 [e ( _delay (1 -> -> 1 `i `ui ]
-"154
-[; ;mainTrip.c: 154:         PORTB = 0b00000011;
-[e = _PORTB -> -> 3 `i `uc ]
-"155
-[; ;mainTrip.c: 155:         delay(1);
+"147
+[; ;mainTrip.c: 147:         PORTB = 0b00001100;
+[e = _PORTB -> -> 12 `i `uc ]
+"148
+[; ;mainTrip.c: 148:         delay(1);
 [e ( _delay (1 -> -> 1 `i `ui ]
-"156
-[; ;mainTrip.c: 156:         PORTB = 0b00001001;
+"149
+[; ;mainTrip.c: 149:         PORTB = 0b00001001;
 [e = _PORTB -> -> 9 `i `uc ]
-"157
-[; ;mainTrip.c: 157:         delay(1);
+"150
+[; ;mainTrip.c: 150:         delay(1);
 [e ( _delay (1 -> -> 1 `i `ui ]
-"158
-[; ;mainTrip.c: 158:     }
+"151
+[; ;mainTrip.c: 151:         PORTB = 0b00000011;
+[e = _PORTB -> -> 3 `i `uc ]
+"152
+[; ;mainTrip.c: 152:         delay(1);
+[e ( _delay (1 -> -> 1 `i `ui ]
+"153
+[; ;mainTrip.c: 153:     }
 }
-[e :U 175 ]
-"160
-[; ;mainTrip.c: 160: }
-[e :UE 173 ]
-}
-"162
-[; ;mainTrip.c: 162: void delay(unsigned int val)
-[v _delay `(v ~T0 @X0 1 ef1`ui ]
-"163
-[; ;mainTrip.c: 163: {
-{
-[e :U _delay ]
-"162
-[; ;mainTrip.c: 162: void delay(unsigned int val)
-[v _val `ui ~T0 @X0 1 r1 ]
-"163
-[; ;mainTrip.c: 163: {
-[f ]
-"164
-[; ;mainTrip.c: 164:      unsigned int i,j;
-[v _i `ui ~T0 @X0 1 a ]
-[v _j `ui ~T0 @X0 1 a ]
-"165
-[; ;mainTrip.c: 165:         for(i=0;i<val;i++)
-{
-[e = _i -> -> 0 `i `ui ]
-[e $U 180  ]
-[e :U 177 ]
-"166
-[; ;mainTrip.c: 166:             for(j=0;j<250;j++);
-{
-[e = _j -> -> 0 `i `ui ]
-[e $ < _j -> -> 250 `i `ui 181  ]
-[e $U 182  ]
-[e :U 181 ]
-[e ++ _j -> -> 1 `i `ui ]
-[e $ < _j -> -> 250 `i `ui 181  ]
-[e :U 182 ]
-}
-[e ++ _i -> -> 1 `i `ui ]
 [e :U 180 ]
-[e $ < _i _val 177  ]
-[e :U 178 ]
+"154
+[; ;mainTrip.c: 154:     if (direction == 0){
+[e $ ! == -> _direction `i -> 0 `i 181  ]
+{
+"155
+[; ;mainTrip.c: 155:         PORTB = 0b00001001;
+[e = _PORTB -> -> 9 `i `uc ]
+"156
+[; ;mainTrip.c: 156:         delay(1);
+[e ( _delay (1 -> -> 1 `i `ui ]
+"157
+[; ;mainTrip.c: 157:         PORTB = 0b00001100;
+[e = _PORTB -> -> 12 `i `uc ]
+"158
+[; ;mainTrip.c: 158:         delay(1);
+[e ( _delay (1 -> -> 1 `i `ui ]
+"159
+[; ;mainTrip.c: 159:         PORTB = 0b00000110;
+[e = _PORTB -> -> 6 `i `uc ]
+"160
+[; ;mainTrip.c: 160:         delay(1);
+[e ( _delay (1 -> -> 1 `i `ui ]
+"161
+[; ;mainTrip.c: 161:         PORTB = 0b00000011;
+[e = _PORTB -> -> 3 `i `uc ]
+"162
+[; ;mainTrip.c: 162:         delay(1);
+[e ( _delay (1 -> -> 1 `i `ui ]
+"163
+[; ;mainTrip.c: 163:         PORTB = 0b00001001;
+[e = _PORTB -> -> 9 `i `uc ]
+"164
+[; ;mainTrip.c: 164:         delay(1);
+[e ( _delay (1 -> -> 1 `i `ui ]
+"165
+[; ;mainTrip.c: 165:     }
 }
+[e :U 181 ]
 "167
 [; ;mainTrip.c: 167: }
-[e :UE 176 ]
+[e :UE 179 ]
+}
+"169
+[; ;mainTrip.c: 169: void delay(unsigned int val)
+[v _delay `(v ~T0 @X0 1 ef1`ui ]
+"170
+[; ;mainTrip.c: 170: {
+{
+[e :U _delay ]
+"169
+[; ;mainTrip.c: 169: void delay(unsigned int val)
+[v _val `ui ~T0 @X0 1 r1 ]
+"170
+[; ;mainTrip.c: 170: {
+[f ]
+"171
+[; ;mainTrip.c: 171:      unsigned int i,j;
+[v _i `ui ~T0 @X0 1 a ]
+[v _j `ui ~T0 @X0 1 a ]
+"172
+[; ;mainTrip.c: 172:         for(i=0;i<val;i++)
+{
+[e = _i -> -> 0 `i `ui ]
+[e $U 186  ]
+[e :U 183 ]
+"173
+[; ;mainTrip.c: 173:             for(j=0;j<250;j++);
+{
+[e = _j -> -> 0 `i `ui ]
+[e $ < _j -> -> 250 `i `ui 187  ]
+[e $U 188  ]
+[e :U 187 ]
+[e ++ _j -> -> 1 `i `ui ]
+[e $ < _j -> -> 250 `i `ui 187  ]
+[e :U 188 ]
+}
+[e ++ _i -> -> 1 `i `ui ]
+[e :U 186 ]
+[e $ < _i _val 183  ]
+[e :U 184 ]
+}
+"174
+[; ;mainTrip.c: 174: }
+[e :UE 182 ]
 }

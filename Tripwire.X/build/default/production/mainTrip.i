@@ -2773,24 +2773,40 @@ void main(void) {
     PORTB = 0;
 
     TRISA = 0;
-    TRISB = 0x02;
+    TRISD = 0x02;
     ANSEL = 0;
     ANSELH = 0;
-
+    INTCONbits.GIE = 1;
     system_init();
-    val = 1;
-
+    val = 0;
+    I2C_Slave_Init(0x20);
 
     while(1){
-# 119 "mainTrip.c"
-        if (val == 1){
+        if (PORTDbits.RD1 == 0){
+            PORTAbits.RA0 = 1;
+            key = 1;
+
+
+        }
+
+        else{
+             key = 0;
+        }
+        if (val == 255){
             for(int i=0;i<1000;i++){
                 full_drive(0);
             }
-            val = 2;
+            val = 0;
+        }
+        if (val == 128){
+            for(int i=0;i<1000;i++){
+                full_drive(1);
+            }
+            val = 0;
+        }
         }
     }
-}
+
 
 void system_init (void){
     ANSELH = 0;

@@ -46,7 +46,7 @@ void delay(unsigned int val);
 
 #define _XTAL_FREQ 8000000      // Frecuencia de oscilacion de 1 Mhz
 
-                    // Variable de estado para indicar si el contador asciende o desciende
+                                // Variable de estado para indicar si el contador asciende o desciende
 
 void __interrupt() isr(void){
     if(PIR1bits.SSPIF == 1){ 
@@ -97,16 +97,16 @@ void main(void) {
     PORTB = 0;                  // Se pone PORTD como output
     
     TRISA = 0;               // Se pone PORTA como output
-    TRISB = 0x02;
+    TRISD = 0x02;
     ANSEL = 0;                  // Se pone PORTA como salida digital
     ANSELH = 0;
-    //INTCONbits.GIE = 1;
+    INTCONbits.GIE = 1;
     system_init();
-    val = 1;
-    //I2C_Slave_Init(0x20);
+    val = 0;
+    I2C_Slave_Init(0x20);
     
     while(1){
-        /*if (PORTBbits.RB1 == 0){
+        if (PORTDbits.RD1 == 0){
             PORTAbits.RA0 = 1;
             key = 1;
 
@@ -115,15 +115,22 @@ void main(void) {
         
         else{
              key = 0;
-        }*/
-        if (val == 1){
+        }
+        if (val == 255){
             for(int i=0;i<steps;i++){
                 full_drive(clockwise);
             }
-            val = 2;
+            val = 0;
+        }
+        if (val == 128){
+            for(int i=0;i<steps;i++){
+                full_drive(anti_clockwise);
+            }
+            val = 0;
+        }
         }
     }
-}
+
 
 void system_init (void){
     ANSELH = 0;

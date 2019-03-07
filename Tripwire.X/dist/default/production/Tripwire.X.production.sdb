@@ -5,6 +5,8 @@
 [d frameptr 6 ]
 "32 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X/I2C.h
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
+"94
+[v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
@@ -19,11 +21,11 @@
 [v _isr isr `II(v  1 e 1 0 ]
 "87
 [v _main main `(v  1 e 1 0 ]
-"128
+"135
 [v _system_init system_init `(v  1 e 1 0 ]
-"134
+"141
 [v _full_drive full_drive `(v  1 e 1 0 ]
-"162
+"169
 [v _delay delay `(v  1 e 1 0 ]
 "166 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -41,6 +43,35 @@
 [v _PORTAbits PORTAbits `VES205  1 e 1 @5 ]
 "228
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S285 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"369
+[u S294 . 1 `S285 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES294  1 e 1 @8 ]
+[s S249 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"482
+[s S258 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S263 . 1 `S249 1 . 1 0 `S258 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES263  1 e 1 @11 ]
 [s S55 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -74,6 +105,8 @@
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1602
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
 [s S217 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
@@ -176,34 +209,42 @@
 "87
 [v _main main `(v  1 e 1 0 ]
 {
+"126
+[v main@i_409 i `i  1 a 2 6 ]
 "120
 [v main@i i `i  1 a 2 4 ]
-"126
-} 0
-"128
-[v _system_init system_init `(v  1 e 1 0 ]
-{
 "132
 } 0
-"134
+"135
+[v _system_init system_init `(v  1 e 1 0 ]
+{
+"139
+} 0
+"141
 [v _full_drive full_drive `(v  1 e 1 0 ]
 {
 [v full_drive@direction direction `uc  1 a 1 wreg ]
 [v full_drive@direction direction `uc  1 a 1 wreg ]
 [v full_drive@direction direction `uc  1 a 1 5 ]
-"160
-} 0
-"162
-[v _delay delay `(v  1 e 1 0 ]
-{
-"164
-[v delay@j j `ui  1 a 2 2 ]
-[v delay@i i `ui  1 a 2 0 ]
-"162
-[v delay@val val `ui  1 p 2 3 ]
 "167
 } 0
-"51
+"169
+[v _delay delay `(v  1 e 1 0 ]
+{
+"171
+[v delay@j j `ui  1 a 2 2 ]
+[v delay@i i `ui  1 a 2 0 ]
+"169
+[v delay@val val `ui  1 p 2 3 ]
+"174
+} 0
+"94 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X/I2C.h
+[v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
+{
+[v I2C_Slave_Init@address address `s  1 p 2 3 ]
+"106
+} 0
+"51 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
 "85
