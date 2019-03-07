@@ -2611,16 +2611,98 @@ unsigned spiDataReady();
 char spiRead(void);
 # 27 "mainTraductor.c" 2
 
+# 1 "./UART.h" 1
+
+
+
+
+
+
+
+char UART_Init(const long int baudrate)
+{
+ unsigned int x;
+ x = (8000000 - baudrate*64)/(baudrate*64);
+ if(x>255)
+ {
+  x = (8000000 - baudrate*16)/(baudrate*16);
+  BRGH = 1;
+ }
+ if(x<256)
+ {
+   SPBRG = x;
+   SYNC = 0;
+   SPEN = 1;
+      TRISC7 = 1;
+      TRISC6 = 1;
+      CREN = 1;
+      TXEN = 1;
+   return 1;
+ }
+ return 0;
+}
+
+char UART_TX_Empty()
+{
+  return TRMT;
+}
+
+char UART_Data_Ready()
+{
+   return RCIF;
+}
+
+char UART_Read()
+{
+  while(!RCIF);
+  return RCREG;
+}
+
+void UART_Read_Text(char *Output, unsigned int length)
+{
+ unsigned int i;
+ for(int i=0;i<length;i++)
+  Output[i] = UART_Read();
+}
+
+void UART_Write(char data)
+{
+  while(PIR1bits.TXIF == 0){
+      __asm("nop");
+  };
+  TXREG = data;
+}
+
+void UART_Write_Text(char *text)
+{
+  int i;
+  for(i=0;text[i]!='\0';i++)
+   UART_Write(text[i]);
+}
+# 28 "mainTraductor.c" 2
+
 
 
 void setup(void);
-char val, received;
+char val, received, info[15], i, done, j;
 
 void __attribute__((picinterrupt(("")))) isr(void){
-   if(SSPIF == 1){
+    if (PIR1bits.RCIF == 1){
+        info[i] = UART_Read();
+        i++;
+        RB0 = 1;
+        if (info[i-1] == 'A'){
+            done = 1;
+            i = 0;
+        }
+    }else if(SSPIF == 1){
         val = spiRead();
+        spiWrite(info[j]);
+        j++;
 
-        spiWrite(PORTB);
+        if (j == 15){
+            j = 0;
+        }
         PORTDbits.RD0 = ~PORTDbits.RD0;
         SSPIF = 0;
     }
@@ -2629,8 +2711,11 @@ void __attribute__((picinterrupt(("")))) isr(void){
 void main(void) {
     setup();
     while (1){
-        PORTB++;
-        _delay((unsigned long)((1000)*(8000000/4000.0)));
+        if (done == 1){
+# 75 "mainTraductor.c"
+            done = 0;
+            RB0 = 0;
+        }
     }
 }
 
@@ -2652,5 +2737,8 @@ void setup(void){
     INTCONbits.PEIE = 1;
     PIR1bits.SSPIF = 0;
     PIE1bits.SSPIE = 1;
+    PIR1bits.RCIF = 0;
+    PIE1bits.RCIE = 1;
+    UART_Init(9600);
     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }

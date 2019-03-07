@@ -135,7 +135,6 @@ __Lcinit F 0 CODE 0
 __Hspace_3 0 0 ABS 0
 __Lspace_3 0 0 ABS 0
 __size_of_main 0 0 ABS 0
-__CFG_MCLRE$OFF 0 0 ABS 0
 ADC_channel@a 75 0 COMMON 1
 __HbssBANK0 0 0 ABS 0
 __LbssBANK0 0 0 ABS 0
@@ -180,6 +179,7 @@ __Hmaintext 0 0 ABS 0
 __Lmaintext 0 0 ABS 0
 __CFG_IESO$OFF 0 0 ABS 0
 __pmaintext 12E 0 CODE 0
+__CFG_MCLRE$ON 0 0 ABS 0
 _OPTION_REGbits 81 0 ABS 0
 __initialization F 0 CODE 0
 __CFG_CP$OFF 0 0 ABS 0
@@ -192,7 +192,7 @@ cstackCOMMON 70 7A COMMON 70 1
 cstackBANK0 20 24 BANK0 20 1
 %locals
 dist/default/production\SlaveHall.X.production.o
-C:\Users\kit_s\AppData\Local\Temp\scag.
+C:\Users\kit_s\AppData\Local\Temp\s12s.
 516 F 0 CODE 0
 519 F 0 CODE 0
 548 F 0 CODE 0

@@ -18,7 +18,7 @@
 #pragma config FOSC = INTRC_NOCLKOUT
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
+#pragma config MCLRE = ON
 #pragma config CP = OFF
 #pragma config CPD = OFF
 #pragma config BOREN = OFF
@@ -2796,8 +2796,8 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
     if (INTCONbits.T0IF == 1){
             cont++;
-            if(cont < 200){
-                if(cont < val){
+            if(cont <= 200){
+                if(cont <= val){
                     PORTAbits.RA1 = 1;
                 }else{
                     PORTAbits.RA1 = 0;

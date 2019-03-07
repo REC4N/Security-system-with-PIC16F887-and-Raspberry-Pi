@@ -12,21 +12,25 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\TraductorProyecto.X.production.o
-cinit CODE 0 F F 6 2
-text1 CODE 0 15 15 2D 2
-text2 CODE 0 86 86 14 2
-text3 CODE 0 42 42 2A 2
-text4 CODE 0 A1 A1 6 2
-text5 CODE 0 9A 9A 7 2
-text6 CODE 0 A7 A7 5 2
-maintext CODE 0 6C 6C 1A 2
-cstackCOMMON COMMON 1 70 70 8 1
-cstackBANK0 BANK0 1 20 20 3 1
-intentry CODE 0 4 4 8 2
-bssCOMMON COMMON 1 78 78 2 1
-$C:\Users\kit_s\AppData\Local\Temp\sktg.o
+cinit CODE 0 11 11 1A 2
+text1 CODE 0 1E9 1E9 44 2
+text2 CODE 0 22D 22D 1C 2
+text3 CODE 0 2B 2B D9 2
+text4 CODE 0 104 104 8F 2
+text5 CODE 0 193 193 56 2
+text6 CODE 0 25D 25D 6 2
+text7 CODE 0 256 256 7 2
+text8 CODE 0 269 269 5 2
+text9 CODE 0 263 263 6 2
+maintext CODE 0 249 249 D 2
+cstackCOMMON COMMON 1 75 75 5 1
+cstackBANK0 BANK0 1 20 20 21 1
+intentry CODE 0 4 4 A 2
+bssBANK0 BANK0 1 41 41 F 1
+bssCOMMON COMMON 1 70 70 5 1
+$C:\Users\kit_s\AppData\Local\Temp\sf20.o
 reset_vec CODE 0 0 0 3 2
-end_init CODE 0 C C 3 2
+end_init CODE 0 E E 3 2
 config CONFIG 0 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -34,22 +38,22 @@ config CONFIG 0 2007 2007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 23-6F 1
+RAM 50-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 23-6F 1
+BANK0 50-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST AC-1FFF 2
+CONST 26E-1FFF 2
 ENTRY 3-3 2
-ENTRY AC-1FFF 2
+ENTRY 26E-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE AC-1FFF 2
+CODE 26E-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -57,9 +61,9 @@ SFR3 180-18F 1
 COMMON 7A-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE AC-1FFF 2
+STRCODE 26E-1FFF 2
 STRING 3-3 2
-STRING AC-1FFF 2
+STRING 26E-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -74,65 +78,143 @@ STRING AC-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\TraductorProyecto.X.production.o
-F cinit CODE >635:C:\Users\kit_s\AppData\Local\Temp\sktg.
-F cinit CODE >638:C:\Users\kit_s\AppData\Local\Temp\sktg.
-F cinit CODE >652:C:\Users\kit_s\AppData\Local\Temp\sktg.
-10 cinit CODE >653:C:\Users\kit_s\AppData\Local\Temp\sktg.
-11 cinit CODE >659:C:\Users\kit_s\AppData\Local\Temp\sktg.
-11 cinit CODE >661:C:\Users\kit_s\AppData\Local\Temp\sktg.
-12 cinit CODE >662:C:\Users\kit_s\AppData\Local\Temp\sktg.
-4 intentry CODE >33:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-A7 text6 CODE >30:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-A7 text6 CODE >32:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-9A text5 CODE >48:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-9A text5 CODE >50:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-9D text5 CODE >51:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-A0 text5 CODE >52:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-A1 text4 CODE >35:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-A2 text4 CODE >37:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-A6 text4 CODE >38:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-42 text3 CODE >33:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-42 text3 CODE >34:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-46 text3 CODE >35:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-4E text3 CODE >37:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-56 text3 CODE >38:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-64 text3 CODE >39:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-65 text3 CODE >41:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-86 text2 CODE >13:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-87 text2 CODE >15:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-8A text2 CODE >16:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-8C text2 CODE >18:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-8E text2 CODE >19:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-8F text2 CODE >20:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-90 text2 CODE >23:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-93 text2 CODE >24:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-94 text2 CODE >25:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-94 text2 CODE >27:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-99 text2 CODE >28:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-15 text1 CODE >51:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-15 text1 CODE >52:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-18 text1 CODE >53:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-19 text1 CODE >54:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1A text1 CODE >55:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1B text1 CODE >56:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1C text1 CODE >57:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1F text1 CODE >58:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-22 text1 CODE >59:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-25 text1 CODE >60:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-28 text1 CODE >61:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-2B text1 CODE >62:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-2E text1 CODE >63:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-31 text1 CODE >64:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-32 text1 CODE >65:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-33 text1 CODE >66:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-34 text1 CODE >67:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-37 text1 CODE >68:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-3A text1 CODE >69:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-41 text1 CODE >70:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-6C maintext CODE >43:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-6C maintext CODE >44:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-71 maintext CODE >46:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-77 maintext CODE >47:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+11 cinit CODE >668:C:\Users\kit_s\AppData\Local\Temp\sf20.
+11 cinit CODE >671:C:\Users\kit_s\AppData\Local\Temp\sf20.
+11 cinit CODE >700:C:\Users\kit_s\AppData\Local\Temp\sf20.
+12 cinit CODE >701:C:\Users\kit_s\AppData\Local\Temp\sf20.
+13 cinit CODE >702:C:\Users\kit_s\AppData\Local\Temp\sf20.
+14 cinit CODE >703:C:\Users\kit_s\AppData\Local\Temp\sf20.
+15 cinit CODE >704:C:\Users\kit_s\AppData\Local\Temp\sf20.
+16 cinit CODE >707:C:\Users\kit_s\AppData\Local\Temp\sf20.
+17 cinit CODE >708:C:\Users\kit_s\AppData\Local\Temp\sf20.
+18 cinit CODE >709:C:\Users\kit_s\AppData\Local\Temp\sf20.
+19 cinit CODE >710:C:\Users\kit_s\AppData\Local\Temp\sf20.
+1A cinit CODE >711:C:\Users\kit_s\AppData\Local\Temp\sf20.
+1B cinit CODE >712:C:\Users\kit_s\AppData\Local\Temp\sf20.
+1C cinit CODE >713:C:\Users\kit_s\AppData\Local\Temp\sf20.
+1D cinit CODE >714:C:\Users\kit_s\AppData\Local\Temp\sf20.
+1E cinit CODE >715:C:\Users\kit_s\AppData\Local\Temp\sf20.
+1F cinit CODE >716:C:\Users\kit_s\AppData\Local\Temp\sf20.
+20 cinit CODE >717:C:\Users\kit_s\AppData\Local\Temp\sf20.
+21 cinit CODE >718:C:\Users\kit_s\AppData\Local\Temp\sf20.
+22 cinit CODE >719:C:\Users\kit_s\AppData\Local\Temp\sf20.
+23 cinit CODE >720:C:\Users\kit_s\AppData\Local\Temp\sf20.
+24 cinit CODE >721:C:\Users\kit_s\AppData\Local\Temp\sf20.
+25 cinit CODE >722:C:\Users\kit_s\AppData\Local\Temp\sf20.
+26 cinit CODE >723:C:\Users\kit_s\AppData\Local\Temp\sf20.
+27 cinit CODE >729:C:\Users\kit_s\AppData\Local\Temp\sf20.
+27 cinit CODE >731:C:\Users\kit_s\AppData\Local\Temp\sf20.
+28 cinit CODE >732:C:\Users\kit_s\AppData\Local\Temp\sf20.
+4 intentry CODE >34:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+263 text9 CODE >41:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+263 text9 CODE >43:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+267 text9 CODE >44:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+268 text9 CODE >45:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+269 text8 CODE >30:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+269 text8 CODE >32:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+256 text7 CODE >48:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+256 text7 CODE >50:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+259 text7 CODE >51:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+25C text7 CODE >52:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+25D text6 CODE >35:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+25E text6 CODE >37:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+262 text6 CODE >38:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+193 text5 CODE >34:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+193 text5 CODE >35:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+197 text5 CODE >36:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1A3 text5 CODE >37:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1A7 text5 CODE >38:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1AA text5 CODE >39:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1B1 text5 CODE >40:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1B3 text5 CODE >41:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1B5 text5 CODE >43:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1B7 text5 CODE >44:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1BF text5 CODE >45:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1C9 text5 CODE >46:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1CD text5 CODE >48:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1D0 text5 CODE >49:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1D1 text5 CODE >51:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1DF text5 CODE >52:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1E0 text5 CODE >54:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+104 text4 CODE >5:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+104 text4 CODE >13:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+107 text4 CODE >14:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+109 text4 CODE >15:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+114 text4 CODE >16:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+116 text4 CODE >17:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+116 text4 CODE >18:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+118 text4 CODE >19:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+123 text4 CODE >20:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+127 text4 CODE >22:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+12F text4 CODE >23:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+135 text4 CODE >24:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+137 text4 CODE >25:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+139 text4 CODE >26:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+142 text4 CODE >27:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+146 text4 CODE >25:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+147 text4 CODE >30:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+150 text4 CODE >31:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+160 text4 CODE >32:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+16E text4 CODE >33:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+16F text4 CODE >35:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+178 text4 CODE >36:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+17C text4 CODE >38:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+17F text4 CODE >39:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+18A text4 CODE >40:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+192 text4 CODE >41:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+2B text3 CODE >8:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+2B text3 CODE >11:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+86 text3 CODE >12:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+8D text3 CODE >14:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+E6 text3 CODE >15:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+E9 text3 CODE >17:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+F1 text3 CODE >19:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+F5 text3 CODE >20:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+F6 text3 CODE >21:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+F9 text3 CODE >22:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+FC text3 CODE >23:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+FD text3 CODE >24:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+100 text3 CODE >25:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+103 text3 CODE >29:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+22D text2 CODE >13:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+230 text2 CODE >15:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+233 text2 CODE >16:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+237 text2 CODE >18:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+23B text2 CODE >19:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+23C text2 CODE >20:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+23D text2 CODE >23:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+242 text2 CODE >24:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+243 text2 CODE >25:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+243 text2 CODE >27:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+248 text2 CODE >28:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+1E9 text1 CODE >81:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1E9 text1 CODE >82:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1EC text1 CODE >83:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1ED text1 CODE >84:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1EE text1 CODE >85:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1EF text1 CODE >86:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1F0 text1 CODE >87:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1F3 text1 CODE >88:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1F6 text1 CODE >89:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1F9 text1 CODE >90:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1FC text1 CODE >91:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+1FF text1 CODE >92:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+202 text1 CODE >93:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+205 text1 CODE >94:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+206 text1 CODE >95:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+207 text1 CODE >96:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+208 text1 CODE >97:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+20B text1 CODE >98:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+20E text1 CODE >99:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+211 text1 CODE >100:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+214 text1 CODE >101:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+223 text1 CODE >102:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+22C text1 CODE >103:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+249 maintext CODE >56:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+249 maintext CODE >57:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+24E maintext CODE >59:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+251 maintext CODE >75:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+252 maintext CODE >76:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -145,78 +227,98 @@ A6 text4 CODE >38:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspber
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
+_i 72 0 COMMON 1 bssCOMMON dist/default/production\TraductorProyecto.X.production.o
+_j 70 0 COMMON 1 bssCOMMON dist/default/production\TraductorProyecto.X.production.o
 ___latbits 2 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __Hspace_0 2009 0 ABS 0 - -
 __Hspace_1 7A 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-spiInit@sTransmitEdge 76 0 COMMON 1 cstackCOMMON dist/default/production\TraductorProyecto.X.production.o
+spiInit@sTransmitEdge 22 0 BANK0 1 cstackBANK0 dist/default/production\TraductorProyecto.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\sktg.o
-_main D8 0 CODE 0 maintext dist/default/production\TraductorProyecto.X.production.o
+_BRGH 4C2 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+_CREN C4 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+_RCIF 65 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+_SPEN C7 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+_SYNC 4C4 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+_TRMT 4C1 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+_TXEN 4C5 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\sf20.o
+_done 71 0 COMMON 1 bssCOMMON dist/default/production\TraductorProyecto.X.production.o
+_info 41 0 BANK0 1 bssBANK0 dist/default/production\TraductorProyecto.X.production.o
+_main 492 0 CODE 0 maintext dist/default/production\TraductorProyecto.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-start 18 0 CODE 0 init C:\Users\kit_s\AppData\Local\Temp\sktg.o
+start 1C 0 CODE 0 init C:\Users\kit_s\AppData\Local\Temp\sf20.o
+__size_of___aldiv 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sktg.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sktg.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sktg.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sktg.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sktg.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sktg.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sf20.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sf20.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sf20.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sf20.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sf20.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sf20.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
+___aldiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\TraductorProyecto.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
+___aldiv@sign 2A 0 BANK0 1 cstackBANK0 dist/default/production\TraductorProyecto.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELH 189 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+UART_Init@baudrate 2F 0 BANK0 1 cstackBANK0 dist/default/production\TraductorProyecto.X.production.o
 __size_of_spiInit 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __size_of_spiRead 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\sktg.o
-___stacklo 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\sktg.o
+__end_of___aldiv 326 0 CODE 0 text4 dist/default/production\TraductorProyecto.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\sf20.o
+___stacklo 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\sf20.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-spiInit@sDataSample 74 0 COMMON 1 cstackCOMMON dist/default/production\TraductorProyecto.X.production.o
-start_initialization 1E 0 CODE 0 cinit dist/default/production\TraductorProyecto.X.production.o
+spiInit@sDataSample 20 0 BANK0 1 cstackBANK0 dist/default/production\TraductorProyecto.X.production.o
+start_initialization 22 0 CODE 0 cinit dist/default/production\TraductorProyecto.X.production.o
+UART_Init@x 3F 0 BANK0 1 cstackBANK0 dist/default/production\TraductorProyecto.X.production.o
 _TRISAbits 85 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+___aldiv@quotient 2B 0 BANK0 1 cstackBANK0 dist/default/production\TraductorProyecto.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\TraductorProyecto.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _TRISC5 43D 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\sktg.o
+_TRISC6 43E 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+_TRISC7 43F 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\sf20.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
-__Hcinit 2A 0 CODE 0 cinit -
+__Hcinit 56 0 CODE 0 cinit -
 __size_of_spiReceiveWait 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __Hidloc 0 0 IDLOC 0 idloc -
 __Hstack 0 0 STACK 2 stack -
 __Hmaintext 0 0 ABS 0 maintext -
-__end_of_spiInit 134 0 CODE 0 text2 dist/default/production\TraductorProyecto.X.production.o
-__end_of_spiRead 142 0 CODE 0 text5 dist/default/production\TraductorProyecto.X.production.o
+__end_of_spiInit 492 0 CODE 0 text2 dist/default/production\TraductorProyecto.X.production.o
+__end_of_spiRead 4BA 0 CODE 0 text7 dist/default/production\TraductorProyecto.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 0 config -
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
-__Lcinit 1E 0 CODE 0 cinit -
+__Lcinit 22 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Lstack 0 0 STACK 2 stack -
 _PORTDbits 8 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _INTCONbits B 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
-__Hinit 18 0 CODE 0 init -
+__Hinit 1C 0 CODE 0 init -
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
@@ -224,7 +326,7 @@ __Hsfr3 0 0 ABS 0 sfr3 -
 __Htext 0 0 ABS 0 text -
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
-__Linit 18 0 CODE 0 init -
+__Linit 1C 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
@@ -232,20 +334,23 @@ __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_RB0 30 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __S0 2009 0 ABS 0 - -
 __S1 7A 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 84 0 CODE 0 text3 dist/default/production\TraductorProyecto.X.production.o
-_val 79 0 COMMON 1 bssCOMMON dist/default/production\TraductorProyecto.X.production.o
+_isr 326 0 CODE 0 text5 dist/default/production\TraductorProyecto.X.production.o
+_val 74 0 COMMON 1 bssCOMMON dist/default/production\TraductorProyecto.X.production.o
 __CFG_BOR4V$BOR40V 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-__end_of_isr D8 0 CODE 0 text3 dist/default/production\TraductorProyecto.X.production.o
+__end_of_isr 3D2 0 CODE 0 text5 dist/default/production\TraductorProyecto.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\kit_s\AppData\Local\Temp\sktg.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\kit_s\AppData\Local\Temp\sf20.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
 _PIE1bits 8C 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-__pmaintext D8 0 CODE 0 maintext dist/default/production\TraductorProyecto.X.production.o
+___aldiv 208 0 CODE 0 text4 dist/default/production\TraductorProyecto.X.production.o
+__pmaintext 492 0 CODE 0 maintext dist/default/production\TraductorProyecto.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
@@ -255,59 +360,76 @@ __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-__pbssCOMMON 78 0 COMMON 1 bssCOMMON dist/default/production\TraductorProyecto.X.production.o
+__pbssCOMMON 70 0 COMMON 1 bssCOMMON dist/default/production\TraductorProyecto.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-__Lend_init 18 0 CODE 0 end_init -
+__Lend_init 1C 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 22 0 CODE 0 cinit dist/default/production\TraductorProyecto.X.production.o
-__Hintentry 18 0 CODE 0 intentry -
+end_of_initialization 4E 0 CODE 0 cinit dist/default/production\TraductorProyecto.X.production.o
+__Hintentry 1C 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
+?___aldiv 20 0 BANK0 1 cstackBANK0 dist/default/production\TraductorProyecto.X.production.o
 __Hreset_vec 6 0 CODE 0 reset_vec -
-__ptext1 2A 0 CODE 0 text1 dist/default/production\TraductorProyecto.X.production.o
-__ptext2 10C 0 CODE 0 text2 dist/default/production\TraductorProyecto.X.production.o
-__ptext3 84 0 CODE 0 text3 dist/default/production\TraductorProyecto.X.production.o
-__ptext4 142 0 CODE 0 text4 dist/default/production\TraductorProyecto.X.production.o
-__ptext5 134 0 CODE 0 text5 dist/default/production\TraductorProyecto.X.production.o
-__ptext6 14E 0 CODE 0 text6 dist/default/production\TraductorProyecto.X.production.o
-_spiInit 10C 0 CODE 0 text2 dist/default/production\TraductorProyecto.X.production.o
-_spiRead 134 0 CODE 0 text5 dist/default/production\TraductorProyecto.X.production.o
-spiWrite@dat 70 0 COMMON 1 cstackCOMMON dist/default/production\TraductorProyecto.X.production.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__end_of_UART_Init 208 0 CODE 0 text3 dist/default/production\TraductorProyecto.X.production.o
+__end_of_UART_Read 4D2 0 CODE 0 text9 dist/default/production\TraductorProyecto.X.production.o
+__size_of_UART_Init 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+__size_of_UART_Read 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+__ptext1 3D2 0 CODE 0 text1 dist/default/production\TraductorProyecto.X.production.o
+__ptext2 45A 0 CODE 0 text2 dist/default/production\TraductorProyecto.X.production.o
+__ptext3 56 0 CODE 0 text3 dist/default/production\TraductorProyecto.X.production.o
+__ptext4 208 0 CODE 0 text4 dist/default/production\TraductorProyecto.X.production.o
+__ptext5 326 0 CODE 0 text5 dist/default/production\TraductorProyecto.X.production.o
+__ptext6 4BA 0 CODE 0 text6 dist/default/production\TraductorProyecto.X.production.o
+__ptext7 4AC 0 CODE 0 text7 dist/default/production\TraductorProyecto.X.production.o
+__ptext8 4D2 0 CODE 0 text8 dist/default/production\TraductorProyecto.X.production.o
+__ptext9 4C6 0 CODE 0 text9 dist/default/production\TraductorProyecto.X.production.o
+_spiInit 45A 0 CODE 0 text2 dist/default/production\TraductorProyecto.X.production.o
+_spiRead 4AC 0 CODE 0 text7 dist/default/production\TraductorProyecto.X.production.o
+___aldiv@dividend 24 0 BANK0 1 cstackBANK0 dist/default/production\TraductorProyecto.X.production.o
+spiWrite@dat 75 0 COMMON 1 cstackCOMMON dist/default/production\TraductorProyecto.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
-spiInit@sType 77 0 COMMON 1 cstackCOMMON dist/default/production\TraductorProyecto.X.production.o
+spiInit@sType 23 0 BANK0 1 cstackBANK0 dist/default/production\TraductorProyecto.X.production.o
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of__initialization 22 0 CODE 0 cinit dist/default/production\TraductorProyecto.X.production.o
+_UART_Init 56 0 CODE 0 text3 dist/default/production\TraductorProyecto.X.production.o
+_UART_Read 4C6 0 CODE 0 text9 dist/default/production\TraductorProyecto.X.production.o
+__end_of__initialization 4E 0 CODE 0 cinit dist/default/production\TraductorProyecto.X.production.o
 __size_of_spiWrite 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-_spiReceiveWait 14E 0 CODE 0 text6 dist/default/production\TraductorProyecto.X.production.o
+_spiReceiveWait 4D2 0 CODE 0 text8 dist/default/production\TraductorProyecto.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\TraductorProyecto.X.production.o
+__pcstackCOMMON 75 0 COMMON 1 cstackCOMMON dist/default/production\TraductorProyecto.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-__Hend_init 1E 0 CODE 0 end_init -
-__end_of_main 10C 0 CODE 0 maintext dist/default/production\TraductorProyecto.X.production.o
+__Hend_init 22 0 CODE 0 end_init -
+___aldiv@counter 29 0 BANK0 1 cstackBANK0 dist/default/production\TraductorProyecto.X.production.o
+__end_of_main 4AC 0 CODE 0 maintext dist/default/production\TraductorProyecto.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+_RCREG 1A 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+_SPBRG 99 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _SSPIF 63 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-__end_of_setup 84 0 CODE 0 text1 dist/default/production\TraductorProyecto.X.production.o
+_TXREG 19 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
+__end_of_setup 45A 0 CODE 0 text1 dist/default/production\TraductorProyecto.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\TraductorProyecto.X.production.o
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-_setup 2A 0 CODE 0 text1 dist/default/production\TraductorProyecto.X.production.o
+_setup 3D2 0 CODE 0 text1 dist/default/production\TraductorProyecto.X.production.o
 _SSPSTATbits 94 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\TraductorProyecto.X.production.o
 __size_of_isr 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-spiInit@sClockIdle 75 0 COMMON 1 cstackCOMMON dist/default/production\TraductorProyecto.X.production.o
-__initialization 1E 0 CODE 0 cinit dist/default/production\TraductorProyecto.X.production.o
+spiInit@sClockIdle 21 0 BANK0 1 cstackBANK0 dist/default/production\TraductorProyecto.X.production.o
+__initialization 22 0 CODE 0 cinit dist/default/production\TraductorProyecto.X.production.o
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-_spiWrite 142 0 CODE 0 text4 dist/default/production\TraductorProyecto.X.production.o
+__pbssBANK0 41 0 BANK0 1 bssBANK0 dist/default/production\TraductorProyecto.X.production.o
+_spiWrite 4BA 0 CODE 0 text6 dist/default/production\TraductorProyecto.X.production.o
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-__end_of_spiReceiveWait 158 0 CODE 0 text6 dist/default/production\TraductorProyecto.X.production.o
-__end_of_spiWrite 14E 0 CODE 0 text4 dist/default/production\TraductorProyecto.X.production.o
+__end_of_spiReceiveWait 4DC 0 CODE 0 text8 dist/default/production\TraductorProyecto.X.production.o
+__end_of_spiWrite 4C6 0 CODE 0 text6 dist/default/production\TraductorProyecto.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -333,8 +455,8 @@ __end_of_spiWrite 14E 0 CODE 0 text4 dist/default/production\TraductorProyecto.X
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cstackCOMMON 1 70 70 A 1
-cstackBANK0 1 20 20 3 1
-intentry 0 4 8 A8 2
+cstackBANK0 1 20 20 30 1
+intentry 0 4 8 26A 2
 reset_vec 0 0 0 3 2
+bssCOMMON 1 70 70 A 1
 config 0 2007 400E 2 2

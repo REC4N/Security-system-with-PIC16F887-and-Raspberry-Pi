@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.05 build -831301201 
-                                                                                               Thu Feb 28 14:29:32 2019
+                                                                                               Thu Mar 07 12:07:31 2019
 
 Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
      1                           	processor	16F887
@@ -1579,16 +1579,16 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
   1562  0115  0870               	movf	??_isr,w
   1563  0116  07F8               	addwf	_cont,f
   1564                           
-  1565                           ;MainHall.c: 72:             if(cont < 200){
-  1566  0117  30C8               	movlw	200
+  1565                           ;MainHall.c: 72:             if(cont <= 200){
+  1566  0117  30C9               	movlw	201
   1567  0118  0278               	subwf	_cont,w
   1568  0119  1803               	skipnc
   1569  011A  2923               	goto	i1l1206
   1570                           
-  1571                           ;MainHall.c: 73:                 if(cont < val){
-  1572  011B  0823               	movf	_val,w
-  1573  011C  0278               	subwf	_cont,w
-  1574  011D  1803               	skipnc
+  1571                           ;MainHall.c: 73:                 if(cont <= val){
+  1572  011B  0878               	movf	_cont,w
+  1573  011C  0223               	subwf	_val,w
+  1574  011D  1C03               	skipc
   1575  011E  2921               	goto	i1l174
   1576                           
   1577                           ;MainHall.c: 74:                     PORTAbits.RA1 = 1;
@@ -1780,7 +1780,7 @@ DATA                 0      0      10      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.05 build -831301201 
-Symbol Table                                                                                   Thu Feb 28 14:29:32 2019
+Symbol Table                                                                                   Thu Mar 07 12:07:31 2019
 
                        _z 0024               __CFG_CP$OFF 0000               _SSPSTATbits 0094  
                       _BF 04A0                        l80 0029                        l90 0068  
@@ -1804,15 +1804,15 @@ Symbol Table                                                                    
                     _TMR0 0001              __CFG_WRT$OFF 0000                      _cont 0078  
                     _door 0077                      _main 012E                      btemp 007E  
                     start 000C             __CFG_IESO$OFF 0000      __size_of_ADC_channel 00AC  
-                   ??_isr 0070                     ?_main 0070             __CFG_WDTE$OFF 0000  
-                   _ANSEL 0188                     i1l163 00F4                     i1l164 00E4  
-                   i1l174 0121                     i1l167 010E                     i1l159 0111  
-                   i1l177 0127                     i1l169 010A                     _PORTA 0005  
-                   _PORTB 0006                     u63_27 00F0                     u64_27 0107  
-                   _TRISA 0085                     _TRISB 0086                     _SSPIE 0463  
-                   _SSPIF 0063            __CFG_FCMEN$OFF 0000           __end_of_initADC 0247  
-                   _setup 01DF            __CFG_BOREN$OFF 0000                     pclath 000A  
-                   status 0003                     wtemp0 007E            __CFG_MCLRE$OFF 0000  
+           __CFG_MCLRE$ON 0000                     ??_isr 0070                     ?_main 0070  
+           __CFG_WDTE$OFF 0000                     _ANSEL 0188                     i1l163 00F4  
+                   i1l164 00E4                     i1l174 0121                     i1l167 010E  
+                   i1l159 0111                     i1l177 0127                     i1l169 010A  
+                   _PORTA 0005                     _PORTB 0006                     u63_27 00F0  
+                   u64_27 0107                     _TRISA 0085                     _TRISB 0086  
+                   _SSPIE 0463                     _SSPIF 0063            __CFG_FCMEN$OFF 0000  
+         __end_of_initADC 0247                     _setup 01DF            __CFG_BOREN$OFF 0000  
+                   pclath 000A                     status 0003                     wtemp0 007E  
          __initialization 000F              __end_of_main 018A    __size_of_initOscilador 0055  
                   ??_main 0020                    _ADRESH 001E                    ?_setup 0070  
                   _ANSELH 0189                    i1l1206 0123                    i1l1208 0124  

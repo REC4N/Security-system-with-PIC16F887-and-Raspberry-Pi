@@ -69,8 +69,8 @@ void __interrupt() isr(void){
     
     if (INTCONbits.T0IF == 1){
             cont++;
-            if(cont < 200){
-                if(cont < val){
+            if(cont <= 200){
+                if(cont <= val){
                     PORTAbits.RA1 = 1;
                 }else{
                     PORTAbits.RA1 = 0;

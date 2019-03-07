@@ -25,26 +25,56 @@
 #include <xc.h>
 #include "Oscilador.h"
 #include "SPI.h"
+#include "UART.h"
 
 
 void setup(void);
-char val, received;
+char val, received, info[15], i, done, j;
 
 void __interrupt() isr(void){
-   if(SSPIF == 1){
+    if (PIR1bits.RCIF == 1){
+        info[i] = UART_Read();
+        i++;
+        RB0 = 1;
+        if (info[i-1] == 'A'){
+            done = 1;
+            i = 0;
+        }
+    }else if(SSPIF == 1){
         val = spiRead();
-        //__delay_us(200);
-        spiWrite(PORTB);
+        spiWrite(info[j]);
+        j++;
+        //__delay_us(500);
+        if (j == 15){
+            j = 0;
+        }
         PORTDbits.RD0 = ~PORTDbits.RD0;
         SSPIF = 0;
-    }
+    }  
 }
 
 void main(void) {
     setup();
     while (1){
-        PORTB++;
-        __delay_ms(1000);
+        if (done == 1){
+            /*UART_Write(info[0]);
+            UART_Write(info[1]);
+            UART_Write(info[2]);
+            UART_Write(info[3]);
+            UART_Write(info[4]);
+            UART_Write(info[5]);
+            UART_Write(info[6]);
+            UART_Write(info[7]);
+            UART_Write(info[8]);
+            UART_Write(info[9]);
+            UART_Write(info[10]);
+            UART_Write(info[11]);
+            UART_Write(info[12]);
+            UART_Write(info[13]);
+            UART_Write(info[14]);*/
+            done = 0;
+            RB0 = 0;
+        }
     }
 }
 
@@ -66,5 +96,8 @@ void setup(void){
     INTCONbits.PEIE = 1;        // Habilitamos interrupciones PEIE
     PIR1bits.SSPIF = 0;         // Borramos bandera interrupción MSSP
     PIE1bits.SSPIE = 1;         // MSSP interruption is enabled.
+    PIR1bits.RCIF = 0;
+    PIE1bits.RCIE = 1;
+    UART_Init(9600);
     spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
 }

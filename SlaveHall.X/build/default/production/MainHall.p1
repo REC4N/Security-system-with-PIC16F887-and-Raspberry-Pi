@@ -296,7 +296,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11
 [p x PWRTE = OFF ]
 "12
-[p x MCLRE = OFF ]
+[p x MCLRE = ON ]
 "13
 [p x CP = OFF ]
 "14
@@ -1258,12 +1258,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;MainHall.c: 71:             cont++;
 [e ++ _cont -> -> 1 `i `uc ]
 "72
-[; ;MainHall.c: 72:             if(cont < 200){
-[e $ ! < -> _cont `i -> 200 `i 195  ]
+[; ;MainHall.c: 72:             if(cont <= 200){
+[e $ ! <= -> _cont `i -> 200 `i 195  ]
 {
 "73
-[; ;MainHall.c: 73:                 if(cont < val){
-[e $ ! < -> _cont `i -> _val `i 196  ]
+[; ;MainHall.c: 73:                 if(cont <= val){
+[e $ ! <= -> _cont `i -> _val `i 196  ]
 {
 "74
 [; ;MainHall.c: 74:                     PORTAbits.RA1 = 1;

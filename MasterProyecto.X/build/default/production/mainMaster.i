@@ -3093,11 +3093,7 @@ void main(void) {
             if (change == 0){
                 state++;
                 Lcd_Clear();
-                if (state == 3){
-                    newday = get_day();
-                    get_time(newtime);
-                }
-                if (state > 3){
+                if (state > 2){
                     state = 0;
                 }
                 while(j < 50){
@@ -3155,39 +3151,6 @@ void main(void) {
             } else {
                 Lcd_Write_String("IR OFF");
             }
-        } else if (state == 3){
-            Lcd_Set_Cursor(1,1);
-            Lcd_Write_String("HORA: ");
-            Lcd_Write_String(newtime);
-            Lcd_Set_Cursor(2,1);
-            Lcd_Write_String("DIA: ");
-            switch(newday){
-                case 1:
-                    newday2 = "LUNES    ";
-                    break;
-                case 2:
-                    newday2 = "MARTES   ";
-                    break;
-                case 3:
-                    newday2 = "MIERCOLES";
-                    break;
-                case 4:
-                    newday2 = "JUEVES   ";
-                    break;
-                case 5:
-                    newday2 = "VIERNES  ";
-                    break;
-                case 6:
-                    newday2 = "SABADO   ";
-                    break;
-                case 7:
-                    newday2 = "DOMINGO  ";
-                    break;
-                default:
-                    newday2 = "         ";
-                    break;
-            }
-            Lcd_Write_String(newday2);
         }
     }
 }
