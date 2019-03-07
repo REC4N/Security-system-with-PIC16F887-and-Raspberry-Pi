@@ -12,15 +12,19 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\Tripwire.X.production.o
-cinit CODE 0 F F 9 2
-text1 CODE 0 A2 A2 19 2
-text2 CODE 0 18 18 52 2
-maintext CODE 0 6A 6A 38 2
-cstackCOMMON COMMON 1 75 75 5 1
-cstackBANK0 BANK0 1 20 20 3 1
+cinit CODE 0 F F A 2
+text1 CODE 0 156 156 B 2
+text2 CODE 0 19 19 88 2
+text3 CODE 0 134 134 22 2
+text4 CODE 0 A1 A1 52 2
+nvBANK0 BANK0 1 26 26 1 1
+maintext CODE 0 F3 F3 41 2
+cstackCOMMON COMMON 1 70 70 7 1
+cstackBANK0 BANK0 1 20 20 6 1
 intentry CODE 0 4 4 8 2
-bssCOMMON COMMON 1 70 70 5 1
-$C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.o
+bssBANK0 BANK0 1 27 27 1 1
+bssCOMMON COMMON 1 77 77 3 1
+$C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 0 2007 2007 2 2
@@ -30,22 +34,22 @@ config CONFIG 0 2007 2007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 23-6F 1
+RAM 28-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 23-6F 1
+BANK0 28-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST BB-1FFF 2
+CONST 161-1FFF 2
 ENTRY 3-3 2
-ENTRY BB-1FFF 2
+ENTRY 161-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE BB-1FFF 2
+CODE 161-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -53,9 +57,9 @@ SFR3 180-18F 1
 COMMON 7A-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE BB-1FFF 2
+STRCODE 161-1FFF 2
 STRING 3-3 2
-STRING BB-1FFF 2
+STRING 161-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -70,75 +74,94 @@ STRING BB-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Tripwire.X.production.o
-F cinit CODE >491:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.
-F cinit CODE >494:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.
-F cinit CODE >517:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.
-10 cinit CODE >518:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.
-11 cinit CODE >519:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.
-12 cinit CODE >520:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.
-13 cinit CODE >521:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.
-14 cinit CODE >527:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.
-14 cinit CODE >529:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.
-15 cinit CODE >530:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.
-4 intentry CODE >41:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-18 text2 CODE >41:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-18 text2 CODE >42:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-1C text2 CODE >44:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-1D text2 CODE >46:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-21 text2 CODE >47:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-25 text2 CODE >48:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-26 text2 CODE >49:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-27 text2 CODE >50:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-28 text2 CODE >53:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-2D text2 CODE >55:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-33 text2 CODE >57:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-34 text2 CODE >58:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-35 text2 CODE >59:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-39 text2 CODE >60:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-3F text2 CODE >61:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-44 text2 CODE >63:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-48 text2 CODE >64:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-4E text2 CODE >65:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-51 text2 CODE >66:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-55 text2 CODE >67:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-56 text2 CODE >68:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-57 text2 CODE >69:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-5C text2 CODE >70:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-60 text2 CODE >71:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-60 text2 CODE >73:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-63 text2 CODE >75:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-A2 text1 CODE >94:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X/I2C.h
-A2 text1 CODE >96:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X/I2C.h
-A6 text1 CODE >97:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X/I2C.h
-AA text1 CODE >98:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X/I2C.h
-AE text1 CODE >99:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X/I2C.h
-B0 text1 CODE >100:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X/I2C.h
-B1 text1 CODE >101:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X/I2C.h
-B2 text1 CODE >102:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X/I2C.h
-B3 text1 CODE >103:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X/I2C.h
-B4 text1 CODE >104:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X/I2C.h
-B7 text1 CODE >105:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X/I2C.h
-BA text1 CODE >106:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X/I2C.h
-6A maintext CODE >77:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-6A maintext CODE >79:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-6D maintext CODE >80:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-6E maintext CODE >81:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-6F maintext CODE >82:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-70 maintext CODE >86:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-73 maintext CODE >87:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-74 maintext CODE >89:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-77 maintext CODE >90:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-79 maintext CODE >91:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-7C maintext CODE >92:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-7D maintext CODE >93:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-7E maintext CODE >94:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-87 maintext CODE >97:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-88 maintext CODE >98:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-89 maintext CODE >99:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-8B maintext CODE >100:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-99 maintext CODE >101:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-9C maintext CODE >97:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
-A0 maintext CODE >106:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+F cinit CODE >495:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.
+F cinit CODE >498:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.
+F cinit CODE >521:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.
+10 cinit CODE >522:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.
+11 cinit CODE >523:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.
+12 cinit CODE >526:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.
+13 cinit CODE >527:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.
+14 cinit CODE >528:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.
+15 cinit CODE >534:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.
+15 cinit CODE >536:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.
+16 cinit CODE >537:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.
+4 intentry CODE >51:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+A1 text4 CODE >51:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+A1 text4 CODE >52:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+A5 text4 CODE >54:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+A6 text4 CODE >56:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+AA text4 CODE >57:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+AE text4 CODE >58:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+AF text4 CODE >59:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+B0 text4 CODE >60:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+B1 text4 CODE >63:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+B6 text4 CODE >65:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+BC text4 CODE >67:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+BD text4 CODE >68:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+BE text4 CODE >69:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+C2 text4 CODE >70:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+C8 text4 CODE >71:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+CD text4 CODE >73:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+D1 text4 CODE >74:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+D7 text4 CODE >75:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+DA text4 CODE >76:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+DE text4 CODE >77:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+DF text4 CODE >78:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+E0 text4 CODE >79:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+E5 text4 CODE >80:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+E9 text4 CODE >81:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+E9 text4 CODE >83:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+EC text4 CODE >85:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+134 text3 CODE >162:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+134 text3 CODE >165:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+138 text3 CODE >166:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+19 text2 CODE >134:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+1A text2 CODE >135:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+1D text2 CODE >136:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+21 text2 CODE >137:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+2A text2 CODE >138:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+2E text2 CODE >139:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+37 text2 CODE >140:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+3B text2 CODE >141:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+44 text2 CODE >142:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+48 text2 CODE >143:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+51 text2 CODE >144:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+55 text2 CODE >145:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+5E text2 CODE >147:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+61 text2 CODE >148:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+65 text2 CODE >149:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+6E text2 CODE >150:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+72 text2 CODE >151:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+7B text2 CODE >152:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+7F text2 CODE >153:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+88 text2 CODE >154:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+8C text2 CODE >155:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+95 text2 CODE >156:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+99 text2 CODE >157:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+A0 text2 CODE >160:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+156 text1 CODE >128:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+156 text1 CODE >129:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+159 text1 CODE >130:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+15C text1 CODE >131:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+160 text1 CODE >132:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+F3 maintext CODE >87:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+F3 maintext CODE >89:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+F6 maintext CODE >90:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+F7 maintext CODE >91:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+F8 maintext CODE >92:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+F9 maintext CODE >96:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+FC maintext CODE >97:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+FD maintext CODE >99:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+100 maintext CODE >100:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+102 maintext CODE >101:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+105 maintext CODE >102:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+106 maintext CODE >104:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+10B maintext CODE >105:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+10F maintext CODE >119:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+112 maintext CODE >120:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+114 maintext CODE >121:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+11A maintext CODE >122:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
+12D maintext CODE >123:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -151,33 +174,38 @@ A0 maintext CODE >106:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tri
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-_z 74 0 COMMON 1 bssCOMMON dist/default/production\Tripwire.X.production.o
+_z 79 0 COMMON 1 bssCOMMON dist/default/production\Tripwire.X.production.o
 ___latbits 2 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __Hspace_0 2009 0 ABS 0 - -
 __Hspace_1 7A 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
+delay@i 20 0 BANK0 1 cstackBANK0 dist/default/production\Tripwire.X.production.o
+delay@j 22 0 BANK0 1 cstackBANK0 dist/default/production\Tripwire.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _BF 4A0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
+main@i 24 0 BANK0 1 cstackBANK0 dist/default/production\Tripwire.X.production.o
+delay@val 73 0 COMMON 1 cstackCOMMON dist/default/production\Tripwire.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _RCEN 48B 0 ABS 0 - dist/default/production\Tripwire.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.o
-_main D4 0 CODE 0 maintext dist/default/production\Tripwire.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.o
+_main 1E6 0 CODE 0 maintext dist/default/production\Tripwire.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Tripwire.X.production.o
-start 18 0 CODE 0 init C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.o
+start 18 0 CODE 0 init C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
+_system_init 2AC 0 CODE 0 text1 dist/default/production\Tripwire.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Tripwire.X.production.o
@@ -186,9 +214,12 @@ __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELH 189 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _SSPCONbits 14 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.o
-___stacklo 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.o
-_I2C_Slave_Init 144 0 CODE 0 text1 dist/default/production\Tripwire.X.production.o
+__LnvBANK0 0 0 ABS 0 nvBANK0 -
+___stackhi 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.o
+___stacklo 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.o
+full_drive@direction 75 0 COMMON 1 cstackCOMMON dist/default/production\Tripwire.X.production.o
+__size_of_delay 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
+_full_drive 32 0 CODE 0 text2 dist/default/production\Tripwire.X.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\Tripwire.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Tripwire.X.production.o
@@ -197,18 +228,18 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Tripwire.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.o
+___int_sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
-__Hcinit 30 0 CODE 0 cinit -
-__end_of_I2C_Slave_Init 176 0 CODE 0 text1 dist/default/production\Tripwire.X.production.o
+__Hcinit 32 0 CODE 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
 __Hstack 0 0 STACK 2 stack -
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 0 config -
+__end_of_full_drive 142 0 CODE 0 text2 dist/default/production\Tripwire.X.production.o
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -217,8 +248,6 @@ __Lcinit 1E 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Lstack 0 0 STACK 2 stack -
 _PORTAbits 5 0 ABS 0 - dist/default/production\Tripwire.X.production.o
-_PORTBbits 6 0 ABS 0 - dist/default/production\Tripwire.X.production.o
-_INTCONbits B 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hinit 18 0 CODE 0 init -
@@ -235,6 +264,7 @@ __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
+__pnvBANK0 26 0 BANK0 1 nvBANK0 dist/default/production\Tripwire.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\Tripwire.X.production.o
@@ -242,51 +272,58 @@ __S0 2009 0 ABS 0 - -
 __S1 7A 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 30 0 CODE 0 text2 dist/default/production\Tripwire.X.production.o
-_key 73 0 COMMON 1 bssCOMMON dist/default/production\Tripwire.X.production.o
-_val 70 0 COMMON 1 bssCOMMON dist/default/production\Tripwire.X.production.o
+_isr 142 0 CODE 0 text4 dist/default/production\Tripwire.X.production.o
+_key 78 0 COMMON 1 bssCOMMON dist/default/production\Tripwire.X.production.o
+_val 26 0 BANK0 1 nvBANK0 dist/default/production\Tripwire.X.production.o
 __CFG_BOR4V$BOR40V 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
+__end_of_system_init 2C2 0 CODE 0 text1 dist/default/production\Tripwire.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
-__end_of_isr D4 0 CODE 0 text2 dist/default/production\Tripwire.X.production.o
+__end_of_isr 1E6 0 CODE 0 text4 dist/default/production\Tripwire.X.production.o
+__HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Alejandro Recancoj\AppData\Local\Temp\s6hc.o
-__pmaintext D4 0 CODE 0 maintext dist/default/production\Tripwire.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk1g.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__pmaintext 1E6 0 CODE 0 maintext dist/default/production\Tripwire.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
-I2C_Slave_Init@address 78 0 COMMON 1 cstackCOMMON dist/default/production\Tripwire.X.production.o
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-__pbssCOMMON 70 0 COMMON 1 bssCOMMON dist/default/production\Tripwire.X.production.o
+__pbssCOMMON 77 0 COMMON 1 bssCOMMON dist/default/production\Tripwire.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __Lend_init 18 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 28 0 CODE 0 cinit dist/default/production\Tripwire.X.production.o
+end_of_initialization 2A 0 CODE 0 cinit dist/default/production\Tripwire.X.production.o
 __Hintentry 18 0 CODE 0 intentry -
+__size_of_full_drive 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 6 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__size_of_system_init 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _SSPCON2bits 91 0 ABS 0 - dist/default/production\Tripwire.X.production.o
-__ptext1 144 0 CODE 0 text1 dist/default/production\Tripwire.X.production.o
-__ptext2 30 0 CODE 0 text2 dist/default/production\Tripwire.X.production.o
+__ptext1 2AC 0 CODE 0 text1 dist/default/production\Tripwire.X.production.o
+__ptext2 32 0 CODE 0 text2 dist/default/production\Tripwire.X.production.o
+__ptext3 268 0 CODE 0 text3 dist/default/production\Tripwire.X.production.o
+__ptext4 142 0 CODE 0 text4 dist/default/production\Tripwire.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of__initialization 28 0 CODE 0 cinit dist/default/production\Tripwire.X.production.o
-__size_of_I2C_Slave_Init 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
+__end_of__initialization 2A 0 CODE 0 cinit dist/default/production\Tripwire.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
-__pcstackCOMMON 75 0 COMMON 1 cstackCOMMON dist/default/production\Tripwire.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Tripwire.X.production.o
 _SSPCON2 91 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_main 144 0 CODE 0 maintext dist/default/production\Tripwire.X.production.o
+__end_of_main 268 0 CODE 0 maintext dist/default/production\Tripwire.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\Tripwire.X.production.o
+__end_of_delay 2AC 0 CODE 0 text3 dist/default/production\Tripwire.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _SSPIE 463 0 ABS 0 - dist/default/production\Tripwire.X.production.o
@@ -296,12 +333,14 @@ _TRISB 86 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\Tripwire.X.production.o
+_delay 268 0 CODE 0 text3 dist/default/production\Tripwire.X.production.o
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _SSPSTATbits 94 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\Tripwire.X.production.o
 __size_of_isr 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __initialization 1E 0 CODE 0 cinit dist/default/production\Tripwire.X.production.o
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
+__pbssBANK0 27 0 BANK0 1 bssBANK0 dist/default/production\Tripwire.X.production.o
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
@@ -328,8 +367,8 @@ __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cstackBANK0 1 20 20 3 1
-intentry 0 4 8 B7 2
+cstackCOMMON 1 70 70 A 1
+cstackBANK0 1 20 20 8 1
+intentry 0 4 8 15D 2
 reset_vec 0 0 0 3 2
-bssCOMMON 1 70 70 A 1
 config 0 2007 400E 2 2

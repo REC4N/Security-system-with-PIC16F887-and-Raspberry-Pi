@@ -33,7 +33,7 @@
 #include <stdio.h>
 
 #define speed 1 // Speed Range 10 to 1  10 = lowest , 1 = highest
-#define steps 250 // how much step it will take
+#define steps 1000 // how much step it will take
 #define clockwise 0 // clockwise direction macro
 #define anti_clockwise 1 // anti clockwise direction macro
 
@@ -100,12 +100,13 @@ void main(void) {
     TRISB = 0x02;
     ANSEL = 0;                  // Se pone PORTA como salida digital
     ANSELH = 0;
-    INTCONbits.GIE = 1;
+    //INTCONbits.GIE = 1;
     system_init();
-    I2C_Slave_Init(0x20);
+    val = 1;
+    //I2C_Slave_Init(0x20);
     
     while(1){
-        if (PORTBbits.RB1 == 0){
+        /*if (PORTBbits.RB1 == 0){
             PORTAbits.RA0 = 1;
             key = 1;
 
@@ -114,11 +115,12 @@ void main(void) {
         
         else{
              key = 0;
-        }
+        }*/
         if (val == 1){
             for(int i=0;i<steps;i++){
                 full_drive(clockwise);
             }
+            val = 2;
         }
     }
 }
