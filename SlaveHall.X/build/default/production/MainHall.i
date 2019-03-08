@@ -2761,53 +2761,39 @@ char z, key, ADC, cont, val, door;
 void setup (void);
 
 void __attribute__((picinterrupt(("")))) isr(void){
-    if(PIR1bits.SSPIF == 1){
+# 52 "MainHall.c"
+                 if(PIR1bits.SSPIF == 1){
 
-        SSPCONbits.CKP = 0;
+            SSPCONbits.CKP = 0;
 
-        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
-            z = SSPBUF;
-            SSPCONbits.SSPOV = 0;
-            SSPCONbits.WCOL = 0;
-            SSPCONbits.CKP = 1;
-        }
+            if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+                z = SSPBUF;
+                SSPCONbits.SSPOV = 0;
+                SSPCONbits.WCOL = 0;
+                SSPCONbits.CKP = 1;
+            }
 
-        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
+            if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
 
-            z = SSPBUF;
+                z = SSPBUF;
+
+                PIR1bits.SSPIF = 0;
+                SSPCONbits.CKP = 1;
+                while(!SSPSTATbits.BF);
+                z = SSPBUF;
+                _delay((unsigned long)((250)*(8000000/4000000.0)));
+
+            }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+                z = SSPBUF;
+                BF = 0;
+                SSPBUF = door;
+                SSPCONbits.CKP = 1;
+                _delay((unsigned long)((250)*(8000000/4000000.0)));
+                while(SSPSTATbits.BF);
+            }
 
             PIR1bits.SSPIF = 0;
-            SSPCONbits.CKP = 1;
-            while(!SSPSTATbits.BF);
-            z = SSPBUF;
-            _delay((unsigned long)((250)*(8000000/4000000.0)));
-
-        }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
-            z = SSPBUF;
-            BF = 0;
-            SSPBUF = door;
-            SSPCONbits.CKP = 1;
-            _delay((unsigned long)((250)*(8000000/4000000.0)));
-            while(SSPSTATbits.BF);
-        }
-
-        PIR1bits.SSPIF = 0;
     }
-
-    if (INTCONbits.T0IF == 1){
-            cont++;
-            if(cont <= 200){
-                if(cont <= val){
-                    PORTAbits.RA1 = 1;
-                }else{
-                    PORTAbits.RA1 = 0;
-                }
-            } else {
-                cont = 0;
-            }
-            TMR0 = 56;
-            INTCONbits.T0IF = 0;
-        }
 }
 
 void main(void) {
@@ -2827,13 +2813,13 @@ void main(void) {
         }
         if (door == 0){
             if (key == 1 & PORTAbits.RA2 == 1){
-                val = 15;
+
                 door = 1;
                 while(PORTAbits.RA2 == 1);
             }
         } else if (door == 1){
             if (PORTAbits.RA2 == 1){
-                val = 8;
+
                 door = 0;
                 while(PORTAbits.RA2 == 1);
             }
@@ -2855,15 +2841,7 @@ void setup (void){
     door = 0;
     ADC_channel(0);
     initADC(2);
-    OPTION_REGbits.T0CS = 0;
-    OPTION_REGbits.T0SE = 0;
-    OPTION_REGbits.PSA = 1;
-    OPTION_REGbits.PS2 = 0;
-    OPTION_REGbits.PS1 = 0;
-    OPTION_REGbits.PS0 = 0;
-    TMR0 = 56;
-    INTCONbits.T0IF = 0;
-    INTCONbits.T0IE = 1;
+# 140 "MainHall.c"
     INTCONbits.GIE = 1;
     I2C_Slave_Init(0x10);
 }

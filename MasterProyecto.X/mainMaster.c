@@ -38,8 +38,8 @@
 #include "Oscilador.h"
 #include "UART.h"
 
-char time[6] = {0}, temp[6] = {0}, newtime[6], *day2;
-char door, trip, PIR, IR, state, day1, i, j, change, change1, change2, change3, alarm, bank;
+char time[6] = {0}, temp[6] = {0}, *day2;
+char door, trip, PIR, IR, state, day1, i, j, change, change1, change2, change3, alarm, bank, cont, val;
 
 void setup (void);
 void write_RTC(char sec, char hour, char minutes, char day);
@@ -52,6 +52,25 @@ char get_PIR(void);
 char get_IR(void);
 void open_door(void);
 void close_door(void);
+
+void __interrupt() manual_pwm(void){
+    if (INTCONbits.T0IF == 1){
+            
+        cont++;
+            if(cont < 200){
+                if(cont < val){
+                    PORTAbits.RA1 = 1;
+                }else{
+                    PORTAbits.RA1 = 0;
+                }    
+            } else {
+                cont = 0;
+            }
+            TMR0 = 56;
+            INTCONbits.T0IF = 0;
+            
+        }
+}
 
 void main(void) {
     setup();
@@ -73,25 +92,37 @@ void main(void) {
         get_time(time);
         day1 = get_day();
         
-                if(PORTDbits.RD0 == 1){         // abrir puerta
+        if(PORTDbits.RD0 == 1){         // abrir puerta
             if (bank == 1){
                 if (change1 == 0){
-                bank = 0;
-                alarm = 0;
-                open_door();
-                
-                while(j < 50){
-                    j++;
+                    bank = 0;
+                    alarm = 0;
+                    open_door();
+
+                    while(j < 50){
+                        j++;
+                    }
+                    j = 0;
+                    change1 = 1;
                 }
-                j = 0;
-                change1 = 1;
-            }
+            } else if (bank == 0){
+                if (change1 == 0){
+                    bank = 1;
+                    //alarm = 0;
+                    close_door();
+                    
+                    while(j < 50){
+                        j++;
+                    }
+                    j = 0;
+                    change1 = 1;
+                }
             }
         } else if(PORTDbits.RD0 == 0){
-            change1 =0;
+            change1 = 0;
         }
         
-        else if(PORTDbits.RD1 == 1){         // cerrar puerta
+        /*else if(PORTDbits.RD1 == 1){         // cerrar puerta
                 if (bank == 0){
                 if (change2 == 0){
                 bank = 1;
@@ -107,28 +138,26 @@ void main(void) {
             }
         } else if (PORTDbits.RD1 == 0) {
             change2 =0;
-        }
+        }*/
         
+        alarm = trip | PIR | IR;
         
-        if (trip | PIR | IR){
+        /*if (trip | PIR | IR){
             alarm = 1;
-            
             PORTAbits.RA7 = 1;
-        }
+        }*/
         //agregar reset de alarma
         
         
-        if (alarm == 1){
-            if (change3 == 0){
+        /*if (alarm == 1){
+            if (change2 == 0){
                 bank = 0;
                 close_door();
-                change3 =1;
-            }
-            
-            
-        } else{
-            change3 = 0;
-        }
+                change2 = 1;
+            }      
+        } else {
+            change2 = 0;
+        }*/
         
         SSPCONbits.SSPEN = 0;
         RCSTAbits.SPEN = 1;
@@ -165,7 +194,11 @@ void main(void) {
             UART_Write('A');
         }
         
-        
+        if (door == 1){
+            val = 8;
+        } else if (door == 0){
+            val = 17;
+        }
         
         switch(day1){
             case 1:
@@ -201,7 +234,6 @@ void main(void) {
             PORTAbits.RA0 = 0;
         }
         
-        
         //Cambia el estado para mostrar los diferentes sensores en la LCD
         if(PORTCbits.RC0 == 1){
             if (change == 0){
@@ -219,9 +251,6 @@ void main(void) {
         } else {
             change =0;
         }
-        
-
-        
         
         if (state == 0){
             //Muestra la hora y la temperatura del banco
@@ -287,6 +316,16 @@ void setup (void){
     trip = 0;
     IR = 0;
     PIR = 0;
+    OPTION_REGbits.T0CS = 0;
+    OPTION_REGbits.T0SE = 0;  
+    OPTION_REGbits.PSA = 1;   
+    OPTION_REGbits.PS2 = 0;   
+    OPTION_REGbits.PS1 = 0;
+    OPTION_REGbits.PS0 = 0;
+    TMR0 = 56;
+    INTCONbits.T0IF = 0;
+    INTCONbits.T0IE = 1;
+    INTCONbits.GIE = 1;
     Lcd_Init();                 //Inicializar LCD
     UART_Init(9600);            //Inicializa la comunicación UART
     I2C_Master_Init(100000);        // Inicializar Comuncación I2C

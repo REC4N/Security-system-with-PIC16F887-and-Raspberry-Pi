@@ -29,11 +29,9 @@
 [v _main main `(v  1 e 1 0 ]
 "118
 [v _setup setup `(v  1 e 1 0 ]
-"59 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
-[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
-"166
+"166 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
-[s S408 . 1 `uc 1 RA0 1 0 :1:0 
+[s S382 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -43,11 +41,11 @@
 `uc 1 RA7 1 0 :1:7 
 ]
 "183
-[u S417 . 1 `S408 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES417  1 e 1 @5 ]
+[u S391 . 1 `S382 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES391  1 e 1 @5 ]
 "228
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S376 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S408 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -57,13 +55,13 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "482
-[s S385 . 1 `uc 1 . 1 0 :2:0 
+[s S417 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S390 . 1 `S376 1 . 1 0 `S385 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES390  1 e 1 @11 ]
+[u S422 . 1 `S408 1 . 1 0 `S417 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES422  1 e 1 @11 ]
 [s S235 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -118,20 +116,6 @@
 ]
 [u S42 . 1 `S22 1 . 1 0 `S27 1 . 1 0 `S36 1 . 1 0 `S39 1 . 1 0 ]
 [v _ADCON0bits ADCON0bits `VES42  1 e 1 @31 ]
-[s S441 . 1 `uc 1 PS 1 0 :3:0 
-`uc 1 PSA 1 0 :1:3 
-`uc 1 T0SE 1 0 :1:4 
-`uc 1 T0CS 1 0 :1:5 
-`uc 1 INTEDG 1 0 :1:6 
-`uc 1 nRBPU 1 0 :1:7 
-]
-"1366
-[s S448 . 1 `uc 1 PS0 1 0 :1:0 
-`uc 1 PS1 1 0 :1:1 
-`uc 1 PS2 1 0 :1:2 
-]
-[u S452 . 1 `S441 1 . 1 0 `S448 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES452  1 e 1 @129 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 [s S89 . 1 `uc 1 TRISA0 1 0 :1:0 
@@ -298,7 +282,6 @@
 [v _z z `uc  1 e 1 0 ]
 [v _key key `uc  1 e 1 0 ]
 [v _ADC ADC `uc  1 e 1 0 ]
-[v _cont cont `uc  1 e 1 0 ]
 [v _val val `uc  1 e 1 0 ]
 [v _door door `uc  1 e 1 0 ]
 "86
