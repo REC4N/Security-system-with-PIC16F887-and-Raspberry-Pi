@@ -11,10 +11,6 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.o
-reset_vec CODE 0 0 0 3 2
-end_init CODE 0 C C 3 2
-config CONFIG 0 2007 2007 2 2
 $dist/default/production\PIR.X.production.o
 cinit CODE 0 F F 9 2
 text1 CODE 0 A2 A2 19 2
@@ -24,6 +20,10 @@ cstackCOMMON COMMON 1 75 75 5 1
 cstackBANK0 BANK0 1 20 20 3 1
 intentry CODE 0 4 4 8 2
 bssCOMMON COMMON 1 70 70 5 1
+$C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.o
+reset_vec CODE 0 0 0 3 2
+end_init CODE 0 C C 3 2
+config CONFIG 0 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -70,16 +70,16 @@ STRING BB-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\PIR.X.production.o
-F cinit CODE >491:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.
-F cinit CODE >494:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.
-F cinit CODE >517:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.
-10 cinit CODE >518:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.
-11 cinit CODE >519:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.
-12 cinit CODE >520:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.
-13 cinit CODE >521:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.
-14 cinit CODE >527:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.
-14 cinit CODE >529:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.
-15 cinit CODE >530:C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.
+F cinit CODE >491:C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.
+F cinit CODE >494:C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.
+F cinit CODE >517:C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.
+10 cinit CODE >518:C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.
+11 cinit CODE >519:C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.
+12 cinit CODE >520:C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.
+13 cinit CODE >521:C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.
+14 cinit CODE >527:C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.
+14 cinit CODE >529:C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.
+15 cinit CODE >530:C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.
 4 intentry CODE >41:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
 18 text2 CODE >41:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
 18 text2 CODE >42:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
@@ -164,20 +164,20 @@ _BF 4A0 0 ABS 0 - dist/default/production\PIR.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\PIR.X.production.o
 _RCEN 48B 0 ABS 0 - dist/default/production\PIR.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.o
+___sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.o
 _main D4 0 CODE 0 maintext dist/default/production\PIR.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\PIR.X.production.o
-start 18 0 CODE 0 init C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.o
+start 18 0 CODE 0 init C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\PIR.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\PIR.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\PIR.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\PIR.X.production.o
@@ -186,8 +186,8 @@ __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELH 189 0 ABS 0 - dist/default/production\PIR.X.production.o
 _SSPCONbits 14 0 ABS 0 - dist/default/production\PIR.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.o
-___stacklo 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.o
+___stackhi 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.o
+___stacklo 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.o
 _I2C_Slave_Init 144 0 CODE 0 text1 dist/default/production\PIR.X.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\PIR.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\PIR.X.production.o
@@ -197,7 +197,7 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\PIR.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\PIR.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\PIR.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\PIR.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.o
+___int_sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -250,7 +250,7 @@ saved_w 7E 0 ABS 0 - dist/default/production\PIR.X.production.o
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\PIR.X.production.o
 __end_of_isr D4 0 CODE 0 text2 dist/default/production\PIR.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Alejandro Recancoj\AppData\Local\Temp\s4k0.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Alejandro Recancoj\AppData\Local\Temp\siv4.o
 __pmaintext D4 0 CODE 0 maintext dist/default/production\PIR.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -

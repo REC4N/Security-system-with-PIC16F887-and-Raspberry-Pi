@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.05 build -831301201 
-                                                                                               Thu Feb 28 15:27:59 2019
+                                                                                               Thu Mar 07 14:45:57 2019
 
 Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
      1                           	processor	16F887
@@ -429,10 +429,10 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    415                           ;mainPIR.c: 103:         }
    416                           
    417                           
-   418                           ;mainPIR.c: 97:         if (PORTBbits.RB1 == 0){
+   418                           ;mainPIR.c: 97:         if (PORTBbits.RB1 == 1){
    419  009C  1283               	bcf	3,5	;RP0=0, select bank0
    420  009D  1303               	bcf	3,6	;RP1=0, select bank0
-   421  009E  1C86               	btfss	6,1	;volatile
+   421  009E  1886               	btfsc	6,1	;volatile
    422  009F  2888               	goto	l887
    423                           
    424                           ;mainPIR.c: 106:              key = 0;
@@ -834,7 +834,7 @@ DATA                 0      0       D      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.05 build -831301201 
-Symbol Table                                                                                   Thu Feb 28 15:27:59 2019
+Symbol Table                                                                                   Thu Mar 07 14:45:57 2019
 
                        _z 0074               __CFG_CP$OFF 0000               _SSPSTATbits 0094  
                       _BF 04A0                       _ADC 0072                       l885 009C  

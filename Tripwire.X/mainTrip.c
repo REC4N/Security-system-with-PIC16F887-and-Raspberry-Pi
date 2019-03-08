@@ -106,7 +106,7 @@ void main(void) {
     I2C_Slave_Init(0x20);
     
     while(1){
-        if (PORTDbits.RD1 == 0){
+        if (PORTDbits.RD1 == 1){
             PORTAbits.RA0 = 1;
             key = 1;
 
@@ -116,13 +116,13 @@ void main(void) {
         else{
              key = 0;
         }
-        if (val == 255){
+        if (val == 0xFF){
             for(int i=0;i<steps;i++){
                 full_drive(clockwise);
             }
             val = 0;
         }
-        if (val == 128){
+        if (val == 0xF0){
             for(int i=0;i<steps;i++){
                 full_drive(anti_clockwise);
             }

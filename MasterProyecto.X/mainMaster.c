@@ -38,8 +38,8 @@
 #include "Oscilador.h"
 #include "UART.h"
 
-char time[6] = {0}, temp[6] = {0}, newtime[6], *day2, *newday2;
-char door, trip, PIR, IR, state, day1, i, j, change, newday;
+char time[6] = {0}, temp[6] = {0}, newtime[6], *day2;
+char door, trip, PIR, IR, state, day1, i, j, change, change1, change2, change3, alarm, bank;
 
 void setup (void);
 void write_RTC(char sec, char hour, char minutes, char day);
@@ -50,14 +50,18 @@ char get_hall(void);
 char get_tripwire (void);
 char get_PIR(void);
 char get_IR(void);
+void open_door(void);
+void close_door(void);
 
 void main(void) {
     setup();
     state = 0;
     Lcd_Clear();
+    PORTAbits.RA7 = 0;
     //write_RTC(0x00, 0x21, 0x50, 0x07);
     while (1) {
         //Obtener la información de los esclavos de la red I2C
+        
         RCSTAbits.SPEN = 0;
         SSPCONbits.SSPEN = 1;
         
@@ -68,6 +72,63 @@ void main(void) {
         IR = get_IR();
         get_time(time);
         day1 = get_day();
+        
+                if(PORTDbits.RD0 == 1){         // abrir puerta
+            if (bank == 1){
+                if (change1 == 0){
+                bank = 0;
+                alarm = 0;
+                open_door();
+                
+                while(j < 50){
+                    j++;
+                }
+                j = 0;
+                change1 = 1;
+            }
+            }
+        } else if(PORTDbits.RD0 == 0){
+            change1 =0;
+        }
+        
+        else if(PORTDbits.RD1 == 1){         // cerrar puerta
+                if (bank == 0){
+                if (change2 == 0){
+                bank = 1;
+                alarm = 0;
+                close_door();
+                
+                while(j < 50){
+                    j++;
+                }
+                j = 0;
+                change2 = 1;
+            }
+            }
+        } else if (PORTDbits.RD1 == 0) {
+            change2 =0;
+        }
+        
+        
+        if (trip | PIR | IR){
+            alarm = 1;
+            
+            PORTAbits.RA7 = 1;
+        }
+        //agregar reset de alarma
+        
+        
+        if (alarm == 1){
+            if (change3 == 0){
+                bank = 0;
+                close_door();
+                change3 =1;
+            }
+            
+            
+        } else{
+            change3 = 0;
+        }
         
         SSPCONbits.SSPEN = 0;
         RCSTAbits.SPEN = 1;
@@ -104,6 +165,8 @@ void main(void) {
             UART_Write('A');
         }
         
+        
+        
         switch(day1){
             case 1:
                 day2 = "LUNES    ";
@@ -138,6 +201,7 @@ void main(void) {
             PORTAbits.RA0 = 0;
         }
         
+        
         //Cambia el estado para mostrar los diferentes sensores en la LCD
         if(PORTCbits.RC0 == 1){
             if (change == 0){
@@ -155,6 +219,8 @@ void main(void) {
         } else {
             change =0;
         }
+        
+
         
         
         if (state == 0){
@@ -347,4 +413,22 @@ char get_IR (void){
     I2C_Master_Stop();
     
     return (IR);
+}
+
+void open_door(void){
+    
+    I2C_Master_Start();
+    I2C_Master_Write(0x20);     
+    I2C_Master_Write(0xFF);
+    I2C_Master_Stop();
+    
+}
+
+void close_door(void){
+    
+    I2C_Master_Start();
+    I2C_Master_Write(0x20);     
+    I2C_Master_Write(0xF0);
+    I2C_Master_Stop();
+    
 }

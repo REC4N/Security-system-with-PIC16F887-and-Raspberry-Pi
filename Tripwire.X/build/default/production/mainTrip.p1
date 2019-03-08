@@ -866,8 +866,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 166 ]
 {
 "109
-[; ;mainTrip.c: 109:         if (PORTDbits.RD1 == 0){
-[e $ ! == -> . . _PORTDbits 0 1 `i -> 0 `i 168  ]
+[; ;mainTrip.c: 109:         if (PORTDbits.RD1 == 1){
+[e $ ! == -> . . _PORTDbits 0 1 `i -> 1 `i 168  ]
 {
 "110
 [; ;mainTrip.c: 110:             PORTAbits.RA0 = 1;
@@ -891,7 +891,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 169 ]
 "119
-[; ;mainTrip.c: 119:         if (val == 255){
+[; ;mainTrip.c: 119:         if (val == 0xFF){
 [e $ ! == -> _val `i -> 255 `i 170  ]
 {
 "120
@@ -921,8 +921,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 170 ]
 "125
-[; ;mainTrip.c: 125:         if (val == 128){
-[e $ ! == -> _val `i -> 128 `i 174  ]
+[; ;mainTrip.c: 125:         if (val == 0xF0){
+[e $ ! == -> _val `i -> 240 `i 174  ]
 {
 "126
 [; ;mainTrip.c: 126:             for(int i=0;i<1000;i++){

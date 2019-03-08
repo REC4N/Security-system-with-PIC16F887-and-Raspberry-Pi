@@ -94,7 +94,7 @@ void main(void) {
     I2C_Slave_Init(0x40);
     
     while(1){
-        if (PORTBbits.RB1 == 0){
+        if (PORTBbits.RB1 == 1){
             PORTAbits.RA0 = 1;
             key = 1;
             __delay_ms(250);

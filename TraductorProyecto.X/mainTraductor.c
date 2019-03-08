@@ -57,7 +57,7 @@ void main(void) {
     setup();
     while (1){
         if (done == 1){
-            /*UART_Write(info[0]);
+            UART_Write(info[0]);
             UART_Write(info[1]);
             UART_Write(info[2]);
             UART_Write(info[3]);
@@ -71,7 +71,7 @@ void main(void) {
             UART_Write(info[11]);
             UART_Write(info[12]);
             UART_Write(info[13]);
-            UART_Write(info[14]);*/
+            UART_Write(info[14]);
             done = 0;
             RB0 = 0;
         }
@@ -84,6 +84,7 @@ void setup(void){
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.SCS = 1;  
     val = 0;
+    j = 0;
     ANSELH = 0;
     TRISB = 0;
     PORTB = 0;
