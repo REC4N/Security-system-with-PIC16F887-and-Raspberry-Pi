@@ -32,6 +32,7 @@
 
 #include <xc.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "I2C.h"
 #include "LCD4bits.h"
@@ -39,10 +40,12 @@
 #include "UART.h"
 
 char time[6] = {0}, temp[6] = {0}, *day2;
-char door, trip, PIR, IR, state, day1, i, j, change, change1, change2, change3, alarm, bank, cont, val;
+char door, trip, PIR, IR, state, day1, i, j, change, change1, change2, change3, alarm, bank, cont, val, hour, min;
+char newhour, newmin;
+int k;
 
 void setup (void);
-void write_RTC(char sec, char hour, char minutes, char day);
+void write_RTC(char hour, char minutes, char day);
 void get_time(char *time_string);
 char get_day(void);
 void get_temp(char *temp_string);
@@ -77,12 +80,8 @@ void main(void) {
     state = 0;
     Lcd_Clear();
     PORTAbits.RA7 = 0;
-    //write_RTC(0x00, 0x21, 0x50, 0x07);
     while (1) {
         //Obtener la información de los esclavos de la red I2C
-        
-        RCSTAbits.SPEN = 0;
-        SSPCONbits.SSPEN = 1;
         
         get_temp(temp);
         door = get_hall();
@@ -92,17 +91,17 @@ void main(void) {
         get_time(time);
         day1 = get_day();
         
-        if(PORTDbits.RD0 == 1){         // abrir puerta
+        if(PORTDbits.RD7 == 1){         // abrir puerta
             if (bank == 1){
                 if (change1 == 0){
                     bank = 0;
                     alarm = 0;
                     open_door();
-
+                    j = 0;
                     while(j < 50){
                         j++;
                     }
-                    j = 0;
+                    
                     change1 = 1;
                 }
             } else if (bank == 0){
@@ -110,15 +109,15 @@ void main(void) {
                     bank = 1;
                     //alarm = 0;
                     close_door();
-                    
+                    j = 0;
                     while(j < 50){
                         j++;
                     }
-                    j = 0;
+                    
                     change1 = 1;
                 }
             }
-        } else if(PORTDbits.RD0 == 0){
+        } else if(PORTDbits.RD7 == 0){
             change1 = 0;
         }
         
@@ -194,6 +193,9 @@ void main(void) {
             UART_Write('A');
         }
         
+        RCSTAbits.SPEN = 0;
+        SSPCONbits.SSPEN = 1;
+        
         if (door == 1){
             val = 8;
         } else if (door == 0){
@@ -239,13 +241,14 @@ void main(void) {
             if (change == 0){
                 state++;
                 Lcd_Clear();
-                if (state > 2){
+                if (state > 3){
                     state = 0;
                 }
+                j = 0;
                 while(j < 50){
                     j++;
                 }
-                j = 0;
+                
                 change = 1;
             }
         } else {
@@ -296,7 +299,54 @@ void main(void) {
             } else {
                 Lcd_Write_String("IR OFF");
             }
-        } 
+        } else if (state == 3){
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("HORA: ");
+            Lcd_Write_String(time);
+            
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_String("DIA: ");
+            Lcd_Write_String(day2);
+            
+            newhour = (time[0] - '0') * 10 + (time[1] - '0');
+            newmin = (time[3] - '0') * 10 + (time[4] - '0');
+            
+            if (PORTDbits.RD4 == 1){
+                newhour++;
+                if (newhour > 23){
+                    newhour = 0;
+                }
+                __delay_ms(100);  
+            } else if (PORTDbits.RD3 == 1){
+                newhour--;
+                if (newhour == 255){
+                    newhour = 23;
+                }
+                __delay_ms(100);   
+            } else if (PORTDbits.RD2 == 1){
+                newmin++;
+                if (newmin > 59){
+                    newmin = 0;
+                }
+                __delay_ms(100);    
+            } else if (PORTDbits.RD1 == 1){
+                newmin--;
+                if (newmin == 255){
+                    newmin = 59;
+                }
+                __delay_ms(100);   
+            } else if (PORTDbits.RD0 == 1){
+                day1++;
+                if (day1 > 7){
+                    day1 = 1;
+                }
+                __delay_ms(100);    
+            }
+            
+            hour = ((newhour / 10) << 4) + (newhour % 10);
+            min = ((newmin / 10) << 4) + (newmin % 10);
+            write_RTC(hour, min, day1);
+        }
     }  
 }
 
@@ -306,7 +356,7 @@ void setup (void){
     ANSEL = 0;                  //Puerto A digital
     TRISB = 0;                  //PORTB como output
     TRISA = 0;                  //PORTA como output
-    TRISD = 15;
+    TRISD = 0xFF;
     PORTB = 0;                  //Inicializar puertos
     PORTA = 0;
     TRISC = 0x01;               //RC0 como input
@@ -331,12 +381,11 @@ void setup (void){
     I2C_Master_Init(100000);        // Inicializar Comuncación I2C
 }
 
-void write_RTC (char sec, char hour, char minutes, char day) {
+void write_RTC (char hour, char minutes, char day) {
     //Cambia los segundos, minutos, hora y día del DS3231
     I2C_Master_Start();
     I2C_Master_Write(0xD0);
-    I2C_Master_Write(0x00);
-    I2C_Master_Write(sec);
+    I2C_Master_Write(0x01);
     I2C_Master_Write(minutes);
     I2C_Master_Write(hour);
     I2C_Master_Write(day);

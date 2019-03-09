@@ -2615,6 +2615,91 @@ extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 # 34 "mainMaster.c" 2
 
+# 1 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdlib.h" 1 3
+
+
+
+
+
+
+typedef unsigned short wchar_t;
+
+
+
+
+
+
+
+typedef struct {
+ int rem;
+ int quot;
+} div_t;
+typedef struct {
+ unsigned rem;
+ unsigned quot;
+} udiv_t;
+typedef struct {
+ long quot;
+ long rem;
+} ldiv_t;
+typedef struct {
+ unsigned long quot;
+ unsigned long rem;
+} uldiv_t;
+# 65 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdlib.h" 3
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+
+
+
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+
+
+
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+
+
+
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+# 104 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdlib.h" 3
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+
+
+
+
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
+extern char * ftoa(float f, int * status);
+# 35 "mainMaster.c" 2
+
 # 1 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\string.h" 1 3
 # 14 "D:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\string.h" 3
 extern void * memcpy(void *, const void *, size_t);
@@ -2646,7 +2731,7 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
-# 35 "mainMaster.c" 2
+# 36 "mainMaster.c" 2
 
 # 1 "./I2C.h" 1
 # 16 "./I2C.h"
@@ -2741,7 +2826,7 @@ void I2C_Slave_Init(short address)
     SSPIF = 0;
     SSPIE = 1;
 }
-# 36 "mainMaster.c" 2
+# 37 "mainMaster.c" 2
 
 # 1 "./LCD4bits.h" 1
 
@@ -2861,7 +2946,7 @@ void Lcd_Shift_Left()
  Lcd_Cmd(0x01);
  Lcd_Cmd(0x08);
 }
-# 37 "mainMaster.c" 2
+# 38 "mainMaster.c" 2
 
 # 1 "./Oscilador.h" 1
 
@@ -2917,7 +3002,7 @@ void initOscilador(char option){
     OSCCONbits.SCS = 1;
 
 }
-# 38 "mainMaster.c" 2
+# 39 "mainMaster.c" 2
 
 # 1 "./UART.h" 1
 
@@ -2985,14 +3070,16 @@ void UART_Write_Text(char *text)
   for(i=0;text[i]!='\0';i++)
    UART_Write(text[i]);
 }
-# 39 "mainMaster.c" 2
+# 40 "mainMaster.c" 2
 
 
 char time[6] = {0}, temp[6] = {0}, *day2;
-char door, trip, PIR, IR, state, day1, i, j, change, change1, change2, change3, alarm, bank, cont, val;
+char door, trip, PIR, IR, state, day1, i, j, change, change1, change2, change3, alarm, bank, cont, val, hour, min;
+char newhour, newmin;
+int k;
 
 void setup (void);
-void write_RTC(char sec, char hour, char minutes, char day);
+void write_RTC(char hour, char minutes, char day);
 void get_time(char *time_string);
 char get_day(void);
 void get_temp(char *temp_string);
@@ -3027,12 +3114,8 @@ void main(void) {
     state = 0;
     Lcd_Clear();
     PORTAbits.RA7 = 0;
-
     while (1) {
 
-
-        RCSTAbits.SPEN = 0;
-        SSPCONbits.SSPEN = 1;
 
         get_temp(temp);
         door = get_hall();
@@ -3042,17 +3125,17 @@ void main(void) {
         get_time(time);
         day1 = get_day();
 
-        if(PORTDbits.RD0 == 1){
+        if(PORTDbits.RD7 == 1){
             if (bank == 1){
                 if (change1 == 0){
                     bank = 0;
                     alarm = 0;
                     open_door();
-
+                    j = 0;
                     while(j < 50){
                         j++;
                     }
-                    j = 0;
+
                     change1 = 1;
                 }
             } else if (bank == 0){
@@ -3060,20 +3143,20 @@ void main(void) {
                     bank = 1;
 
                     close_door();
-
+                    j = 0;
                     while(j < 50){
                         j++;
                     }
-                    j = 0;
+
                     change1 = 1;
                 }
             }
-        } else if(PORTDbits.RD0 == 0){
+        } else if(PORTDbits.RD7 == 0){
             change1 = 0;
         }
-# 143 "mainMaster.c"
+# 142 "mainMaster.c"
         alarm = trip | PIR | IR;
-# 162 "mainMaster.c"
+# 161 "mainMaster.c"
         SSPCONbits.SSPEN = 0;
         RCSTAbits.SPEN = 1;
 
@@ -3108,6 +3191,9 @@ void main(void) {
             _delay((unsigned long)((1)*(8000000/4000.0)));
             UART_Write('A');
         }
+
+        RCSTAbits.SPEN = 0;
+        SSPCONbits.SSPEN = 1;
 
         if (door == 1){
             val = 8;
@@ -3154,13 +3240,14 @@ void main(void) {
             if (change == 0){
                 state++;
                 Lcd_Clear();
-                if (state > 2){
+                if (state > 3){
                     state = 0;
                 }
+                j = 0;
                 while(j < 50){
                     j++;
                 }
-                j = 0;
+
                 change = 1;
             }
         } else {
@@ -3211,6 +3298,53 @@ void main(void) {
             } else {
                 Lcd_Write_String("IR OFF");
             }
+        } else if (state == 3){
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("HORA: ");
+            Lcd_Write_String(time);
+
+            Lcd_Set_Cursor(2,1);
+            Lcd_Write_String("DIA: ");
+            Lcd_Write_String(day2);
+
+            newhour = (time[0] - '0') * 10 + (time[1] - '0');
+            newmin = (time[3] - '0') * 10 + (time[4] - '0');
+
+            if (PORTDbits.RD4 == 1){
+                newhour++;
+                if (newhour > 23){
+                    newhour = 0;
+                }
+                _delay((unsigned long)((100)*(8000000/4000.0)));
+            } else if (PORTDbits.RD3 == 1){
+                newhour--;
+                if (newhour == 255){
+                    newhour = 23;
+                }
+                _delay((unsigned long)((100)*(8000000/4000.0)));
+            } else if (PORTDbits.RD2 == 1){
+                newmin++;
+                if (newmin > 59){
+                    newmin = 0;
+                }
+                _delay((unsigned long)((100)*(8000000/4000.0)));
+            } else if (PORTDbits.RD1 == 1){
+                newmin--;
+                if (newmin == 255){
+                    newmin = 59;
+                }
+                _delay((unsigned long)((100)*(8000000/4000.0)));
+            } else if (PORTDbits.RD0 == 1){
+                day1++;
+                if (day1 > 7){
+                    day1 = 1;
+                }
+                _delay((unsigned long)((100)*(8000000/4000.0)));
+            }
+
+            hour = ((newhour / 10) << 4) + (newhour % 10);
+            min = ((newmin / 10) << 4) + (newmin % 10);
+            write_RTC(hour, min, day1);
         }
     }
 }
@@ -3221,7 +3355,7 @@ void setup (void){
     ANSEL = 0;
     TRISB = 0;
     TRISA = 0;
-    TRISD = 15;
+    TRISD = 0xFF;
     PORTB = 0;
     PORTA = 0;
     TRISC = 0x01;
@@ -3246,12 +3380,11 @@ void setup (void){
     I2C_Master_Init(100000);
 }
 
-void write_RTC (char sec, char hour, char minutes, char day) {
+void write_RTC (char hour, char minutes, char day) {
 
     I2C_Master_Start();
     I2C_Master_Write(0xD0);
-    I2C_Master_Write(0x00);
-    I2C_Master_Write(sec);
+    I2C_Master_Write(0x01);
     I2C_Master_Write(minutes);
     I2C_Master_Write(hour);
     I2C_Master_Write(day);
