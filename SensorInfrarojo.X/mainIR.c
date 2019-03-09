@@ -30,13 +30,12 @@
 #define _XTAL_FREQ 8000000
 #include <xc.h>
 #include "I2C.h"
-char z, key, ADC, cont, val;
+char z, IR, val;
 
 void setup (void);
 
 #define _XTAL_FREQ 8000000      // Frecuencia de oscilacion de 1 Mhz
-
-                    // Variable de estado para indicar si el contador asciende o desciende
+                                // Variable de estado para indicar si el contador asciende o desciende
 
 void __interrupt() isr(void){
     if(PIR1bits.SSPIF == 1){ 
@@ -63,7 +62,7 @@ void __interrupt() isr(void){
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
             z = SSPBUF;                 // Read to refresh the buffer and reset the BF bit.
             BF = 0;
-            SSPBUF = key;               // key value is put on the SSPBUF to transmit.
+            SSPBUF = IR;               // key value is put on the SSPBUF to transmit.
             PORTAbits.RA6 = 1;
             SSPCONbits.CKP = 1;         // SCL pulses are activated.
             __delay_us(250);
@@ -75,35 +74,27 @@ void __interrupt() isr(void){
 }
 
 void main(void) {
-    
     OSCCONbits.IRCF0 = 1;       // Se configura oscilador a 8 Mhz
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.SCS = 1;         
-  
-    
-    
     PORTA = 0;                  // Se limpia PORTD
     PORTB = 0;                  // Se pone PORTD como output
-    
-    TRISA = 0;               // Se pone PORTA como output
+    TRISA = 0;                  // Se pone PORTA como output
     TRISB = 0x02;
     ANSEL = 0;                  // Se pone PORTA como salida digital
     ANSELH = 0;
     INTCONbits.GIE = 1;
     I2C_Slave_Init(0x30);
-    
     while(1){
         if (PORTBbits.RB1 == 0){
             PORTAbits.RA0 = 1;
-            key = 1;
+            IR = 1;
             __delay_ms(250);
-            PORTAbits.RA0 = 0;
-            
+            PORTAbits.RA0 = 0;  
         }
-        
         else{
-             key = 0;
+             IR = 0;
         }
     }
 }

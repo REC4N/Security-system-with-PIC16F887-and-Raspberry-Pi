@@ -37,7 +37,9 @@
 #define clockwise 0 // clockwise direction macro
 #define anti_clockwise 1 // anti clockwise direction macro
 
-char z, key, ADC, cont, val;
+char z, key, ADC, cont, val, i; 
+int j;
+char send[2];
 
 void setup (void);
 void system_init (void); // This function will initialise the ports.
@@ -71,9 +73,15 @@ void __interrupt() isr(void){
             __delay_us(250);
             
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+            
             z = SSPBUF;                 // Read to refresh the buffer and reset the BF bit.
             BF = 0;
-            SSPBUF = key;               // key value is put on the SSPBUF to transmit.
+            
+            SSPBUF = send[i];               // key value is put on the SSPBUF to transmit.
+            i++;
+            if (i>1){
+                i = 0;
+            }
             PORTAbits.RA6 = 1;
             SSPCONbits.CKP = 1;         // SCL pulses are activated.
             __delay_us(250);
@@ -92,7 +100,10 @@ void main(void) {
     OSCCONbits.SCS = 1;         
   
     
-    
+    i = 0;
+    j = 0;
+    send[0] = 0;
+    send[1] = 3;
     PORTA = 0;                  // Se limpia PORTD
     PORTB = 0;                  // Se pone PORTD como output
     
@@ -108,28 +119,37 @@ void main(void) {
     while(1){
         if (PORTDbits.RD1 == 1){
             PORTAbits.RA0 = 1;
-            key = 1;
+            send[0] = 1;
 
             
         }
         
         else{
-             key = 0;
+             send[0] = 0;
         }
         if (val == 0xFF){
-            for(int i=0;i<steps;i++){
-                full_drive(clockwise);
+            if (j < 1000){
+                full_drive(anti_clockwise);  
+                j++;
             }
-            val = 0;
-        }
+            else{
+                send[1] = 3;
+                val = 0;
+            }
+            }
         if (val == 0xF0){
-            for(int i=0;i<steps;i++){
-                full_drive(anti_clockwise);
+            if (j > 0){
+                full_drive(clockwise);
+                j--;
             }
-            val = 0;
+            else{
+                send[1] = 2;
+                val = 0;
+            }
+            
         }
         }
-    }
+        }
 
 
 void system_init (void){

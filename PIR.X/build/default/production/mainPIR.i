@@ -2608,10 +2608,9 @@ void I2C_Slave_Init(short address)
 }
 # 32 "mainPIR.c" 2
 
-char z, key, ADC, cont, val;
+char z, PIR, val;
 
 void setup (void);
-
 
 
 
@@ -2641,8 +2640,7 @@ void __attribute__((picinterrupt(("")))) isr(void){
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
             z = SSPBUF;
             BF = 0;
-            SSPBUF = key;
-            PORTAbits.RA6 = 1;
+            SSPBUF = PIR;
             SSPCONbits.CKP = 1;
             _delay((unsigned long)((250)*(8000000/4000000.0)));
             while(SSPSTATbits.BF);
@@ -2658,12 +2656,8 @@ void main(void) {
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.SCS = 1;
-
-
-
     PORTA = 0;
     PORTB = 0;
-
     TRISA = 0;
     TRISB = 0x02;
     ANSEL = 0;
@@ -2673,15 +2667,12 @@ void main(void) {
 
     while(1){
         if (PORTBbits.RB1 == 1){
-            PORTAbits.RA0 = 1;
-            key = 1;
+            PIR = 1;
             _delay((unsigned long)((250)*(8000000/4000.0)));
-            PORTAbits.RA0 = 0;
-
         }
 
         else{
-             key = 0;
+            PIR = 0;
         }
     }
 }

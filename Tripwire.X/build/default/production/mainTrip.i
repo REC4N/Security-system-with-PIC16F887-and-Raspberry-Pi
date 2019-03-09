@@ -2713,7 +2713,9 @@ extern int printf(const char *, ...);
 
 
 
-char z, key, ADC, cont, val;
+char z, key, ADC, cont, val, i;
+int j;
+char send[2];
 
 void setup (void);
 void system_init (void);
@@ -2747,9 +2749,15 @@ void __attribute__((picinterrupt(("")))) isr(void){
             _delay((unsigned long)((250)*(8000000/4000000.0)));
 
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+
             z = SSPBUF;
             BF = 0;
-            SSPBUF = key;
+
+            SSPBUF = send[i];
+            i++;
+            if (i>1){
+                i = 0;
+            }
             PORTAbits.RA6 = 1;
             SSPCONbits.CKP = 1;
             _delay((unsigned long)((250)*(8000000/4000000.0)));
@@ -2768,7 +2776,10 @@ void main(void) {
     OSCCONbits.SCS = 1;
 
 
-
+    i = 0;
+    j = 0;
+    send[0] = 0;
+    send[1] = 3;
     PORTA = 0;
     PORTB = 0;
 
@@ -2784,28 +2795,37 @@ void main(void) {
     while(1){
         if (PORTDbits.RD1 == 1){
             PORTAbits.RA0 = 1;
-            key = 1;
+            send[0] = 1;
 
 
         }
 
         else{
-             key = 0;
+             send[0] = 0;
         }
         if (val == 0xFF){
-            for(int i=0;i<1000;i++){
-                full_drive(0);
-            }
-            val = 0;
-        }
-        if (val == 0xF0){
-            for(int i=0;i<1000;i++){
+            if (j < 1000){
                 full_drive(1);
+                j++;
             }
-            val = 0;
+            else{
+                send[1] = 3;
+                val = 0;
+            }
+            }
+        if (val == 0xF0){
+            if (j > 0){
+                full_drive(0);
+                j--;
+            }
+            else{
+                send[1] = 2;
+                val = 0;
+            }
+
         }
         }
-    }
+        }
 
 
 void system_init (void){

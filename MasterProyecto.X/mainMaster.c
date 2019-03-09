@@ -80,21 +80,31 @@ void main(void) {
     state = 0;
     Lcd_Clear();
     PORTAbits.RA7 = 0;
+    Lcd_Set_Cursor(1,1);
+    Lcd_Write_String("Iniciando Sistema");
+    Lcd_Set_Cursor(2,1);
+    Lcd_Write_String("de seguridad");
+    __delay_ms(5000);
+    Lcd_Clear();
+    
     while (1) {
         //Obtener la información de los esclavos de la red I2C
         
         get_temp(temp);
         door = get_hall();
         trip = get_tripwire();
+        
         PIR = get_PIR();
         IR = get_IR();
         get_time(time);
         day1 = get_day();
+        bank = get_tripwire();
+        
         
         if(PORTDbits.RD7 == 1){         // abrir puerta
-            if (bank == 1){
+            if (bank == 2){
                 if (change1 == 0){
-                    bank = 0;
+                    //bank = 0;
                     alarm = 0;
                     open_door();
                     j = 0;
@@ -104,10 +114,10 @@ void main(void) {
                     
                     change1 = 1;
                 }
-            } else if (bank == 0){
+            } else if (bank == 3){
                 if (change1 == 0){
-                    bank = 1;
-                    //alarm = 0;
+                    //bank = 1;
+                    alarm = 0;
                     close_door();
                     j = 0;
                     while(j < 50){
@@ -120,43 +130,21 @@ void main(void) {
         } else if(PORTDbits.RD7 == 0){
             change1 = 0;
         }
+
+        if (alarm == 0){
+            alarm = trip | PIR | IR;
+        }
         
-        /*else if(PORTDbits.RD1 == 1){         // cerrar puerta
-                if (bank == 0){
-                if (change2 == 0){
-                bank = 1;
-                alarm = 0;
-                close_door();
-                
-                while(j < 50){
-                    j++;
-                }
-                j = 0;
-                change2 = 1;
-            }
-            }
-        } else if (PORTDbits.RD1 == 0) {
-            change2 =0;
-        }*/
-        
-        alarm = trip | PIR | IR;
-        
-        /*if (trip | PIR | IR){
-            alarm = 1;
-            PORTAbits.RA7 = 1;
-        }*/
-        //agregar reset de alarma
-        
-        
-        /*if (alarm == 1){
+        if (alarm == 1){
             if (change2 == 0){
-                bank = 0;
+                
                 close_door();
                 change2 = 1;
+                PORTEbits.RE1 = ~PORTEbits.RE1;
             }      
         } else {
             change2 = 0;
-        }*/
+        }
         
         SSPCONbits.SSPEN = 0;
         RCSTAbits.SPEN = 1;
@@ -199,7 +187,7 @@ void main(void) {
         if (door == 1){
             val = 8;
         } else if (door == 0){
-            val = 17;
+            val = 16;
         }
         
         switch(day1){
@@ -284,6 +272,13 @@ void main(void) {
                 Lcd_Write_String("Trip OFF");
             }
             
+            Lcd_Set_Cursor(2,9);
+            if (bank == 2){
+                Lcd_Write_String("Bank ON ");
+            } else {
+                Lcd_Write_String("BANK OFF");
+            }
+            
         } else if (state == 2){
             //Muestra el estado del sensor de movimiento y el infrarrojo
             Lcd_Set_Cursor(1,1);
@@ -361,9 +356,12 @@ void setup (void){
     PORTA = 0;
     TRISC = 0x01;               //RC0 como input
     PORTC = 0;
+    PORTE  = 0;
+    TRISE = 0;
     i = 0;
     door = 0;
     trip = 0;
+    alarm = 0;
     IR = 0;
     PIR = 0;
     OPTION_REGbits.T0CS = 0;

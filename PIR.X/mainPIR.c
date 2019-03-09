@@ -1,7 +1,7 @@
 /*
  * File:   mainIR.c
  * Author: Alejandro Recancoj y Julio Shin
- * Descripcion: Control de sensor infrarojo
+ * Descripcion: IR Sensor
  * Created on 19 de febrero de 2019, 11:46 AM
  */
 
@@ -30,13 +30,12 @@
 #define _XTAL_FREQ 8000000
 #include <xc.h>
 #include "I2C.h"
-char z, key, ADC, cont, val;
+char z, PIR, val;
 
 void setup (void);
 
 #define _XTAL_FREQ 8000000      // Frecuencia de oscilacion de 1 Mhz
-
-                    // Variable de estado para indicar si el contador asciende o desciende
+                                // Variable de estado para indicar si el contador asciende o desciende
 
 void __interrupt() isr(void){
     if(PIR1bits.SSPIF == 1){ 
@@ -57,14 +56,13 @@ void __interrupt() isr(void){
             PIR1bits.SSPIF = 0;         // Interruption flag is cleared.
             SSPCONbits.CKP = 1;         // SCL pulses are activated.
             while(!SSPSTATbits.BF);     // Meanwhile the process is complete, no nothing.
-            val = SSPBUF;             // SSPBUF is of no use, so it is stored in the dummy variable.
+            val = SSPBUF;               // SSPBUF is of no use, so it is stored in the dummy variable.
             __delay_us(250);
             
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
             z = SSPBUF;                 // Read to refresh the buffer and reset the BF bit.
             BF = 0;
-            SSPBUF = key;               // key value is put on the SSPBUF to transmit.
-            PORTAbits.RA6 = 1;
+            SSPBUF = PIR;               // key value is put on the SSPBUF to transmit.
             SSPCONbits.CKP = 1;         // SCL pulses are activated.
             __delay_us(250);
             while(SSPSTATbits.BF);      // It waits until transmit is complete.
@@ -80,30 +78,23 @@ void main(void) {
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.SCS = 1;         
-  
-    
-    
-    PORTA = 0;                  // Se limpia PORTD
-    PORTB = 0;                  // Se pone PORTD como output
-    
-    TRISA = 0;               // Se pone PORTA como output
-    TRISB = 0x02;
-    ANSEL = 0;                  // Se pone PORTA como salida digital
-    ANSELH = 0;
-    INTCONbits.GIE = 1;
-    I2C_Slave_Init(0x40);
+    PORTA = 0;                  // Se limpia PORTA y PORTB
+    PORTB = 0;                  
+    TRISA = 0;                  // Se pone PORTA como output
+    TRISB = 0x02;               // Se pone PORTB como input en RB1, todos los demas son outputs.
+    ANSEL = 0;                  // Se pone PORTA como salida digital.
+    ANSELH = 0;                 // Se pone PORTB como salida digital.
+    INTCONbits.GIE = 1;         // Se activan interrupciones globales.
+    I2C_Slave_Init(0x40);       // Se activa I2C con direccion 0x40.
     
     while(1){
-        if (PORTBbits.RB1 == 1){
-            PORTAbits.RA0 = 1;
-            key = 1;
+        if (PORTBbits.RB1 == 1){ // Si el sensor PIR se activa, PIR = 1.
+            PIR = 1;
             __delay_ms(250);
-            PORTAbits.RA0 = 0;
-            
         }
         
         else{
-             key = 0;
+            PIR = 0;            // Si el sensor PIR no se activa, PIR = 0.
         }
     }
 }
