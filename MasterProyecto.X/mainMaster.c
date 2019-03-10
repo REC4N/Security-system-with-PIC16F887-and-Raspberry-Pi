@@ -77,20 +77,20 @@ void __interrupt() manual_pwm(void){
 void main(void) {
     setup();
     state = 0;
-    seguridad = 0;
+    seguridad = 1;
     Lcd_Clear();
     PORTAbits.RA7 = 0;
     Lcd_Set_Cursor(1,1);
     Lcd_Write_String("Iniciando Sistema de Seguridad");
-    for (k = 0; k < 14; k++){
+    for (k = 0; k < 16; k++){
         Lcd_Shift_Left();
-        __delay_ms(200);
+        __delay_ms(300);
     }
     for (k = 0; k < 14; k++){
         Lcd_Shift_Right();
-        __delay_ms(200);
+        __delay_ms(300);
     }
-    __delay_ms(2000);
+    __delay_ms(5000);
     Lcd_Clear();
     
     while (1) {
@@ -137,7 +137,7 @@ void main(void) {
             change1 = 0;
         }
 
-        if (alarm == 0){
+        if (alarm == 0 & seguridad == 1){
             alarm = trip | PIR | IR;
         }
         
@@ -466,7 +466,7 @@ void setup (void){
     TRISC = 0x01;               //RC0 como input
     PORTC = 0;
     PORTE  = 0;
-    TRISE = 0x0F;
+    TRISE = 0xFF;
     i = 0;
     door = 0;
     trip = 0;

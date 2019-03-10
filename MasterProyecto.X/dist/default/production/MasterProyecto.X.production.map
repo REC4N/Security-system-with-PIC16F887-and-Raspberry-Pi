@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=D:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\MasterProyecto.X.production.sym \
   --cmf=dist/default/production\MasterProyecto.X.production.cmf -z -Q16F887 \
-  -oC:\Users\kit_s\AppData\Local\Temp\s1bk.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\kit_s\AppData\Local\Temp\sm7o.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/MasterProyecto.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\kit_s\AppData\Local\Temp\s1bk.o \
+  -DENTRY=2 -k C:\Users\kit_s\AppData\Local\Temp\sm7o.o \
   dist/default/production\MasterProyecto.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\kit_s\AppData\Local\Temp\s1bk.o
+C:\Users\kit_s\AppData\Local\Temp\sm7o.o
                 end_init                              C        C        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2     400E       0
@@ -47,7 +47,7 @@ dist/default/production\MasterProyecto.X.production.o
                 text33                             168C     168C        6     2D18       0
                 text32                             16C0     16C0        A     2D80       0
                 text31                              B07      B07       5B     160E       0
-                text30                              6B1      6B1       4D        8       0
+                text30                              6B2      6B2       4D        8       0
                 text29                             16B7     16B7        9     2D6E       0
                 text28                             1692     1692        7     2D24       0
                 text27                             1699     1699        7     2D32       0
@@ -77,7 +77,7 @@ dist/default/production\MasterProyecto.X.production.o
                 text3                               B62      B62       5B     16C4       0
                 text2                               88E      88E       30     111C       0
                 text1                               A1C      A1C       46     1438       0
-                maintext                             3B       3B      676        8       0
+                maintext                             3B       3B      677        8       0
                 cstackBANK0                          47       47       21       20       1
                 cstackCOMMON                         70       70        8       70       1
                 cstackBANK1                          A0       A0        6       A0       1
@@ -108,7 +108,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text33                             168C     168C        6         0
                 text32                             16C0     16C0        A         0
                 text31                              B07      B07       5B         0
-                text30                              6B1      6B1       4D         0
+                text30                              6B2      6B2       4D         0
                 text29                             16B7     16B7        9         0
                 text28                             1692     1692        7         0
                 text27                             1699     1699        7         0
@@ -138,7 +138,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text3                               B62      B62       5B         0
                 text2                               88E      88E       30         0
                 text1                               A1C      A1C       46         0
-                maintext                             3B       3B      676         0
+                maintext                             3B       3B      677         0
                 clrtext                            16AF     16AF        8         0
                 idataBANK0                         1687     1687        5         0
 
@@ -192,7 +192,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
-                intentry                       000004  0006FA  0006FE         8       0  CODE        2
+                intentry                       000004  0006FB  0006FF         8       0  CODE        2
                 bssBANK0                       000020  00004D  00006D        20       1  BANK0       1
                 cstackCOMMON                   000070  00000B  00007B        70       1  COMMON      1
                 cstackBANK1                    0000A0  000006  0000A6        A0       1  BANK1       1
@@ -251,17 +251,17 @@ UNUSED ADDRESS RANGES
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0003-0003              1           2
-                         06FE-06FF              2
+                         06FF-06FF              1
                          1000-1686            687
                          1800-1FFF            800
         COMMON           007B-007D              3           1
         CONST            0003-0003              1           2
-                         06FE-06FF              2
+                         06FF-06FF              1
                          1000-1686            100
                          1800-1FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         06FE-06FF              2
+                         06FF-06FF              1
                          1000-1686            100
                          1800-1FFF            100
         IDLOC            2000-2003              4           2
@@ -275,11 +275,11 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
         STRCODE          0003-0003              1           2
-                         06FE-06FF              2
+                         06FF-06FF              1
                          1000-1686            687
                          1800-1FFF            800
         STRING           0003-0003              1           2
-                         06FE-06FF              2
+                         06FF-06FF              1
                          1000-1686            100
                          1800-1FFF            100
 
@@ -489,7 +489,7 @@ ___awdiv@dividend                  cstackCOMMON 0075
 ___awdiv@divisor                   cstackCOMMON 0073
 ___awdiv@quotient                  cstackBANK0  0049
 ___awdiv@sign                      cstackBANK0  0048
-___awmod                           text30       06B1
+___awmod                           text30       06B2
 ___awmod@counter                   cstackBANK0  0047
 ___awmod@dividend                  cstackCOMMON 0075
 ___awmod@divisor                   cstackCOMMON 0073
@@ -538,7 +538,7 @@ __end_of_UART_TX_Empty             text33       1692
 __end_of_UART_Write                text32       16CA
 __end_of___aldiv                   text6        0D95
 __end_of___awdiv                   text31       0B62
-__end_of___awmod                   text30       06FE
+__end_of___awmod                   text30       06FF
 __end_of___bmul                    text18       083C
 __end_of___lldiv                   text9        0C1D
 __end_of___lwdiv                   text17       09DB
@@ -555,7 +555,7 @@ __end_of_get_temp                  text13       0E3A
 __end_of_get_time                  text12       0D06
 __end_of_get_tripwire              text11       1800
 __end_of_initOscilador             text4        0B07
-__end_of_main                      maintext     06B1
+__end_of_main                      maintext     06B2
 __end_of_manual_pwm                text42       1774
 __end_of_open_door                 text10       1755
 __end_of_setup                     text3        0BBD
@@ -597,7 +597,7 @@ __ptext27                          text27       1699
 __ptext28                          text28       1692
 __ptext29                          text29       16B7
 __ptext3                           text3        0B62
-__ptext30                          text30       06B1
+__ptext30                          text30       06B2
 __ptext31                          text31       0B07
 __ptext32                          text32       16C0
 __ptext33                          text33       168C
@@ -2241,7 +2241,7 @@ D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c estimated size: 53
 
 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-		___awmod       		CODE           	06B1	0000	78
+		___awmod       		CODE           	06B2	0000	78
 
 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c estimated size: 78
 
@@ -2256,7 +2256,7 @@ mainMaster.c
 		_get_hall      		CODE           	17BA	0000	36
 		_get_temp      		CODE           	0D95	0000	166
 		_get_IR        		CODE           	1774	0000	36
-		_main          		CODE           	003B	0000	1655
+		_main          		CODE           	003B	0000	1656
 		_get_day       		CODE           	0963	0000	59
 		_manual_pwm    		CODE           	1755	0000	32
 		_get_time      		CODE           	0C7D	0000	138
@@ -2267,7 +2267,7 @@ mainMaster.c
 		_get_tripwire  		CODE           	17DD	0000	36
 		_close_door    		CODE           	171F	0000	28
 
-mainMaster.c estimated size: 2413
+mainMaster.c estimated size: 2414
 
 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
 		___lldiv       		CODE           	0BBD	0000	97

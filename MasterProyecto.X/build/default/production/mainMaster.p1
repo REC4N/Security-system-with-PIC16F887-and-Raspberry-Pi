@@ -1663,8 +1663,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mainMaster.c: 79:     state = 0;
 [e = _state -> -> 0 `i `uc ]
 "80
-[; ;mainMaster.c: 80:     seguridad = 0;
-[e = _seguridad -> -> 0 `i `uc ]
+[; ;mainMaster.c: 80:     seguridad = 1;
+[e = _seguridad -> -> 1 `i `uc ]
 "81
 [; ;mainMaster.c: 81:     Lcd_Clear();
 [e ( _Lcd_Clear ..  ]
@@ -1678,10 +1678,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mainMaster.c: 84:     Lcd_Write_String("Iniciando Sistema de Seguridad");
 [e ( _Lcd_Write_String (1 :s 1C ]
 "85
-[; ;mainMaster.c: 85:     for (k = 0; k < 14; k++){
+[; ;mainMaster.c: 85:     for (k = 0; k < 16; k++){
 {
 [e = _k -> -> 0 `i `uc ]
-[e $ < -> _k `i -> 14 `i 222  ]
+[e $ < -> _k `i -> 16 `i 222  ]
 [e $U 223  ]
 [e :U 222 ]
 {
@@ -1689,13 +1689,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mainMaster.c: 86:         Lcd_Shift_Left();
 [e ( _Lcd_Shift_Left ..  ]
 "87
-[; ;mainMaster.c: 87:         _delay((unsigned long)((200)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;mainMaster.c: 87:         _delay((unsigned long)((300)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "88
 [; ;mainMaster.c: 88:     }
 }
 [e ++ _k -> -> 1 `i `uc ]
-[e $ < -> _k `i -> 14 `i 222  ]
+[e $ < -> _k `i -> 16 `i 222  ]
 [e :U 223 ]
 }
 "89
@@ -1710,8 +1710,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mainMaster.c: 90:         Lcd_Shift_Right();
 [e ( _Lcd_Shift_Right ..  ]
 "91
-[; ;mainMaster.c: 91:         _delay((unsigned long)((200)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;mainMaster.c: 91:         _delay((unsigned long)((300)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "92
 [; ;mainMaster.c: 92:     }
 }
@@ -1720,8 +1720,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 226 ]
 }
 "93
-[; ;mainMaster.c: 93:     _delay((unsigned long)((2000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;mainMaster.c: 93:     _delay((unsigned long)((5000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "94
 [; ;mainMaster.c: 94:     Lcd_Clear();
 [e ( _Lcd_Clear ..  ]
@@ -1855,8 +1855,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 244 ]
 [e :U 243 ]
 "140
-[; ;mainMaster.c: 140:         if (alarm == 0){
-[e $ ! == -> _alarm `i -> 0 `i 245  ]
+[; ;mainMaster.c: 140:         if (alarm == 0 & seguridad == 1){
+[e $ ! & == -> _alarm `i -> 0 `i == -> _seguridad `i -> 1 `i 245  ]
 {
 "141
 [; ;mainMaster.c: 141:             alarm = trip | PIR | IR;
@@ -2950,8 +2950,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mainMaster.c: 468:     PORTE = 0;
 [e = _PORTE -> -> 0 `i `uc ]
 "469
-[; ;mainMaster.c: 469:     TRISE = 0x0F;
-[e = _TRISE -> -> 15 `i `uc ]
+[; ;mainMaster.c: 469:     TRISE = 0xFF;
+[e = _TRISE -> -> 255 `i `uc ]
 "470
 [; ;mainMaster.c: 470:     i = 0;
 [e = _i -> -> 0 `i `uc ]
