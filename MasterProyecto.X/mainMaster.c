@@ -419,7 +419,10 @@ void main(void) {
                     }
                 } else if (PORTD == 0){
                         change4 = 0;
-                } else if (PORTEbits.RE0 == 1){
+                }
+            }
+            
+            if (PORTEbits.RE0 == 1){
                     if (passwordu[0] == password[0] & passwordu[1] == password[1] & passwordu[2] == password[2] & passwordu[3] == password[3] & passwordu[4] == password[4]){
                         if (seguridad == 0){
                             seguridad = 1;
@@ -443,16 +446,14 @@ void main(void) {
                         Lcd_Write_String("WRONG");
                         __delay_ms(2000);
                     }
-                } else if (PORTEbits.RE1 == 1){
-                    Lcd_Set_Cursor(2,1);
-                    Lcd_Write_String("            ");
-                    k = 0;
-                }
+            } else if (PORTEbits.RE1 == 1){
+                Lcd_Set_Cursor(2,1);
+                Lcd_Write_String("            ");
+                k = 0;
             }
-            
         }
-    }  
-}
+    }
+}  
 
 void setup (void){
     initOscilador(7);           // Oscilador interno de 8 MHz

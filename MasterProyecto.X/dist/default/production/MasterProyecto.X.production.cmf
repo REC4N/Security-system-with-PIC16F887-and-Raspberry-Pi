@@ -42,7 +42,7 @@ text26 CODE 0 16A7 16A7 8 2
 text27 CODE 0 1699 1699 7 2
 text28 CODE 0 1692 1692 7 2
 text29 CODE 0 16B7 16B7 9 2
-text30 CODE 0 6B2 6B2 4D 2
+text30 CODE 0 6B3 6B3 4D 2
 text31 CODE 0 B07 B07 5B 2
 text32 CODE 0 16C0 16C0 A 2
 text33 CODE 0 168C 168C 6 2
@@ -55,7 +55,7 @@ text39 CODE 0 16CA 16CA B 2
 text40 CODE 0 1705 1705 1A 2
 text41 CODE 0 16EB 16EB 1A 2
 text42 CODE 0 1755 1755 1F 2
-maintext CODE 0 3B 3B 677 2
+maintext CODE 0 3B 3B 678 2
 cstackCOMMON COMMON 1 70 70 8 1
 cstackBANK0 BANK0 1 47 47 21 1
 cstackBANK1 BANK1 1 A0 A0 6 1
@@ -66,7 +66,7 @@ idataBANK0 CODE 0 1687 1687 5 2
 dataBANK0 BANK0 1 68 68 5 1
 clrtext CODE 0 16AF 16AF 8 2
 bssCOMMON COMMON 1 78 78 3 1
-$C:\Users\kit_s\AppData\Local\Temp\sm7o.o
+$C:\Users\kit_s\AppData\Local\Temp\siv0.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 0 2007 2007 2 2
@@ -85,17 +85,14 @@ BANK1 A6-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 6FF-6FF 2
 CONST 1000-1686 2
 CONST 1800-1FFF 2
 ENTRY 3-3 2
-ENTRY 6FF-6FF 2
 ENTRY 1000-1686 2
 ENTRY 1800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 6FF-6FF 2
 CODE 1000-1686 2
 CODE 1800-1FFF 2
 SFR0 0-1F 1
@@ -105,11 +102,9 @@ SFR3 180-18F 1
 COMMON 7B-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 6FF-6FF 2
 STRCODE 1000-1686 2
 STRCODE 1800-1FFF 2
 STRING 3-3 2
-STRING 6FF-6FF 2
 STRING 1000-1686 2
 STRING 1800-1FFF 2
 # %LINETAB Section
@@ -126,29 +121,29 @@ STRING 1800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\MasterProyecto.X.production.o
-F cinit CODE >1070:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-F cinit CODE >1073:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-F cinit CODE >1174:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-14 cinit CODE >1175:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-15 cinit CODE >1176:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-1A cinit CODE >1177:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-1B cinit CODE >1178:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-20 cinit CODE >1179:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-21 cinit CODE >1180:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-26 cinit CODE >1181:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-27 cinit CODE >1182:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-2C cinit CODE >1183:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-2D cinit CODE >1202:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-2E cinit CODE >1203:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-2F cinit CODE >1204:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-30 cinit CODE >1205:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-31 cinit CODE >1206:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-34 cinit CODE >1209:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-35 cinit CODE >1210:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-36 cinit CODE >1211:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-37 cinit CODE >1217:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-37 cinit CODE >1219:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-38 cinit CODE >1220:C:\Users\kit_s\AppData\Local\Temp\sm7o.
+F cinit CODE >1070:C:\Users\kit_s\AppData\Local\Temp\siv0.
+F cinit CODE >1073:C:\Users\kit_s\AppData\Local\Temp\siv0.
+F cinit CODE >1174:C:\Users\kit_s\AppData\Local\Temp\siv0.
+14 cinit CODE >1175:C:\Users\kit_s\AppData\Local\Temp\siv0.
+15 cinit CODE >1176:C:\Users\kit_s\AppData\Local\Temp\siv0.
+1A cinit CODE >1177:C:\Users\kit_s\AppData\Local\Temp\siv0.
+1B cinit CODE >1178:C:\Users\kit_s\AppData\Local\Temp\siv0.
+20 cinit CODE >1179:C:\Users\kit_s\AppData\Local\Temp\siv0.
+21 cinit CODE >1180:C:\Users\kit_s\AppData\Local\Temp\siv0.
+26 cinit CODE >1181:C:\Users\kit_s\AppData\Local\Temp\siv0.
+27 cinit CODE >1182:C:\Users\kit_s\AppData\Local\Temp\siv0.
+2C cinit CODE >1183:C:\Users\kit_s\AppData\Local\Temp\siv0.
+2D cinit CODE >1202:C:\Users\kit_s\AppData\Local\Temp\siv0.
+2E cinit CODE >1203:C:\Users\kit_s\AppData\Local\Temp\siv0.
+2F cinit CODE >1204:C:\Users\kit_s\AppData\Local\Temp\siv0.
+30 cinit CODE >1205:C:\Users\kit_s\AppData\Local\Temp\siv0.
+31 cinit CODE >1206:C:\Users\kit_s\AppData\Local\Temp\siv0.
+34 cinit CODE >1209:C:\Users\kit_s\AppData\Local\Temp\siv0.
+35 cinit CODE >1210:C:\Users\kit_s\AppData\Local\Temp\siv0.
+36 cinit CODE >1211:C:\Users\kit_s\AppData\Local\Temp\siv0.
+37 cinit CODE >1217:C:\Users\kit_s\AppData\Local\Temp\siv0.
+37 cinit CODE >1219:C:\Users\kit_s\AppData\Local\Temp\siv0.
+38 cinit CODE >1220:C:\Users\kit_s\AppData\Local\Temp\siv0.
 4 intentry CODE >58:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 1755 text42 CODE >58:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 1755 text42 CODE >59:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
@@ -262,27 +257,27 @@ B55 text31 CODE >38:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\c
 B58 text31 CODE >39:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
 B5D text31 CODE >40:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
 B61 text31 CODE >41:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
-6B2 text30 CODE >5:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6B2 text30 CODE >12:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6B5 text30 CODE >13:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6B7 text30 CODE >14:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6BC text30 CODE >15:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6BE text30 CODE >17:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6C0 text30 CODE >18:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6C5 text30 CODE >19:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6C9 text30 CODE >20:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6CB text30 CODE >21:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6CD text30 CODE >22:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6D4 text30 CODE >23:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6D8 text30 CODE >21:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6D9 text30 CODE >26:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6E1 text30 CODE >27:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6E7 text30 CODE >28:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6EE text30 CODE >29:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6F2 text30 CODE >31:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6F5 text30 CODE >32:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6FA text30 CODE >33:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-6FE text30 CODE >34:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6B3 text30 CODE >5:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6B3 text30 CODE >12:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6B6 text30 CODE >13:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6B8 text30 CODE >14:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6BD text30 CODE >15:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6BF text30 CODE >17:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6C1 text30 CODE >18:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6C6 text30 CODE >19:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6CA text30 CODE >20:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6CC text30 CODE >21:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6CE text30 CODE >22:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6D5 text30 CODE >23:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6D9 text30 CODE >21:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6DA text30 CODE >26:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6E2 text30 CODE >27:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6E8 text30 CODE >28:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6EF text30 CODE >29:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6F3 text30 CODE >31:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6F6 text30 CODE >32:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6FB text30 CODE >33:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6FF text30 CODE >34:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
 16B7 text29 CODE >32:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 16B7 text29 CODE >34:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 1692 text28 CODE >39:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
@@ -297,12 +292,12 @@ B61 text31 CODE >41:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\c
 16A7 text26 CODE >67:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 16AA text26 CODE >68:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 16AE text26 CODE >69:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
-171F text25 CODE >624:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-171F text25 CODE >626:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-1724 text25 CODE >627:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-172D text25 CODE >628:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-1736 text25 CODE >629:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-1739 text25 CODE >631:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+171F text25 CODE >625:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+171F text25 CODE >627:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1724 text25 CODE >628:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+172D text25 CODE >629:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1736 text25 CODE >630:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1739 text25 CODE >632:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 860 text24 CODE >74:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 860 text24 CODE >77:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 865 text24 CODE >78:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
@@ -317,41 +312,41 @@ B61 text31 CODE >41:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\c
 886 text24 CODE >88:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 887 text24 CODE >89:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 88D text24 CODE >90:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
-1774 text23 CODE >603:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-1774 text23 CODE >607:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-1779 text23 CODE >608:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-1782 text23 CODE >609:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-1790 text23 CODE >610:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-1793 text23 CODE >612:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-1796 text23 CODE >613:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-1797 text22 CODE >591:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-1797 text22 CODE >595:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-179C text22 CODE >596:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17A5 text22 CODE >597:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17B3 text22 CODE >598:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17B6 text22 CODE >600:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17B9 text22 CODE >601:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1774 text23 CODE >604:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1774 text23 CODE >608:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1779 text23 CODE >609:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1782 text23 CODE >610:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1790 text23 CODE >611:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1793 text23 CODE >613:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1796 text23 CODE >614:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1797 text22 CODE >592:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1797 text22 CODE >596:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+179C text22 CODE >597:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17A5 text22 CODE >598:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17B3 text22 CODE >599:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17B6 text22 CODE >601:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17B9 text22 CODE >602:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 16A0 text21 CODE >47:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 16A0 text21 CODE >49:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 16A3 text21 CODE >50:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 16A6 text21 CODE >51:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
-963 text20 CODE >525:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-963 text20 CODE >529:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-968 text20 CODE >530:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-971 text20 CODE >531:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-97A text20 CODE >532:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-97F text20 CODE >533:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-988 text20 CODE >534:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-996 text20 CODE >535:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-999 text20 CODE >537:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-99C text20 CODE >538:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17BA text19 CODE >567:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17BA text19 CODE >571:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17BF text19 CODE >572:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17C8 text19 CODE >573:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17D6 text19 CODE >574:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17D9 text19 CODE >576:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17DC text19 CODE >577:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+963 text20 CODE >526:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+963 text20 CODE >530:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+968 text20 CODE >531:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+971 text20 CODE >532:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+97A text20 CODE >533:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+97F text20 CODE >534:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+988 text20 CODE >535:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+996 text20 CODE >536:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+999 text20 CODE >538:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+99C text20 CODE >539:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17BA text19 CODE >568:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17BA text19 CODE >572:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17BF text19 CODE >573:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17C8 text19 CODE >574:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17D6 text19 CODE >575:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17D9 text19 CODE >577:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17DC text19 CODE >578:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 82B text18 CODE >4:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
 82C text18 CODE >6:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
 82D text18 CODE >43:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
@@ -422,53 +417,53 @@ FFF text15 CODE >1560:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90
 84C text14 CODE >22:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
 850 text14 CODE >23:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
 854 text14 CODE >21:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
-D95 text13 CODE >540:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-D98 text13 CODE >545:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-D9D text13 CODE >546:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-DA6 text13 CODE >547:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-DAF text13 CODE >548:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-DB4 text13 CODE >549:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-DBD text13 CODE >550:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-DCC text13 CODE >551:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-DDA text13 CODE >552:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-DDF text13 CODE >554:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-DE6 text13 CODE >555:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-DFD text13 CODE >556:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-E0E text13 CODE >557:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-E13 text13 CODE >558:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-E17 text13 CODE >560:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-E28 text13 CODE >562:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-E32 text13 CODE >563:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-E39 text13 CODE >565:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-C7D text12 CODE >504:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-C80 text12 CODE >508:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-C85 text12 CODE >509:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-C8E text12 CODE >510:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-C97 text12 CODE >511:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-C9C text12 CODE >512:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-CA5 text12 CODE >513:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-CB4 text12 CODE >514:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-CC2 text12 CODE >515:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-CC7 text12 CODE >517:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-CD9 text12 CODE >518:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-CE1 text12 CODE >519:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-CE8 text12 CODE >520:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-CF8 text12 CODE >521:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-D01 text12 CODE >522:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-D05 text12 CODE >523:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17DD text11 CODE >579:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17DD text11 CODE >583:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17E2 text11 CODE >584:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17EB text11 CODE >585:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17F9 text11 CODE >586:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17FC text11 CODE >588:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-17FF text11 CODE >589:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-173A text10 CODE >615:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-173A text10 CODE >617:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-173F text10 CODE >618:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-1748 text10 CODE >619:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-1751 text10 CODE >620:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-1754 text10 CODE >622:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+D95 text13 CODE >541:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+D98 text13 CODE >546:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+D9D text13 CODE >547:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+DA6 text13 CODE >548:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+DAF text13 CODE >549:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+DB4 text13 CODE >550:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+DBD text13 CODE >551:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+DCC text13 CODE >552:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+DDA text13 CODE >553:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+DDF text13 CODE >555:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+DE6 text13 CODE >556:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+DFD text13 CODE >557:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+E0E text13 CODE >558:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+E13 text13 CODE >559:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+E17 text13 CODE >561:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+E28 text13 CODE >563:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+E32 text13 CODE >564:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+E39 text13 CODE >566:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+C7D text12 CODE >505:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+C80 text12 CODE >509:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+C85 text12 CODE >510:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+C8E text12 CODE >511:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+C97 text12 CODE >512:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+C9C text12 CODE >513:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+CA5 text12 CODE >514:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+CB4 text12 CODE >515:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+CC2 text12 CODE >516:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+CC7 text12 CODE >518:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+CD9 text12 CODE >519:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+CE1 text12 CODE >520:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+CE8 text12 CODE >521:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+CF8 text12 CODE >522:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+D01 text12 CODE >523:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+D05 text12 CODE >524:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17DD text11 CODE >580:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17DD text11 CODE >584:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17E2 text11 CODE >585:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17EB text11 CODE >586:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17F9 text11 CODE >587:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17FC text11 CODE >589:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+17FF text11 CODE >590:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+173A text10 CODE >616:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+173A text10 CODE >618:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+173F text10 CODE >619:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1748 text10 CODE >620:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1751 text10 CODE >621:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+1754 text10 CODE >623:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 BBD text9 CODE >5:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
 BBD text9 CODE >13:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
 BC7 text9 CODE >14:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
@@ -566,41 +561,41 @@ AE2 text4 CODE >49:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspbe
 AE3 text4 CODE >50:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
 B05 text4 CODE >51:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
 B06 text4 CODE >53:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
-B62 text3 CODE >457:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 B62 text3 CODE >458:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B68 text3 CODE >459:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B6B text3 CODE >460:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B6C text3 CODE >461:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B6F text3 CODE >462:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B70 text3 CODE >463:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B72 text3 CODE >464:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B75 text3 CODE >465:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B76 text3 CODE >466:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B7A text3 CODE >467:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B7D text3 CODE >468:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B7E text3 CODE >469:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B82 text3 CODE >470:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B85 text3 CODE >471:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B86 text3 CODE >472:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B87 text3 CODE >473:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B88 text3 CODE >474:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B89 text3 CODE >475:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B8A text3 CODE >476:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B8B text3 CODE >477:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B8C text3 CODE >478:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B8F text3 CODE >479:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B90 text3 CODE >480:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B91 text3 CODE >481:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B92 text3 CODE >482:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B93 text3 CODE >483:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B94 text3 CODE >484:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B98 text3 CODE >485:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B99 text3 CODE >486:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B9A text3 CODE >487:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-B9B text3 CODE >488:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-BA0 text3 CODE >489:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-BAF text3 CODE >490:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-BBC text3 CODE >491:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B62 text3 CODE >459:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B68 text3 CODE >460:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B6B text3 CODE >461:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B6C text3 CODE >462:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B6F text3 CODE >463:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B70 text3 CODE >464:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B72 text3 CODE >465:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B75 text3 CODE >466:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B76 text3 CODE >467:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B7A text3 CODE >468:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B7D text3 CODE >469:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B7E text3 CODE >470:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B82 text3 CODE >471:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B85 text3 CODE >472:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B86 text3 CODE >473:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B87 text3 CODE >474:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B88 text3 CODE >475:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B89 text3 CODE >476:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B8A text3 CODE >477:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B8B text3 CODE >478:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B8C text3 CODE >479:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B8F text3 CODE >480:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B90 text3 CODE >481:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B91 text3 CODE >482:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B92 text3 CODE >483:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B93 text3 CODE >484:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B94 text3 CODE >485:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B98 text3 CODE >486:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B99 text3 CODE >487:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B9A text3 CODE >488:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+B9B text3 CODE >489:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+BA0 text3 CODE >490:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+BAF text3 CODE >491:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+BBC text3 CODE >492:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 88E text2 CODE >33:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
 891 text2 CODE >37:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
 897 text2 CODE >38:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
@@ -608,15 +603,15 @@ BBC text3 CODE >491:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspb
 8A1 text2 CODE >37:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
 8B8 text2 CODE >41:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
 8BD text2 CODE >42:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
-A1C text1 CODE >493:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-A1D text1 CODE >495:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-A22 text1 CODE >496:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-A2B text1 CODE >497:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-A34 text1 CODE >498:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-A42 text1 CODE >499:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-A50 text1 CODE >500:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-A5E text1 CODE >501:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-A61 text1 CODE >502:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+A1C text1 CODE >494:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+A1D text1 CODE >496:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+A22 text1 CODE >497:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+A2B text1 CODE >498:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+A34 text1 CODE >499:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+A42 text1 CODE >500:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+A50 text1 CODE >501:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+A5E text1 CODE >502:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+A61 text1 CODE >503:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 3B maintext CODE >77:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 3B maintext CODE >78:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 40 maintext CODE >79:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
@@ -849,39 +844,39 @@ F5 maintext CODE >107:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Ras
 622 maintext CODE >418:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 629 maintext CODE >420:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 62C maintext CODE >421:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-62D maintext CODE >422:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-630 maintext CODE >423:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-644 maintext CODE >424:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-647 maintext CODE >425:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-649 maintext CODE >426:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-64A maintext CODE >427:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-64F maintext CODE >428:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-657 maintext CODE >429:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-662 maintext CODE >430:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-671 maintext CODE >431:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-672 maintext CODE >432:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-673 maintext CODE >433:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-674 maintext CODE >434:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-679 maintext CODE >435:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-681 maintext CODE >436:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-687 maintext CODE >440:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-68C maintext CODE >441:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-68D maintext CODE >442:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-695 maintext CODE >443:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-69B maintext CODE >446:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-69D maintext CODE >447:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-6A5 maintext CODE >448:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-6B0 maintext CODE >449:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
-16AF clrtext CODE >1189:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-16AF clrtext CODE >1190:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-16B0 clrtext CODE >1191:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-16B0 clrtext CODE >1192:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-16B1 clrtext CODE >1193:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-16B2 clrtext CODE >1194:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-16B3 clrtext CODE >1195:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-16B4 clrtext CODE >1196:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-16B5 clrtext CODE >1197:C:\Users\kit_s\AppData\Local\Temp\sm7o.
-16B6 clrtext CODE >1198:C:\Users\kit_s\AppData\Local\Temp\sm7o.
+62D maintext CODE >425:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+631 maintext CODE >426:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+645 maintext CODE >427:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+648 maintext CODE >428:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+64A maintext CODE >429:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+64B maintext CODE >430:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+650 maintext CODE >431:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+658 maintext CODE >432:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+663 maintext CODE >433:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+672 maintext CODE >434:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+673 maintext CODE >435:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+674 maintext CODE >436:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+675 maintext CODE >437:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+67A maintext CODE >438:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+682 maintext CODE >439:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+688 maintext CODE >443:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+68D maintext CODE >444:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+68E maintext CODE >445:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+696 maintext CODE >446:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+69C maintext CODE >449:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+69E maintext CODE >450:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+6A6 maintext CODE >451:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+6B1 maintext CODE >452:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
+16AF clrtext CODE >1189:C:\Users\kit_s\AppData\Local\Temp\siv0.
+16AF clrtext CODE >1190:C:\Users\kit_s\AppData\Local\Temp\siv0.
+16B0 clrtext CODE >1191:C:\Users\kit_s\AppData\Local\Temp\siv0.
+16B0 clrtext CODE >1192:C:\Users\kit_s\AppData\Local\Temp\siv0.
+16B1 clrtext CODE >1193:C:\Users\kit_s\AppData\Local\Temp\siv0.
+16B2 clrtext CODE >1194:C:\Users\kit_s\AppData\Local\Temp\siv0.
+16B3 clrtext CODE >1195:C:\Users\kit_s\AppData\Local\Temp\siv0.
+16B4 clrtext CODE >1196:C:\Users\kit_s\AppData\Local\Temp\siv0.
+16B5 clrtext CODE >1197:C:\Users\kit_s\AppData\Local\Temp\siv0.
+16B6 clrtext CODE >1198:C:\Users\kit_s\AppData\Local\Temp\siv0.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -929,7 +924,7 @@ _SYNC 4C4 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _TRMT 4C1 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _TXEN 4C5 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\sm7o.o
+___sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\siv0.o
 _bank 2E 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.o
 _cont 2D 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.o
 _day1 79 0 COMMON 1 bssCOMMON dist/default/production\MasterProyecto.X.production.o
@@ -942,7 +937,7 @@ _time 41 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.
 _trip 39 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _Lcd_Write_Char 1254 0 CODE 0 text35 dist/default/production\MasterProyecto.X.production.o
-start 18 0 CODE 0 init C:\Users\kit_s\AppData\Local\Temp\sm7o.o
+start 18 0 CODE 0 init C:\Users\kit_s\AppData\Local\Temp\siv0.o
 __size_of___aldiv 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
@@ -962,12 +957,12 @@ __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __Hpowerup 0 0 CODE 0 powerup -
 ___awmod@sign 48 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
 I2C_Master_Read@a 73 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sm7o.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sm7o.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sm7o.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sm7o.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sm7o.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sm7o.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\siv0.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\siv0.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\siv0.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\siv0.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\siv0.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\siv0.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 strcat@from 73 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 ___bmul@multiplicand 73 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
@@ -999,15 +994,15 @@ ___awdiv@divisor 73 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyec
 ___lwmod@divisor 4A 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
 __end_of___aldiv 1B2A 0 CODE 0 text6 dist/default/production\MasterProyecto.X.production.o
 __end_of___awdiv 16C4 0 CODE 0 text31 dist/default/production\MasterProyecto.X.production.o
-__end_of___awmod DFE 0 CODE 0 text30 dist/default/production\MasterProyecto.X.production.o
+__end_of___awmod E00 0 CODE 0 text30 dist/default/production\MasterProyecto.X.production.o
 __end_of___lldiv 183A 0 CODE 0 text9 dist/default/production\MasterProyecto.X.production.o
 __end_of___lwdiv 13B6 0 CODE 0 text17 dist/default/production\MasterProyecto.X.production.o
 __end_of___lwmod 11E4 0 CODE 0 text16 dist/default/production\MasterProyecto.X.production.o
 __end_of_initOscilador 160E 0 CODE 0 text4 dist/default/production\MasterProyecto.X.production.o
 ?_strcmp 73 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
 __end_of_Lcd_Shift_Right 2DD6 0 CODE 0 text36 dist/default/production\MasterProyecto.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\sm7o.o
-___stacklo 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\sm7o.o
+___stackhi 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\siv0.o
+___stacklo 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\siv0.o
 _dpowers E24 0 STRCODE 0 stringtext dist/default/production\MasterProyecto.X.production.o
 __end_of_UART_Write 2D94 0 CODE 0 text32 dist/default/production\MasterProyecto.X.production.o
 ___lwdiv@quotient 48 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
@@ -1040,7 +1035,7 @@ get_PIR@PIR 49 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.pr
 _Lcd_Shift_Left 2DAA 0 CODE 0 text37 dist/default/production\MasterProyecto.X.production.o
 _Lcd_Shift_Right 2DC0 0 CODE 0 text36 dist/default/production\MasterProyecto.X.production.o
 __size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\sm7o.o
+___int_sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\siv0.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -1127,7 +1122,7 @@ __size_of_get_hall 0 0 ABS 0 - dist/default/production\MasterProyecto.X.producti
 __size_of_get_temp 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __size_of_get_time 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 strcmp@r 47 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\kit_s\AppData\Local\Temp\sm7o.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\kit_s\AppData\Local\Temp\siv0.o
 __size_of_Lcd_Clear 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 _get_tripwire 2FBA 0 CODE 0 text11 dist/default/production\MasterProyecto.X.production.o
 __pdataBANK0 68 0 BANK0 1 dataBANK0 dist/default/production\MasterProyecto.X.production.o
@@ -1160,7 +1155,7 @@ __ptext26 2D4E 0 CODE 0 text26 dist/default/production\MasterProyecto.X.producti
 __ptext27 2D32 0 CODE 0 text27 dist/default/production\MasterProyecto.X.production.o
 __ptext28 2D24 0 CODE 0 text28 dist/default/production\MasterProyecto.X.production.o
 __ptext29 2D6E 0 CODE 0 text29 dist/default/production\MasterProyecto.X.production.o
-__ptext30 D64 0 CODE 0 text30 dist/default/production\MasterProyecto.X.production.o
+__ptext30 D66 0 CODE 0 text30 dist/default/production\MasterProyecto.X.production.o
 __ptext31 160E 0 CODE 0 text31 dist/default/production\MasterProyecto.X.production.o
 __ptext32 2D80 0 CODE 0 text32 dist/default/production\MasterProyecto.X.production.o
 __ptext33 2D18 0 CODE 0 text33 dist/default/production\MasterProyecto.X.production.o
@@ -1178,7 +1173,7 @@ _newmin 27 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.productio
 __size_of_Lcd_Write_Char 0 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 ___aldiv 1A0C 0 CODE 0 text6 dist/default/production\MasterProyecto.X.production.o
 ___awdiv 160E 0 CODE 0 text31 dist/default/production\MasterProyecto.X.production.o
-___awmod D64 0 CODE 0 text30 dist/default/production\MasterProyecto.X.production.o
+___awmod D66 0 CODE 0 text30 dist/default/production\MasterProyecto.X.production.o
 _Lcd_Set_Cursor 14C4 0 CODE 0 text38 dist/default/production\MasterProyecto.X.production.o
 ___lldiv 177A 0 CODE 0 text9 dist/default/production\MasterProyecto.X.production.o
 ___lwdiv 133A 0 CODE 0 text17 dist/default/production\MasterProyecto.X.production.o
@@ -1308,7 +1303,7 @@ _change3 31 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.producti
 _change4 30 0 BANK0 1 bssBANK0 dist/default/production\MasterProyecto.X.production.o
 sprintf@c 5E 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
 sprintf@f 50 0 BANK0 1 cstackBANK0 dist/default/production\MasterProyecto.X.production.o
-__end_of_main D64 0 CODE 0 maintext dist/default/production\MasterProyecto.X.production.o
+__end_of_main D66 0 CODE 0 maintext dist/default/production\MasterProyecto.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\MasterProyecto.X.production.o
 __end_of_dpowers E38 0 STRCODE 0 stringtext dist/default/production\MasterProyecto.X.production.o
 initOscilador@option 75 0 COMMON 1 cstackCOMMON dist/default/production\MasterProyecto.X.production.o
@@ -1426,7 +1421,7 @@ text41 0 16EB 2DD6 1A 2
 text42 0 1755 2EAA 1F 2
 cstackCOMMON 1 70 70 B 1
 cstackBANK1 1 A0 A0 6 1
-intentry 0 4 8 6FB 2
+intentry 0 4 8 6FC 2
 reset_vec 0 0 0 3 2
 bssBANK0 1 20 20 4D 1
 stringtext 0 700 E00 12B 2
