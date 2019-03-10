@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 6 ]
-"13 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+"13 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
 [e E1264 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -24,7 +24,7 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
-"104 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+"104 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
 [e E1266 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -45,29 +45,29 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
-"8 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+"8 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
 [v _UART_Init UART_Init `(uc  1 e 1 0 ]
 "41
 [v _UART_Read UART_Read `(uc  1 e 1 0 ]
 "54
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
-"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
-"10 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"4 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"6 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"34 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+"34 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
 [v _isr isr `II(v  1 e 1 0 ]
 "56
 [v _main main `(v  1 e 1 0 ]
 "81
 [v _setup setup `(v  1 e 1 0 ]
-"13 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+"13 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
 "30
 [v _spiReceiveWait spiReceiveWait `(v  1 s 1 spiReceiveWait ]
@@ -75,7 +75,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
 "48
 [v _spiRead spiRead `(uc  1 e 1 0 ]
-"228 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
+"228 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
@@ -257,7 +257,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _TRMT TRMT `VEb  1 e 0 @1217 ]
 "4538
 [v _TXEN TXEN `VEb  1 e 0 @1221 ]
-"32 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+"32 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
 [v _val val `uc  1 e 1 0 ]
 [v _send send `[10]uc  1 e 10 0 ]
 [v _info info `[10]uc  1 e 10 0 ]
@@ -276,7 +276,7 @@ SPI_ACTIVE_2_IDLE 64
 {
 "105
 } 0
-"13 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+"13 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
 {
 [v spiInit@sType sType `E1264  1 a 1 wreg ]
@@ -288,7 +288,7 @@ SPI_ACTIVE_2_IDLE 64
 [v spiInit@sType sType `E1264  1 a 1 3 ]
 "28
 } 0
-"8 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+"8 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
 [v _UART_Init UART_Init `(uc  1 e 1 0 ]
 {
 "10
@@ -297,7 +297,7 @@ SPI_ACTIVE_2_IDLE 64
 [v UART_Init@baudrate baudrate `DCl  1 p 4 15 ]
 "29
 } 0
-"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
 {
 "10
@@ -310,7 +310,7 @@ SPI_ACTIVE_2_IDLE 64
 [v ___aldiv@dividend dividend `l  1 p 4 4 ]
 "41
 } 0
-"54 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+"54 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
 {
 [v UART_Write@data data `uc  1 a 1 wreg ]
@@ -318,12 +318,12 @@ SPI_ACTIVE_2_IDLE 64
 [v UART_Write@data data `uc  1 a 1 0 ]
 "60
 } 0
-"34 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
+"34 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
 "54
 } 0
-"35 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
+"35 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
 [v _spiWrite spiWrite `(v  1 e 1 0 ]
 {
 [v spiWrite@dat dat `uc  1 a 1 wreg ]
@@ -342,7 +342,7 @@ SPI_ACTIVE_2_IDLE 64
 {
 "33
 } 0
-"41 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
+"41 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
 [v _UART_Read UART_Read `(uc  1 e 1 0 ]
 {
 "45

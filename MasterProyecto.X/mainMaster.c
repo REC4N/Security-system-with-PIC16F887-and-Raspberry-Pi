@@ -262,7 +262,7 @@ void main(void) {
                     k = 0;
                 }
                 Lcd_Clear();
-                if (state > 4){
+                if (state > 5){
                     state = 0;
                 }
                 j = 0;
@@ -293,7 +293,7 @@ void main(void) {
             //Muestra el estado de la bóveda y el tripwire
             Lcd_Set_Cursor(1,1);
             if (door == 1){
-                Lcd_Write_String("DOOR OPEN  ");
+                Lcd_Write_String("DOOR OPENED");
             } else {
                 Lcd_Write_String("DOOR CLOSED");
             }
@@ -303,13 +303,6 @@ void main(void) {
                 Lcd_Write_String("TRIP ON ");
             } else {
                 Lcd_Write_String("TRIP OFF");
-            }
-            
-            Lcd_Set_Cursor(2,9);
-            if (bank == 3){
-                Lcd_Write_String("BANK ON ");
-            } else {
-                Lcd_Write_String("BANK OFF");
             }
             
         } else if (state == 2){
@@ -456,6 +449,20 @@ void main(void) {
                 Lcd_Set_Cursor(2,1);
                 Lcd_Write_String("            ");
                 k = 0;
+            }
+        } else if(state == 5){
+            Lcd_Set_Cursor(1,1);
+            if (bank == 3){
+                Lcd_Write_String("BANK OPENED");
+            } else {
+                Lcd_Write_String("BANK CLOSED");
+            }
+            
+            Lcd_Set_Cursor(2,1);
+            if (seguridad == 1){
+                Lcd_Write_String("SECURITY ON");
+            } else {
+                Lcd_Write_String("SECURITY OFF");
             }
         }
     }

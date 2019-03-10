@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.05 build -831301201 
-                                                                                               Sat Mar 09 22:47:32 2019
+                                                                                               Sat Mar 09 23:29:55 2019
 
 Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
      1                           	processor	16F887
@@ -1225,7 +1225,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
   1208  00FA                     __ptext4:	
   1209 ;; *************** function ___aldiv *****************
   1210 ;; Defined at:
-  1211 ;;		line 5 in file "D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c"
+  1211 ;;		line 5 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c"
   1212 ;; Parameters:    Size  Location     Type
   1213 ;;  divisor         4    0[BANK0 ] long 
   1214 ;;  dividend        4    4[BANK0 ] long 
@@ -1576,9 +1576,9 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
   1558  022B  1303               	bcf	3,6	;RP1=0, select bank0
   1559  022C  00D6               	movwf	_val
   1560                           
-  1561                           ;mainTraductor.c: 45:         spiWrite(info[j]);
+  1561                           ;mainTraductor.c: 45:         spiWrite(send[j]);
   1562  022D  0872               	movf	_j,w
-  1563  022E  3E42               	addlw	(low (_info| 0))& (0+255)
+  1563  022E  3E4C               	addlw	(low (_send| 0))& (0+255)
   1564  022F  0084               	movwf	4
   1565  0230  1383               	bcf	3,7	;select IRP bank0
   1566  0231  0800               	movf	0,w
@@ -1999,7 +1999,7 @@ DATA                 0      0      41      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.05 build -831301201 
-Symbol Table                                                                                   Sat Mar 09 22:47:32 2019
+Symbol Table                                                                                   Sat Mar 09 23:29:55 2019
 
                        _i 0074                         _j 0072                         _k 0070  
              __CFG_CP$OFF 0000               _SSPSTATbits 0094                        l16 02B5  

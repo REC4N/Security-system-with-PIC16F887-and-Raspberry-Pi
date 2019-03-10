@@ -42,7 +42,7 @@ void __interrupt() isr(void){
         }
     }else if(SSPIF == 1){
         val = spiRead();
-        spiWrite(info[j]);
+        spiWrite(send[j]);
         j++;
         //__delay_us(500);
         if (j == 10){

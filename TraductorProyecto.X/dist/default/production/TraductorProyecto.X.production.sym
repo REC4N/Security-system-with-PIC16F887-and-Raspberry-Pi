@@ -218,7 +218,7 @@ bssCOMMON 70 79 COMMON 70 1
 cstackBANK0 20 56 BANK0 20 1
 %locals
 dist/default/production\TraductorProyecto.X.production.o
-C:\Users\kit_s\AppData\Local\Temp\slis.
+C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
 672 11 0 CODE 0
 675 11 0 CODE 0
 725 11 0 CODE 0
@@ -317,7 +317,7 @@ SPI.c
 24 F3 0 CODE 0
 25 F6 0 CODE 0
 29 F9 0 CODE 0
-D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
 5 FA 0 CODE 0
 13 FA 0 CODE 0
 14 FD 0 CODE 0

@@ -11,6 +11,10 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.o
+reset_vec CODE 0 0 0 3 2
+end_init CODE 0 E E 3 2
+config CONFIG 0 2007 2007 2 2
 $dist/default/production\TraductorProyecto.X.production.o
 cinit CODE 0 11 11 10 2
 text1 CODE 0 257 257 48 2
@@ -30,10 +34,6 @@ intentry CODE 0 4 4 A 2
 bssBANK0 BANK0 1 42 42 15 1
 clrtext CODE 0 2C7 2C7 8 2
 bssCOMMON COMMON 1 70 70 5 1
-$C:\Users\kit_s\AppData\Local\Temp\slis.o
-reset_vec CODE 0 0 0 3 2
-end_init CODE 0 E E 3 2
-config CONFIG 0 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -80,165 +80,165 @@ STRING 2E7-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\TraductorProyecto.X.production.o
-11 cinit CODE >672:C:\Users\kit_s\AppData\Local\Temp\slis.
-11 cinit CODE >675:C:\Users\kit_s\AppData\Local\Temp\slis.
-11 cinit CODE >725:C:\Users\kit_s\AppData\Local\Temp\slis.
-12 cinit CODE >726:C:\Users\kit_s\AppData\Local\Temp\slis.
-13 cinit CODE >727:C:\Users\kit_s\AppData\Local\Temp\slis.
-14 cinit CODE >728:C:\Users\kit_s\AppData\Local\Temp\slis.
-15 cinit CODE >729:C:\Users\kit_s\AppData\Local\Temp\slis.
-16 cinit CODE >732:C:\Users\kit_s\AppData\Local\Temp\slis.
-17 cinit CODE >733:C:\Users\kit_s\AppData\Local\Temp\slis.
-18 cinit CODE >734:C:\Users\kit_s\AppData\Local\Temp\slis.
-19 cinit CODE >735:C:\Users\kit_s\AppData\Local\Temp\slis.
-1A cinit CODE >736:C:\Users\kit_s\AppData\Local\Temp\slis.
-1D cinit CODE >742:C:\Users\kit_s\AppData\Local\Temp\slis.
-1D cinit CODE >744:C:\Users\kit_s\AppData\Local\Temp\slis.
-1E cinit CODE >745:C:\Users\kit_s\AppData\Local\Temp\slis.
-4 intentry CODE >34:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-2DC text10 CODE >41:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-2DC text10 CODE >43:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-2E0 text10 CODE >44:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-2E1 text10 CODE >45:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-2E2 text9 CODE >30:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2E2 text9 CODE >32:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2CF text8 CODE >48:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2CF text8 CODE >50:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2D2 text8 CODE >51:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2D5 text8 CODE >52:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2D6 text7 CODE >35:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2D7 text7 CODE >37:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2DB text7 CODE >38:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-1FF text6 CODE >34:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1FF text6 CODE >35:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-203 text6 CODE >36:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-20B text6 CODE >37:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-213 text6 CODE >38:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-217 text6 CODE >39:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-21A text6 CODE >40:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-21E text6 CODE >41:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-221 text6 CODE >43:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-223 text6 CODE >44:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-22D text6 CODE >45:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-237 text6 CODE >46:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-23B text6 CODE >48:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-23E text6 CODE >49:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-23F text6 CODE >51:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-24D text6 CODE >52:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-24E text6 CODE >54:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-2BB text5 CODE >54:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-2BE text5 CODE >56:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-2BE text5 CODE >58:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-2C2 text5 CODE >57:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-2C3 text5 CODE >56:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-2C4 text5 CODE >59:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-2C6 text5 CODE >60:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-FA text4 CODE >5:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-FA text4 CODE >13:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-FD text4 CODE >14:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-FF text4 CODE >15:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-10A text4 CODE >16:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-10C text4 CODE >17:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-10C text4 CODE >18:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-10E text4 CODE >19:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-119 text4 CODE >20:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-11D text4 CODE >22:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-125 text4 CODE >23:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-12B text4 CODE >24:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-12D text4 CODE >25:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-12F text4 CODE >26:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-138 text4 CODE >27:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-13C text4 CODE >25:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-13D text4 CODE >30:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-146 text4 CODE >31:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-156 text4 CODE >32:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-164 text4 CODE >33:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-165 text4 CODE >35:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-16E text4 CODE >36:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-172 text4 CODE >38:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-175 text4 CODE >39:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-180 text4 CODE >40:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-188 text4 CODE >41:D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
-21 text3 CODE >8:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-21 text3 CODE >11:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-7C text3 CODE >12:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-83 text3 CODE >14:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-DC text3 CODE >15:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-DF text3 CODE >17:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-E7 text3 CODE >19:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-EB text3 CODE >20:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-EC text3 CODE >21:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-EF text3 CODE >22:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-F2 text3 CODE >23:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-F3 text3 CODE >24:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-F6 text3 CODE >25:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-F9 text3 CODE >29:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X/UART.h
-29F text2 CODE >13:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2A2 text2 CODE >15:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2A5 text2 CODE >16:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2A9 text2 CODE >18:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2AD text2 CODE >19:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2AE text2 CODE >20:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2AF text2 CODE >23:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2B4 text2 CODE >24:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2B5 text2 CODE >25:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2B5 text2 CODE >27:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-2BA text2 CODE >28:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\SPI.c
-257 text1 CODE >81:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-257 text1 CODE >82:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-25A text1 CODE >83:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-25B text1 CODE >84:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-25C text1 CODE >85:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-25D text1 CODE >86:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-260 text1 CODE >87:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-261 text1 CODE >88:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-262 text1 CODE >89:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-265 text1 CODE >90:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-268 text1 CODE >91:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-26B text1 CODE >92:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-26E text1 CODE >93:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-271 text1 CODE >94:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-274 text1 CODE >95:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-277 text1 CODE >96:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-278 text1 CODE >97:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-279 text1 CODE >98:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-27A text1 CODE >99:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-27D text1 CODE >100:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-280 text1 CODE >101:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-283 text1 CODE >102:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-286 text1 CODE >103:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-295 text1 CODE >104:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-29E text1 CODE >105:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-189 maintext CODE >56:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-189 maintext CODE >57:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-18E maintext CODE >59:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-191 maintext CODE >60:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-197 maintext CODE >61:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-19D maintext CODE >62:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1A5 maintext CODE >63:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1AD maintext CODE >64:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1B5 maintext CODE >65:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1BD maintext CODE >66:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1C5 maintext CODE >67:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1CD maintext CODE >68:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1D5 maintext CODE >69:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1DD maintext CODE >70:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1E5 maintext CODE >71:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1E6 maintext CODE >72:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1F3 maintext CODE >73:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1FB maintext CODE >74:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1FC maintext CODE >75:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-1FD maintext CODE >76:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\TraductorProyecto.X\mainTraductor.c
-2C7 clrtext CODE >712:C:\Users\kit_s\AppData\Local\Temp\slis.
-2C7 clrtext CODE >713:C:\Users\kit_s\AppData\Local\Temp\slis.
-2C8 clrtext CODE >714:C:\Users\kit_s\AppData\Local\Temp\slis.
-2C8 clrtext CODE >715:C:\Users\kit_s\AppData\Local\Temp\slis.
-2C9 clrtext CODE >716:C:\Users\kit_s\AppData\Local\Temp\slis.
-2CA clrtext CODE >717:C:\Users\kit_s\AppData\Local\Temp\slis.
-2CB clrtext CODE >718:C:\Users\kit_s\AppData\Local\Temp\slis.
-2CC clrtext CODE >719:C:\Users\kit_s\AppData\Local\Temp\slis.
-2CD clrtext CODE >720:C:\Users\kit_s\AppData\Local\Temp\slis.
-2CE clrtext CODE >721:C:\Users\kit_s\AppData\Local\Temp\slis.
+11 cinit CODE >672:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+11 cinit CODE >675:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+11 cinit CODE >725:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+12 cinit CODE >726:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+13 cinit CODE >727:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+14 cinit CODE >728:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+15 cinit CODE >729:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+16 cinit CODE >732:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+17 cinit CODE >733:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+18 cinit CODE >734:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+19 cinit CODE >735:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+1A cinit CODE >736:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+1D cinit CODE >742:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+1D cinit CODE >744:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+1E cinit CODE >745:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+4 intentry CODE >34:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+2DC text10 CODE >41:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+2DC text10 CODE >43:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+2E0 text10 CODE >44:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+2E1 text10 CODE >45:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+2E2 text9 CODE >30:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2E2 text9 CODE >32:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2CF text8 CODE >48:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2CF text8 CODE >50:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2D2 text8 CODE >51:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2D5 text8 CODE >52:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2D6 text7 CODE >35:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2D7 text7 CODE >37:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2DB text7 CODE >38:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+1FF text6 CODE >34:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1FF text6 CODE >35:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+203 text6 CODE >36:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+20B text6 CODE >37:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+213 text6 CODE >38:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+217 text6 CODE >39:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+21A text6 CODE >40:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+21E text6 CODE >41:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+221 text6 CODE >43:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+223 text6 CODE >44:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+22D text6 CODE >45:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+237 text6 CODE >46:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+23B text6 CODE >48:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+23E text6 CODE >49:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+23F text6 CODE >51:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+24D text6 CODE >52:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+24E text6 CODE >54:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+2BB text5 CODE >54:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+2BE text5 CODE >56:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+2BE text5 CODE >58:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+2C2 text5 CODE >57:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+2C3 text5 CODE >56:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+2C4 text5 CODE >59:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+2C6 text5 CODE >60:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+FA text4 CODE >5:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+FA text4 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+FD text4 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+FF text4 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+10A text4 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+10C text4 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+10C text4 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+10E text4 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+119 text4 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+11D text4 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+125 text4 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+12B text4 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+12D text4 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+12F text4 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+138 text4 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+13C text4 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+13D text4 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+146 text4 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+156 text4 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+164 text4 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+165 text4 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+16E text4 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+172 text4 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+175 text4 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+180 text4 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+188 text4 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+21 text3 CODE >8:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+21 text3 CODE >11:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+7C text3 CODE >12:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+83 text3 CODE >14:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+DC text3 CODE >15:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+DF text3 CODE >17:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+E7 text3 CODE >19:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+EB text3 CODE >20:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+EC text3 CODE >21:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+EF text3 CODE >22:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+F2 text3 CODE >23:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+F3 text3 CODE >24:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+F6 text3 CODE >25:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+F9 text3 CODE >29:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X/UART.h
+29F text2 CODE >13:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2A2 text2 CODE >15:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2A5 text2 CODE >16:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2A9 text2 CODE >18:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2AD text2 CODE >19:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2AE text2 CODE >20:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2AF text2 CODE >23:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2B4 text2 CODE >24:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2B5 text2 CODE >25:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2B5 text2 CODE >27:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+2BA text2 CODE >28:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
+257 text1 CODE >81:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+257 text1 CODE >82:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+25A text1 CODE >83:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+25B text1 CODE >84:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+25C text1 CODE >85:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+25D text1 CODE >86:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+260 text1 CODE >87:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+261 text1 CODE >88:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+262 text1 CODE >89:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+265 text1 CODE >90:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+268 text1 CODE >91:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+26B text1 CODE >92:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+26E text1 CODE >93:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+271 text1 CODE >94:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+274 text1 CODE >95:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+277 text1 CODE >96:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+278 text1 CODE >97:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+279 text1 CODE >98:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+27A text1 CODE >99:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+27D text1 CODE >100:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+280 text1 CODE >101:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+283 text1 CODE >102:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+286 text1 CODE >103:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+295 text1 CODE >104:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+29E text1 CODE >105:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+189 maintext CODE >56:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+189 maintext CODE >57:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+18E maintext CODE >59:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+191 maintext CODE >60:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+197 maintext CODE >61:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+19D maintext CODE >62:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1A5 maintext CODE >63:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1AD maintext CODE >64:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1B5 maintext CODE >65:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1BD maintext CODE >66:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1C5 maintext CODE >67:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1CD maintext CODE >68:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1D5 maintext CODE >69:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1DD maintext CODE >70:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1E5 maintext CODE >71:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1E6 maintext CODE >72:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1F3 maintext CODE >73:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1FB maintext CODE >74:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1FC maintext CODE >75:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+1FD maintext CODE >76:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+2C7 clrtext CODE >712:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+2C7 clrtext CODE >713:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+2C8 clrtext CODE >714:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+2C8 clrtext CODE >715:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+2C9 clrtext CODE >716:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+2CA clrtext CODE >717:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+2CB clrtext CODE >718:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+2CC clrtext CODE >719:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+2CD clrtext CODE >720:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
+2CE clrtext CODE >721:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -271,25 +271,25 @@ _SPEN C7 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _SYNC 4C4 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _TRMT 4C1 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _TXEN 4C5 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\slis.o
+___sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.o
 _done 73 0 COMMON 1 bssCOMMON dist/default/production\TraductorProyecto.X.production.o
 _info 42 0 BANK0 1 bssBANK0 dist/default/production\TraductorProyecto.X.production.o
 _main 312 0 CODE 0 maintext dist/default/production\TraductorProyecto.X.production.o
 _send 4C 0 BANK0 1 bssBANK0 dist/default/production\TraductorProyecto.X.production.o
 _temp 71 0 COMMON 1 bssCOMMON dist/default/production\TraductorProyecto.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-start 1C 0 CODE 0 init C:\Users\kit_s\AppData\Local\Temp\slis.o
+start 1C 0 CODE 0 init C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.o
 __size_of___aldiv 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\slis.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\slis.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\slis.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\slis.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\slis.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\slis.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 ___aldiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\TraductorProyecto.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
@@ -304,8 +304,8 @@ __size_of_spiInit 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.produc
 __size_of_spiRead 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 __end_of___aldiv 312 0 CODE 0 text4 dist/default/production\TraductorProyecto.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\slis.o
-___stacklo 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\slis.o
+___stackhi 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.o
+___stacklo 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.o
 __end_of_UART_Write 58E 0 CODE 0 text5 dist/default/production\TraductorProyecto.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
@@ -323,7 +323,7 @@ _TRISC3 43B 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _TRISC5 43D 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _TRISC6 43E 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 _TRISC7 43F 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\slis.o
+___int_sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -376,7 +376,7 @@ saved_w 7E 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __end_of_isr 4AE 0 CODE 0 text6 dist/default/production\TraductorProyecto.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\kit_s\AppData\Local\Temp\slis.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Alejandro Recancoj\AppData\Local\Temp\sg74.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _PIE1bits 8C 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
 __size_of_UART_Write 0 0 ABS 0 - dist/default/production\TraductorProyecto.X.production.o
