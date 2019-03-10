@@ -29,7 +29,7 @@
 
 
 void setup(void);
-char val, received, info[9], i, done, j, temp;
+char val, received, info[10], i, done, j, temp;
 
 void __interrupt() isr(void){
     if (PIR1bits.RCIF == 1){
@@ -45,7 +45,7 @@ void __interrupt() isr(void){
         spiWrite(info[j]);
         j++;
         //__delay_us(500);
-        if (j == 9){
+        if (j == 10){
             j = 0;
         }
         PORTDbits.RD0 = ~PORTDbits.RD0;
@@ -57,7 +57,7 @@ void main(void) {
     setup();
     while (1){
         if (done == 1){
-            info[8] = 'A';
+            info[9] = 'A';
             UART_Write(info[0]);
             UART_Write(info[1]);
             UART_Write(info[2]);
