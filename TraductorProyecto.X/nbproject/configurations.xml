@@ -6,7 +6,6 @@
                    projectFiles="true">
       <itemPath>SPI.h</itemPath>
       <itemPath>Oscilador.h</itemPath>
-      <itemPath>UART.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

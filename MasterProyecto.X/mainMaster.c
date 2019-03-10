@@ -40,7 +40,7 @@
 #include "UART.h"
 
 char time[6] = {0}, temp[6] = {0}, *day2;
-char door, trip, PIR, IR, state, day1, i, j, change, change1, change2, change3, alarm, bank, cont, val, hour, min;
+char door, trip, PIR, IR, state, day1, i, j, change, change1, change2, change3, alarm, bank, cont, val, hour, min, seguridad;
 char newhour, newmin;
 int k;
 
@@ -78,6 +78,7 @@ void __interrupt() manual_pwm(void){
 void main(void) {
     setup();
     state = 0;
+    seguridad = 0;
     Lcd_Clear();
     PORTAbits.RA7 = 0;
     Lcd_Set_Cursor(1,1);
@@ -105,7 +106,7 @@ void main(void) {
             if (bank == 2){
                 if (change1 == 0){
                     //bank = 0;
-                    alarm = 0;
+                    
                     open_door();
                     j = 0;
                     while(j < 50){
@@ -114,10 +115,10 @@ void main(void) {
                     
                     change1 = 1;
                 }
-            } else if (bank == 3){
+            } else if (bank == 3){          // cerrar puerta
                 if (change1 == 0){
                     //bank = 1;
-                    alarm = 0;
+                    
                     close_door();
                     j = 0;
                     while(j < 50){
@@ -135,16 +136,38 @@ void main(void) {
             alarm = trip | PIR | IR;
         }
         
+         
+        
         if (alarm == 1){
+            //close_door();
             if (change2 == 0){
-                
-                close_door();
                 change2 = 1;
-                PORTEbits.RE1 = ~PORTEbits.RE1;
-            }      
-        } else {
+                close_door();
+                PORTEbits.RE1 = 1;
+            }  
+            
+        }
+        else {
+            PORTEbits.RE1 = 0;
             change2 = 0;
         }
+        
+        
+        if (PORTDbits.RD6 == 1){
+            if (change3 == 0){
+                if (alarm == 0){
+                    alarm = 1;
+                }else {
+                    alarm = 0;
+                }
+                change3 = 1;
+            }
+          
+        }
+        else{
+            change3 = 0;
+        }
+        
         
         SSPCONbits.SSPEN = 0;
         RCSTAbits.SPEN = 1;
@@ -160,25 +183,16 @@ void main(void) {
             __delay_ms(1);
             UART_Write(temp[4]);
             __delay_ms(1);
-            UART_Write(time[0]);
-            __delay_ms(1);
-            UART_Write(time[1]);
-            __delay_ms(1);
-            UART_Write(time[2]);
-            __delay_ms(1);
-            UART_Write(time[3]);
-            __delay_ms(1);
-            UART_Write(time[4]);
-            __delay_ms(1);
             UART_Write(door);
             __delay_ms(1);
-            UART_Write(trip);
+            UART_Write(alarm);
             __delay_ms(1);
-            UART_Write(PIR);
+            UART_Write(bank);
             __delay_ms(1);
-            UART_Write(IR);
+            UART_Write(seguridad);
             __delay_ms(1);
             UART_Write('A');
+            __delay_ms(1);
         }
         
         RCSTAbits.SPEN = 0;
@@ -222,6 +236,12 @@ void main(void) {
             PORTAbits.RA0 = 1;
         } else {
             PORTAbits.RA0 = 0;
+        }
+        
+        if ((strcmp(time, "22:00") == 0) & ((day1 != 6) | (day1 != 7))){
+            close_door();
+        } else if ((strcmp(time, "21:00") == 0) & ((day1 == 6) | (day1 == 7))){
+            close_door();
         }
         
         //Cambia el estado para mostrar los diferentes sensores en la LCD
@@ -273,7 +293,7 @@ void main(void) {
             }
             
             Lcd_Set_Cursor(2,9);
-            if (bank == 2){
+            if (bank == 3){
                 Lcd_Write_String("Bank ON ");
             } else {
                 Lcd_Write_String("BANK OFF");
@@ -362,6 +382,8 @@ void setup (void){
     door = 0;
     trip = 0;
     alarm = 0;
+    change2 = 0;
+    change3 = 0;
     IR = 0;
     PIR = 0;
     OPTION_REGbits.T0CS = 0;

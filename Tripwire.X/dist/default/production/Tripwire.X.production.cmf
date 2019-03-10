@@ -24,7 +24,7 @@ cstackBANK0 BANK0 1 26 26 6 1
 intentry CODE 0 4 4 A 2
 bssBANK0 BANK0 1 20 20 6 1
 bssCOMMON COMMON 1 76 76 4 1
-$C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.o
+$C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 E E 3 2
 config CONFIG 0 2007 2007 2 2
@@ -74,23 +74,23 @@ STRING 1CD-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Tripwire.X.production.o
-11 cinit CODE >498:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-11 cinit CODE >501:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-11 cinit CODE >536:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-12 cinit CODE >537:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-13 cinit CODE >538:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-14 cinit CODE >539:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-15 cinit CODE >542:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-16 cinit CODE >543:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-17 cinit CODE >544:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-18 cinit CODE >545:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-19 cinit CODE >546:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-1A cinit CODE >547:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-1B cinit CODE >548:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-1C cinit CODE >549:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-1D cinit CODE >555:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-1D cinit CODE >557:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
-1E cinit CODE >558:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.
+11 cinit CODE >498:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+11 cinit CODE >501:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+11 cinit CODE >536:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+12 cinit CODE >537:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+13 cinit CODE >538:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+14 cinit CODE >539:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+15 cinit CODE >542:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+16 cinit CODE >543:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+17 cinit CODE >544:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+18 cinit CODE >545:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+19 cinit CODE >546:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+1A cinit CODE >547:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+1B cinit CODE >548:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+1C cinit CODE >549:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+1D cinit CODE >555:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+1D cinit CODE >557:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
+1E cinit CODE >558:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.
 4 intentry CODE >53:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
 127 text5 CODE >53:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
 127 text5 CODE >54:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\Tripwire.X\mainTrip.c
@@ -233,22 +233,22 @@ delay@val 74 0 COMMON 1 cstackCOMMON dist/default/production\Tripwire.X.producti
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _RCEN 48B 0 ABS 0 - dist/default/production\Tripwire.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.o
+___sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.o
 _main 152 0 CODE 0 maintext dist/default/production\Tripwire.X.production.o
 _send 20 0 BANK0 1 bssBANK0 dist/default/production\Tripwire.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Tripwire.X.production.o
-start 1C 0 CODE 0 init C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.o
+start 1C 0 CODE 0 init C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _system_init 384 0 CODE 0 text1 dist/default/production\Tripwire.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Tripwire.X.production.o
@@ -257,8 +257,8 @@ __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELH 189 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _SSPCONbits 14 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.o
-___stacklo 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.o
+___stackhi 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.o
+___stacklo 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.o
 full_drive@direction 2A 0 BANK0 1 cstackBANK0 dist/default/production\Tripwire.X.production.o
 _I2C_Slave_Init 352 0 CODE 0 text4 dist/default/production\Tripwire.X.production.o
 __size_of_delay 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
@@ -271,7 +271,7 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Tripwire.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.o
+___int_sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -325,7 +325,7 @@ saved_w 7E 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\Tripwire.X.production.o
 __end_of_isr 30E 0 CODE 0 text5 dist/default/production\Tripwire.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Alejandro Recancoj\AppData\Local\Temp\sftg.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Alejandro Recancoj\AppData\Local\Temp\sim8.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __pmaintext 152 0 CODE 0 maintext dist/default/production\Tripwire.X.production.o
 __Lcommon 0 0 ABS 0 common -

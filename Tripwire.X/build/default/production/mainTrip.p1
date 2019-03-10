@@ -932,8 +932,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! < _j -> 1000 `i 172  ]
 {
 "132
-[; ;mainTrip.c: 132:                 full_drive(1);
-[e ( _full_drive (1 -> -> 1 `i `uc ]
+[; ;mainTrip.c: 132:                 full_drive(0);
+[e ( _full_drive (1 -> -> 0 `i `uc ]
 "133
 [; ;mainTrip.c: 133:                 j++;
 [e ++ _j -> 1 `i ]
@@ -968,8 +968,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! > _j -> 0 `i 175  ]
 {
 "142
-[; ;mainTrip.c: 142:                 full_drive(0);
-[e ( _full_drive (1 -> -> 0 `i `uc ]
+[; ;mainTrip.c: 142:                 full_drive(1);
+[e ( _full_drive (1 -> -> 1 `i `uc ]
 "143
 [; ;mainTrip.c: 143:                 j--;
 [e -- _j -> 1 `i ]

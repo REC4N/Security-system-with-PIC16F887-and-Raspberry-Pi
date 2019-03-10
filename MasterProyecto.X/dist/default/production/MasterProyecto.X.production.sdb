@@ -73,27 +73,27 @@
 [v _manual_pwm manual_pwm `II(v  1 e 1 0 ]
 "78
 [v _main main `(v  1 e 1 0 ]
-"348
+"368
 [v _setup setup `(v  1 e 1 0 ]
-"382
+"404
 [v _write_RTC write_RTC `(v  1 e 1 0 ]
-"393
+"415
 [v _get_time get_time `(v  1 e 1 0 ]
-"414
+"436
 [v _get_day get_day `(uc  1 e 1 0 ]
-"429
+"451
 [v _get_temp get_temp `(v  1 e 1 0 ]
-"456
+"478
 [v _get_hall get_hall `(uc  1 e 1 0 ]
-"468
+"490
 [v _get_tripwire get_tripwire `(uc  1 e 1 0 ]
-"480
+"502
 [v _get_PIR get_PIR `(uc  1 e 1 0 ]
-"492
+"514
 [v _get_IR get_IR `(uc  1 e 1 0 ]
-"504
+"526
 [v _open_door open_door `(v  1 e 1 0 ]
-"513
+"535
 [v _close_door close_door `(v  1 e 1 0 ]
 "59 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -346,30 +346,32 @@
 [v _change change `uc  1 e 1 0 ]
 [v _change1 change1 `uc  1 e 1 0 ]
 [v _change2 change2 `uc  1 e 1 0 ]
+[v _change3 change3 `uc  1 e 1 0 ]
 [v _alarm alarm `uc  1 e 1 0 ]
 [v _bank bank `uc  1 e 1 0 ]
 [v _cont cont `uc  1 e 1 0 ]
 [v _val val `uc  1 e 1 0 ]
 [v _hour hour `uc  1 e 1 0 ]
 [v _min min `uc  1 e 1 0 ]
+[v _seguridad seguridad `uc  1 e 1 0 ]
 "44
 [v _newhour newhour `uc  1 e 1 0 ]
 [v _newmin newmin `uc  1 e 1 0 ]
 "78
 [v _main main `(v  1 e 1 0 ]
 {
-"346
+"366
 } 0
-"382
+"404
 [v _write_RTC write_RTC `(v  1 e 1 0 ]
 {
 [v write_RTC@hour hour `uc  1 a 1 wreg ]
 [v write_RTC@hour hour `uc  1 a 1 wreg ]
 [v write_RTC@minutes minutes `uc  1 p 1 5 ]
 [v write_RTC@day day `uc  1 p 1 6 ]
-"384
+"406
 [v write_RTC@hour hour `uc  1 a 1 7 ]
-"391
+"413
 } 0
 "33 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
@@ -383,10 +385,10 @@
 [v strcmp@s1 s1 `*.4DCuc  1 a 1 1 ]
 "42
 } 0
-"348 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
+"368 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"380
+"402
 } 0
 "11 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/Oscilador.h
 [v _initOscilador initOscilador `(v  1 e 1 0 ]
@@ -441,45 +443,45 @@
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"504 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
+"526 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
 [v _open_door open_door `(v  1 e 1 0 ]
 {
-"511
+"533
 } 0
-"468
+"490
 [v _get_tripwire get_tripwire `(uc  1 e 1 0 ]
 {
-"470
+"492
 [v get_tripwire@trip trip `uc  1 a 1 2 ]
-"478
+"500
 } 0
-"393
+"415
 [v _get_time get_time `(v  1 e 1 0 ]
 {
 [v get_time@time_string time_string `*.4uc  1 a 1 wreg ]
-"395
+"417
 [v get_time@min min `uc  1 a 1 5 ]
 [v get_time@hour hour `uc  1 a 1 4 ]
-"393
+"415
 [v get_time@time_string time_string `*.4uc  1 a 1 wreg ]
-"397
+"419
 [v get_time@time_string time_string `*.4uc  1 a 1 6 ]
-"412
+"434
 } 0
-"429
+"451
 [v _get_temp get_temp `(v  1 e 1 0 ]
 {
 [v get_temp@temp_string temp_string `*.4uc  1 a 1 wreg ]
-"432
+"454
 [v get_temp@decimal decimal `[3]uc  1 a 3 25 ]
-"431
+"453
 [v get_temp@tempLSB tempLSB `uc  1 a 1 30 ]
 [v get_temp@tempMSB tempMSB `uc  1 a 1 28 ]
-"429
+"451
 [v get_temp@temp_string temp_string `*.4uc  1 a 1 wreg ]
-"434
+"456
 [v get_temp@temp_string temp_string `*.4uc  1 a 1 29 ]
-"454
+"476
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
 [v _strcat strcat `(*.4uc  1 e 1 0 ]
@@ -550,38 +552,38 @@
 [v ___bmul@multiplier multiplier `uc  1 a 1 6 ]
 "51
 } 0
-"456 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
+"478 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
 [v _get_hall get_hall `(uc  1 e 1 0 ]
 {
-"458
+"480
 [v get_hall@key key `uc  1 a 1 2 ]
-"466
+"488
 } 0
-"414
+"436
 [v _get_day get_day `(uc  1 e 1 0 ]
 {
-"416
+"438
 [v get_day@d d `uc  1 a 1 2 ]
-"427
+"449
 } 0
 "47 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/I2C.h
 [v _I2C_Master_RepeatedStart I2C_Master_RepeatedStart `(v  1 e 1 0 ]
 {
 "51
 } 0
-"480 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
+"502 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
 [v _get_PIR get_PIR `(uc  1 e 1 0 ]
 {
-"482
+"504
 [v get_PIR@PIR PIR `uc  1 a 1 2 ]
-"490
+"512
 } 0
-"492
+"514
 [v _get_IR get_IR `(uc  1 e 1 0 ]
 {
-"494
+"516
 [v get_IR@IR IR `uc  1 a 1 2 ]
-"502
+"524
 } 0
 "74 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/I2C.h
 [v _I2C_Master_Read I2C_Master_Read `(us  1 e 2 0 ]
@@ -592,10 +594,10 @@
 [v I2C_Master_Read@a a `us  1 p 2 3 ]
 "90
 } 0
-"513 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
+"535 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
 [v _close_door close_door `(v  1 e 1 0 ]
 {
-"520
+"542
 } 0
 "65 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/I2C.h
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]

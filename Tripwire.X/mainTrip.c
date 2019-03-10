@@ -129,7 +129,7 @@ void main(void) {
         }
         if (val == 0xFF){
             if (j < 1000){
-                full_drive(anti_clockwise);  
+                full_drive(clockwise);  
                 j++;
             }
             else{
@@ -139,7 +139,7 @@ void main(void) {
             }
         if (val == 0xF0){
             if (j > 0){
-                full_drive(clockwise);
+                full_drive(anti_clockwise);
                 j--;
             }
             else{

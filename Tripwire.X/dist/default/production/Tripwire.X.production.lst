@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.05 build -831301201 
-                                                                                               Sat Mar 09 14:06:20 2019
+                                                                                               Sat Mar 09 18:26:11 2019
 
 Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
      1                           	processor	16F887
@@ -516,8 +516,8 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    502  00E9  1803               	skipnc
    503  00EA  28FA               	goto	l1202
    504                           
-   505                           ;mainTrip.c: 132:                 full_drive(1);
-   506  00EB  3001               	movlw	1
+   505                           ;mainTrip.c: 132:                 full_drive(0);
+   506  00EB  3000               	movlw	0
    507  00EC  120A  118A  2021  120A  118A  	fcall	_full_drive
    508                           
    509                           ;mainTrip.c: 133:                 j++;
@@ -566,8 +566,8 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    552  010E  1C03               	skipc
    553  010F  291F               	goto	l1214
    554                           
-   555                           ;mainTrip.c: 142:                 full_drive(0);
-   556  0110  3000               	movlw	0
+   555                           ;mainTrip.c: 142:                 full_drive(1);
+   556  0110  3001               	movlw	1
    557  0111  120A  118A  2021  120A  118A  	fcall	_full_drive
    558                           
    559                           ;mainTrip.c: 143:                 j--;
@@ -1354,7 +1354,7 @@ DATA                 0      0      16      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.05 build -831301201 
-Symbol Table                                                                                   Sat Mar 09 14:06:20 2019
+Symbol Table                                                                                   Sat Mar 09 18:26:11 2019
 
                        _i 0076                         _j 0022                         _z 0079  
              __CFG_CP$OFF 0000               _SSPSTATbits 0094                        _BF 04A0  

@@ -2684,23 +2684,23 @@ void UART_Write_Text(char *text)
 
 
 void setup(void);
-char val, received, info[15], i, done, j;
+char val, received, info[9], i, done, j, temp;
 
 void __attribute__((picinterrupt(("")))) isr(void){
     if (PIR1bits.RCIF == 1){
-        info[i] = UART_Read();
+        temp = UART_Read();
+        info[i] = temp;
         i++;
         RB0 = 1;
-        if (info[i-1] == 'A'){
+        if (temp == 'A'){
             done = 1;
-            i = 0;
         }
     }else if(SSPIF == 1){
         val = spiRead();
         spiWrite(info[j]);
         j++;
 
-        if (j == 15){
+        if (j == 9){
             j = 0;
         }
         PORTDbits.RD0 = ~PORTDbits.RD0;
@@ -2712,6 +2712,7 @@ void main(void) {
     setup();
     while (1){
         if (done == 1){
+            info[8] = 'A';
             UART_Write(info[0]);
             UART_Write(info[1]);
             UART_Write(info[2]);
@@ -2721,13 +2722,8 @@ void main(void) {
             UART_Write(info[6]);
             UART_Write(info[7]);
             UART_Write(info[8]);
-            UART_Write(info[9]);
-            UART_Write(info[10]);
-            UART_Write(info[11]);
-            UART_Write(info[12]);
-            UART_Write(info[13]);
-            UART_Write(info[14]);
             done = 0;
+            i = 0;
             RB0 = 0;
         }
     }
@@ -2739,6 +2735,7 @@ void setup(void){
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.SCS = 1;
     val = 0;
+    i = 0;
     j = 0;
     ANSELH = 0;
     TRISB = 0;

@@ -24,7 +24,7 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
-"103 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
+"100 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
 [e E1266 . `uc
 SPI_MASTER_OSC_DIV4 32
 SPI_MASTER_OSC_DIV16 33
@@ -65,7 +65,7 @@ SPI_ACTIVE_2_IDLE 64
 [v _isr isr `II(v  1 e 1 0 ]
 "56
 [v _main main `(v  1 e 1 0 ]
-"81
+"77
 [v _setup setup `(v  1 e 1 0 ]
 "13 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]
@@ -259,19 +259,20 @@ SPI_ACTIVE_2_IDLE 64
 [v _TXEN TXEN `VEb  1 e 0 @1221 ]
 "32 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\mainTraductor.c
 [v _val val `uc  1 e 1 0 ]
-[v _info info `[15]uc  1 e 15 0 ]
+[v _info info `[9]uc  1 e 9 0 ]
 [v _i i `uc  1 e 1 0 ]
 [v _done done `uc  1 e 1 0 ]
 [v _j j `uc  1 e 1 0 ]
+[v _temp temp `uc  1 e 1 0 ]
 "56
 [v _main main `(v  1 e 1 0 ]
 {
-"79
+"75
 } 0
-"81
+"77
 [v _setup setup `(v  1 e 1 0 ]
 {
-"104
+"101
 } 0
 "13 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\TraductorProyecto.X\SPI.c
 [v _spiInit spiInit `(v  1 e 1 0 ]

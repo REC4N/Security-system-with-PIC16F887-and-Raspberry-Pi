@@ -2805,7 +2805,7 @@ void main(void) {
         }
         if (val == 0xFF){
             if (j < 1000){
-                full_drive(1);
+                full_drive(0);
                 j++;
             }
             else{
@@ -2815,7 +2815,7 @@ void main(void) {
             }
         if (val == 0xF0){
             if (j > 0){
-                full_drive(0);
+                full_drive(1);
                 j--;
             }
             else{
