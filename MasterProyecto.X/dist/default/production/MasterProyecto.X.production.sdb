@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 6 ]
-"16 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/I2C.h
+"16 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 [v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
 "32
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
@@ -17,7 +17,7 @@
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
 "74
 [v _I2C_Master_Read I2C_Master_Read `(us  1 e 2 0 ]
-"7 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/LCD4bits.h
+"7 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
 [v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
 "29
 [v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
@@ -31,9 +31,13 @@
 [v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
 "100
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
-"11 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/Oscilador.h
+"107
+[v _Lcd_Shift_Right Lcd_Shift_Right `(v  1 e 1 0 ]
+"113
+[v _Lcd_Shift_Left Lcd_Shift_Left `(v  1 e 1 0 ]
+"11 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
 [v _initOscilador initOscilador `(v  1 e 1 0 ]
-"8 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/UART.h
+"8 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/UART.h
 [v _UART_Init UART_Init `(uc  1 e 1 0 ]
 "31
 [v _UART_TX_Empty UART_TX_Empty `(uc  1 e 1 0 ]
@@ -41,61 +45,61 @@
 [v _UART_Read UART_Read `(uc  1 e 1 0 ]
 "54
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
+"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
-"500 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+"500 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+"10 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
+"8 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
 [v _strcat strcat `(*.4uc  1 e 1 0 ]
-"33 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
+"33 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+"4 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
 [v ___bmul __bmul `(uc  1 e 1 0 ]
-"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+"4 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+"6 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"59 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
+"58 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _manual_pwm manual_pwm `II(v  1 e 1 0 ]
-"78
+"77
 [v _main main `(v  1 e 1 0 ]
-"368
+"457
 [v _setup setup `(v  1 e 1 0 ]
-"404
+"493
 [v _write_RTC write_RTC `(v  1 e 1 0 ]
-"415
+"504
 [v _get_time get_time `(v  1 e 1 0 ]
-"436
+"525
 [v _get_day get_day `(uc  1 e 1 0 ]
-"451
+"540
 [v _get_temp get_temp `(v  1 e 1 0 ]
-"478
+"567
 [v _get_hall get_hall `(uc  1 e 1 0 ]
-"490
+"579
 [v _get_tripwire get_tripwire `(uc  1 e 1 0 ]
-"502
+"591
 [v _get_PIR get_PIR `(uc  1 e 1 0 ]
-"514
+"603
 [v _get_IR get_IR `(uc  1 e 1 0 ]
-"526
+"615
 [v _open_door open_door `(v  1 e 1 0 ]
-"535
+"624
 [v _close_door close_door `(v  1 e 1 0 ]
-"59 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
+"59 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f887.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
 "166
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -127,7 +131,7 @@
 [v _PORTBbits PORTBbits `VES85  1 e 1 @6 ]
 "290
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
-[s S347 . 1 `uc 1 RC0 1 0 :1:0 
+[s S334 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -137,8 +141,10 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "307
-[u S356 . 1 `S347 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES356  1 e 1 @7 ]
+[u S343 . 1 `S334 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES343  1 e 1 @7 ]
+"352
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
 [s S229 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
@@ -153,14 +159,14 @@
 [v _PORTDbits PORTDbits `VES238  1 e 1 @8 ]
 "414
 [v _PORTE PORTE `VEuc  1 e 1 @9 ]
-[s S258 . 1 `uc 1 RE0 1 0 :1:0 
+[s S363 . 1 `uc 1 RE0 1 0 :1:0 
 `uc 1 RE1 1 0 :1:1 
 `uc 1 RE2 1 0 :1:2 
 `uc 1 RE3 1 0 :1:3 
 ]
 "427
-[u S263 . 1 `S258 1 . 1 0 ]
-[v _PORTEbits PORTEbits `VES263  1 e 1 @9 ]
+[u S368 . 1 `S363 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES368  1 e 1 @9 ]
 [s S141 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
@@ -182,21 +188,21 @@
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-[s S271 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S258 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "870
-[s S277 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S264 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S282 . 1 `S271 1 . 1 0 `S277 1 . 1 0 ]
-[v _SSPCONbits SSPCONbits `VES282  1 e 1 @20 ]
-[s S297 . 1 `uc 1 RX9D 1 0 :1:0 
+[u S269 . 1 `S258 1 . 1 0 `S264 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES269  1 e 1 @20 ]
+[s S284 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -206,23 +212,23 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "1068
-[s S306 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S293 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S310 . 1 `uc 1 . 1 0 :6:0 
+[s S297 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 nRC8 1 0 :1:6 
 ]
-[s S313 . 1 `uc 1 . 1 0 :6:0 
+[s S300 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[u S316 . 1 `S297 1 . 1 0 `S306 1 . 1 0 `S310 1 . 1 0 `S313 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES316  1 e 1 @24 ]
+[u S303 . 1 `S284 1 . 1 0 `S293 1 . 1 0 `S297 1 . 1 0 `S300 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES303  1 e 1 @24 ]
 "1133
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1140
 [v _RCREG RCREG `VEuc  1 e 1 @26 ]
-[s S386 . 1 `uc 1 PS 1 0 :3:0 
+[s S387 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -230,12 +236,12 @@
 `uc 1 nRBPU 1 0 :1:7 
 ]
 "1366
-[s S393 . 1 `uc 1 PS0 1 0 :1:0 
+[s S394 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 ]
-[u S397 . 1 `S386 1 . 1 0 `S393 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES397  1 e 1 @129 ]
+[u S398 . 1 `S387 1 . 1 0 `S394 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES398  1 e 1 @129 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
@@ -328,12 +334,14 @@
 [v _TRMT TRMT `VEb  1 e 0 @1217 ]
 "4538
 [v _TXEN TXEN `VEb  1 e 0 @1221 ]
-"358 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+"358 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
-"42 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
+"42 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _time time `[6]uc  1 e 6 0 ]
 [v _temp temp `[6]uc  1 e 6 0 ]
-[v _day2 day2 `*.24uc  1 e 1 0 ]
+[v _day2 day2 `*.25uc  1 e 2 0 ]
+[v _password password `[5]uc  1 e 5 0 ]
+[v _passwordu passwordu `[5]uc  1 e 5 0 ]
 "43
 [v _door door `uc  1 e 1 0 ]
 [v _trip trip `uc  1 e 1 0 ]
@@ -343,10 +351,12 @@
 [v _day1 day1 `uc  1 e 1 0 ]
 [v _i i `uc  1 e 1 0 ]
 [v _j j `uc  1 e 1 0 ]
+[v _k k `uc  1 e 1 0 ]
 [v _change change `uc  1 e 1 0 ]
 [v _change1 change1 `uc  1 e 1 0 ]
 [v _change2 change2 `uc  1 e 1 0 ]
 [v _change3 change3 `uc  1 e 1 0 ]
+[v _change4 change4 `uc  1 e 1 0 ]
 [v _alarm alarm `uc  1 e 1 0 ]
 [v _bank bank `uc  1 e 1 0 ]
 [v _cont cont `uc  1 e 1 0 ]
@@ -357,23 +367,23 @@
 "44
 [v _newhour newhour `uc  1 e 1 0 ]
 [v _newmin newmin `uc  1 e 1 0 ]
-"78
+"77
 [v _main main `(v  1 e 1 0 ]
 {
-"366
+"455
 } 0
-"404
+"493
 [v _write_RTC write_RTC `(v  1 e 1 0 ]
 {
 [v write_RTC@hour hour `uc  1 a 1 wreg ]
 [v write_RTC@hour hour `uc  1 a 1 wreg ]
 [v write_RTC@minutes minutes `uc  1 p 1 5 ]
 [v write_RTC@day day `uc  1 p 1 6 ]
-"406
+"495
 [v write_RTC@hour hour `uc  1 a 1 7 ]
-"413
+"502
 } 0
-"33 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
+"33 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
 {
 [v strcmp@s1 s1 `*.4DCuc  1 a 1 wreg ]
@@ -381,16 +391,16 @@
 [v strcmp@r r `c  1 a 1 0 ]
 "33
 [v strcmp@s1 s1 `*.4DCuc  1 a 1 wreg ]
-[v strcmp@s2 s2 `*.24DCuc  1 p 1 3 ]
+[v strcmp@s2 s2 `*.25DCuc  1 p 2 3 ]
 [v strcmp@s1 s1 `*.4DCuc  1 a 1 1 ]
 "42
 } 0
-"368 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
+"457 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"402
+"491
 } 0
-"11 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/Oscilador.h
+"11 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/Oscilador.h
 [v _initOscilador initOscilador `(v  1 e 1 0 ]
 {
 [v initOscilador@option option `uc  1 a 1 wreg ]
@@ -398,7 +408,7 @@
 [v initOscilador@option option `uc  1 a 1 5 ]
 "53
 } 0
-"8 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/UART.h
+"8 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/UART.h
 [v _UART_Init UART_Init `(uc  1 e 1 0 ]
 {
 "10
@@ -407,7 +417,7 @@
 [v UART_Init@baudrate baudrate `DCl  1 p 4 14 ]
 "29
 } 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
 {
 "10
@@ -420,18 +430,18 @@
 [v ___aldiv@dividend dividend `l  1 p 4 4 ]
 "41
 } 0
-"65 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/LCD4bits.h
+"65 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
 [v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
 {
 "82
 } 0
-"16 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/I2C.h
+"16 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 [v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
 {
 [v I2C_Master_Init@c c `DCul  1 p 4 13 ]
 "24
 } 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
 {
 "10
@@ -443,47 +453,47 @@
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"526 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
+"615 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _open_door open_door `(v  1 e 1 0 ]
 {
-"533
+"622
 } 0
-"490
+"579
 [v _get_tripwire get_tripwire `(uc  1 e 1 0 ]
 {
-"492
+"581
 [v get_tripwire@trip trip `uc  1 a 1 2 ]
-"500
+"589
 } 0
-"415
+"504
 [v _get_time get_time `(v  1 e 1 0 ]
 {
 [v get_time@time_string time_string `*.4uc  1 a 1 wreg ]
-"417
+"506
 [v get_time@min min `uc  1 a 1 5 ]
 [v get_time@hour hour `uc  1 a 1 4 ]
-"415
+"504
 [v get_time@time_string time_string `*.4uc  1 a 1 wreg ]
-"419
+"508
 [v get_time@time_string time_string `*.4uc  1 a 1 6 ]
-"434
+"523
 } 0
-"451
+"540
 [v _get_temp get_temp `(v  1 e 1 0 ]
 {
 [v get_temp@temp_string temp_string `*.4uc  1 a 1 wreg ]
-"454
-[v get_temp@decimal decimal `[3]uc  1 a 3 25 ]
-"453
-[v get_temp@tempLSB tempLSB `uc  1 a 1 30 ]
-[v get_temp@tempMSB tempMSB `uc  1 a 1 28 ]
-"451
+"543
+[v get_temp@decimal decimal `[3]uc  1 a 3 27 ]
+"542
+[v get_temp@tempLSB tempLSB `uc  1 a 1 32 ]
+[v get_temp@tempMSB tempMSB `uc  1 a 1 30 ]
+"540
 [v get_temp@temp_string temp_string `*.4uc  1 a 1 wreg ]
-"456
-[v get_temp@temp_string temp_string `*.4uc  1 a 1 29 ]
-"476
+"545
+[v get_temp@temp_string temp_string `*.4uc  1 a 1 31 ]
+"565
 } 0
-"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
+"8 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
 [v _strcat strcat `(*.4uc  1 e 1 0 ]
 {
 [v strcat@to to `*.4uc  1 a 1 wreg ]
@@ -496,28 +506,28 @@
 [v strcat@to to `*.4uc  1 a 1 5 ]
 "26
 } 0
-"500 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+"500 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
 "540
-[v sprintf@val val `ui  1 a 2 18 ]
+[v sprintf@val val `ui  1 a 2 20 ]
 "507
-[v sprintf@c c `uc  1 a 1 21 ]
+[v sprintf@c c `uc  1 a 1 23 ]
 "516
-[v sprintf@prec prec `c  1 a 1 17 ]
+[v sprintf@prec prec `c  1 a 1 19 ]
 "520
-[v sprintf@flag flag `uc  1 a 1 16 ]
+[v sprintf@flag flag `uc  1 a 1 18 ]
 "502
-[v sprintf@ap ap `[1]*.4v  1 a 1 15 ]
+[v sprintf@ap ap `[1]*.4v  1 a 1 17 ]
 "500
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
-[v sprintf@f f `*.24DCuc  1 p 1 9 ]
+[v sprintf@f f `*.25DCuc  1 p 2 9 ]
 "545
-[v sprintf@sp sp `*.4uc  1 a 1 20 ]
+[v sprintf@sp sp `*.4uc  1 a 1 22 ]
 "1560
 } 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
 {
 "10
@@ -527,7 +537,7 @@
 [v ___lwmod@dividend dividend `ui  1 p 2 5 ]
 "25
 } 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
 "10
@@ -539,7 +549,7 @@
 [v ___lwdiv@dividend dividend `ui  1 p 2 5 ]
 "30
 } 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+"4 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
 [v ___bmul __bmul `(uc  1 e 1 0 ]
 {
 [v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
@@ -552,40 +562,40 @@
 [v ___bmul@multiplier multiplier `uc  1 a 1 6 ]
 "51
 } 0
-"478 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
+"567 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _get_hall get_hall `(uc  1 e 1 0 ]
 {
-"480
+"569
 [v get_hall@key key `uc  1 a 1 2 ]
-"488
+"577
 } 0
-"436
+"525
 [v _get_day get_day `(uc  1 e 1 0 ]
 {
-"438
+"527
 [v get_day@d d `uc  1 a 1 2 ]
-"449
+"538
 } 0
-"47 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/I2C.h
+"47 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 [v _I2C_Master_RepeatedStart I2C_Master_RepeatedStart `(v  1 e 1 0 ]
 {
 "51
 } 0
-"502 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
+"591 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _get_PIR get_PIR `(uc  1 e 1 0 ]
 {
-"504
+"593
 [v get_PIR@PIR PIR `uc  1 a 1 2 ]
-"512
+"601
 } 0
-"514
+"603
 [v _get_IR get_IR `(uc  1 e 1 0 ]
 {
-"516
+"605
 [v get_IR@IR IR `uc  1 a 1 2 ]
-"524
+"613
 } 0
-"74 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/I2C.h
+"74 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 [v _I2C_Master_Read I2C_Master_Read `(us  1 e 2 0 ]
 {
 "76
@@ -594,12 +604,12 @@
 [v I2C_Master_Read@a a `us  1 p 2 3 ]
 "90
 } 0
-"535 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
+"624 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _close_door close_door `(v  1 e 1 0 ]
 {
-"542
+"631
 } 0
-"65 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/I2C.h
+"65 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/I2C.h
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
 {
 [v I2C_Master_Write@d d `ui  1 p 2 3 ]
@@ -620,7 +630,7 @@
 {
 "35
 } 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
@@ -631,7 +641,7 @@
 [v ___awmod@dividend dividend `i  1 p 2 5 ]
 "34
 } 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
+"5 D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
 "10
@@ -644,7 +654,7 @@
 [v ___awdiv@dividend dividend `i  1 p 2 5 ]
 "41
 } 0
-"54 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/UART.h
+"54 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/UART.h
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
 {
 [v UART_Write@data data `uc  1 a 1 wreg ]
@@ -657,7 +667,7 @@
 {
 "34
 } 0
-"100 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X/LCD4bits.h
+"100 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X/LCD4bits.h
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
 {
 "102
@@ -678,6 +688,16 @@
 "87
 [v Lcd_Write_Char@a a `uc  1 a 1 7 ]
 "98
+} 0
+"107
+[v _Lcd_Shift_Right Lcd_Shift_Right `(v  1 e 1 0 ]
+{
+"111
+} 0
+"113
+[v _Lcd_Shift_Left Lcd_Shift_Left `(v  1 e 1 0 ]
+{
+"117
 } 0
 "44
 [v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
@@ -717,8 +737,8 @@
 [v Lcd_Port@a a `uc  1 a 1 3 ]
 "28
 } 0
-"59 C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\MasterProyecto.X\mainMaster.c
+"58 D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\MasterProyecto.X\mainMaster.c
 [v _manual_pwm manual_pwm `II(v  1 e 1 0 ]
 {
-"76
+"75
 } 0

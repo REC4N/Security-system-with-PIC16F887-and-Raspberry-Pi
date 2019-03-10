@@ -39,10 +39,9 @@
 #include "Oscilador.h"
 #include "UART.h"
 
-char time[6] = {0}, temp[6] = {0}, *day2;
-char door, trip, PIR, IR, state, day1, i, j, change, change1, change2, change3, alarm, bank, cont, val, hour, min, seguridad;
+char time[6] = {0}, temp[6] = {0}, *day2, password[5] = {1,5,1,0,3}, passwordu[5];
+char door, trip, PIR, IR, state, day1, i, j, k, change, change1, change2, change3, change4, alarm, bank, cont, val, hour, min, seguridad;
 char newhour, newmin;
-int k;
 
 void setup (void);
 void write_RTC(char hour, char minutes, char day);
@@ -82,10 +81,16 @@ void main(void) {
     Lcd_Clear();
     PORTAbits.RA7 = 0;
     Lcd_Set_Cursor(1,1);
-    Lcd_Write_String("Iniciando Sistema");
-    Lcd_Set_Cursor(2,1);
-    Lcd_Write_String("de seguridad");
-    __delay_ms(5000);
+    Lcd_Write_String("Iniciando Sistema de Seguridad");
+    for (k = 0; k < 14; k++){
+        Lcd_Shift_Left();
+        __delay_ms(200);
+    }
+    for (k = 0; k < 14; k++){
+        Lcd_Shift_Right();
+        __delay_ms(200);
+    }
+    __delay_ms(2000);
     Lcd_Clear();
     
     while (1) {
@@ -143,12 +148,12 @@ void main(void) {
             if (change2 == 0){
                 change2 = 1;
                 close_door();
-                PORTEbits.RE1 = 1;
+                PORTAbits.RA6 = 1;
             }  
             
         }
         else {
-            PORTEbits.RE1 = 0;
+            PORTAbits.RA6 = 0;
             change2 = 0;
         }
         
@@ -248,8 +253,11 @@ void main(void) {
         if(PORTCbits.RC0 == 1){
             if (change == 0){
                 state++;
+                if (state == 4){
+                    k = 0;
+                }
                 Lcd_Clear();
-                if (state > 3){
+                if (state > 4){
                     state = 0;
                 }
                 j = 0;
@@ -280,21 +288,21 @@ void main(void) {
             //Muestra el estado de la bóveda y el tripwire
             Lcd_Set_Cursor(1,1);
             if (door == 1){
-                Lcd_Write_String("Door OPEN  ");
+                Lcd_Write_String("DOOR OPEN  ");
             } else {
-                Lcd_Write_String("Door CLOSED");
+                Lcd_Write_String("DOOR CLOSED");
             }
 
             Lcd_Set_Cursor(2,1);
             if (trip == 1){
-                Lcd_Write_String("Trip ON ");
+                Lcd_Write_String("TRIP ON ");
             } else {
-                Lcd_Write_String("Trip OFF");
+                Lcd_Write_String("TRIP OFF");
             }
             
             Lcd_Set_Cursor(2,9);
             if (bank == 3){
-                Lcd_Write_String("Bank ON ");
+                Lcd_Write_String("BANK ON ");
             } else {
                 Lcd_Write_String("BANK OFF");
             }
@@ -316,11 +324,11 @@ void main(void) {
             }
         } else if (state == 3){
             Lcd_Set_Cursor(1,1);
-            Lcd_Write_String("HORA: ");
+            Lcd_Write_String("TIME: ");
             Lcd_Write_String(time);
             
             Lcd_Set_Cursor(2,1);
-            Lcd_Write_String("DIA: ");
+            Lcd_Write_String("DAY: ");
             Lcd_Write_String(day2);
             
             newhour = (time[0] - '0') * 10 + (time[1] - '0');
@@ -361,6 +369,87 @@ void main(void) {
             hour = ((newhour / 10) << 4) + (newhour % 10);
             min = ((newmin / 10) << 4) + (newmin % 10);
             write_RTC(hour, min, day1);
+        } else if (state == 4){
+            Lcd_Set_Cursor(1,1);
+            Lcd_Write_String("PASSWORD:");
+            Lcd_Set_Cursor(2,k + 1);
+            
+            if (k < 5) {
+                if (PORTDbits.RD0 == 1){
+                    if (change4 == 0){
+                        passwordu[k] = 0;
+                        k++;
+                        change4 = 1;
+                        Lcd_Write_Char('*');
+                    }    
+                } else if (PORTDbits.RD1 == 1){
+                    if (change4 == 0){
+                        passwordu[k] = 1;
+                        k++;
+                        change4 = 1;
+                        Lcd_Write_Char('*');
+                    }
+                } else if (PORTDbits.RD2 == 1){
+                    if (change4 == 0){
+                        passwordu[k] = 2;
+                        k++;
+                        change4 = 1;
+                        Lcd_Write_Char('*');
+                    }
+                } else if (PORTDbits.RD3 == 1){
+                    if (change4 == 0){
+                        passwordu[k] = 3;
+                        k++;
+                        change4 = 1;
+                        Lcd_Write_Char('*');
+                    }
+                } else if (PORTDbits.RD4 == 1){
+                    if (change4 == 0){
+                        passwordu[k] = 4;
+                        k++;
+                        change4 = 1;
+                        Lcd_Write_Char('*');
+                    }
+                } else if (PORTDbits.RD5 == 1){
+                    if (change4 == 0){
+                        passwordu[k] = 5;
+                        k++;
+                        change4 = 1;
+                        Lcd_Write_Char('*');
+                    }
+                } else if (PORTD == 0){
+                        change4 = 0;
+                } else if (PORTEbits.RE0 == 1){
+                    if (passwordu[0] == password[0] & passwordu[1] == password[1] & passwordu[2] == password[2] & passwordu[3] == password[3] & passwordu[4] == password[4]){
+                        if (seguridad == 0){
+                            seguridad = 1;
+                            k = 0;
+                            Lcd_Clear();
+                            Lcd_Set_Cursor(1,1);
+                            Lcd_Write_String("Security ON");
+                            __delay_ms(2000);
+                        } else {
+                            seguridad = 0;
+                            k = 0;
+                            Lcd_Clear();
+                            Lcd_Set_Cursor(1,1);
+                            Lcd_Write_String("Security OFF");
+                            __delay_ms(2000);
+                        }
+                    } else {
+                        Lcd_Clear();
+                        k = 0;
+                        Lcd_Set_Cursor(1,1);
+                        Lcd_Write_String("WRONG");
+                        __delay_ms(2000);
+                    }
+                } else if (PORTEbits.RE1 == 1){
+                    Lcd_Set_Cursor(2,1);
+                    Lcd_Write_String("            ");
+                    k = 0;
+                }
+            }
+            
         }
     }  
 }
@@ -377,7 +466,7 @@ void setup (void){
     TRISC = 0x01;               //RC0 como input
     PORTC = 0;
     PORTE  = 0;
-    TRISE = 0;
+    TRISE = 0x0F;
     i = 0;
     door = 0;
     trip = 0;
