@@ -2684,7 +2684,7 @@ void UART_Write_Text(char *text)
 
 
 void setup(void);
-char val, received, info[10], i, done, j, temp;
+char val, send[10], info[10], i, done, j, temp, k;
 
 void __attribute__((picinterrupt(("")))) isr(void){
     if (PIR1bits.RCIF == 1){
@@ -2722,6 +2722,10 @@ void main(void) {
             UART_Write(info[6]);
             UART_Write(info[7]);
             UART_Write(info[8]);
+            UART_Write(info[9]);
+            for (k = 0; k < 10; k++){
+                send[k] = info[k];
+            }
             done = 0;
             i = 0;
             RB0 = 0;
