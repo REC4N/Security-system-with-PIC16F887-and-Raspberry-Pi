@@ -86,11 +86,16 @@ void main(void) {
         Lcd_Shift_Left();
         __delay_ms(300);
     }
-    for (k = 0; k < 14; k++){
+    for (k = 0; k < 16; k++){
         Lcd_Shift_Right();
         __delay_ms(300);
     }
-    __delay_ms(5000);
+    Lcd_Clear();
+    Lcd_Set_Cursor(1,1);
+    Lcd_Write_String("Espere");
+    Lcd_Set_Cursor(2,1);
+    Lcd_Write_String("un Momento");
+    __delay_ms(4000);
     Lcd_Clear();
     
     while (1) {
@@ -157,22 +162,22 @@ void main(void) {
             change2 = 0;
         }
         
-        
-        if (PORTDbits.RD6 == 1){
-            if (change3 == 0){
-                if (alarm == 0){
-                    alarm = 1;
-                }else {
-                    alarm = 0;
+        if (seguridad == 1){
+            if (PORTDbits.RD6 == 1){
+                if (change3 == 0){
+                    if (alarm == 0){
+                        alarm = 1;
+                    }else {
+                        alarm = 0;
+                    }
+                    change3 = 1;
                 }
-                change3 = 1;
+
             }
-          
+            else{
+                change3 = 0;
+            }
         }
-        else{
-            change3 = 0;
-        }
-        
         
         SSPCONbits.SSPEN = 0;
         RCSTAbits.SPEN = 1;
@@ -371,7 +376,7 @@ void main(void) {
             write_RTC(hour, min, day1);
         } else if (state == 4){
             Lcd_Set_Cursor(1,1);
-            Lcd_Write_String("PASSWORD:");
+            Lcd_Write_String("PASSWORD:       ");
             Lcd_Set_Cursor(2,k + 1);
             
             if (k < 5) {
@@ -434,6 +439,7 @@ void main(void) {
                         } else {
                             seguridad = 0;
                             k = 0;
+                            alarm = 0;
                             Lcd_Clear();
                             Lcd_Set_Cursor(1,1);
                             Lcd_Write_String("Security OFF");
