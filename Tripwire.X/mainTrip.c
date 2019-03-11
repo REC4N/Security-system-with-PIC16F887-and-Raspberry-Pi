@@ -101,7 +101,7 @@ void main(void) {
   
     
     i = 0;
-    j = 0;
+    j = 1000;
     send[0] = 0;
     send[1] = 3;
     PORTA = 0;                  // Se limpia PORTD

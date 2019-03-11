@@ -33,22 +33,21 @@ char val, send[10], info[10], i, done, j, temp, k;
 
 void __interrupt() isr(void){
     if (PIR1bits.RCIF == 1){
-        temp = UART_Read();
-        info[i] = temp;
-        i++;
-        RB0 = 1;
-        if (temp == 'A'){
+        // Interrupción por recepción UART
+        temp = UART_Read();         // Lee el buffer si llega algún dato
+        info[i] = temp;             // Ingresa el valor a una lista
+        i++;                        // Incrementa el índice de la lista
+        if (temp == 'A'){           // Si recibe una letra A, enciende la bandera done
             done = 1;
         }
     }else if(SSPIF == 1){
-        val = spiRead();
-        spiWrite(send[j]);
-        j++;
-        //__delay_us(500);
-        if (j == 10){
+        // Interrupción SPI
+        val = spiRead();            // Obtiene el valor del buffer del SPI, no es utilizado para nada
+        spiWrite(send[j]);          // Envía el valor de la lista que serán enviados
+        j++;                        // Incrementa el índice de la lista
+        if (j == 10){               // Si llega a 10, la lista inicia nuevamente en 0
             j = 0;
         }
-        PORTDbits.RD0 = ~PORTDbits.RD0;
         SSPIF = 0;
     }  
 }
@@ -56,24 +55,14 @@ void __interrupt() isr(void){
 void main(void) {
     setup();
     while (1){
+        // Si la bandera de done se activa, mueve los valores de la lista a los valores que serán enviados
         if (done == 1){
             info[9] = 'A';
-            UART_Write(info[0]);
-            UART_Write(info[1]);
-            UART_Write(info[2]);
-            UART_Write(info[3]);
-            UART_Write(info[4]);
-            UART_Write(info[5]);
-            UART_Write(info[6]);
-            UART_Write(info[7]);
-            UART_Write(info[8]);
-            UART_Write(info[9]);
-            for (k = 0; k < 10; k++){
+            for (k = 0; k < 10; k++){       //Asignando valores de la lista recibida a la lista de envío
                 send[k] = info[k];
             }
-            done = 0;
-            i = 0;
-            RB0 = 0;
+            done = 0;       // Desactiva la bandera de done
+            i = 0;          // Reinicia el valor del índice de la lista
         }
     }
 }
@@ -83,15 +72,9 @@ void setup(void){
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.SCS = 1;  
-    val = 0;
+    val = 0;                    //Inicialización de variables
     i = 0;
     j = 0;
-    ANSELH = 0;
-    TRISB = 0;
-    PORTB = 0;
-    ANSEL = 0;
-    TRISD = 0;
-    PORTD = 0;
     TRISAbits.TRISA5 = 1;       // Slave Select
     TRISCbits.TRISC3 = 1; 
     INTCONbits.GIE = 1;         // Habilitamos interrupciones
@@ -100,6 +83,6 @@ void setup(void){
     PIE1bits.SSPIE = 1;         // MSSP interruption is enabled.
     PIR1bits.RCIF = 0;
     PIE1bits.RCIE = 1;
-    UART_Init(9600);
-    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);
+    UART_Init(9600);            // Inicialización del UART
+    spiInit(SPI_SLAVE_SS_EN, SPI_DATA_SAMPLE_MIDDLE, SPI_CLOCK_IDLE_LOW, SPI_IDLE_2_ACTIVE);        // Inicialización del SPI
 }

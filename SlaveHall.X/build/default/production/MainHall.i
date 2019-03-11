@@ -2756,43 +2756,42 @@ void initOscilador(char option){
 # 30 "MainHall.c" 2
 
 
-char z, key, ADC, cont, val, door;
+char z, key, ADC, door;
 
 void setup (void);
 
 void __attribute__((picinterrupt(("")))) isr(void){
-# 52 "MainHall.c"
-                 if(PIR1bits.SSPIF == 1){
+    if(PIR1bits.SSPIF == 1){
 
-            SSPCONbits.CKP = 0;
+        SSPCONbits.CKP = 0;
 
-            if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
-                z = SSPBUF;
-                SSPCONbits.SSPOV = 0;
-                SSPCONbits.WCOL = 0;
-                SSPCONbits.CKP = 1;
-            }
+        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+            z = SSPBUF;
+            SSPCONbits.SSPOV = 0;
+            SSPCONbits.WCOL = 0;
+            SSPCONbits.CKP = 1;
+        }
 
-            if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
+        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
 
-                z = SSPBUF;
-
-                PIR1bits.SSPIF = 0;
-                SSPCONbits.CKP = 1;
-                while(!SSPSTATbits.BF);
-                z = SSPBUF;
-                _delay((unsigned long)((250)*(8000000/4000000.0)));
-
-            }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
-                z = SSPBUF;
-                BF = 0;
-                SSPBUF = door;
-                SSPCONbits.CKP = 1;
-                _delay((unsigned long)((250)*(8000000/4000000.0)));
-                while(SSPSTATbits.BF);
-            }
+            z = SSPBUF;
 
             PIR1bits.SSPIF = 0;
+            SSPCONbits.CKP = 1;
+            while(!SSPSTATbits.BF);
+            z = SSPBUF;
+            _delay((unsigned long)((250)*(8000000/4000000.0)));
+
+        }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+            z = SSPBUF;
+            BF = 0;
+            SSPBUF = door;
+            SSPCONbits.CKP = 1;
+            _delay((unsigned long)((250)*(8000000/4000000.0)));
+            while(SSPSTATbits.BF);
+        }
+
+        PIR1bits.SSPIF = 0;
     }
 }
 
@@ -2804,7 +2803,6 @@ void main(void) {
             __asm("nop");
         }
         ADC = ADRESH;
-        PORTB = key;
         _delay((unsigned long)((200)*(8000000/4000.0)));
         if (ADC > 134 | ADC < 120){
             key = 1;
@@ -2813,13 +2811,11 @@ void main(void) {
         }
         if (door == 0){
             if (key == 1 & PORTAbits.RA2 == 1){
-
                 door = 1;
                 while(PORTAbits.RA2 == 1);
             }
         } else if (door == 1){
             if (PORTAbits.RA2 == 1){
-
                 door = 0;
                 while(PORTAbits.RA2 == 1);
             }
@@ -2831,17 +2827,11 @@ void main(void) {
 void setup (void){
     initOscilador(7);
     ANSEL = 0;
-    ANSELH = 0;
     TRISA = 0;
     TRISAbits.TRISA2 = 1;
-    TRISB = 0;
     PORTA = 0;
-    PORTB = 0;
-    val = 8;
     door = 0;
     ADC_channel(0);
     initADC(2);
-# 140 "MainHall.c"
-    INTCONbits.GIE = 1;
     I2C_Slave_Init(0x10);
 }
