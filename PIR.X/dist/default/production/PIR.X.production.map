@@ -2,23 +2,23 @@ Microchip MPLAB XC8 Compiler V2.05 ()
 
 Linker command line:
 
--W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
+-W-3 --edf=D:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\PIR.X.production.sym \
   --cmf=dist/default/production\PIR.X.production.cmf -z -Q16F887 \
-  -oC:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.2 \
-  --defsym=__MPLAB_BUILD=1 -Mdist/default/production/PIR.X.production.map \
-  -E1 -ver=XC8 --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
-  -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
-  -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh \
-  -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0110h-016Fh \
-  -ABANK3=0190h-01EFh -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
+  -oC:\Users\kit_s\AppData\Local\Temp\smo4.2 --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/production/PIR.X.production.map -E1 -ver=XC8 --acfsm=1493 \
+  -ASTACK=0110h-016Fh -pstack=STACK -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
+  -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
+  -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
+  -ABANK2=0110h-016Fh -ABANK3=0190h-01EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
   -AABS1=020h-07Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh -ASFR0=00h-01Fh \
   -ASFR1=080h-09Fh -ASFR2=0100h-010Fh -ASFR3=0180h-018Fh \
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
   -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o \
+  -DENTRY=2 -k C:\Users\kit_s\AppData\Local\Temp\smo4.o \
   dist/default/production\PIR.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o
+C:\Users\kit_s\AppData\Local\Temp\smo4.o
                 end_init                              C        C        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2     400E       0
@@ -289,7 +289,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 75 in file "mainPIR.c"
+		line 73 in file "mainPIR.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -348,7 +348,7 @@ Total ram usage:        2 bytes
 
  *************** function _isr *****************
  Defined at:
-		line 40 in file "mainPIR.c"
+		line 38 in file "mainPIR.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type

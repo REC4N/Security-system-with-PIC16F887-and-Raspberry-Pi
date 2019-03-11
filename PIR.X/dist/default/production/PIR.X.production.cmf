@@ -19,7 +19,7 @@ maintext CODE 0 67 67 33 2
 cstackCOMMON COMMON 1 70 70 8 1
 intentry CODE 0 4 4 8 2
 bssCOMMON COMMON 1 78 78 3 1
-$C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o
+$C:\Users\kit_s\AppData\Local\Temp\smo4.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 0 2007 2007 2 2
@@ -69,70 +69,70 @@ STRING B3-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\PIR.X.production.o
-F cinit CODE >489:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.
-F cinit CODE >492:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.
-F cinit CODE >509:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.
-10 cinit CODE >510:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.
-11 cinit CODE >511:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.
-12 cinit CODE >517:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.
-12 cinit CODE >519:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.
-13 cinit CODE >520:C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.
-4 intentry CODE >40:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-16 text2 CODE >40:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-16 text2 CODE >41:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-1A text2 CODE >43:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-1B text2 CODE >45:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-1F text2 CODE >46:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-23 text2 CODE >47:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-24 text2 CODE >48:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-25 text2 CODE >49:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-26 text2 CODE >52:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-2B text2 CODE >54:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-31 text2 CODE >56:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-32 text2 CODE >57:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-33 text2 CODE >58:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-37 text2 CODE >59:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-3D text2 CODE >60:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-42 text2 CODE >62:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-46 text2 CODE >63:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-4C text2 CODE >64:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-4F text2 CODE >65:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-53 text2 CODE >66:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-54 text2 CODE >67:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-59 text2 CODE >68:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-5D text2 CODE >69:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-5D text2 CODE >71:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-60 text2 CODE >73:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-9A text1 CODE >94:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X/I2C.h
-9A text1 CODE >96:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X/I2C.h
-9E text1 CODE >97:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X/I2C.h
-A2 text1 CODE >98:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X/I2C.h
-A6 text1 CODE >99:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X/I2C.h
-A8 text1 CODE >100:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X/I2C.h
-A9 text1 CODE >101:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X/I2C.h
-AA text1 CODE >102:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X/I2C.h
-AB text1 CODE >103:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X/I2C.h
-AC text1 CODE >104:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X/I2C.h
-AF text1 CODE >105:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X/I2C.h
-B2 text1 CODE >106:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X/I2C.h
-67 maintext CODE >75:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-67 maintext CODE >77:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-6A maintext CODE >78:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-6B maintext CODE >79:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-6C maintext CODE >80:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-6D maintext CODE >81:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-70 maintext CODE >82:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-71 maintext CODE >83:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-74 maintext CODE >84:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-76 maintext CODE >85:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-79 maintext CODE >86:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-7A maintext CODE >87:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-7B maintext CODE >88:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-84 maintext CODE >91:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-85 maintext CODE >92:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-87 maintext CODE >93:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-94 maintext CODE >91:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
-98 maintext CODE >97:C:\Users\Alejandro Recancoj\Desktop\SistemaDeSeguridad\PIR.X\mainPIR.c
+F cinit CODE >489:C:\Users\kit_s\AppData\Local\Temp\smo4.
+F cinit CODE >492:C:\Users\kit_s\AppData\Local\Temp\smo4.
+F cinit CODE >509:C:\Users\kit_s\AppData\Local\Temp\smo4.
+10 cinit CODE >510:C:\Users\kit_s\AppData\Local\Temp\smo4.
+11 cinit CODE >511:C:\Users\kit_s\AppData\Local\Temp\smo4.
+12 cinit CODE >517:C:\Users\kit_s\AppData\Local\Temp\smo4.
+12 cinit CODE >519:C:\Users\kit_s\AppData\Local\Temp\smo4.
+13 cinit CODE >520:C:\Users\kit_s\AppData\Local\Temp\smo4.
+4 intentry CODE >38:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+16 text2 CODE >38:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+16 text2 CODE >39:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+1A text2 CODE >41:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+1B text2 CODE >43:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+1F text2 CODE >44:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+23 text2 CODE >45:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+24 text2 CODE >46:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+25 text2 CODE >47:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+26 text2 CODE >50:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+2B text2 CODE >52:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+31 text2 CODE >54:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+32 text2 CODE >55:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+33 text2 CODE >56:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+37 text2 CODE >57:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+3D text2 CODE >58:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+42 text2 CODE >60:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+46 text2 CODE >61:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+4C text2 CODE >62:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+4F text2 CODE >63:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+53 text2 CODE >64:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+54 text2 CODE >65:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+59 text2 CODE >66:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+5D text2 CODE >67:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+5D text2 CODE >69:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+60 text2 CODE >71:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+9A text1 CODE >94:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X/I2C.h
+9A text1 CODE >96:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X/I2C.h
+9E text1 CODE >97:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X/I2C.h
+A2 text1 CODE >98:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X/I2C.h
+A6 text1 CODE >99:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X/I2C.h
+A8 text1 CODE >100:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X/I2C.h
+A9 text1 CODE >101:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X/I2C.h
+AA text1 CODE >102:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X/I2C.h
+AB text1 CODE >103:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X/I2C.h
+AC text1 CODE >104:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X/I2C.h
+AF text1 CODE >105:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X/I2C.h
+B2 text1 CODE >106:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X/I2C.h
+67 maintext CODE >73:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+67 maintext CODE >75:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+6A maintext CODE >76:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+6B maintext CODE >77:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+6C maintext CODE >78:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+6D maintext CODE >79:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+70 maintext CODE >80:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+71 maintext CODE >81:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+74 maintext CODE >82:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+76 maintext CODE >83:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+79 maintext CODE >84:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+7A maintext CODE >85:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+7B maintext CODE >86:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+84 maintext CODE >89:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+85 maintext CODE >90:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+87 maintext CODE >91:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+94 maintext CODE >89:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
+98 maintext CODE >93:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\PIR.X\mainPIR.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -158,20 +158,20 @@ _BF 4A0 0 ABS 0 - dist/default/production\PIR.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\PIR.X.production.o
 _RCEN 48B 0 ABS 0 - dist/default/production\PIR.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o
+___sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\smo4.o
 _main CE 0 CODE 0 maintext dist/default/production\PIR.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\PIR.X.production.o
-start 18 0 CODE 0 init C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o
+start 18 0 CODE 0 init C:\Users\kit_s\AppData\Local\Temp\smo4.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\PIR.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\PIR.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\smo4.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\smo4.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\smo4.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\smo4.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\smo4.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\smo4.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\PIR.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\PIR.X.production.o
@@ -180,8 +180,8 @@ __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELH 189 0 ABS 0 - dist/default/production\PIR.X.production.o
 _SSPCONbits 14 0 ABS 0 - dist/default/production\PIR.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o
-___stacklo 0 0 ABS 0 - C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o
+___stackhi 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\smo4.o
+___stacklo 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\smo4.o
 _I2C_Slave_Init 134 0 CODE 0 text1 dist/default/production\PIR.X.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\PIR.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\PIR.X.production.o
@@ -190,7 +190,7 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\PIR.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\PIR.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\PIR.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\PIR.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o
+___int_sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\smo4.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -241,7 +241,7 @@ saved_w 7E 0 ABS 0 - dist/default/production\PIR.X.production.o
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\PIR.X.production.o
 __end_of_isr CE 0 CODE 0 text2 dist/default/production\PIR.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Alejandro Recancoj\AppData\Local\Temp\sk6g.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\kit_s\AppData\Local\Temp\smo4.o
 __pmaintext CE 0 CODE 0 maintext dist/default/production\PIR.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -

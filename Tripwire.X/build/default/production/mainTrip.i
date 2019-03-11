@@ -2713,18 +2713,13 @@ extern int printf(const char *, ...);
 
 
 
-char z, key, ADC, cont, val, i;
+char z, val, i;
 int j;
 char send[2];
 
-void setup (void);
 void system_init (void);
 void full_drive (char direction);
 void delay(unsigned int val);
-
-
-
-
 
 void __attribute__((picinterrupt(("")))) isr(void){
     if(PIR1bits.SSPIF == 1){
@@ -2752,7 +2747,6 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
             z = SSPBUF;
             BF = 0;
-
             SSPBUF = send[i];
             i++;
             if (i>1){
@@ -2780,40 +2774,39 @@ void main(void) {
     j = 1000;
     send[0] = 0;
     send[1] = 3;
+    val = 0;
     PORTA = 0;
     PORTB = 0;
-
     TRISA = 0;
     TRISD = 0x02;
     ANSEL = 0;
     ANSELH = 0;
     INTCONbits.GIE = 1;
     system_init();
-    val = 0;
     I2C_Slave_Init(0x20);
 
     while(1){
         if (PORTDbits.RD1 == 1){
-            PORTAbits.RA0 = 1;
             send[0] = 1;
-
-
+        } else {
+            send[0] = 0;
         }
 
-        else{
-             send[0] = 0;
-        }
+
         if (val == 0xFF){
+
             if (j < 1000){
                 full_drive(0);
                 j++;
-            }
-            else{
+            } else {
                 send[1] = 3;
                 val = 0;
             }
-            }
+        }
+
+
         if (val == 0xF0){
+
             if (j > 0){
                 full_drive(1);
                 j--;
@@ -2822,10 +2815,9 @@ void main(void) {
                 send[1] = 2;
                 val = 0;
             }
-
         }
-        }
-        }
+    }
+}
 
 
 void system_init (void){
@@ -2835,6 +2827,7 @@ void system_init (void){
 }
 
 void full_drive (char direction){
+
     if (direction == 1){
         PORTB = 0b00000011;
         delay(1);
@@ -2862,8 +2855,8 @@ void full_drive (char direction){
 
 }
 
-void delay(unsigned int val)
-{
+
+void delay(unsigned int val){
      unsigned int i,j;
         for(i=0;i<val;i++)
             for(j=0;j<250;j++);

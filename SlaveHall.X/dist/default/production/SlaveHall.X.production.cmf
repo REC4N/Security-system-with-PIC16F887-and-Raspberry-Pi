@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\kit_s\AppData\Local\Temp\sfhc.o
+$C:\Users\kit_s\AppData\Local\Temp\si08.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 0 2007 2007 2 2
@@ -74,15 +74,15 @@ STRING 20D-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\SlaveHall.X.production.o
-F cinit CODE >502:C:\Users\kit_s\AppData\Local\Temp\sfhc.
-F cinit CODE >505:C:\Users\kit_s\AppData\Local\Temp\sfhc.
-F cinit CODE >525:C:\Users\kit_s\AppData\Local\Temp\sfhc.
-10 cinit CODE >526:C:\Users\kit_s\AppData\Local\Temp\sfhc.
-11 cinit CODE >527:C:\Users\kit_s\AppData\Local\Temp\sfhc.
-12 cinit CODE >528:C:\Users\kit_s\AppData\Local\Temp\sfhc.
-13 cinit CODE >534:C:\Users\kit_s\AppData\Local\Temp\sfhc.
-13 cinit CODE >536:C:\Users\kit_s\AppData\Local\Temp\sfhc.
-14 cinit CODE >537:C:\Users\kit_s\AppData\Local\Temp\sfhc.
+F cinit CODE >502:C:\Users\kit_s\AppData\Local\Temp\si08.
+F cinit CODE >505:C:\Users\kit_s\AppData\Local\Temp\si08.
+F cinit CODE >525:C:\Users\kit_s\AppData\Local\Temp\si08.
+10 cinit CODE >526:C:\Users\kit_s\AppData\Local\Temp\si08.
+11 cinit CODE >527:C:\Users\kit_s\AppData\Local\Temp\si08.
+12 cinit CODE >528:C:\Users\kit_s\AppData\Local\Temp\si08.
+13 cinit CODE >534:C:\Users\kit_s\AppData\Local\Temp\si08.
+13 cinit CODE >536:C:\Users\kit_s\AppData\Local\Temp\si08.
+14 cinit CODE >537:C:\Users\kit_s\AppData\Local\Temp\si08.
 4 intentry CODE >36:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X\MainHall.c
 16A text6 CODE >36:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X\MainHall.c
 16A text6 CODE >37:D:\Documents\GitHub\Security-system-with-PIC16F887-and-Raspberry-Pi\SlaveHall.X\MainHall.c
@@ -268,21 +268,21 @@ _BF 4A0 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
 _RCEN 48B 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\sfhc.o
+___sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\si08.o
 _door 76 0 COMMON 1 bssCOMMON dist/default/production\SlaveHall.X.production.o
 _main 230 0 CODE 0 maintext dist/default/production\SlaveHall.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
-start 18 0 CODE 0 init C:\Users\kit_s\AppData\Local\Temp\sfhc.o
+start 18 0 CODE 0 init C:\Users\kit_s\AppData\Local\Temp\si08.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sfhc.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sfhc.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sfhc.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sfhc.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sfhc.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\sfhc.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\si08.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\si08.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\si08.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\si08.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\si08.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\kit_s\AppData\Local\Temp\si08.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
@@ -295,8 +295,8 @@ ADC_channel@a 75 0 COMMON 1 cstackCOMMON dist/default/production\SlaveHall.X.pro
 __size_of_initADC 0 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 __end_of_initOscilador 230 0 CODE 0 text2 dist/default/production\SlaveHall.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\sfhc.o
-___stacklo 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\sfhc.o
+___stackhi 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\si08.o
+___stacklo 0 0 ABS 0 - C:\Users\kit_s\AppData\Local\Temp\si08.o
 _I2C_Slave_Init 3C0 0 CODE 0 text4 dist/default/production\SlaveHall.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
@@ -312,7 +312,7 @@ _SSPCON 14 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
 __end_of_initADC 41A 0 CODE 0 text3 dist/default/production\SlaveHall.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\sfhc.o
+___int_sp 0 0 STACK 2 stack C:\Users\kit_s\AppData\Local\Temp\si08.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -363,7 +363,7 @@ saved_w 7E 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\SlaveHall.X.production.o
 __end_of_isr 376 0 CODE 0 text6 dist/default/production\SlaveHall.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\kit_s\AppData\Local\Temp\sfhc.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\kit_s\AppData\Local\Temp\si08.o
 __pmaintext 230 0 CODE 0 maintext dist/default/production\SlaveHall.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -

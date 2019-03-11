@@ -30,12 +30,10 @@
 #define _XTAL_FREQ 8000000
 #include <xc.h>
 #include "I2C.h"
+
 char z, PIR, val;
 
 void setup (void);
-
-#define _XTAL_FREQ 8000000      // Frecuencia de oscilacion de 1 Mhz
-                                // Variable de estado para indicar si el contador asciende o desciende
 
 void __interrupt() isr(void){
     if(PIR1bits.SSPIF == 1){ 
@@ -77,12 +75,9 @@ void main(void) {
     OSCCONbits.IRCF0 = 1;       // Se configura oscilador a 8 Mhz
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF2 = 1;
-    OSCCONbits.SCS = 1;         
-    PORTA = 0;                  // Se limpia PORTA y PORTB
-    PORTB = 0;                  
-    TRISA = 0;                  // Se pone PORTA como output
+    OSCCONbits.SCS = 1;                      
+    PORTB = 0;                  // Se limpia PORTB
     TRISB = 0x02;               // Se pone PORTB como input en RB1, todos los demas son outputs.
-    ANSEL = 0;                  // Se pone PORTA como salida digital.
     ANSELH = 0;                 // Se pone PORTB como salida digital.
     INTCONbits.GIE = 1;         // Se activan interrupciones globales.
     I2C_Slave_Init(0x40);       // Se activa I2C con direccion 0x40.
@@ -91,9 +86,7 @@ void main(void) {
         if (PORTBbits.RB1 == 1){ // Si el sensor PIR se activa, PIR = 1.
             PIR = 1;
             __delay_ms(250);
-        }
-        
-        else{
+        } else {
             PIR = 0;            // Si el sensor PIR no se activa, PIR = 0.
         }
     }

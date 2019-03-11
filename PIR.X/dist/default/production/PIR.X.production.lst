@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.05 build -831301201 
-                                                                                               Sat Mar 09 11:28:35 2019
+                                                                                               Mon Mar 11 08:13:47 2019
 
 Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
      1                           	processor	16F887
@@ -301,7 +301,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    287 ;;
    288 ;; *************** function _main *****************
    289 ;; Defined at:
-   290 ;;		line 75 in file "mainPIR.c"
+   290 ;;		line 73 in file "mainPIR.c"
    291 ;; Parameters:    Size  Location     Type
    292 ;;		None
    293 ;; Auto vars:     Size  Location     Type
@@ -332,7 +332,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    318                           ;psect for function _main
    319  0067                     _main:	
    320                           
-   321                           ;mainPIR.c: 77:     OSCCONbits.IRCF0 = 1;
+   321                           ;mainPIR.c: 75:     OSCCONbits.IRCF0 = 1;
    322                           
    323                           ;incstack = 0
    324                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
@@ -340,44 +340,44 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    326  0068  1303               	bcf	3,6	;RP1=0, select bank1
    327  0069  160F               	bsf	15,4	;volatile
    328                           
-   329                           ;mainPIR.c: 78:     OSCCONbits.IRCF1 = 1;
+   329                           ;mainPIR.c: 76:     OSCCONbits.IRCF1 = 1;
    330  006A  168F               	bsf	15,5	;volatile
    331                           
-   332                           ;mainPIR.c: 79:     OSCCONbits.IRCF2 = 1;
+   332                           ;mainPIR.c: 77:     OSCCONbits.IRCF2 = 1;
    333  006B  170F               	bsf	15,6	;volatile
    334                           
-   335                           ;mainPIR.c: 80:     OSCCONbits.SCS = 1;
+   335                           ;mainPIR.c: 78:     OSCCONbits.SCS = 1;
    336  006C  140F               	bsf	15,0	;volatile
    337                           
-   338                           ;mainPIR.c: 81:     PORTA = 0;
+   338                           ;mainPIR.c: 79:     PORTA = 0;
    339  006D  1283               	bcf	3,5	;RP0=0, select bank0
    340  006E  1303               	bcf	3,6	;RP1=0, select bank0
    341  006F  0185               	clrf	5	;volatile
    342                           
-   343                           ;mainPIR.c: 82:     PORTB = 0;
+   343                           ;mainPIR.c: 80:     PORTB = 0;
    344  0070  0186               	clrf	6	;volatile
    345                           
-   346                           ;mainPIR.c: 83:     TRISA = 0;
+   346                           ;mainPIR.c: 81:     TRISA = 0;
    347  0071  1683               	bsf	3,5	;RP0=1, select bank1
    348  0072  1303               	bcf	3,6	;RP1=0, select bank1
    349  0073  0185               	clrf	5	;volatile
    350                           
-   351                           ;mainPIR.c: 84:     TRISB = 0x02;
+   351                           ;mainPIR.c: 82:     TRISB = 0x02;
    352  0074  3002               	movlw	2
    353  0075  0086               	movwf	6	;volatile
    354                           
-   355                           ;mainPIR.c: 85:     ANSEL = 0;
+   355                           ;mainPIR.c: 83:     ANSEL = 0;
    356  0076  1683               	bsf	3,5	;RP0=1, select bank3
    357  0077  1703               	bsf	3,6	;RP1=1, select bank3
    358  0078  0188               	clrf	8	;volatile
    359                           
-   360                           ;mainPIR.c: 86:     ANSELH = 0;
+   360                           ;mainPIR.c: 84:     ANSELH = 0;
    361  0079  0189               	clrf	9	;volatile
    362                           
-   363                           ;mainPIR.c: 87:     INTCONbits.GIE = 1;
+   363                           ;mainPIR.c: 85:     INTCONbits.GIE = 1;
    364  007A  178B               	bsf	11,7	;volatile
    365                           
-   366                           ;mainPIR.c: 88:     I2C_Slave_Init(0x40);
+   366                           ;mainPIR.c: 86:     I2C_Slave_Init(0x40);
    367  007B  3040               	movlw	64
    368  007C  00F3               	movwf	I2C_Slave_Init@address
    369  007D  3000               	movlw	0
@@ -386,11 +386,11 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    372  0084  2894               	goto	l851
    373  0085                     l853:	
    374                           
-   375                           ;mainPIR.c: 92:             PIR = 1;
+   375                           ;mainPIR.c: 90:             PIR = 1;
    376  0085  01F9               	clrf	_PIR
    377  0086  0AF9               	incf	_PIR,f
    378                           
-   379                           ;mainPIR.c: 93:             _delay((unsigned long)((250)*(8000000/4000.0)));
+   379                           ;mainPIR.c: 91:             _delay((unsigned long)((250)*(8000000/4000.0)));
    380  0087  3003               	movlw	3
    381  0088  00F7               	movwf	??_main+2
    382  0089  308A               	movlw	138
@@ -406,16 +406,16 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    392  0092  288D               	goto	u167
    393  0093  2894               	nop2
    394  0094                     l851:	
-   395                           ;mainPIR.c: 94:         }
+   395                           ;mainPIR.c: 92:         } else {
    396                           
    397                           
-   398                           ;mainPIR.c: 91:         if (PORTBbits.RB1 == 1){
+   398                           ;mainPIR.c: 89:         if (PORTBbits.RB1 == 1){
    399  0094  1283               	bcf	3,5	;RP0=0, select bank0
    400  0095  1303               	bcf	3,6	;RP1=0, select bank0
    401  0096  1886               	btfsc	6,1	;volatile
    402  0097  2885               	goto	l853
    403                           
-   404                           ;mainPIR.c: 97:             PIR = 0;
+   404                           ;mainPIR.c: 93:             PIR = 0;
    405  0098  01F9               	clrf	_PIR
    406  0099  2894               	goto	l851
    407  009A                     __end_of_main:	
@@ -510,7 +510,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    495  0016                     __ptext2:	
    496 ;; *************** function _isr *****************
    497 ;; Defined at:
-   498 ;;		line 40 in file "mainPIR.c"
+   498 ;;		line 38 in file "mainPIR.c"
    499 ;; Parameters:    Size  Location     Type
    500 ;;		None
    501 ;; Auto vars:     Size  Location     Type
@@ -541,46 +541,46 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    526                           ;psect for function _isr
    527  0016                     _isr:	
    528                           
-   529                           ;mainPIR.c: 41:     if(PIR1bits.SSPIF == 1){
+   529                           ;mainPIR.c: 39:     if(PIR1bits.SSPIF == 1){
    530  0016  1283               	bcf	3,5	;RP0=0, select bank0
    531  0017  1303               	bcf	3,6	;RP1=0, select bank0
    532  0018  1D8C               	btfss	12,3	;volatile
    533  0019  2860               	goto	i1l107
    534                           
-   535                           ;mainPIR.c: 43:         SSPCONbits.CKP = 0;
+   535                           ;mainPIR.c: 41:         SSPCONbits.CKP = 0;
    536  001A  1214               	bcf	20,4	;volatile
    537                           
-   538                           ;mainPIR.c: 45:         if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+   538                           ;mainPIR.c: 43:         if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
    539  001B  1B14               	btfsc	20,6	;volatile
    540  001C  281F               	goto	i1l773
    541  001D  1F94               	btfss	20,7	;volatile
    542  001E  2826               	goto	i1l781
    543  001F                     i1l773:	
    544                           
-   545                           ;mainPIR.c: 46:             z = SSPBUF;
+   545                           ;mainPIR.c: 44:             z = SSPBUF;
    546  001F  0813               	movf	19,w	;volatile
    547  0020  00F0               	movwf	??_isr
    548  0021  0870               	movf	??_isr,w
    549  0022  00FA               	movwf	_z
    550                           
-   551                           ;mainPIR.c: 47:             SSPCONbits.SSPOV = 0;
+   551                           ;mainPIR.c: 45:             SSPCONbits.SSPOV = 0;
    552  0023  1314               	bcf	20,6	;volatile
    553                           
-   554                           ;mainPIR.c: 48:             SSPCONbits.WCOL = 0;
+   554                           ;mainPIR.c: 46:             SSPCONbits.WCOL = 0;
    555  0024  1394               	bcf	20,7	;volatile
    556                           
-   557                           ;mainPIR.c: 49:             SSPCONbits.CKP = 1;
+   557                           ;mainPIR.c: 47:             SSPCONbits.CKP = 1;
    558  0025  1614               	bsf	20,4	;volatile
    559  0026                     i1l781:	
    560                           
-   561                           ;mainPIR.c: 52:         if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
+   561                           ;mainPIR.c: 50:         if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
    562  0026  1683               	bsf	3,5	;RP0=1, select bank1
    563  0027  1303               	bcf	3,6	;RP1=0, select bank1
    564  0028  1E94               	btfss	20,5	;volatile
    565  0029  1914               	btfsc	20,2	;volatile
    566  002A  2843               	goto	i1l98
    567                           
-   568                           ;mainPIR.c: 54:             z = SSPBUF;
+   568                           ;mainPIR.c: 52:             z = SSPBUF;
    569  002B  1283               	bcf	3,5	;RP0=0, select bank0
    570  002C  1303               	bcf	3,6	;RP1=0, select bank0
    571  002D  0813               	movf	19,w	;volatile
@@ -588,20 +588,20 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    573  002F  0870               	movf	??_isr,w
    574  0030  00FA               	movwf	_z
    575                           
-   576                           ;mainPIR.c: 56:             PIR1bits.SSPIF = 0;
+   576                           ;mainPIR.c: 54:             PIR1bits.SSPIF = 0;
    577  0031  118C               	bcf	12,3	;volatile
    578                           
-   579                           ;mainPIR.c: 57:             SSPCONbits.CKP = 1;
+   579                           ;mainPIR.c: 55:             SSPCONbits.CKP = 1;
    580  0032  1614               	bsf	20,4	;volatile
    581  0033                     i1l99:	
-   582                           ;mainPIR.c: 58:             while(!SSPSTATbits.BF);
+   582                           ;mainPIR.c: 56:             while(!SSPSTATbits.BF);
    583                           
    584  0033  1683               	bsf	3,5	;RP0=1, select bank1
    585  0034  1303               	bcf	3,6	;RP1=0, select bank1
    586  0035  1C14               	btfss	20,0	;volatile
    587  0036  2833               	goto	i1l99
    588                           
-   589                           ;mainPIR.c: 59:             val = SSPBUF;
+   589                           ;mainPIR.c: 57:             val = SSPBUF;
    590  0037  1283               	bcf	3,5	;RP0=0, select bank0
    591  0038  1303               	bcf	3,6	;RP1=0, select bank0
    592  0039  0813               	movf	19,w	;volatile
@@ -609,7 +609,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    594  003B  0870               	movf	??_isr,w
    595  003C  00F8               	movwf	_val
    596                           
-   597                           ;mainPIR.c: 60:             _delay((unsigned long)((250)*(8000000/4000000.0)));
+   597                           ;mainPIR.c: 58:             _delay((unsigned long)((250)*(8000000/4000000.0)));
    598  003D  30A6               	movlw	166
    599  003E  00F0               	movwf	??_isr
    600  003F                     u17_27:	
@@ -617,14 +617,14 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    602  0040  283F               	goto	u17_27
    603  0041  0000               	nop
    604                           
-   605                           ;mainPIR.c: 62:         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+   605                           ;mainPIR.c: 60:         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
    606  0042  285D               	goto	i1l102
    607  0043                     i1l98:	
    608  0043  1E94               	btfss	20,5	;volatile
    609  0044  1D14               	btfss	20,2	;volatile
    610  0045  285D               	goto	i1l102
    611                           
-   612                           ;mainPIR.c: 63:             z = SSPBUF;
+   612                           ;mainPIR.c: 61:             z = SSPBUF;
    613  0046  1283               	bcf	3,5	;RP0=0, select bank0
    614  0047  1303               	bcf	3,6	;RP1=0, select bank0
    615  0048  0813               	movf	19,w	;volatile
@@ -632,21 +632,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    617  004A  0870               	movf	??_isr,w
    618  004B  00FA               	movwf	_z
    619                           
-   620                           ;mainPIR.c: 64:             BF = 0;
+   620                           ;mainPIR.c: 62:             BF = 0;
    621  004C  1683               	bsf	3,5	;RP0=1, select bank1
    622  004D  1303               	bcf	3,6	;RP1=0, select bank1
    623  004E  1014               	bcf	20,0	;volatile
    624                           
-   625                           ;mainPIR.c: 65:             SSPBUF = PIR;
+   625                           ;mainPIR.c: 63:             SSPBUF = PIR;
    626  004F  0879               	movf	_PIR,w
    627  0050  1283               	bcf	3,5	;RP0=0, select bank0
    628  0051  1303               	bcf	3,6	;RP1=0, select bank0
    629  0052  0093               	movwf	19	;volatile
    630                           
-   631                           ;mainPIR.c: 66:             SSPCONbits.CKP = 1;
+   631                           ;mainPIR.c: 64:             SSPCONbits.CKP = 1;
    632  0053  1614               	bsf	20,4	;volatile
    633                           
-   634                           ;mainPIR.c: 67:             _delay((unsigned long)((250)*(8000000/4000000.0)));
+   634                           ;mainPIR.c: 65:             _delay((unsigned long)((250)*(8000000/4000000.0)));
    635  0054  30A6               	movlw	166
    636  0055  00F0               	movwf	??_isr
    637  0056                     u18_27:	
@@ -654,7 +654,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    639  0057  2856               	goto	u18_27
    640  0058  0000               	nop
    641  0059                     i1l104:	
-   642                           ;mainPIR.c: 68:             while(SSPSTATbits.BF);
+   642                           ;mainPIR.c: 66:             while(SSPSTATbits.BF);
    643                           
    644  0059  1683               	bsf	3,5	;RP0=1, select bank1
    645  005A  1303               	bcf	3,6	;RP1=0, select bank1
@@ -662,7 +662,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    647  005C  2859               	goto	i1l104
    648  005D                     i1l102:	
    649                           
-   650                           ;mainPIR.c: 71:         PIR1bits.SSPIF = 0;
+   650                           ;mainPIR.c: 69:         PIR1bits.SSPIF = 0;
    651  005D  1283               	bcf	3,5	;RP0=0, select bank0
    652  005E  1303               	bcf	3,6	;RP1=0, select bank0
    653  005F  118C               	bcf	12,3	;volatile
@@ -811,7 +811,7 @@ DATA                 0      0       B      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.05 build -831301201 
-Symbol Table                                                                                   Sat Mar 09 11:28:35 2019
+Symbol Table                                                                                   Mon Mar 11 08:13:47 2019
 
                        _z 007A               __CFG_CP$OFF 0000               _SSPSTATbits 0094  
                       _BF 04A0                       l851 0094                       l853 0085  

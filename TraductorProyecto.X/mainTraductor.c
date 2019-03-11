@@ -1,6 +1,6 @@
 /*
  * File:   mainTraductor.c
- * Author: Julio Shin
+ * Author: Julio Shin y Alejandro Recancoj
  * Recibe todos los valores del master por medio de UART y los transmite a la Raspberry por medio SPI
  * Created on February 28, 2019, 2:44 PM
  */

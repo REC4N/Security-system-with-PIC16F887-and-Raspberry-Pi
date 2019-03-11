@@ -37,18 +37,13 @@
 #define clockwise 0 // clockwise direction macro
 #define anti_clockwise 1 // anti clockwise direction macro
 
-char z, key, ADC, cont, val, i; 
+char z, val, i; 
 int j;
 char send[2];
 
-void setup (void);
 void system_init (void); // This function will initialise the ports.
 void full_drive (char direction); // This function will drive the motor in full drive mode
 void delay(unsigned int val);
-
-#define _XTAL_FREQ 8000000      // Frecuencia de oscilacion de 1 Mhz
-
-                                // Variable de estado para indicar si el contador asciende o desciende
 
 void __interrupt() isr(void){
     if(PIR1bits.SSPIF == 1){ 
@@ -69,18 +64,17 @@ void __interrupt() isr(void){
             PIR1bits.SSPIF = 0;         // Interruption flag is cleared.
             SSPCONbits.CKP = 1;         // SCL pulses are activated.
             while(!SSPSTATbits.BF);     // Meanwhile the process is complete, no nothing.
-            val = SSPBUF;             // SSPBUF is of no use, so it is stored in the dummy variable.
+            val = SSPBUF;               // SSPBUF es guardado en val cuando hay una recepción de datos
             __delay_us(250);
             
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
             
             z = SSPBUF;                 // Read to refresh the buffer and reset the BF bit.
             BF = 0;
-            
-            SSPBUF = send[i];               // key value is put on the SSPBUF to transmit.
-            i++;
+            SSPBUF = send[i];               // send value is put on the SSPBUF to transmit.
+            i++;                        // Se incrementa el índice de la lista a enviar
             if (i>1){
-                i = 0;
+                i = 0;                  // Si se pasa de 1, regresa a 0
             }
             PORTAbits.RA6 = 1;
             SSPCONbits.CKP = 1;         // SCL pulses are activated.
@@ -100,56 +94,54 @@ void main(void) {
     OSCCONbits.SCS = 1;         
   
     
-    i = 0;
-    j = 1000;
-    send[0] = 0;
-    send[1] = 3;
-    PORTA = 0;                  // Se limpia PORTD
-    PORTB = 0;                  // Se pone PORTD como output
-    
-    TRISA = 0;               // Se pone PORTA como output
-    TRISD = 0x02;
+    i = 0;                      // Inicialización de variables
+    j = 1000;                   // Banco inicia abierto, j empieza en 1000
+    send[0] = 0;                // Trip desactivado
+    send[1] = 3;                // Banco abierto
+    val = 0;
+    PORTA = 0;                  // Se limpia PORTA y PORTB
+    PORTB = 0;                  
+    TRISA = 0;                  // Se pone PORTA como output
+    TRISD = 0x02;               // RD1 como input
     ANSEL = 0;                  // Se pone PORTA como salida digital
     ANSELH = 0;
-    INTCONbits.GIE = 1;
-    system_init();
-    val = 0;
-    I2C_Slave_Init(0x20);
+    INTCONbits.GIE = 1;         // Se activan interrupciones
+    system_init();              // Inicializa el puerto a utilizar por el stepper
+    I2C_Slave_Init(0x20);       // Inicializa I2C con dirección 0x20
     
     while(1){
         if (PORTDbits.RD1 == 1){
-            PORTAbits.RA0 = 1;
-            send[0] = 1;
-
-            
+            send[0] = 1;        // Si el trip está activado, se manda un 1
+        } else {
+            send[0] = 0;        // Si el trip se desactiva, manda un 0
         }
         
-        else{
-             send[0] = 0;
-        }
+        // Si el PIC recibe un 0xFF, comienza a girar a favor de las agujas del reloj
         if (val == 0xFF){
+            // Va a dar los steps necesarios para que llegue a 1000
             if (j < 1000){
-                full_drive(clockwise);  
-                j++;
+                full_drive(clockwise);  // Va girando el stepper
+                j++;                    // Va incrementando la variable
+            } else {
+                send[1] = 3;            // Cuando llega a 1000, se manda un 3 para decir que el banco está abierto
+                val = 0;                // Se reincia val
             }
-            else{
-                send[1] = 3;
-                val = 0;
-            }
-            }
+        }
+        
+        // Si el PIC recibe un 0xFF, comienza a girar en contra de las agujas del reloj
         if (val == 0xF0){
+            // Va a dar las suficientes vueltas para regresar a 0
             if (j > 0){
-                full_drive(anti_clockwise);
-                j--;
+                full_drive(anti_clockwise); // Va girando el stepper
+                j--;                        // Va incrementando la variable
             }
             else{
-                send[1] = 2;
-                val = 0;
-            }
-            
+                send[1] = 2;                // Cuando llega a 0, se manda un 2 para decir que el banco está cerrado
+                val = 0;                    // Se reinicia val
+            }   
         }
-        }
-        }
+    }
+}
 
 
 void system_init (void){
@@ -159,6 +151,7 @@ void system_init (void){
 }
 
 void full_drive (char direction){
+    // Secuencias para poder rotar el stepper en la dirección deseada
     if (direction == anti_clockwise){
         PORTB = 0b00000011;
         delay(speed);
@@ -186,8 +179,8 @@ void full_drive (char direction){
         
 }
 
-void delay(unsigned int val)
-{
+// Genera un delay para el movimiento del stepper
+void delay(unsigned int val){
      unsigned int i,j;
         for(i=0;i<val;i++)
             for(j=0;j<250;j++);
