@@ -516,7 +516,7 @@ text33 2BE4 2BEF CODE 2BE4 0
 idataBANK0 2BDA 2BE3 CODE 2BDA 0
 %locals
 dist/default/production\MasterProyecto.X.production.o
-C:\Users\kit_s\AppData\Local\Temp\sclo.
+C:\Users\Alejandro Recancoj\AppData\Local\Temp\sfag.
 1160 F 0 CODE 0
 1163 F 0 CODE 0
 1264 F 0 CODE 0
@@ -825,7 +825,7 @@ mainMaster.c
 562 A08 0 CODE 0
 563 A16 0 CODE 0
 564 A19 0 CODE 0
-D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
 33 179C 0 CODE 0
 37 179F 0 CODE 0
 38 17A5 0 CODE 0
@@ -904,7 +904,7 @@ mainMaster.c
 24 F0B 0 CODE 0
 25 F0E 0 CODE 0
 29 F11 0 CODE 0
-D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
 5 D06 0 CODE 0
 13 D06 0 CODE 0
 14 D09 0 CODE 0
@@ -957,7 +957,7 @@ D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\aldiv.c
 22 8DF 0 CODE 0
 23 8E0 0 CODE 0
 24 8E1 0 CODE 0
-D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
 5 BBD 0 CODE 0
 13 BBD 0 CODE 0
 14 BC7 0 CODE 0
@@ -1022,7 +1022,7 @@ mainMaster.c
 626 E28 0 CODE 0
 627 E32 0 CODE 0
 629 E39 0 CODE 0
-D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
 8 886 0 CODE 0
 18 887 0 CODE 0
 19 88B 0 CODE 0
@@ -1031,7 +1031,7 @@ D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
 22 896 0 CODE 0
 23 89A 0 CODE 0
 21 89E 0 CODE 0
-D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
 500 F12 0 CODE 0
 545 F15 0 CODE 0
 548 F19 0 CODE 0
@@ -1056,7 +1056,7 @@ D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
 1493 FFA 0 CODE 0
 1557 FFB 0 CODE 0
 1560 FFF 0 CODE 0
-D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
 5 17CC 0 CODE 0
 12 17CC 0 CODE 0
 13 17D2 0 CODE 0
@@ -1070,7 +1070,7 @@ D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
 22 17F7 0 CODE 0
 24 17FB 0 CODE 0
 25 17FF 0 CODE 0
-D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
 5 955 0 CODE 0
 13 955 0 CODE 0
 14 959 0 CODE 0
@@ -1087,7 +1087,7 @@ D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
 27 98A 0 CODE 0
 29 98E 0 CODE 0
 30 992 0 CODE 0
-D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
 4 1648 0 CODE 0
 6 1649 0 CODE 0
 43 164A 0 CODE 0
@@ -1172,7 +1172,7 @@ mainMaster.c
 43 15FE 0 CODE 0
 32 87D 0 CODE 0
 34 87D 0 CODE 0
-D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
 5 A1A 0 CODE 0
 12 A1A 0 CODE 0
 13 A1D 0 CODE 0
@@ -1194,7 +1194,7 @@ D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
 32 A5D 0 CODE 0
 33 A62 0 CODE 0
 34 A66 0 CODE 0
-D:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
 5 B62 0 CODE 0
 13 B62 0 CODE 0
 14 B65 0 CODE 0

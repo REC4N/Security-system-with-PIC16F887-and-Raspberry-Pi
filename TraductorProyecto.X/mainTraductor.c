@@ -58,6 +58,16 @@ void main(void) {
         // Si la bandera de done se activa, mueve los valores de la lista a los valores que serán enviados
         if (done == 1){
             info[9] = 'A';
+            UART_Write(info[0]);
+            UART_Write(info[1]);
+            UART_Write(info[2]);
+            UART_Write(info[3]);
+            UART_Write(info[4]);
+            UART_Write(info[5]);
+            UART_Write(info[6]);
+            UART_Write(info[7]);
+            UART_Write(info[8]);
+            UART_Write(info[9]);
             for (k = 0; k < 10; k++){       //Asignando valores de la lista recibida a la lista de envío
                 send[k] = info[k];
             }
